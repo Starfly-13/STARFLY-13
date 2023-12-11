@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# ss13-init-db
+# initialize a MariaDB container to act as a database for starfly13
+
+# generate some secure passwords
+MYSQL_DATABASE="starfly13"
+MYSQL_PASSWORD=$(dd if=/dev/urandom bs=1 count=32 2>/dev/null | base64 | head -c 32)
+MYSQL_ROOT_PASSWORD=$(dd if=/dev/urandom bs=1 count=32 2>/dev/null | base64 | head -c 32)
+MYSQL_USER="ss13"
+
+# create the container and import the tgstation database schema
+#	--publish 3306:3306 \
+docker run \
+	--env MYSQL_DATABASE="${MYSQL_DATABASE}" \
+	--env MYSQL_PASSWORD="${MYSQL_PASSWORD}" \
+	--env MYSQL_ROOT_PASSWORD="${MYSQL_ROOT_PASSWORD}" \
+	--env MYSQL_USER="${MYSQL_USER}" \
+	--name=starfly_db \
+	--volume ${PWD}/SQL/tgstation_schema.sql:/docker-entrypoint-initdb.d/tgstation_schema.sql:ro \
+	--volume ${PWD}/SQL/zzz_starfly13.sql:/docker-entrypoint-initdb.d/zzz_starfly13.sql:ro \
+	mariadb:10 &
+
+# move the old dbconfig.txt to a backup file just in case...
+BACKUP_TIME=$(date +%s)
+mv ${PWD}/config/dbconfig.txt ${PWD}/config/dbconfig.${BACKUP_TIME}.backup
+
+# generate an appropriate dbconfig.txt configuration file
+echo "# MYSQL_ROOT_PASSWORD ${MYSQL_ROOT_PASSWORD}" >> ${PWD}/config/dbconfig.txt
+echo "SQL_ENABLED" >> ${PWD}/config/dbconfig.txt
+echo "ADDRESS starfly_db" >> ${PWD}/config/dbconfig.txt
+echo "PORT 3306" >> ${PWD}/config/dbconfig.txt
+echo "FEEDBACK_DATABASE ${MYSQL_DATABASE}" >> ${PWD}/config/dbconfig.txt
+echo "FEEDBACK_TABLEPREFIX" >> ${PWD}/config/dbconfig.txt
+echo "FEEDBACK_LOGIN ${MYSQL_USER}" >> ${PWD}/config/dbconfig.txt
+echo "FEEDBACK_PASSWORD ${MYSQL_PASSWORD}" >> ${PWD}/config/dbconfig.txt
+echo "ASYNC_QUERY_TIMEOUT 10" >> ${PWD}/config/dbconfig.txt
+echo "BLOCKING_QUERY_TIMEOUT 5" >> ${PWD}/config/dbconfig.txt
+echo "BSQL_THREAD_LIMIT 50" >> ${PWD}/config/dbconfig.txt
+echo "# BSQL_DEBUG" >> ${PWD}/config/dbconfig.txt

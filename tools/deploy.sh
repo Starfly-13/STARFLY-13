@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #Run this in the repo root after compiling
 #First arg is path to where you want to deploy
@@ -31,9 +31,7 @@ cp -r tgui/public/* $1/tgui/public/
 cp -r tgui/packages/tgfont/dist/* $1/tgui/packages/tgfont/dist/
 
 #remove .dm files from _maps
-
-#this regrettably doesn't work with windows find
-#find $1/_maps -name "*.dm" -type f -delete
+find $1/_maps -name "*.dm" -type f -delete
 
 #dlls on windows
 if [ "$(uname -o)" = "Msys" ]; then

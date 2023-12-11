@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ss13-tail
+# tail the logs of the starfly13 container
+
+docker container logs -f starfly13
