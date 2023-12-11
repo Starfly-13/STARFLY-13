@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# ss13-db-shell
+# connect to the starfly13 database container with a mysql client shell
+
+MYSQL_ROOT_PASSWORD=$(head -1 config/dbconfig.txt | awk -e '{print $3}')
+docker exec --interactive --tty starfly_db \
+	mysql --password=${MYSQL_ROOT_PASSWORD} starfly13

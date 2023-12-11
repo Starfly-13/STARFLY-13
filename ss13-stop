@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ss13-stop
+# stop the starfly13 service container
+
+docker stop starfly13

@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# ss13-build
+# build the starfly13 container image
+
+# get the first 12 characters of the commit hash from git as GIT_HASH
+GIT_HASH="$(git log | head -1 | awk -e '{print $2}' | head -c 12)"
+
+# build starfly13, and tag it as starfly13:GIT_HASH
+docker buildx build \
+	--file Dockerfile \
+	--tag starfly13:${GIT_HASH} \
+	.
+
+# since we just built starfly13, tag it again as starfly13:latest
+docker image tag starfly13:${GIT_HASH} starfly13:latest

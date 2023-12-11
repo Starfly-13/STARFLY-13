@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ss13-shell
+# connect to the starfly13 service container with a bash shell
+
+docker exec --interactive --tty starfly13 /bin/bash

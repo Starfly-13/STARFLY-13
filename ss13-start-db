@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ss13-start-db
+# start the starfly13 database container
+
+docker start starfly_db
