@@ -583,7 +583,7 @@
 	process_flags = ORGANIC | SYNTHETIC
 
 /datum/reagent/mutationtoxin/lizard
-	name = "Sarathi Mutation Toxin"
+	name = "Unathi Mutation Toxin"
 	description = "A lizarding toxin."
 	color = "#5EFF3B" //RGB: 94, 255, 59
 	race = /datum/species/lizard

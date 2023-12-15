@@ -41,8 +41,8 @@
 		H.update_body()
 
 /obj/item/organ/tail/lizard
-	name = "\improper Sarathi tail"
-	desc = "A severed Sarathi's tail. Can't they regrow these...?"
+	name = "\improper Unathi tail"
+	desc = "A severed Unathi's tail. Can they regrow these...?"
 	icon_state = "severedlizard"
 	color = "#116611"
 	tail_type = "Smooth"
