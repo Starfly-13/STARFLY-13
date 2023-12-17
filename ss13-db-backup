@@ -4,6 +4,6 @@
 
 # dump the database to a compressed SQL file on standard out
 MYSQL_ROOT_PASSWORD=$(head -1 config/dbconfig.txt | awk -e '{print $3}')
-docker exec --interactive --tty starfly_db \
+docker exec starfly_db \
 	mysqldump --password=${MYSQL_ROOT_PASSWORD} starfly13 \
 	| gzip -
