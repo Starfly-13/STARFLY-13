@@ -2,11 +2,8 @@
 # ss13-db-backup
 # use mysqldump to dump a SQL backup of the starfly13 database container
 
-# ensure the backup directory exists
-mkdir -p /tmp/backup
-
-# dump the database to a compressed SQL file in the backup directory
+# dump the database to a compressed SQL file on standard out
 MYSQL_ROOT_PASSWORD=$(head -1 config/dbconfig.txt | awk -e '{print $3}')
 docker exec --interactive --tty starfly_db \
 	mysqldump --password=${MYSQL_ROOT_PASSWORD} starfly13 \
-	| gzip > /tmp/backup/mariadb.sql.gz
+	| gzip -
