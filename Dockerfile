@@ -1,6 +1,14 @@
 # syntax=docker/dockerfile:1
 FROM beestation/byond:514.1583 as base
 
+# Install a MariaDB development package for the shared library
+FROM base as mariadb_library
+RUN dpkg --add-architecture i386 \
+    && apt-get update \
+	&& apt-get install -y --no-install-recommends \
+    libmariadb-dev:i386 \
+    && rm -rf /var/lib/apt/lists/*
+
 # Install the tools needed to compile our rust dependencies
 FROM base as rust-build
 ENV PKG_CONFIG_ALLOW_CROSS=1 \
@@ -25,7 +33,7 @@ RUN git init \
     && /bin/bash -c "source dependencies.sh \
     && git fetch --depth 1 origin \$RUST_G_VERSION" \
     && git checkout FETCH_HEAD \
-    && cargo build --release --all-features --target i686-unknown-linux-gnu
+    && cargo build --release --features all --target i686-unknown-linux-gnu
 
 # Build auxmos
 FROM rust-build as auxmos
@@ -37,6 +45,7 @@ RUN git init \
     && cargo rustc --target=i686-unknown-linux-gnu --release --features all_reaction_hooks,katmos -- -C target-cpu=native
 
 # Install nodejs which is required to deploy Shiptest
+# NOTE: See: https://github.com/nodesource/distributions/discussions/1639
 FROM base as node
 COPY dependencies.sh .
 RUN apt-get update \
@@ -57,10 +66,31 @@ RUN tools/build/build \
     && apt-get autoremove curl -y \
     && rm -rf /var/lib/apt/lists/*
 
+# Build the final starfly13 container image
 FROM base
+# create an ss13 user and group for the container
+RUN groupadd \
+	--gid 1001 \
+	ss13
+RUN useradd \
+	--gid 1001 \
+	--no-create-home \
+	--shell /bin/bash \
+	--uid 1001 \
+	ss13
+USER ss13
+# work in the /shiptest directory
 WORKDIR /shiptest
-COPY --from=dm-build /deploy ./
-COPY --from=rustg /build/target/i686-unknown-linux-gnu/release/librust_g.so /root/.byond/bin/rust_g
+# copy the shared libraries we need to the BYOND binary directory
+COPY --chown=ss13:ss13 --from=auxmos /build/target/i686-unknown-linux-gnu/release/libauxmos.so libauxmos.so
+COPY --chown=ss13:ss13 --from=mariadb_library /usr/lib/i386-linux-gnu/libmariadb.so libmariadb.so
+COPY --chown=ss13:ss13 --from=rustg /build/target/i686-unknown-linux-gnu/release/librust_g.so librust_g.so
+# copy our build assets and execuable to our working directory
+COPY --chown=ss13:ss13 --from=dm-build /deploy ./
+# declare the volumes that we'd like orchestration to provide
 VOLUME [ "/shiptest/config", "/shiptest/data" ]
+# tell orchestration how to start the starfly13 service
+ENV LD_LIBRARY_PATH="/shiptest:${LD_LIBRARY_PATH}"
 ENTRYPOINT [ "DreamDaemon", "shiptest.dmb", "-port", "1337", "-trusted", "-close", "-verbose" ]
+# allow connections on port 1337 when the container is started
 EXPOSE 1337

@@ -270,8 +270,8 @@
 
 	var/list/static/allowed_species = list(
 		"Human" = /datum/species/human,
-		"Sarathi" = /datum/species/lizard,
-		"Moth" = /datum/species/moth,
+		"Unathi" = /datum/species/lizard,
+		"Nian" = /datum/species/moth,
 		"Elzuose" = /datum/species/ethereal,
 		"Pod" = /datum/species/pod,
 		"Fly" = /datum/species/fly,

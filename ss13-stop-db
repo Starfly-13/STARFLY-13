@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ss13-stop-db
+# stop the starfly13 database container
+
+docker stop starfly_db

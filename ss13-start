@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# ss13-start
+# run the starfly13 service in a container
+
+docker run \
+	--detach \
+	--link starfly_db:starfly_db \
+	--name=starfly13 \
+	--publish 1337:1337 \
+	--rm \
+	--volume ${PWD}/config:/shiptest/config:ro \
+	--volume ${PWD}/data:/shiptest/data \
+	starfly13:latest
