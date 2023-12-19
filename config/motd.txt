@@ -1,5 +1,9 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Welcome to Shiptest!</h1>
+<h1>Welcome to STARFLY 13 Public Preview!</h1>
 
-<i>This server is running a Shiptest Git build.</i>
+<i>This server is running a Shiptest Git build, found <a href="https://github.com/Starfly-13/STARFLY-13" alt="STARFLY 13 GitHub">here</a>.</i>
+<br>
+<i>We are a M/HRP server that features our own take on the Space Station 13 lore, combining ideas from Aurorastation, Baystation, Paradise Station, and Shiptest with our own original content. Our wiki will be up in the near future - please stay tuned!</i>
+<br>
+<b><i>Keep up with development on our <a href="https://discord.gg/aCU5gY9EnK" alt="STARFLY 13 Discord" title="Join the STARFLY 13 Discord server today!">Discord server!</a></i></b>
