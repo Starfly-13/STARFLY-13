@@ -312,8 +312,8 @@
 	return
 
 /obj/item/reagent_containers/food/drinks/bottle/lizardwine
-	name = "bottle of 'kalixcis' wine"
-	desc = "An alcoholic beverage of sarathi origin, now so widespread that knock-offs can be found everywhere. Check the label for point of origin."
+	name = "bottle of Moghesan wine"
+	desc = "An alcoholic beverage made from the fruits of assorted Moghesan cacti."
 	icon_state = "lizardwine"
 	list_reagents = list(/datum/reagent/consumable/ethanol/lizardwine = 100)
 	foodtype = FRUIT | ALCOHOL

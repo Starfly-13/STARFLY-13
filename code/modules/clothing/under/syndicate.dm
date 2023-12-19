@@ -56,7 +56,7 @@
 
 /obj/item/clothing/under/syndicate/sniper
 	name = "Tactical turtleneck suit"
-	desc = "A double seamed tactical turtleneck disguised as a civilian grade silk suit. Intended for the most formal operator. The collar is really sharp."
+	desc = "A double seamed tactical turtleneck disguised as a civilian grade silk suit. Popular among high-ranking Roseus Galactic staff."
 	icon = 'icons/obj/clothing/under/suits.dmi'
 	icon_state = "really_black_suit"
 	item_state = "bl_suit"
@@ -102,8 +102,8 @@
 	alt_covers_chest = TRUE
 
 /obj/item/clothing/under/syndicate/aclfgrunt
-	name = "ACLF uniform"
-	desc = "A button-up in a tasteful shade of gray with red pants, used as the uniform of the Anti-Corporate Liberation front on the rim."
+	name = "Roseus Galactic uniform"
+	desc = "A button-up in a tasteful shade of gray with red pants, used as the uniform of the Roseus Galactic corporation on the rim."
 	icon_state = "aclfgrunt"
 	can_adjust = FALSE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
