@@ -66,5 +66,3 @@
 	)
 	icon_state = "lizard"
 	default_priority = 90
- 
-
