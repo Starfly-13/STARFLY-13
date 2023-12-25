@@ -43,6 +43,11 @@
 	/// Flags that determine the potential of a mob to perform certain actions. Do not change this directly.
 	var/mobility_flags = MOBILITY_FLAGS_DEFAULT
 
+	/// Used for preventing attacks on admin-frozen mobs.
+	var/frozen = null
+	/// Used for keeping track of previous sleeping value with admin freeze.
+	var/admin_prev_sleeping = 0
+
 	var/resting = FALSE
 
 	/// Variable to track the body position of a mob, regardgless of the actual angle of rotation (usually matching it, but not necessarily).
