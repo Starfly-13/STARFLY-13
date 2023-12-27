@@ -27,6 +27,10 @@ jobs:
             type=raw,value={{date 'YYYYMMDDHHmmss'}}
             type=sha
 
+      # check out the code from the repository
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
       # set up the build
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
