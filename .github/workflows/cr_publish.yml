@@ -42,10 +42,10 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       # log in to the registry
-      - name: Login to Vultr Container Registry
+      - name: Login to Container Registry
         uses: docker/login-action@v3
         with:
-          registry: sjc.vultrcr.com
+          registry: docker.ss13.host
           username: ${{ secrets.REGISTRY_USERNAME }}
           password: ${{ secrets.REGISTRY_PASSWORD }}
 
