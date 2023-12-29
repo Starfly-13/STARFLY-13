@@ -1,12 +1,10 @@
 name: PR Labeler
 
-# on:
-#   push:
-#     branches:
-#       - master
-#   pull_request_target:
 on:
-- pull_request_target
+  push:
+    branches:
+      - master
+  pull_request_target:
 
 jobs:
   Label:
