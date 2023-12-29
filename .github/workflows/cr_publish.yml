@@ -1,4 +1,4 @@
-name: Publish to Vultr
+name: Publish to Docker Registry
 
 on:
   workflow_dispatch:
@@ -15,13 +15,19 @@ jobs:
     if: "!contains(github.event.head_commit.message, '[ci skip]')"
     runs-on: ubuntu-latest
     steps:
-      # generate the images and tags we'll publish to the registry
+      # enable built or pulled docker images to be cached
+      - name: Enable Docker Cache
+        uses: ScribeMD/docker-cache@0.3.7
+        with:
+          key: docker-${{ runner.os }}-${{ hashFiles('dependencies.sh') }}
+
+      # generate the images and tags that we'll publish to the registry
       - name: Docker meta
         id: meta
         uses: docker/metadata-action@v5
         with:
           images: |
-            sjc.vultrcr.com/starfly13/starfly13
+            docker.ss13.host/starfly13
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
             type=raw,value={{date 'YYYYMMDDHHmmss'}}
@@ -36,12 +42,12 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       # log in to the registry
-      - name: Login to Vultr Container Registry
+      - name: Login to Container Registry
         uses: docker/login-action@v3
         with:
-          registry: sjc.vultrcr.com
-          username: ${{ secrets.VULTR_USERNAME }}
-          password: ${{ secrets.VULTR_APIKEY }}
+          registry: docker.ss13.host
+          username: ${{ secrets.REGISTRY_USERNAME }}
+          password: ${{ secrets.REGISTRY_PASSWORD }}
 
       # build and push to the registry
       - name: Build and push
@@ -51,3 +57,5 @@ jobs:
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
