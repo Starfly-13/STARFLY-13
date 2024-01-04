@@ -40,6 +40,7 @@
 	var/lights = FALSE
 	var/last_user_hud = 1 // used to show/hide the mecha hud while preserving previous preference
 	var/completely_disabled = FALSE //stops the mech from doing anything
+	var/frozen = FALSE // admin frozen
 
 	var/bumpsmash = 0 //Whether or not the mech destroys walls by running into it.
 	//inner atmos
@@ -565,7 +566,7 @@
 /obj/mecha/relaymove(mob/living/user, direction)
 	if(completely_disabled)
 		return
-	if(!direction)
+	if(!direction || frozen)
 		return
 	if(user != occupant) //While not "realistic", this piece is player friendly.
 		user.forceMove(get_turf(src))
@@ -884,6 +885,9 @@
 		. = t_air.return_temperature()
 
 /obj/mecha/MouseDrop_T(mob/M, mob/user)
+	if(frozen)
+		to_chat(user, "<span class='warning'>Do not enter Admin-Frozen mechs.</span>")
+		return TRUE
 	if((user != M) || user.incapacitated() || !Adjacent(user))
 		return
 	if(!ishuman(user)) // no silicons or drones in mechas.

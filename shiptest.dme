@@ -1513,6 +1513,7 @@
 #include "code\modules\admin\verbs\fax_manager.dm"
 #include "code\modules\admin\verbs\fix_air.dm"
 #include "code\modules\admin\verbs\fps.dm"
+#include "code\modules\admin\verbs\freeze.dm"
 #include "code\modules\admin\verbs\getlogs.dm"
 #include "code\modules\admin\verbs\individual_logging.dm"
 #include "code\modules\admin\verbs\machine_upgrade.dm"
