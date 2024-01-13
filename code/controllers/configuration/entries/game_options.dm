@@ -431,3 +431,5 @@
 	max_val = 255
 	config_entry_value = 127
 	min_val = 127
+
+/datum/config_entry/flag/cryosleep_symptoms

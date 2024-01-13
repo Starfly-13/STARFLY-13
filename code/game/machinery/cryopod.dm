@@ -166,11 +166,15 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod/retro, 17)
 	var/open_sound = 'sound/machines/podopen.ogg'
 	var/close_sound = 'sound/machines/podclose.ogg'
 
+	/// if symptoms of cryosleep will be applied to players upon waking
+	var/apply_cryosleep_symptoms = TRUE
+
 /obj/machinery/cryopod/Initialize()
 	..()
 	if(!preserve_items_typecache)
 		preserve_items_typecache = typecacheof(preserve_items)
 	icon_state = open_state
+	apply_cryosleep_symptoms = CONFIG_GET(flag/cryosleep_symptoms)
 	return INITIALIZE_HINT_LATELOAD //Gotta populate the cryopod computer GLOB first
 
 /obj/machinery/cryopod/Destroy()
@@ -430,6 +434,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod/retro, 17)
 	linked_ship.spawn_points += src
 
 /obj/machinery/cryopod/apply_effects_to_mob(mob/living/carbon/sleepyhead)
+	if(!apply_cryosleep_symptoms)
+		return
 	//it always sucks a little to get up
 	sleepyhead.set_nutrition(200)
 	sleepyhead.SetSleeping(60) //if you read this comment and feel like shitting together something to adjust elzu and IPC charge on wakeup, be my guest.
@@ -448,7 +454,7 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod/retro, 17)
 	//maybe you should've bought high passage.
 	if(prob(30))
 		sleepyhead.apply_damage_type(15, BURN)
-	to_chat(sleepyhead, "<span class='userdanger'>The symptoms of cryosleep set in as you awaken...")
+	to_chat(sleepyhead, "<span class='userdanger'>The symptoms of cryosleep set in as you awaken...</span>")
 
 
 
@@ -457,6 +463,8 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod/retro, 17)
 	desc = "Keeps crew frozen in cryostasis until they are needed in order to cut down on supply usage. This one seems cheaply made."
 
 /obj/machinery/cryopod/poor/apply_effects_to_mob(mob/living/carbon/sleepyhead)
+	if(!apply_cryosleep_symptoms)
+		return
 	sleepyhead.set_nutrition(200)
 	sleepyhead.SetSleeping(80)
 	if(prob(90))
@@ -471,4 +479,4 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/computer/cryopod/retro, 17)
 		sleepyhead.adjust_disgust(rand(5,15))
 	if(prob(30))
 		sleepyhead.apply_damage_type(30, BURN)
-	to_chat(sleepyhead, "<span class='userdanger'>The symptoms of a horrid cryosleep set in as you awaken...")
+	to_chat(sleepyhead, "<span class='userdanger'>The symptoms of a horrid cryosleep set in as you awaken...</span>")
