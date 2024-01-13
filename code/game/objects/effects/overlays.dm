@@ -50,7 +50,7 @@
 	name = "adminoverlay"
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "admin"
-	layer = 4.1
+	layer = ABOVE_ALL_MOB_LAYER
 
 /obj/effect/overlay/vis
 	mouse_opacity = MOUSE_OPACITY_TRANSPARENT
