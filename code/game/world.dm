@@ -321,20 +321,12 @@ GLOBAL_VAR(restart_counter)
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-<<<<<<< HEAD
-	s += "<a href=\"[CONFIG_GET(string/discordurl)]\">" //Change this to wherever you want the hub to link to.
-=======
 	s += "<a href=\"[discord_url]\">" //Change this to wherever you want the hub to link to.
->>>>>>> upstream/master
 	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 	s += " ("
-<<<<<<< HEAD
-	s += "<a href=\"[CONFIG_GET(string/githuburl)]\">"
-=======
 	s += "<a href=\"[github_url]\">"
->>>>>>> upstream/master
 	s += "Github"
 	s += "</a>"
 	s += ")"
