@@ -19,8 +19,12 @@ const TARGET_SPECIES_LIST = [
     value: 'human',
   },
   {
-    name: 'Unathi',
+    name: 'SintaUnathi',
     value: 'lizard',
+  },
+  {
+    name: 'YeosaUnathi',
+    value: 'yeosa',
   },
   {
     name: 'Flyperson',

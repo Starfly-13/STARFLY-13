@@ -1,6 +1,6 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
-	name = "\improper Unathi"
+	name = "\improper Sinta'Unathi"
 	id = SPECIES_LIZARD
 	default_color = "00FF00"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,SCLERA,EMOTE_OVERLAY,MUTCOLORS_SECONDARY)
@@ -10,6 +10,8 @@
 	mutant_organs = list(/obj/item/organ/tail/lizard)
 	coldmod = 1.5
 	heatmod = 0.67
+	species_age_min = 22
+	species_age_max = 200
 	default_features = list("mcolor" = "0F0", "tail_lizard" = "Smooth", "face_markings" = "None", "horns" = "None", "frills" = "None", "spines" = "None", "body_markings" = "None", "legs" = "Normal Legs", "body_size" = "Normal")
 	changesource_flags = MIRROR_BADMIN | WABBAJACK | MIRROR_PRIDE | MIRROR_MAGIC | RACE_SWAP | ERT_SPAWN | SLIME_EXTRACT
 	attack_verb = "slash"
@@ -48,7 +50,7 @@
 	// Lizards are coldblooded and can stand a greater temperature range than humans
 	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 20 // This puts lizards 10 above lavaland max heat for ash lizards.
 	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 10
-	loreblurb = "The Unathi are a cold-blooded reptilian species originating from the planet Moghes, in the Uuoea-Esa system. A warrior culture with emphasis on honor, family, and loyalty to one's clan, the divided Unathi find themselves as powerful a force as any other species despite their less than hospitable homeworld."
+	loreblurb = "The Sinta'Unathi are a cold-blooded reptilian species originating from the harsh mainland of the planet Moghes, in the Uuoea-Esa system. A warrior culture with emphasis on honor, family, and loyalty to one's clan, the divided Sinta'Unathi find themselves as powerful a force as any other species despite their less than hospitable homeworld."
 
 	ass_image = 'icons/ass/asslizard.png'
 	var/datum/action/innate/liz_lighter/internal_lighter
@@ -108,13 +110,57 @@
 Lizard subspecies: ASHWALKERS
 */
 /datum/species/lizard/ashwalker
-	name = "Ash Walker"
+	name = "Rksh'Unathi"
 	id = SPECIES_ASHWALKER
+	species_age_min = 18
+	species_age_max = 300
 	examine_limb_id = SPECIES_LIZARD
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
 	species_language_holder = /datum/language_holder/lizard/ash
 	digitigrade_customization = DIGITIGRADE_FORCED
+	loreblurb = "The Rksh'Unathi are a mysterious reptilian species scattered across numerous planets, but only where the Necropolis' tendrils have scarred the land. While they are genetically related to the other species of Unathi, it is unclear how they came to be."
+
+
+/*
+Lizard subspecies: YEOSA'UNATHI
+*/
+/datum/species/lizard/yeosa
+	name = "Yeosa'Unathi"
+	id = SPECIES_YEOSA
+	species_age_min = 22
+	species_age_max = 200
+	examine_limb_id = SPECIES_LIZARD
+	inherent_traits = list(TRAIT_ALCOHOL_TOLERANCE)
+	species_language_holder = /datum/language_holder/yeosa
+	coldmod = 2
+	heatmod = 0.7
+	burnmod = 1.25
+	siemens_coeff = 1.25
+	oxymod = 0.75
+	grad_color="#fffec4"
+
+	// Yeosa are more cold-blooded than Sinta, and thus should be less cozy in bad temps.
+	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 10 // This puts lizards 10 above lavaland max heat for ash lizards.
+	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 5
+	loreblurb = "The Yeosa'Unathi are a cold-blooded reptilian species originating from the depths of the ocean on the planet Moghes, in the Uuoea-Esa system. Most Yeosa'Unathi will seldom step on the surface except to sunbathe - this can leave the impression of laziness and lethargy on those who interact with them. However, their culture largely mirrors that of the Sinta, and they are equally proud. "
+
+
+//WS Edit Start - Kobold
+//Ashwalker subspecies: KOBOLD
+/datum/species/lizard/ashwalker/kobold
+	name = "Kobold"
+	id = SPECIES_KOBOLD
+	examine_limb_id = SPECIES_LIZARD
+	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR)
+	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
+	species_language_holder = /datum/language_holder/lizard/ash
+
+/datum/species/lizard/ashwalker/kobold/on_species_gain(mob/living/carbon/C, datum/species/old_species, pref_load)
+	. = ..() //call everything from species/on_species_gain()
+	C.dna.add_mutation(DWARFISM)
+//WS Edit End - Kobold
+
 
 //WS Edit Start - Kobold
 //Ashwalker subspecies: KOBOLD
