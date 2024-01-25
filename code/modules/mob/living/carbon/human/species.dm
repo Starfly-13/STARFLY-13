@@ -94,6 +94,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/staminamod = 1
 	///multiplier for stun durations
 	var/stunmod = 1
+	///multiplier for oxy damage
+	var/oxymod = 1
 	///Type of damage attack does. Ethereals attack with burn damage for example.
 	var/attack_type = BRUTE
 	///Lowest possible punch damage this species can give. If this is set to 0, punches will always miss.
