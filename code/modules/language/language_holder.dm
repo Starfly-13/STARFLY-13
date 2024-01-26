@@ -268,18 +268,19 @@ Key procs
 
 /datum/language_holder/lizard
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/yeosa = list(LANGUAGE_ATOM),
 								/datum/language/draconic = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-							/datum/language/draconic = list(LANGUAGE_ATOM)
+							/datum/language/draconic = list(LANGUAGE_ATOM),
+							/datum/language/yeosa = list(LANGUAGE_ATOM))
+
 /datum/language_holder/lizard/ash
 	selected_language = /datum/language/draconic
 
 /datum/language_holder/yeosa
 	understood_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
-								/datum/language/draconic = list(LANGUAGE_ATOM),
 								/datum/language/yeosa = list(LANGUAGE_ATOM))
 	spoken_languages = list(/datum/language/common = list(LANGUAGE_ATOM),
+							/datum/language/draconic = list(LANGUAGE_ATOM),
 							/datum/language/yeosa = list(LANGUAGE_ATOM))
 
 /datum/language_holder/monkey

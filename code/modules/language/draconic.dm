@@ -42,7 +42,7 @@
 		"ra", "ar", "re", "er", "ri", "ir", "ro", "or", "ru", "ur", "rs", "sr",
 		"a",  "a",  "e",  "e",  "i",  "i",  "o",  "o",  "u",  "u",  "s",  "s"
 	)
-	icon_state = "squiddish"
+	icon_state = "lizard"
 	default_priority = 90
 
 /datum/language/kalixcis
