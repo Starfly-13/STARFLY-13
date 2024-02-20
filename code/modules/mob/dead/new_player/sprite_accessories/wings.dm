@@ -29,7 +29,7 @@
 	center = TRUE
 	dimension_y = 34
 
-//Sarathi wings
+//Unathi wings
 
 /datum/sprite_accessory/wings/dragon
 	name = "Dragon"

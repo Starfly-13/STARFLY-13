@@ -59,7 +59,7 @@
 #define HIDEHAIR (1<<8)
 #define HIDEFACIALHAIR (1<<9)
 #define HIDENECK (1<<10)
-#define HIDEHORNS (1<<11) 	// Used for hiding Sarathi horns.
+#define HIDEHORNS (1<<11) 	// Used for hiding Unathi horns.
 
 //bitflags for clothing coverage - also used for limbs
 #define HEAD (1<<0)

@@ -267,11 +267,11 @@
 	icon_state = "none"
 
 /datum/sprite_accessory/ipc_tail/lizard
-	name = "Synthetic Sarathi"
+	name = "Synthetic Unathi"
 	icon_state = "synth"
 
 /datum/sprite_accessory/ipc_tail/lizard_big
-	name = "Synthetic Sarathi Large"
+	name = "Synthetic Unathi Large"
 	icon_state = "large"
 
 /datum/sprite_accessory/ipc_tail/plug
