@@ -1,7 +1,7 @@
 /datum/species/lizard
 	// Reptilian humanoids with scaled skin and tails.
 	name = "\improper Sinta'Unathi"
-	id = SPECIES_LIZARD
+	id = SPECIES_UNATHI
 	default_color = "00FF00"
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,SCLERA,EMOTE_OVERLAY,MUTCOLORS_SECONDARY)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
@@ -114,7 +114,7 @@ Lizard subspecies: ASHWALKERS
 	id = SPECIES_ASHWALKER
 	species_age_min = 18
 	species_age_max = 300
-	examine_limb_id = SPECIES_LIZARD
+	examine_limb_id = SPECIES_UNATHI
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
 	species_language_holder = /datum/language_holder/lizard/ash
@@ -130,7 +130,7 @@ Lizard subspecies: YEOSA'UNATHI
 	id = SPECIES_YEOSA
 	species_age_min = 22
 	species_age_max = 200
-	examine_limb_id = SPECIES_LIZARD
+	examine_limb_id = SPECIES_UNATHI
 	inherent_traits = list(TRAIT_ALCOHOL_TOLERANCE)
 	species_language_holder = /datum/language_holder/yeosa
 	coldmod = 2
@@ -151,7 +151,7 @@ Lizard subspecies: YEOSA'UNATHI
 /datum/species/lizard/ashwalker/kobold
 	name = "Kobold"
 	id = SPECIES_KOBOLD
-	examine_limb_id = SPECIES_LIZARD
+	examine_limb_id = SPECIES_UNATHI
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
 	species_language_holder = /datum/language_holder/lizard/ash
@@ -167,7 +167,7 @@ Lizard subspecies: YEOSA'UNATHI
 /datum/species/lizard/ashwalker/kobold
 	name = "Kobold"
 	id = SPECIES_KOBOLD
-	examine_limb_id = SPECIES_LIZARD
+	examine_limb_id = SPECIES_UNATHI
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS, NO_UNDERWEAR)
 	inherent_traits = list(TRAIT_CHUNKYFINGERS,TRAIT_NOBREATH)
 	species_language_holder = /datum/language_holder/lizard/ash

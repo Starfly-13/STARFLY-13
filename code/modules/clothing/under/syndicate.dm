@@ -112,7 +112,7 @@
 /obj/item/clothing/under/syndicate/aclfgrunt
 	name = "Roseus Galactic uniform"
 	desc = "A button-up in a tasteful shade of gray with red pants, used as the uniform of the Roseus Galactic corporation on the rim."
-	icon_state = "aclfgrunt"
+	icon_state = "ngr_grunt"
 	can_adjust = FALSE
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
 	alt_covers_chest = TRUE
