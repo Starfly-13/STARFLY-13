@@ -277,8 +277,8 @@
 		"Kepori" = /datum/species/kepori,
 		"Moth" = /datum/species/moth,
 		"Pod" = /datum/species/pod,
-		"Rachnid" = /datum/species/spider
-		"Unathi" = /datum/species/lizard,
+		"Rachnid" = /datum/species/spider,
+		"Unathi" = /datum/species/lizard
 	)
 
 /datum/nanite_program/sensor/species/register_extra_settings()
