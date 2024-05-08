@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM beestation/byond:514.1583 as base
+FROM beestation/byond:515.1616 as base
 
 # Install a MariaDB development package for the shared library
 FROM base as mariadb_library

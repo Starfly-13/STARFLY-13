@@ -269,16 +269,16 @@
 	trigger_cooldown = 5
 
 	var/list/static/allowed_species = list(
-		"Human" = /datum/species/human,
-		"Unathi" = /datum/species/lizard,
-		"Nian" = /datum/species/moth,
-		"Elzuose" = /datum/species/ethereal,
-		"Pod" = /datum/species/pod,
+		"Elzuose" = /datum/species/elzuose,
 		"Fly" = /datum/species/fly,
-		"Jelly" = /datum/species/jelly,
+		"Human" = /datum/species/human,
 		"IPC" = /datum/species/ipc,
+		"Jelly" = /datum/species/jelly,
 		"Kepori" = /datum/species/kepori,
+		"Moth" = /datum/species/moth,
+		"Pod" = /datum/species/pod,
 		"Rachnid" = /datum/species/spider
+		"Unathi" = /datum/species/lizard,
 	)
 
 /datum/nanite_program/sensor/species/register_extra_settings()

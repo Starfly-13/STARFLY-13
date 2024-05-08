@@ -423,7 +423,7 @@ SILICON_MAX_LAW_AMOUNT 12
 ROUNDSTART_RACES human
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
-ROUNDSTART_RACES lizard
+ROUNDSTART_RACES unathi
 #ROUNDSTART_RACES fly
 ROUNDSTART_RACES moth
 ROUNDSTART_RACES plasmaman
@@ -437,7 +437,7 @@ ROUNDSTART_RACES vox
 ROUNDSTART_RACES yeosa
 
 ## Races that are better than humans in some ways, but worse in others
-ROUNDSTART_RACES ethereal
+ROUNDSTART_RACES elzuose
 ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES golem
 #ROUNDSTART_RACES adamantine
@@ -594,7 +594,3 @@ BLUESPACE_JUMP_WAIT 12000
 
 ## If admins are allowed to use the authentication server as a regular server for testing
 AUTH_ADMIN_TESTING
-
-## Apply symptoms of cryosleep to characters when first spawning on a ship
-## Comment this out if you want characters to skip the cryo sickness stuff and jump straight to it
-CRYOSLEEP_SYMPTOMS
