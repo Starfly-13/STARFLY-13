@@ -67,6 +67,11 @@
 	description = "Only the truly insane would wear this around their neck."
 	path = /obj/item/clothing/neck/petcollar
 
+/datum/gear/accessory/gloves
+	display_name = "plain gloves"
+	description = "Standard hand coverings for everyday use."
+	path = /obj/item/clothing/gloves/color/white
+
 /datum/gear/accessory/gloves/black
 	display_name = "black gloves"
 	description = "Standard hand coverings for everyday use."
