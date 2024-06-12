@@ -458,7 +458,7 @@
 			return
 /obj/item/gun/ballistic/revolver/detective
 	name = "\improper HP Detective Special"
-	desc = "A small law enforcement firearm. Originally commissioned by Nanotrasen for their Private Investigation division, it has become extremely popular among independent civilians as a cheap, compact sidearm. Uses .38 Special rounds."
+	desc = "A small law enforcement firearm. Originally commissioned by Nanotrasen for their Private Investigation division, it has become extremely popular among independent civilians and local police forces as a cheap, compact sidearm. Uses .38 Special rounds."
 	fire_sound = 'sound/weapons/gun/revolver/shot_light.ogg'
 	icon_state = "detective"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
@@ -680,17 +680,18 @@
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 	spread_unwielded = 50
 	fire_delay = 0
+	gate_offset = 4
 	semi_auto = TRUE
 	safety_wording = "safety"
 
 /obj/item/gun/ballistic/revolver/shadow
-	name = "\improper HP Shadow"
+	name = "\improper Shadow 45"
 	desc = "A mid-size revolver. Despite the antiquated design, it is cheap, reliable, and stylish, making it a favorite among fast-drawing spacers and the officers of various militaries, as well as small-time police units. Chambered in .45."
 	fire_sound = 'sound/weapons/gun/revolver/cattleman.ogg'
 	icon = 'icons/obj/guns/48x32guns.dmi'
 	icon_state = "shadow"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
-	manufacturer = MANUFACTURER_HUNTERSPRIDE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 	obj_flags = UNIQUE_RENAME
 	gate_loaded = TRUE
 	unique_reskin = list("Shadow" = "shadow",
