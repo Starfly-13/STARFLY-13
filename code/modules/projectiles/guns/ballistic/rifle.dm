@@ -135,8 +135,8 @@
 	wield_delay = 1.3 SECONDS
 
 /obj/item/gun/ballistic/rifle/scout
-	name = "HP Scout"
-	desc = "A powerful bolt-action rifle usually given to mercenary hunters of the Saint-Roumain Militia, equally suited for taking down big game or two-legged game. Chambered in .300 Magnum."
+	name = "Scout 300M"
+	desc = "A powerful bolt-action rifle beloved by mercenaries and hunters alike, equally suited for taking down big game or two-legged game. Chambered in .300 Magnum."
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/smile
 	fire_sound = 'sound/weapons/gun/rifle/scout.ogg'
 
@@ -150,7 +150,7 @@
 	zoom_amt = 10 //Long range, enough to see in front of you, but no tiles behind you.
 	zoom_out_amt = 5
 
-	manufacturer = MANUFACTURER_HUNTERSPRIDE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 
 /obj/item/gun/ballistic/rifle/illestren/enchanted
 	name = "enchanted bolt-action rifle"
@@ -204,8 +204,8 @@
 		user.dropItemToGround(src, TRUE)
 
 /obj/item/gun/ballistic/rifle/polymer
-	name = "polymer survivor rifle"
-	desc = "A bolt-action rifle made of scrap, desperation, and luck. Likely to shatter at any moment. Chambered in .300 Blackout."
+	name = "LK-MR Marksman Rifle"
+	desc = "A strange bolt-action rifle built with cheap materials. Nobody knows where, exactly, these came from, having mysteriously appeared among pirate crews near the end of the ICW. Chambered in .300 Blackout."
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "crackhead_rifle"
 	item_state = "crackhead_rifle"
@@ -213,4 +213,4 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/polymer
 	can_be_sawn_off = FALSE
-	manufacturer = MANUFACTURER_NONE
+	manufacturer = MANUFACTURER_LKV

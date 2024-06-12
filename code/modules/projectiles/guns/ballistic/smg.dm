@@ -76,7 +76,7 @@
 	item_state = "cobra20"
 
 /obj/item/gun/ballistic/automatic/smg/c20r/suns
-	desc = "A bullpup .45 SMG designated 'C-20r.' Its buttstamp reads 'Scarborough Arms - Per falcis, per pravitas.' This one is painted in SUNS' colors."
+	desc = "A bullpup .45 SMG designated 'C-20r.' Its buttstamp reads 'Scarborough Arms - Per falcis, per pravitas.' Before being painted, this one was used as a film prop!"
 	icon_state = "c20r_suns"
 	item_state = "c20r_suns"
 
@@ -129,7 +129,7 @@
 
 /obj/item/gun/ballistic/automatic/smg/vector
 	name = "\improper Vector carbine"
-	desc = "A police carbine based on a pre-Night of Fire SMG design. Most of the complex workings have been removed for reliability. Chambered in 9mm."
+	desc = "A police carbine based on an ancient SMG design. Most of the complex workings have been removed for reliability. Chambered in 9mm."
 	icon_state = "vector"
 	item_state = "vector"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm //you guys remember when the autorifle was chambered in 9mm
@@ -212,8 +212,8 @@
 	return
 
 /obj/item/gun/ballistic/automatic/smg/firestorm //weapon designed by Apogee-dev
-	name = "HP Firestorm"
-	desc = "An unconventional submachinegun, rarely issued to Saint-Roumain Militia mercenary hunters for outstanding situations where normal hunting weapons fall short. Chambered in .45."
+	name = "Firestorm .45"
+	desc = "An unconventional submachinegun designed by Hephaestus Industries. This model never really caught on, for some reason. Chambered in .45."
 	icon = 'icons/obj/guns/48x32guns.dmi'
 	icon_state = "firestorm"
 	item_state = "firestorm"
@@ -226,7 +226,7 @@
 	rack_sound = 'sound/weapons/gun/smg/uzi_cocked.ogg'
 	fire_sound = 'sound/weapons/gun/smg/firestorm.ogg'
 
-	manufacturer = MANUFACTURER_HUNTERSPRIDE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 	wield_slowdown = 0.4
 
 /obj/item/gun/ballistic/automatic/smg/firestorm/Initialize()

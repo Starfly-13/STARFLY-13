@@ -1,6 +1,6 @@
 /obj/item/gun/energy/taser
 	name = "taser gun"
-	desc = "A low-capacity, energy-based stun gun used by security teams to subdue targets at range."
+	desc = "A low-capacity, energy-based stun gun used by law enforcement to subdue targets at range."
 	icon_state = "taser"
 	item_state = null	//so the human update icon uses the icon_state instead.
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode)
@@ -11,7 +11,7 @@
 
 /obj/item/gun/energy/e_gun/advtaser
 	name = "hybrid taser"
-	desc = "A dual-mode taser designed to fire both short-range high-power electrodes and long-range disabler beams."
+	desc = "A dual-mode taser designed to fire both short-range high-power electrodes and long-range disabler beams. Popular among military police regardless of nation."
 	icon_state = "advtaser"
 	ammo_type = list(/obj/item/ammo_casing/energy/electrode, /obj/item/ammo_casing/energy/disabler)
 	ammo_x_offset = 2
@@ -49,6 +49,6 @@
 
 /obj/item/gun/energy/disabler/e60
 	name = "E-60"
-	desc = "A self-defense weapon that exhausts organic targets, weakening them until they collapse."
+	desc = "A self-defense weapon that exhausts organic targets, weakening them until they collapse. Popular among law enforcement in impoverished areas."
 	icon_state = "e60"
 	manufacturer = MANUFACTURER_EOEHOMA
