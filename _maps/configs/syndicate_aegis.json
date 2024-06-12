@@ -1,5 +1,5 @@
 {
-	"prefix": "SUNS",
+	"prefix": "CSSV",
 	"map_name": "Aegis-class Long Term Care Ship",
 	"map_short_name": "Aegis-class",
 	"map_path": "_maps/shuttles/syndicate/syndicate_aegis.dmm",
@@ -12,29 +12,29 @@
 	"map_id": "syndicate_aegis",
 	"limit": 1,
 	"namelists": [
-		"SUNS",
+		"CYBERSUN",
 		"SPACE",
 		"GENERAL"
 	],
 	"job_slots": {
 		"Captain": {
-			"outfit": "/datum/outfit/job/syndicate/captain/suns",
+			"outfit": "/datum/outfit/job/syndicate/captain/cybersun",
 			"officer": true,
 			"slots": 1
 		},
 
 		"Lead Doctor": {
-			"outfit": "/datum/outfit/job/syndicate/cmo/suns",
+			"outfit": "/datum/outfit/job/syndicate/cmo",
 			"slots": 1
 		},
 
 		"Ship Doctor":{
-			"outfit": "/datum/outfit/job/syndicate/doctor/suns",
+			"outfit": "/datum/outfit/job/syndicate/doctor/cybersun",
 			"slots": 2
 		},
 
 		"Mechanic": {
-			"outfit": "/datum/outfit/job/syndicate/engineer/suns",
+			"outfit": "/datum/outfit/job/syndicate/engineer/cybersun",
 			"slots": 1
 		},
 
