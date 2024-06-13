@@ -1,6 +1,6 @@
 //Jumpsuits
 /obj/item/clothing/under/gezena
-	name = "gezenan navywear"
+	name = "Eridanite navywear"
 	desc = "Made of a slick synthetic material that is both breathable, and resistant to scale and thorn alike."
 	icon = 'icons/obj/clothing/faction/gezena/uniforms.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/uniforms.dmi'
@@ -12,13 +12,13 @@
 	armor = list("melee" = 10, "bullet" = 0, "laser" = 0,"energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 40)
 
 /obj/item/clothing/under/gezena/captain
-	name = "\improper Gezenan captain's navywear"
+	name = "\improper Eridanite captain's navywear"
 	desc = "A refined variation of the basic navywear, sporting sleek silver trim."
 	icon_state = "captain"
 	item_state = "bluejump"
 
 /obj/item/clothing/under/gezena/marine
-	name = "\improper Gezenan marine fatigue"
+	name = "\improper Eridanite marine fatigue"
 	desc = "Rough inside and out, these fatigues have seen their fair share."
 	icon_state = "marine"
 	item_state = "marinejump"
@@ -27,7 +27,7 @@
 
 /obj/item/clothing/suit/toggle/gezena
 	name = "silkenweave jacket"
-	desc = "Refined and sturdy, emblazoned below the neck with the Federation's symbol."
+	desc = "Refined and sturdy, emblazoned below the neck with the symbol of Epsilon Eridani."
 	icon = 'icons/obj/clothing/faction/gezena/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/suits.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -45,7 +45,7 @@
 
 /obj/item/clothing/suit/armor/gezena
 	name = "navywear coat"
-	desc = "Formal navywear, emblazoned across the back with the Gezenan sigil."
+	desc = "Formal navywear, emblazoned across the back with the Eridanite sigil."
 	icon = 'icons/obj/clothing/faction/gezena/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/suits.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -81,15 +81,15 @@
 	item_state = "captaincoat"
 
 /obj/item/clothing/suit/armor/gezena/marine
-	name = "\improper Raksha-plating vest"
-	desc = "Raksha - a Kalixcian word for 'protection of the heart'. Sturdy and reliable."
+	name = "\improper Eridanite armored vest"
+	desc = "A sturdy and reliable vest, standard-issue among Eridanite marines.."
 	icon_state = "marinevest"
 	item_state = "marinevest"
 	armor = list("melee" = 35, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50) //the laser gun country should probably have laser armor
 
 /obj/item/clothing/suit/armor/gezena/marinecoat
-	name = "coated Raksha-plating"
-	desc = "Less practical with the coat than without."
+	name = "plated Eridanite coat"
+	desc = "A less practical set of body armor of Eridanite build, often used on missions on colder planets."
 	icon_state = "marinecoat"
 	item_state = "bluecloth"
 	armor = list("melee" = 35, "bullet" = 50, "laser" = 50, "energy" = 50, "bomb" = 40, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50) //same
@@ -97,8 +97,8 @@
 //Spacesuits
 
 /obj/item/clothing/suit/space/gezena
-	name = "\improper Rakalla-suit"
-	desc = "Rakalla - a Kalixcian word for 'protection among the stars'. Sturdy, flexible, and reliable."
+	name = "\improper Eridanite model E-3 spacesuit"
+	desc = " Sturdy, flexible, and reliable, the E-3 spacesuit is commonly found on government-owned vessels from Epsilon Eridani."
 	icon = 'icons/obj/clothing/faction/gezena/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/suits.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -110,8 +110,8 @@
 	supports_variations = DIGITIGRADE_VARIATION
 
 /obj/item/clothing/head/helmet/space/gezena
-	name = "\improper Rakalla-helm"
-	desc = "Featuring rubberized grommets fitting for any length of horn, and an internal monitor for life support."
+	name = "\improper Eridanite model E-3 helmet"
+	desc = "A celebration of the diversity in Epsilon Eridani, the E-3 spacesuit helmet features rubberized grommets fitting for any length of horn, and an internal monitor for life support."
 	icon = 'icons/obj/clothing/faction/gezena/head.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/head.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -124,8 +124,8 @@
 //Hats
 
 /obj/item/clothing/head/gezena
-	name = "\improper PGFN Cap"
-	desc = "The standard cap of the PGF military, in Navy colors."
+	name = "\improper EAFN Cap"
+	desc = "The standard cap of the Epsilon Eridani military, in Navy colors."
 	icon = 'icons/obj/clothing/faction/gezena/head.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/head.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -135,56 +135,56 @@
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 
 /obj/item/clothing/head/gezena/flap
-	name = "\improper PGFN Betzu-il cap"
-	desc = "The standard cap of the PGF military, in Navy colors. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects."
+	name = "\improper EAFN flap cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Navy colors. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back."
 	icon_state = "navalflap"
 	item_state = "bluecloth"
 
 /obj/item/clothing/head/gezena/marine
-	name = "\improper PGFMC Cap"
-	desc = "The standard cap of the PGF military, in Marine Corps colors."
+	name = "\improper EAFMC Cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Marine Corps colors."
 	icon_state = "marinehat"
 	item_state = "marinecloth"
 
 /obj/item/clothing/head/gezena/marine/flap
-	name = "\improper PGFMC Betzu-il cap"
-	desc = "The standard cap of the PGF military, in Marine Corps colors. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects."
+	name = "\improper EAFMC flap cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Marine Corps colors. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back."
 	icon_state = "marineflap"
 	item_state = "marinecloth"
 
 /obj/item/clothing/head/gezena/marine/lead
-	name = "\improper PGFMC Commander Cap"
+	name = "\improper EAFMC Commander Cap"
 	desc = "The standard cap of the PGF military, in Marine Corps colors. The silver markings denote it as a commander's cap."
 	icon_state = "squadhat"
 	item_state = "marinecloth"
 
 /obj/item/clothing/head/gezena/marine/lead/flap
-	name = "\improper PGFMC Commander's' Betzu-il cap"
-	desc = "The standard cap of the PGF military, in Marine Corps colors. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects. The silver markings denote it as a commander's cap."
+	name = "\improper EAFMC Commander's' flap cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Marine Corps colors. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back. The silver markings denote it as a commander's cap."
 	icon_state = "squadflap"
 	item_state = "marinecloth"
 
 /obj/item/clothing/head/gezena/medic
-	name = "\improper PGF medic cap"
-	desc = "The standard cap of the PGF military. The coloring indicates the wearer as a medical officer."
+	name = "\improper EAF medic cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces. The coloring indicates the wearer as a medical officer."
 	icon_state = "medichat"
 	item_state = "whitecloth"
 
 /obj/item/clothing/head/gezena/medic/flap
-	name = "\improper PGF medic Betzu-il cap"
-	desc = "The standard cap of the PGF military. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects. The coloring indicates the wearer as a medical officer."
+	name = "\improper EAF medic flap cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back."
 	icon_state = "medicflap"
 	item_state = "whitecloth"
 
 /obj/item/clothing/head/gezena/captain // no captain flap yet(?)
-	name = "\improper PGFN captain's cap"
-	desc = "The standard cap of the PGF military, in Navy colors. The decoration indicates the wearer as a ship's Captain."
+	name = "\improper EAFN captain's cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Navy colors. The decoration indicates the wearer as a ship's Captain."
 	icon_state = "captainhat"
 	item_state = "bluecloth"
 
 /obj/item/clothing/head/helmet/gezena
-	name = "\improper Raksha-helm"
-	desc = "Far more practical for combat than either type of cap, but not nearly as traditional or comfortable. Features small sections of removable plating to make space for the horns of horned races."
+	name = "\improper Eridanite combat helmet"
+	desc = "Far more practical for combat than either type of cap, but not nearly as traditional or comfortable. Features small sections of removable plating to make space for the horns of horned races as per Regulation 740, concerning accomodations for nonhuman species."
 	icon = 'icons/obj/clothing/faction/gezena/head.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/head.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -196,8 +196,8 @@
 //Gloves
 
 /obj/item/clothing/gloves/gezena
-	name = "\improper PGFN Ihuz-irra Gloves"
-	desc = "As the name, “ihuz-irra”, or “sure-grip”, suggests, the gloves employed by the PGF military are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments."
+	name = "\improper EAFN Gripper Gloves"
+	desc = "the gloves employed by the Epsilon Eridani Armed Forces are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments."
 	icon = 'icons/obj/clothing/faction/gezena/hands.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/hands.dmi'
 	icon_state = "navalgloves"
@@ -206,28 +206,28 @@
 	armor = list("melee" = 5, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 
 /obj/item/clothing/gloves/gezena/marine
-	name = "\improper PGFMC Ihuz-irra Gloves"
-	desc = "As the name, “ihuz-irra”, or “sure-grip”, suggests, the gloves employed by the PGF military are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Carries extra tactile grip on the fingertips for easy use of firearms."
+	name = "\improper EAFMC Gripper Gloves"
+	desc = "The gloves employed by the Epsilon Eridani Armed Forces are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Carries extra tactile grip on the fingertips for easy use of firearms."
 	icon_state = "marinegloves"
 	armor = list("melee" = 10, "bullet" = 10, "laser" = 10, "energy" = 10, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 75, "acid" = 50)
 
 /obj/item/clothing/gloves/gezena/engi
-	name = "\improper PGFN Engineering Ihuz-irra Gloves"
-	desc = "As the name, “ihuz-irra”, or “sure-grip”, suggests, the gloves employed by the PGF military are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Comes with anti-conductive microfibers interwoven to supply the useer with electrical insulation."
+	name = "\improper EAFN Insulated Gripper Gloves"
+	desc = "The gloves employed by the Epsilon Eridani Armed Forces are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Comes with anti-conductive microfibers interwoven to supply the useer with electrical insulation."
 	icon_state = "engigloves"
 	siemens_coefficient = 0
 
 /obj/item/clothing/gloves/gezena/captain
-	name = "\improper PGFN Captain's Ihuz-irra Gloves"
-	desc = "As the name, “ihuz-irra”, or “sure-grip”, suggests, the gloves employed by the PGF military are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Bears the silver standard of a Gezenan captain."
+	name = "\improper PGFN Captain's Gripper Gloves"
+	desc = "As the name suggests, the gloves employed by the Epsilon Eridani Armed Forces are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Bears the silver standard of an Eridanite captain."
 	icon_state = "captaingloves"
 	siemens_coefficient = 0
 
 //Boots
 
 /obj/item/clothing/shoes/combat/gezena
-	name = "\improper PGF Uhro-sez Boots"
-	desc = "The word “uhro-sez” translates to “steel-foot”, in reference to the steel toe protection provided by these boots. Standard issue to all members of all branches of the PGF military."
+	name = "\improper Eridanite steel-toed boots"
+	desc = "These boots have steel protection around the toes.. Standard issue to all members of all branches of the Epsilon Eridani Armed Forces."
 	icon = 'icons/obj/clothing/faction/gezena/feet.dmi'
 	//mob_overlay_icon = 'icons/mob/clothing/faction/gezena/feet.dmi' todo: find out why digi breaks here
 	icon_state = "pgfboots"
@@ -236,8 +236,8 @@
 //Belt
 
 /obj/item/storage/belt/military/gezena
-	name = "\improper PGF Iho-Usks"
-	desc = "The “iho-usks”, translating to “gear-holder”, is a lightweight harness covered in pouches, supplied to the ground troops of the PGF. This variant is designed for carrying ammunition."
+	name = "\improper EAF gear harness"
+	desc = "A lightweight harness covered in pouches, supplied to Eridanite footsoldiers. This variant is designed for carrying ammunition."
 	icon = 'icons/obj/clothing/faction/gezena/belt.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/belt.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -247,8 +247,8 @@
 	unique_reskin = null
 
 /obj/item/storage/belt/medical/gezena
-	name = "\improper PGF Medical Iho-Usks"
-	desc = "The “iho-usks”, translating to “gear-holder”, is a lightweight harness covered in pouches, supplied to the ground troops of the PGF. This variant is designed for carrying medical supplies."
+	name = "\improper EAF Medical gear harness"
+	desc = "A lightweight harness covered in pouches, supplied to the ground troops of the EAF. This variant is designed for carrying medical supplies."
 	icon = 'icons/obj/clothing/faction/gezena/belt.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/belt.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -259,8 +259,8 @@
 //Cloaks
 
 /obj/item/clothing/neck/cloak/gezena
-	name = "\improper Aziulhauz"
-	desc = "The “Aziulhauz”, or “rank-cape”, is the method with which PGF military members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as a standard non-officer soldier or crewperson."
+	name = "\improper Standard EAF Cloak"
+	desc = "The method with which Epsilon Eridani Armed Forces members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as a standard non-officer soldier or crewperson."
 	icon = 'icons/obj/clothing/faction/gezena/neck.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/neck.dmi'
 	lefthand_file = 'icons/mob/inhands/faction/gezena/gezena_lefthand.dmi'
@@ -269,31 +269,31 @@
 	item_state = "blackcloth"
 
 /obj/item/clothing/neck/cloak/gezena/lead
-	name = "sergeant's Azuilhauz"
-	desc = "The “Aziulhauz”, or “rank-cape”, is the method with which PGF military members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as a squad commander."
+	name = "EAF Sergeant's Cloak"
+	desc = "The method with which Epsilon Eridani Armed Forces members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as a squad commander."
 	icon_state = "squadcape"
 	item_state = "blackcloth"
 
 /obj/item/clothing/neck/cloak/gezena/engi
-	name = "engineering Aziulhauz"
-	desc = "The “Aziulhauz”, or “rank-cape”, is the method with which PGF military members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as an officer with an engineering specialization."
+	name = "EAF Engineer's Cloak"
+	desc = "The method with which Epsilon Eridani Armed Forces members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as an officer with an engineering specialization."
 	icon_state = "engicape"
 	item_state = "blackcloth"
 
 /obj/item/clothing/neck/cloak/gezena/med
-	name = "medical Aziulhauz"
-	desc = "The “Aziulhauz”, or “rank-cape”, is the method with which PGF military members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as an officer with a medical specialization."
+	name = "EAF Medic's Cloak"
+	desc = "The method with which Epsilon Eridani Armed Forces members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as an officer with a medical specialization."
 	icon_state = "medcape"
 	item_state = "whitecloth"
 
 /obj/item/clothing/neck/cloak/gezena/command
-	name = "officer's Azuilhauz"
-	desc = "The “Aziulhauz”, or “rank-cape”, is the method with which PGF military members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as an officer."
+	name = "EAF Officer's Cloak"
+	desc = "The method with which Epsilon Eridani Armed Forces members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as an officer."
 	icon_state = "commandcape"
 	item_state = "whitecloth"
 
 /obj/item/clothing/neck/cloak/gezena/captain
-	name = "captain's Azuilhauz"
-	desc = "The “Aziulhauz”, or “rank-cape”, is the method with which PGF military members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as a high ranking officer."
+	name = "EAF Captain's Cloak"
+	desc = "The method with which Epsilon Eridani Armed Forces members display their rank to others. Wearing one while on duty is required by uniform code. This variant displays the wearer's rank as a high ranking officer."
 	icon_state = "captaincape"
 	item_state = "whitecloth"

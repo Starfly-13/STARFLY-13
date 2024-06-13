@@ -3,7 +3,7 @@
 /////////////
 
 /obj/item/clothing/under/syndicate/hardliners
-	name = "hardliners uniform"
+	name = "vintage Gorlex uniform"
 	desc = "A crimson combat uniform, reminiscent of the Gorlex Marauders at the height of the Inter-Corporate Wars. It's oddly comfortable, and warm."
 	icon_state = "hardliners"
 	item_state = "hardliners"
@@ -13,13 +13,13 @@
 	mob_overlay_icon = 'icons/mob/clothing/faction/hardliners/uniforms.dmi'
 
 /obj/item/clothing/under/syndicate/hardliners/jumpsuit
-	name = "hardliners jumpsuit"
+	name = "vintage Gorlex jumpsuit"
 	desc = "A black jumpsuit with white overalls, a scant reminder of the old miners of Gorlex VII."
 	icon_state = "hl_jumpsuit"
 	item_state = "hl_jumpsuit"
 
 /obj/item/clothing/under/syndicate/hardliners/officer
-	name = "hardliners officer uniform"
+	name = "vintage Gorlex officer uniform"
 	desc = "A button-up uniform with cargo pants, certainly more tactical than most officer uniforms."
 	icon_state = "hl_officer"
 	item_state = "hl_officer"
