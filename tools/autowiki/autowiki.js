@@ -38,7 +38,7 @@ async function main() {
 	const bot = new MWBot();
 
 	await bot.loginGetEditToken({
-		apiUrl: "https://shiptest.net/w/api.php",
+		apiUrl: "https://wiki.starfly.space/api.php",
 		username: USERNAME,
 		password: PASSWORD,
 	});
