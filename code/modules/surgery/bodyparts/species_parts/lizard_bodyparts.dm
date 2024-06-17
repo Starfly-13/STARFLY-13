@@ -4,6 +4,7 @@
 	limb_id = SPECIES_UNATHI
 	uses_mutcolor = TRUE
 	is_dimorphic = FALSE
+	bodytype = BODYTYPE_HUMANOID | BODYTYPE_ORGANIC | BODYTYPE_SNOUT
 
 /obj/item/bodypart/chest/lizard
 	icon = 'icons/mob/species/lizard/bodyparts.dmi'
