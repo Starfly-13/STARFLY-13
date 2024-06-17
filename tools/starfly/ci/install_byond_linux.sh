@@ -28,14 +28,14 @@ else
     mkdir -p "${HOME}/BYOND"
     # copy BYOND from our repo
     cd "${HOME}/BYOND"
-    cp -v "${BYOND_ZIP}" "byond.zip"
+    cp -v "${HOME}/${BYOND_ZIP}" "byond.zip"
     # unzip and install BYOND
     unzip byond.zip
     rm byond.zip
     cd byond
     make here
     # record the version that we installed for posterity
-    echo "$BYOND_MAJOR.$BYOND_MINOR" > "$HOME/BYOND/version.txt"
+    echo "${BYOND_MAJOR}.${BYOND_MINOR}" > "${HOME}/BYOND/version.txt"
     # change back to our home directory
-    cd ~/
+    cd "${HOME}"
 fi
