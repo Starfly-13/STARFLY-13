@@ -61,9 +61,10 @@
 
 /datum/supply_pack/medical/defibs
 	name = "Defibrillator Crate"
-	desc = "Contains a defibrillator for bringing the recently deceased back to life."
-	cost = 750
-	contains = list(/obj/item/defibrillator/loaded)
+	desc = "Contains two defibrillators for bringing the recently deceased back to life."
+	cost = 1500
+	contains = list(/obj/item/defibrillator/loaded,
+					/obj/item/defibrillator/loaded)
 	crate_name = "defibrillator crate"
 
 /datum/supply_pack/medical/surgery

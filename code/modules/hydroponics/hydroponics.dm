@@ -1,6 +1,3 @@
-#define HYDRO_MAX_PEST 10
-#define HYDRO_MAX_WEED 10
-#define HYDRO_MAX_TOXIC 100
 /obj/machinery/hydroponics
 	name = "hydroponics tray"
 	icon = 'icons/obj/hydroponics/equipment.dmi'
@@ -9,9 +6,7 @@
 	pixel_z = 1
 	obj_flags = CAN_BE_HIT | UNIQUE_RENAME
 	circuit = /obj/item/circuitboard/machine/hydroponics
-	use_power = IDLE_POWER_USE
-	idle_power_usage = IDLE_DRAW_LOW
-	active_power_usage = ACTIVE_DRAW_HIGH
+	idle_power_usage = 0
 	var/waterlevel = 100	//The amount of water in the tray (max 100)
 	var/maxwater = 100		//The maximum amount of water in the tray
 	var/nutridrain = 1      // How many units of nutrient will be drained in the tray
@@ -119,7 +114,7 @@
 
 	if(!powered() && self_sustaining)
 		visible_message("<span class='warning'>[name]'s auto-grow functionality shuts off!</span>")
-		set_idle_power()
+		idle_power_usage = 0
 		self_sustaining = FALSE
 		update_appearance()
 
@@ -258,7 +253,7 @@
 				adjustWeeds(1 / rating)
 
 		// Weeeeeeeeeeeeeeedddssss
-		if(weedlevel >= HYDRO_MAX_WEED && prob(50)) // At this point the plant is kind of fucked. Weeds can overtake the plant spot.
+		if(weedlevel >= 10 && prob(50)) // At this point the plant is kind of fucked. Weeds can overtake the plant spot.
 			if(myseed)
 				if(!myseed.get_gene(/datum/plant_gene/trait/plant_type/weed_hardy) && !myseed.get_gene(/datum/plant_gene/trait/plant_type/fungal_metabolism)) // If a normal plant
 					weedinvasion()
@@ -554,26 +549,25 @@
 
 	else if(istype(O, /obj/item/plant_analyzer))
 		var/obj/item/plant_analyzer/P_analyzer = O
-		var/msg = ""
 		if(myseed)
 			if(P_analyzer.scan_mode == PLANT_SCANMODE_STATS)
-				msg += "<B>[myseed.plantname]</B>\n"
-				msg += "- Plant Age: [span_notice("[age]\n")]"
+				to_chat(user, examine_block("<B>[myseed.plantname]</B>"))
+				to_chat(user, examine_block("Plant Age: <span class='notice'>[age]</span>"))
 				var/list/text_string = myseed.get_analyzer_text()
 				if(text_string)
-					msg += "[text_string]\n"
+					to_chat(user, examine_block(text_string))
 			if(myseed.reagents_add && P_analyzer.scan_mode == PLANT_SCANMODE_CHEMICALS)
-				msg += "<B>Plant Reagents</B>\n"
+				to_chat(user, examine_block("<B>Plant Reagents</B>"))
 				for(var/datum/plant_gene/reagent/Gene in myseed.genes)
-					msg += "[span_notice("- [Gene.get_name()] -")]\n"
+					to_chat(user, examine_block("<span class='notice'>- [Gene.get_name()] -</span>"))
 		else
-			msg +=  "<B>No plant found.</B>\n"
-		msg += "Weed level: [span_notice("[weedlevel] / [HYDRO_MAX_WEED]")]\n"
-		msg += "Pest level: [span_notice("[pestlevel] / [HYDRO_MAX_PEST]")]\n"
-		msg += "Toxicity level: [span_notice("[toxic] / [HYDRO_MAX_TOXIC]")]\n"
-		msg += "Water level: [span_notice("[waterlevel] / [maxwater]")]\n"
-		msg += "Nutrition level: [span_notice("[reagents.total_volume] / [maxnutri]")]\n"
-		to_chat(user, examine_block(msg))
+			to_chat(user, examine_block( "<B>No plant found.</B>"))
+		to_chat(user, examine_block("\nWeed level: <span class='notice'>[weedlevel] / 10</span>"))
+		to_chat(user, examine_block("\nPest level: <span class='notice'>[pestlevel] / 10</span>"))
+		to_chat(user, examine_block("\nToxicity level: <span class='notice'>[toxic] / 100</span>"))
+		to_chat(user, examine_block("\nWater level: <span class='notice'>[waterlevel] / [maxwater]</span>"))
+		to_chat(user, examine_block("\nNutrition level: <span class='notice'>[reagents.total_volume] / [maxnutri]</span>"))
+		to_chat(user, examine_block("<br/>"))
 		return
 
 	else if(istype(O, /obj/item/cultivator))
@@ -677,10 +671,7 @@
 	if(!anchored)
 		return
 	self_sustaining = !self_sustaining
-	if(self_sustaining)
-		set_active_power()
-	else
-		set_idle_power()
+	idle_power_usage = self_sustaining ? 1250 : 0
 	to_chat(user, "<span class='notice'>You [self_sustaining ? "activate" : "deactivated"] [src]'s autogrow function[self_sustaining ? ", maintaining the tray's health while using high amounts of power" : ""].")
 	update_appearance()
 
@@ -711,7 +702,7 @@
 		desc = initial(desc)
 		TRAY_NAME_UPDATE
 		if(self_sustaining) //No reason to pay for an empty tray.
-			set_idle_power()
+			idle_power_usage = 0
 			self_sustaining = FALSE
 	update_appearance()
 
@@ -727,13 +718,13 @@
 		plant_health = clamp(plant_health + adjustamt, 0, myseed.endurance)
 
 /obj/machinery/hydroponics/proc/adjustToxic(adjustamt)
-	toxic = clamp(toxic + adjustamt, 0, HYDRO_MAX_TOXIC)
+	toxic = clamp(toxic + adjustamt, 0, 100)
 
 /obj/machinery/hydroponics/proc/adjustPests(adjustamt)
-	pestlevel = clamp(pestlevel + adjustamt, 0, HYDRO_MAX_PEST)
+	pestlevel = clamp(pestlevel + adjustamt, 0, 10)
 
 /obj/machinery/hydroponics/proc/adjustWeeds(adjustamt)
-	weedlevel = clamp(weedlevel + adjustamt, 0, HYDRO_MAX_WEED)
+	weedlevel = clamp(weedlevel + adjustamt, 0, 10)
 
 /obj/machinery/hydroponics/proc/spawnplant() // why would you put strange reagent in a hydro tray you monster I bet you also feed them blood
 	var/list/livingplants = list(/mob/living/simple_animal/hostile/tree, /mob/living/simple_animal/hostile/killertomato)

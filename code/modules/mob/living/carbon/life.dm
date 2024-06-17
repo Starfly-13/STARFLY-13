@@ -25,12 +25,9 @@
 		if(.) //not dead
 			handle_blood()
 
-		if(isLivingSSD()) // If you're disconnected, you're going to sleep
-			if(trunc((world.time - lastclienttime) / (3 MINUTES)) > 0) // After a three minute grace period, your character will fall asleep
-				if(AmountSleeping() < 20)
-					AdjustSleeping(20) // Adjust every 10 seconds
-				if(ssd_indicator)
-					cut_overlay(GLOB.ssd_indicator_overlay) // Prevents chronically SSD players from breaking immersion
+		if(isLivingSSD())//if you're disconnected, you're going to sleep
+			if(AmountSleeping() < 20)
+				AdjustSleeping(20)//adjust every 10 seconds
 
 		if(stat != DEAD)
 			var/bprv = handle_bodyparts()

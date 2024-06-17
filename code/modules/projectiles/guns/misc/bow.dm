@@ -1,6 +1,6 @@
 /obj/item/gun/ballistic/bow
 	name = "longbow"
-	desc = "A finely crafted, low-tech projectile-launching device. These have existed even longer than written history, and nobody knows the name of the original inventor."
+	desc = "While pretty finely crafted, surely you can find something better to use in the current year."
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "bow"
 	item_state = "pipebow"

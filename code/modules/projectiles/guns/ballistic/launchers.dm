@@ -38,7 +38,6 @@
 	fire_delay = 0
 	actions_types = list()
 	casing_ejector = FALSE
-	manufacturer = MANUFACTURER_HEPHAESTUS
 
 /obj/item/gun/ballistic/rocketlauncher
 	name = "\improper PML-9"

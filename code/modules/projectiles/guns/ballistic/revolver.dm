@@ -57,7 +57,7 @@
 		. += "[base_icon_state || initial(icon_state)][safety ? "_hammer_up" : "_hammer_down"]"
 
 
-/obj/item/gun/ballistic/revolver/process_chamber(empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE, atom/shooter)
+/obj/item/gun/ballistic/revolver/process_chamber(empty_chamber = TRUE, from_firing = TRUE, chamber_next_round = TRUE)
 	SEND_SIGNAL(src, COMSIG_UPDATE_AMMO_HUD)
 	return ..()
 
@@ -84,9 +84,7 @@
 			if(!casing_to_eject)
 				continue
 			casing_to_eject.forceMove(drop_location())
-			var/angle_of_movement =(rand(-3000, 3000) / 100) + dir2angle(turn(user.dir, 180))
-			casing_to_eject.AddComponent(/datum/component/movable_physics, _horizontal_velocity = rand(450, 550) / 100, _vertical_velocity = rand(400, 450) / 100, _horizontal_friction = rand(20, 24) / 100, _z_gravity = PHYSICS_GRAV_STANDARD, _z_floor = 0, _angle_of_movement = angle_of_movement)
-
+			casing_to_eject.bounce_away(FALSE, NONE)
 			num_unloaded++
 			SSblackbox.record_feedback("tally", "station_mess_created", 1, casing_to_eject.name)
 		chamber_round(FALSE)
@@ -100,7 +98,7 @@
 			var/doafter_time = 0.4 SECONDS
 			if(!do_mob(user,user,doafter_time))
 				break
-			if(!eject_casing(user))
+			if(!eject_casing())
 				doafter_time = 0 SECONDS
 			else
 				num_unloaded++
@@ -123,9 +121,7 @@
 		return FALSE
 	playsound(src, eject_sound, eject_sound_volume, eject_sound_vary)
 	casing_to_eject.forceMove(drop_location())
-	var/angle_of_movement =(rand(-3000, 3000) / 100) + dir2angle(turn(user.dir, 180))
-	casing_to_eject.AddComponent(/datum/component/movable_physics, _horizontal_velocity = rand(350, 450) / 100, _vertical_velocity = rand(400, 450) / 100, _horizontal_friction = rand(20, 24) / 100, _z_gravity = PHYSICS_GRAV_STANDARD, _z_floor = 0, _angle_of_movement = angle_of_movement)
-
+	casing_to_eject.bounce_away(FALSE, NONE)
 	SSblackbox.record_feedback("tally", "station_mess_created", 1, casing_to_eject.name)
 	if(!gate_loaded)
 		magazine.stored_ammo[casing_index] = null
@@ -143,12 +139,6 @@
 /obj/item/gun/ballistic/revolver/proc/insert_casing(mob/living/user, obj/item/ammo_casing/casing_to_insert, allow_ejection)
 	if(!casing_to_insert)
 		return FALSE
-
-// Check if the bullet's caliber matches the magazine's caliber.If not, send a warning message to the user and return FALSE.
-	if(casing_to_insert.caliber != magazine.caliber)
-		to_chat(user, "<span class='warning'>\The [casing_to_insert] is not suitable for [src].</span>")
-		return FALSE
-
 	var/list/rounds = magazine.ammo_list()
 	var/obj/item/ammo_casing/slot = rounds[gate_offset+1] //byond arrays start at 1, so we add 1 to get the correct index
 	var/doafter_time = 0.4 SECONDS
@@ -280,6 +270,7 @@
 		playsound(src, rack_sound, rack_sound_volume, rack_sound_vary)
 
 	chamber_round(TRUE)
+	//playsound(src, rack_sound, rack_sound_volume, rack_sound_vary)
 	SEND_SIGNAL(src, COMSIG_UPDATE_AMMO_HUD)
 	update_appearance()
 
@@ -467,7 +458,7 @@
 			return
 /obj/item/gun/ballistic/revolver/detective
 	name = "\improper HP Detective Special"
-	desc = "A small law enforcement firearm. Originally commissioned by Nanotrasen for their Private Investigation division, it has become extremely popular among independent civilians and local police forces as a cheap, compact sidearm. Uses .38 Special rounds."
+	desc = "A small law enforcement firearm. Originally commissioned by Nanotrasen for their Private Investigation division, it has become extremely popular among independent civilians as a cheap, compact sidearm. Uses .38 Special rounds."
 	fire_sound = 'sound/weapons/gun/revolver/shot_light.ogg'
 	icon_state = "detective"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
@@ -689,18 +680,17 @@
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 	spread_unwielded = 50
 	fire_delay = 0
-	gate_offset = 4
 	semi_auto = TRUE
 	safety_wording = "safety"
 
 /obj/item/gun/ballistic/revolver/shadow
-	name = "\improper Shadow 45"
+	name = "\improper HP Shadow"
 	desc = "A mid-size revolver. Despite the antiquated design, it is cheap, reliable, and stylish, making it a favorite among fast-drawing spacers and the officers of various militaries, as well as small-time police units. Chambered in .45."
 	fire_sound = 'sound/weapons/gun/revolver/cattleman.ogg'
 	icon = 'icons/obj/guns/48x32guns.dmi'
 	icon_state = "shadow"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
-	manufacturer = MANUFACTURER_HEPHAESTUS
+	manufacturer = MANUFACTURER_HUNTERSPRIDE
 	obj_flags = UNIQUE_RENAME
 	gate_loaded = TRUE
 	unique_reskin = list("Shadow" = "shadow",
@@ -724,6 +714,4 @@
 	// if you go through the pain of not only using this shitty gun, but also with the fucking gunslinger quirk, you deserve this bonus. not a BIG bonus, but enough as an incentive to make people actually take the quirk.
 	if(chambered.BB && (HAS_TRAIT(user, TRAIT_GUNSLINGER)))
 		chambered.BB.damage += 5
-		chambered.BB.armour_penetration += 5
-
-
+		chambered.armour_penetration += 5

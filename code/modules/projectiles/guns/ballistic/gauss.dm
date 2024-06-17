@@ -47,11 +47,10 @@
 	spread_unwielded = 12
 
 /obj/item/gun/ballistic/automatic/powered/gauss/modelh/suns
-	desc = "A fully functional replica built by Roseus Galactic. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor. It is painted in the colors of SUNS."
+	desc = "A standard-issue pistol exported from the Solarian Confederation. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor. It is painted in the colors of SUNS."
 	mag_type = /obj/item/ammo_box/magazine/modelh
 	icon_state = "model-h_suns"
 	item_state = "model-h_suns"
-	manufacturer = MANUFACTURER_ROSEUS
 
 /obj/item/gun/ballistic/automatic/powered/gauss/claris
 	name = "Claris"
@@ -72,13 +71,13 @@
 	manufacturer = MANUFACTURER_SOLARARMORIES
 
 /obj/item/gun/ballistic/automatic/powered/gauss/claris/suns
-	desc = "An antiquated Solarian rifle. Chambered in ferromagnetic pellets, just as the founding Solarians intended. This one is painted in the colors of Roseus Galactic."
+	desc = "An antiquated Solarian rifle. Chambered in ferromagnetic pellets, just as the founding Solarians intended. Evidently, SUNS' founders echo the sentiment, as it appears to be painted in their colors."
 	icon_state = "claris_suns"
 	item_state = "claris_suns"
 
 /obj/item/gun/ballistic/automatic/powered/gauss/gar
-	name = "GAR Carbine"
-	desc = "A replica carbine with historical inaccuracies. Originally built by Roseus Galactic during the ICW, these have been seen in more than a few films. Launches ferromagnetic lances at alarming speeds."
+	name = "Solar 'GAR' Carbine"
+	desc = "A Solarian carbine, unusually modern for its producers. Launches ferromagnetic lances at alarming speeds."
 	mag_type = /obj/item/ammo_box/magazine/gar
 	icon = 'icons/obj/guns/48x32guns.dmi'
 	icon_state = "gar"
@@ -90,7 +89,7 @@
 	fire_delay = 1
 	actions_types = list()
 	empty_indicator = FALSE
-	manufacturer = MANUFACTURER_ROSEUS
+	manufacturer = MANUFACTURER_SOLARARMORIES
 
 	wield_delay = 0.7 SECONDS
 
@@ -99,6 +98,6 @@
 	AddComponent(/datum/component/automatic_fire, 0.2 SECONDS)
 
 /obj/item/gun/ballistic/automatic/powered/gauss/gar/suns
-	desc = "A Solarian carbine often used by Roseus Galactic security, who have painted the weapon in their colors. Launches ferromagnetic lances at alarming speeds."
+	desc = "A Solarian carbine, unusually modern for its producers. It's just modern enough for SUNS, however, who have painted the weapon in their colors. Launches ferromagnetic lances at alarming speeds."
 	icon_state = "gar_suns"
 	item_state = "gar_suns"

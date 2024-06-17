@@ -1,6 +1,6 @@
 /obj/item/gun/energy/kalix //blue //todo: fix up belt_mirror.dmi, it's incomprehensible
 	name = "Etherbor BG-12"
-	desc = "Brought to you by Etherbor Industries, proudly based within Epsilon Eridani, is the BG-12 energy beam gun! The BG-12 is Etherbor's current newest civilian energy weapon model."
+	desc = "Brought to you by Etherbor Industries, proudly based within the PGF, is the BG-12 energy beam gun! The BG-12 is Etherbor's current newest civilian energy weapon model."
 	icon_state = "kalixgun"
 	item_state = "kalixgun"
 	icon = 'icons/obj/guns/faction/gezena/energy.dmi'
@@ -42,7 +42,7 @@
 
 /obj/item/gun/energy/kalix/pgf
 	name = "Etherbor BG-16"
-	desc = "An advanced variant of the BG-12, the BG-16 is the military-grade beam gun designed and manufactured by Etherbor Industries as the standard-issue close-range weapon of the Epsilon Eridani Defense Force."
+	desc = "An advanced variant of the BG-12, the BG-16 is the military-grade beam gun designed and manufactured by Etherbor Industries as the standard-issue close-range weapon of the PGF."
 	icon_state = "pgfgun"
 	item_state = "pgfgun"
 
@@ -95,7 +95,7 @@
 
 /obj/item/gun/energy/kalix/pgf/heavy
 	name = "Etherbor HBG-7"
-	desc = "The HBG-7 is the standard-issue rifle weapon of the Epsilon Eridani Defense Force. If the stopping power and fire rate isn't enough, it comes with a DMR mode that has greater armor piercing for dealing with armored targets."
+	desc = "The HBG-7 is the standard-issue rifle weapon of the PGF. If the stopping power and fire rate isn't enough, it comes with a DMR mode that has greater armor piercing for dealing with armored targets."
 	icon_state = "pgfheavy"
 	item_state = "pgfheavy"
 	icon = 'icons/obj/guns/faction/gezena/48x32.dmi'

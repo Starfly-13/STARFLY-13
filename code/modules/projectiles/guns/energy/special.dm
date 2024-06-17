@@ -82,8 +82,8 @@
 	ammo_x_offset = 2
 
 /obj/item/gun/energy/kinetic_accelerator/crossbow
-	name = "Crossbow model RIC"
-	desc = "A concealable crossbow that was once the weapon of choice for many Roseus Galactic infiltrators during the ICW due to its lack of noise, minimal weight, and self-charging capabilities."
+	name = "mini energy crossbow"
+	desc = "A weapon favored by syndicate stealth specialists."
 	icon_state = "crossbow"
 	item_state = "crossbow"
 	w_class = WEIGHT_CLASS_SMALL
@@ -97,7 +97,7 @@
 	unique_frequency = TRUE
 	can_flashlight = FALSE
 	max_mod_capacity = 0
-	manufacturer = MANUFACTURER_ROSEUS
+	manufacturer = MANUFACTURER_SCARBOROUGH
 
 /obj/item/gun/energy/kinetic_accelerator/crossbow/halloween
 	name = "candy corn crossbow"
@@ -107,14 +107,14 @@
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/halloween)
 
 /obj/item/gun/energy/kinetic_accelerator/crossbow/large
-	name = "Crossbow model RIL"
-	desc = "An energy crossbow that was utilized by Roseus Galactic infiltrators early in the ICW, this one never became as popular as its successor due to its larger size."
+	name = "energy crossbow"
+	desc = "A reverse engineered weapon using syndicate technology."
 	icon_state = "crossbowlarge"
 	w_class = WEIGHT_CLASS_NORMAL
 	custom_materials = list(/datum/material/iron=4000)
 	suppressed = null
 	ammo_type = list(/obj/item/ammo_casing/energy/bolt/large)
-	manufacturer = MANUFACTURER_ROSEUS
+	manufacturer = MANUFACTURER_NONE
 
 
 /obj/item/gun/energy/plasmacutter
@@ -128,7 +128,6 @@
 	force = 12
 	sharpness = IS_SHARP
 	can_charge = FALSE
-	manufacturer = MANUFACTURER_HEPHAESTUS
 
 	heat = 3800
 	usesound = list('sound/items/welder.ogg', 'sound/items/welder2.ogg')
