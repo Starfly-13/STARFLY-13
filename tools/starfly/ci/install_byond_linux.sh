@@ -27,9 +27,9 @@ else
     rm -rf "${HOME}/BYOND"
     mkdir -p "${HOME}/BYOND"
     # copy BYOND from our repo
-    cd "${HOME}/BYOND"
-    cp -v "${HOME}/${BYOND_ZIP}" "byond.zip"
+    cp -v "${BYOND_ZIP}" "${HOME}/BYOND/byond.zip"
     # unzip and install BYOND
+    cd "${HOME}/BYOND"
     unzip byond.zip
     rm byond.zip
     cd byond
