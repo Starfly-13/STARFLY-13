@@ -44,12 +44,12 @@ EMPTY_GUN_HELPER(automatic/pistol)
 	install_suppressor(S)
 
 /obj/item/gun/ballistic/automatic/pistol/suns
-	desc = "A small, easily concealable 10mm handgun that bears Scarborough Arms stamps. It is painted in the colors of SUNS."
+	desc = "A small, easily concealable 10mm handgun that bears Scarborough Arms stamps. It is painted in the colors of Roseus Galactic."
 	icon_state = "pistol_suns"
 
 /obj/item/gun/ballistic/automatic/pistol/candor
 	name = "\improper Candor"
-	desc = "A classic semi-automatic handgun, widely popular throughout the Frontier. An engraving on the slide marks it as a product of Hunter's Pride. Chambered in .45."
+	desc = "A classic semi-automatic handgun, widely popular throughout the Frontier. Chambered in .45."
 	icon_state = "candor"
 	item_state = "hp_generic"
 	w_class = WEIGHT_CLASS_NORMAL
@@ -59,7 +59,7 @@ EMPTY_GUN_HELPER(automatic/pistol)
 	rack_sound = 'sound/weapons/gun/pistol/candor_cocked.ogg'
 	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
 	bolt_drop_sound = 'sound/weapons/gun/pistol/slide_drop.ogg'
-	manufacturer = MANUFACTURER_HUNTERSPRIDE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 	load_sound = 'sound/weapons/gun/pistol/candor_reload.ogg'
 	load_empty_sound = 'sound/weapons/gun/pistol/candor_reload.ogg'
 	eject_sound = 'sound/weapons/gun/pistol/candor_unload.ogg'
@@ -67,8 +67,8 @@ EMPTY_GUN_HELPER(automatic/pistol)
 
 EMPTY_GUN_HELPER(automatic/pistol/candor)
 
-/obj/item/gun/ballistic/automatic/pistol/candor/factory //also give this to the srm, their candors should probably look factory fresh from how well taken care of they are
-	desc = "A classic semi-automatic handgun, widely popular throughout the Frontier. An engraving on the slide marks it as a product of Hunter's Pride. This example has been kept in especially good shape, and may as well be fresh out of the workshop. Chambered in .45."
+/obj/item/gun/ballistic/automatic/pistol/candor/factory //This will be sold on the marketplace.
+	desc = "A classic semi-automatic handgun, widely popular throughout the Frontier. This example has been kept in especially good shape, and may as well be fresh out of the workshop. Chambered in .45."
 	item_state = "hp_generic_fresh"
 
 EMPTY_GUN_HELPER(automatic/pistol/candor/factory)

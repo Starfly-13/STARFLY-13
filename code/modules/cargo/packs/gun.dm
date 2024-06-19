@@ -13,6 +13,29 @@
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/disposable)
 	crate_name = "disposable gun crate"
 
+/datum/supply_pack/gun/disposablebulk
+	name = "Bulk Disposable Guns Crate"
+	desc = "In some sectors, these disposable pistols are the only firearms that can be legally sold for less than 400cr. That price is still far too high; this pack contains five."
+	cost = 700
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/disposable,
+					/obj/item/gun/ballistic/automatic/pistol/disposable,
+					/obj/item/gun/ballistic/automatic/pistol/disposable,
+					/obj/item/gun/ballistic/automatic/pistol/disposable,
+					/obj/item/gun/ballistic/automatic/pistol/disposable)
+
+/datum/supply_pack/gun/derringer
+	name = ".38 Derringer Crate"
+	desc = "A cheap, concealable pistol manufactured by the reputable Hunter's Pride. At least it's better than a disposable pistol. Chambered in .38 rounds."
+	cost = 350
+	contains = list(/obj/item/gun/ballistic/derringer)
+	crate_name = "derringer crate"
+
+/datum/supply_pack/gun/revolver
+	name = "Scarborough Revolver Crate"
+	desc = "Contains a concealable Scarborough revolver, chambered in .357."
+	cost = 1250
+	contains = list(/obj/item/gun/ballistic/revolver)
+
 /datum/supply_pack/gun/derringer
 	name = ".38 Derringer Crate"
 	desc = "A cheap, concealable pistol manufactured by the reputable Hunter's Pride. At least it's better than a disposable pistol. Chambered in .38 rounds."
@@ -34,19 +57,25 @@
 
 /datum/supply_pack/gun/candors
 	name = "Candor Pistol Crate"
-	desc = "Contains a Candor pistol, the trusty sidearm of any spacer, produced by Hunter's Pride and chambered in .45 ACP."
-	cost = 1000
+	desc = "Contains a Candor pistol, the trusty sidearm of any spacer. Produced by Hephaestus Industries and chambered in .45 ACP."
+	cost = 2000
 	contains = list(/obj/item/gun/ballistic/automatic/pistol/candor)
+
+/datum/supply_pack/gun/candorsnew
+	name = "Candor Pistol Crate"
+	desc = "Contains a Candor pistol, the trusty sidearm of any spacer. This one appears factory fresh! Produced by Hephaestus Industries and chambered in .45 ACP."
+	cost = 2000
+	contains = list(/obj/item/gun/ballistic/automatic/pistol/candor/factory)
 
 /datum/supply_pack/gun/pepperbox
 	name = "HP Firebrand Pepperbox Revolver Crate"
-	desc = "Contains a concealable pepperbox revolver manufactured by the Saint Roumain Militia, chambered in .357."
+	desc = "Contains a concealable pepperbox revolver manufactured by Hunter's Pride and chambered in .357."
 	cost = 1250
 	contains = list(/obj/item/gun/ballistic/revolver/firebrand)
 
 /datum/supply_pack/gun/detrevolver
-	name = "Hunter's Pride Detective Revolver Crate"
-	desc = "Contains a concealable revolver favored by police departments around the sector, chambered in .38."
+	name = "Detective Revolver Crate"
+	desc = "Contains a concealable revolver favored by Solarian systems, chambered in .38."
 	cost = 600
 	contains = list(/obj/item/gun/ballistic/revolver/detective)
 
@@ -56,6 +85,12 @@
 	cost = 1000
 	contains = list(/obj/item/gun/ballistic/revolver/shadow)
 
+/datum/supply_pack/gun/cobra20
+	name = "Cobra-20 SMG Crate"
+	desc = "Contains a .45 submachine gun, manufactured by Scarborough Arms and chambered in .45"
+	cost = 3000
+	contains = list(/obj/item/gun/ballistic/automatic/smg/c20r/cobra)
+	crate_name = "SMG crate"
 
 /*
 		Energy
@@ -93,14 +128,14 @@
 
 /datum/supply_pack/gun/laser/kalix/pistol
 	name = "Etherbor SG-8 Beam Pistol Crate"
-	desc = "Contains a single SG-8 Beam Pistol, a civilian-grade sidearm developed in the PGF, manufactured by Etherbor Industries."
+	desc = "Contains a single SG-8 Beam Pistol, a civilian-grade sidearm developed in Epsilon Eridani, manufactured by Etherbor Industries."
 	cost = 1000
 	contains = list(/obj/item/gun/energy/kalix/pistol)
 	crate_name = "beam pistol crate"
 
 /datum/supply_pack/gun/laser/kalix
 	name = "Etherbor BG-12 Beam Rifle Crate"
-	desc = "Contains a single BG-12 Beam Rifle, a civilian-grade semi-automatic developed in the PGF, manufactured by Etherbor Industries."
+	desc = "Contains a single BG-12 Beam Rifle, a civilian-grade semi-automatic developed in Epsilon Eridani, manufactured by Etherbor Industries."
 	cost = 3000
 	contains = list(/obj/item/gun/energy/kalix)
 	crate_name = "beam rifle crate"
@@ -164,7 +199,7 @@
 
 /datum/supply_pack/gun/cobra20
 	name = "Cobra-20 SMG Crate"
-	desc = "Contains a .45 submachine gun, manufactured by Scaraborough Arms and chambered in .45"
+	desc = "Contains a .45 submachine gun, manufactured by Scarborough Arms and chambered in .45"
 	cost = 3000
 	contains = list(/obj/item/gun/ballistic/automatic/smg/c20r/cobra)
 	crate_name = "SMG crate"

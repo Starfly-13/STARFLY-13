@@ -1,6 +1,6 @@
 /obj/item/gun/medbeam
 	name = "Medical Beamgun"
-	desc = "Don't cross the streams!"
+	desc = "One of the most successful products by Cybersun Industries, the Medical Beamgun allows for a field medic to actively mend their allies while on the move. On the side it reads: WARNING! SAFETY HAZARD! DO NOT CROSS THE BEAMS!"
 	icon = 'icons/obj/chronos.dmi'
 	icon_state = "chronogun"
 	item_state = "chronogun"

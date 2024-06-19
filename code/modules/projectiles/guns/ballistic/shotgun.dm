@@ -58,8 +58,8 @@
 // BRIMSTONE SHOTGUN //
 
 /obj/item/gun/ballistic/shotgun/brimstone
-	name = "HP Brimstone"
-	desc = "A simple and sturdy pump-action shotgun sporting a 5-round capacity, manufactured by Hunter's Pride. Found widely throughout the Frontier in the hands of hunters, pirates, police, and countless others. Chambered in 12g."
+	name = "Brimstone P5"
+	desc = "A simple and sturdy pump-action shotgun sporting a 5-round capacity, manufactured by Hephaestus Industries. Found widely throughout the Frontier in the hands of hunters, pirates, police, and countless others. Chambered in 12g."
 	sawn_desc = "A stockless and shortened pump-action shotgun. The worsened recoil and accuracy make it a poor sidearm anywhere beyond punching distance."
 	fire_sound = 'sound/weapons/gun/shotgun/brimstone.ogg'
 	icon = 'icons/obj/guns/48x32guns.dmi'
@@ -70,9 +70,10 @@
 	default_firemode = FIREMODE_FULLAUTO
 
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
-	manufacturer = MANUFACTURER_HUNTERSPRIDE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 	fire_delay = 0.05 SECONDS //slamfire
 	rack_delay = 0.2 SECONDS
+	fire_delay = 1
 
 	can_be_sawn_off  = TRUE
 
@@ -94,8 +95,8 @@
 // HELLFIRE SHOTGUN //
 
 /obj/item/gun/ballistic/shotgun/hellfire
-	name = "HP Hellfire"
-	desc = "A hefty pump-action riot shotgun with a seven-round tube, manufactured by Hunter's Pride. Especially popular among the Frontier's police forces. Chambered in 12g."
+	name = "Hellfire P7"
+	desc = "A hefty pump-action riot shotgun with a seven-round tube, manufactured by Hephaestus Industries. Especially popular among the Frontier's police forces. Chambered in 12g."
 	icon = 'icons/obj/guns/48x32guns.dmi'
 	icon_state = "hellfire"
 	item_state = "hellfire"
@@ -104,6 +105,7 @@
 	can_be_sawn_off  = TRUE
 	rack_sound = 'sound/weapons/gun/shotgun/rack_alt.ogg'
 	fire_delay = 0.1 SECONDS
+	manufacturer = MANUFACTURER_HEPHAESTUS
 
 /obj/item/gun/ballistic/shotgun/hellfire/sawoff(mob/user)
 	. = ..()
@@ -131,7 +133,7 @@
 	wield_delay = 0.65 SECONDS
 
 /obj/item/gun/ballistic/shotgun/automatic
-	manufacturer = MANUFACTURER_NANOTRASEN
+	manufacturer = MANUFACTURER_HEPHAESTUS
 
 /obj/item/gun/ballistic/shotgun/automatic/shoot_live_shot(mob/living/user)
 	..()
@@ -256,7 +258,7 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 
 /obj/item/gun/ballistic/shotgun/bulldog/suns
 	name = "\improper Bulldog-C Shotgun"
-	desc = "A variation of the Bulldog manufactured by Scarborough Arms for SUNS. Its shorter barrel is intended to provide additional maneuverability in personal defense scenarios."
+	desc = "A variation of the Bulldog manufactured by Scarborough Arms for private security. Its shorter barrel is intended to provide additional maneuverability in personal defense scenarios, making it a favorite among Roseus guards."
 	icon_state = "bulldog_suns"
 	item_state = "bulldog_suns"
 
@@ -427,6 +429,7 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	sawn_desc = "I'm just here for the gasoline."
 	unique_reskin = null
 	var/slung = FALSE
+	manufacturer = MANUFACTURER_NONE
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/improvised/attackby(obj/item/A, mob/user, params)
 	..()
@@ -499,7 +502,7 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	icon_state = "cshotgunccc"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact/compact/compact
 	w_class = WEIGHT_CLASS_TINY
-	sawn_desc = "<i>Sigh.</i> This is a trigger attached to a bullet."
+	sawn_desc = "<i>Sigh.</i> This is a trigger attached to a cartridge."
 	can_be_sawn_off  = TRUE
 
 /obj/item/gun/ballistic/shotgun/automatic/combat/compact/compact/compact/process_fire(atom/target, mob/living/user, message = TRUE, params = null, zone_override = "", bonus_spread = 0)
