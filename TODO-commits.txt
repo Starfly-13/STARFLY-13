@@ -4,6 +4,7 @@ X = compiles without errors
 ^ = inherits compile errors; no new errors introduced
 @ = resolved without a cherry pick
 * = resolved
+! = skipped; not necessary to merge
 
 [@] c88b2633a20c83dfba5ed401df7f975242d99664    Update from Shiptest on 2024-05-07
 [@] 8edf84f54790db070c9ec563ed1227f7cda13d75    Updating computers
@@ -31,10 +32,11 @@ X = compiles without errors
 [*] 55268e0620e0af5d2e5f9cb50246c72e173c9325    SSD-Indicators-Will-Be-Real-In-2020-
 [@] 21fe09b54c2d2fa776b0a47b55740d2411e63403    respriting egg boxes
 [@] f165b98f242246de7a2ed737c074f155e57ccbe0    Knife-visibility-quick-fix
-[^] 44764d96d10f46c5e37a89160a64621779a4a841    Ports-'Command-bar-typing-indicators-(client-side-html-version)
-[-] f50415cec86c0ec80bac750f2201b5291f1f49ee    restores ballistic.dm   [[[fixes 1 error]]]
+[*] 44764d96d10f46c5e37a89160a64621779a4a841    Ports-'Command-bar-typing-indicators-(client-side-html-version)
+[!] f50415cec86c0ec80bac750f2201b5291f1f49ee    restores ballistic.dm   [[[fixes 1 error]]]
 
-[-] fe043b3614603fe5d28c69cb2dfe12c08ea66a7c    --> Restoring missing files...?
+[*] fe043b3614603fe5d28c69cb2dfe12c08ea66a7c    --> Restoring missing files...?
 
-[-] cbdaaf98c0c1fb602cdcd9343fd127c286686808    I'm... rapidly losing confidence in this.
-
+[!] c3f892d6d78ac8db7802aed8a6fa84b87fc7dea1    direct lift
+[-] 38c812c433b3e2936e343199b26c4d3fcce51561    More files included, PGF to Epsilon Eridani conversion
+[!] cbdaaf98c0c1fb602cdcd9343fd127c286686808    I'm... rapidly losing confidence in this.
