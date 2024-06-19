@@ -15,19 +15,19 @@ X = compiles without errors
 [*] 5cdc04bcba1d594878be878d80ab713cb67278c8    Constructable Suit Storage Units part 2
 [@] 69820b0b662fad1657dfa6fdb3cda9427cfc4a19    Constructable Suit Storage Units part 3
 [*] 2dab8af3a192f6705c4d42e3fcb2a558a47803d6    Constructable Suit Storage Units part 4 (final)
-[^] de71c609003df6a255c22d50fe47100f827f76fc    Gun Lore Update
-[^] 4b727c9f03905a2d113e169474f23f11433df546    Armor value changes
-[^] 17efcbf73d4e15789f90bddfacea6286f950ab4d    Defib cargo/station
-[^] 61d82bda46ee76216524c12f73f71832a789b6ba    secret documents randomization
-[^] 21162817d06e60b8bcce6a4c970a9577643236dc    soul removal 1
-[^] 5dbf574b2fe63c492f5a27d2f4b2d0c47201ad3b    Makes Sinta'Unathi playable again.
-[^] 11b7bc7ea21c875d3a1b419ae5d3acd83a40ef50    Ship spawn adjustments
-[-] fa0eb54c7a03fcddb94de87450d3df2fe7264a76    Kills-legion-disease-cause-its-bad-and-weird
-[^] 21709d390eef4fa1cbab5af1d8d0919b978f8173    Mindbreaker Tweak
-[^] a0ae6ee50f7dcc336843897d508128518a6b1245    Ports-a-super-small-TG-signal-optimization
-[^] 4bb50ced53aff3902a0c87bd47ae63887d5efa2d    makes-plant-analyzer-usable
-[^] d830853fa2cf567ad15a167242698a16b86546ed    no-more-ammo-boxes-in-sec-belts
-[^] ee1c8e30a5b4afa865a37b82173a509b12d829b7    Fix-shadow-AP-bonus
+[*] de71c609003df6a255c22d50fe47100f827f76fc    Gun Lore Update
+[@] 4b727c9f03905a2d113e169474f23f11433df546    Armor value changes
+[@] 17efcbf73d4e15789f90bddfacea6286f950ab4d    Defib cargo/station
+[@] 61d82bda46ee76216524c12f73f71832a789b6ba    secret documents randomization
+[@] 21162817d06e60b8bcce6a4c970a9577643236dc    soul removal 1
+[*] 5dbf574b2fe63c492f5a27d2f4b2d0c47201ad3b    Makes Sinta'Unathi playable again.
+[*] 11b7bc7ea21c875d3a1b419ae5d3acd83a40ef50    Ship spawn adjustments
+[*] fa0eb54c7a03fcddb94de87450d3df2fe7264a76    Kills-legion-disease-cause-its-bad-and-weird
+[@] 21709d390eef4fa1cbab5af1d8d0919b978f8173    Mindbreaker Tweak
+[@] a0ae6ee50f7dcc336843897d508128518a6b1245    Ports-a-super-small-TG-signal-optimization
+[@] 4bb50ced53aff3902a0c87bd47ae63887d5efa2d    makes-plant-analyzer-usable
+[@] d830853fa2cf567ad15a167242698a16b86546ed    no-more-ammo-boxes-in-sec-belts
+[@] ee1c8e30a5b4afa865a37b82173a509b12d829b7    Fix-shadow-AP-bonus
 [^] 55268e0620e0af5d2e5f9cb50246c72e173c9325    SSD-Indicators-Will-Be-Real-In-2020-
 [^] 21fe09b54c2d2fa776b0a47b55740d2411e63403    respriting egg boxes
 [^] f165b98f242246de7a2ed737c074f155e57ccbe0    Knife-visibility-quick-fix
