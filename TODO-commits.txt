@@ -38,5 +38,5 @@ X = compiles without errors
 [*] fe043b3614603fe5d28c69cb2dfe12c08ea66a7c    --> Restoring missing files...?
 
 [!] c3f892d6d78ac8db7802aed8a6fa84b87fc7dea1    direct lift
-[-] 38c812c433b3e2936e343199b26c4d3fcce51561    More files included, PGF to Epsilon Eridani conversion
+[*] 38c812c433b3e2936e343199b26c4d3fcce51561    More files included, PGF to Epsilon Eridani conversion
 [!] cbdaaf98c0c1fb602cdcd9343fd127c286686808    I'm... rapidly losing confidence in this.

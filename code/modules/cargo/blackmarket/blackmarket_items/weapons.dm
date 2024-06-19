@@ -66,7 +66,7 @@
 
 /datum/blackmarket_item/weapon/golden
 	name = "Golden Derringer"
-	desc = "A rare custom-made concealable weapon designed to fire illegal .357 rounds."
+	desc = "Rumored to have been once used by a famous assassin who never missed a shot. Unlike the legends, however, this uses regular rounds as opposed to custom, golden ones."
 	item = /obj/item/gun/ballistic/derringer/gold
 	price_min = 1000
 	price_max = 3000
