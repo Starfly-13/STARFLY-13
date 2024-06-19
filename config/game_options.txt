@@ -423,6 +423,7 @@ SILICON_MAX_LAW_AMOUNT 12
 ROUNDSTART_RACES human
 
 ## Races that are strictly worse than humans that could probably be turned on without balance concerns
+ROUNDSTART_RACES lizard
 ROUNDSTART_RACES unathi
 #ROUNDSTART_RACES fly
 ROUNDSTART_RACES moth
@@ -437,7 +438,7 @@ ROUNDSTART_RACES vox
 ROUNDSTART_RACES yeosa
 
 ## Races that are better than humans in some ways, but worse in others
-ROUNDSTART_RACES elzuose
+ROUNDSTART_RACES ethereal
 ROUNDSTART_RACES jelly
 #ROUNDSTART_RACES golem
 #ROUNDSTART_RACES adamantine
