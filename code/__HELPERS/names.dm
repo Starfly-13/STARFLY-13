@@ -234,8 +234,9 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 				. += ", "
 
 #define FACTION_SYNDICATE "Syndicate"
-	#define FACTION_NGR "New Gorlex Republic"
 	#define FACTION_CYBERSUN "CyberSun"
+	#define FACTION_NGR "New Gorlex Republic"
+	#define FACTION_ROSEUS "Roseus Galactic"
 	#define FACTION_SUNS "Student-Union of Naturalistic Sciences"
 #define FACTION_SOLGOV "SolGov"
 #define FACTION_SRM "Saint-Roumain Militia"
@@ -249,8 +250,9 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 #define FACTION_INDEPENDENT "Independent"
 
 #define PREFIX_SYNDICATE list("SEV", "SSV")
-	#define PREFIX_NGR list("NGRV")
 	#define PREFIX_CYBERSUN list("CSSV")
+	#define PREFIX_NGR list("NGRV")
+	#define PREFIX_ROSEUS list("RGSV")
 	#define PREFIX_SUNS list("SUNS")
 #define PREFIX_SOLGOV list("SCSV")
 #define PREFIX_SRM list("SRSV")
@@ -266,8 +268,9 @@ GLOBAL_DATUM(syndicate_code_response_regex, /regex)
 /// List of all ship factions to their prefixes.
 GLOBAL_LIST_INIT(ship_faction_to_prefixes, list(
 	FACTION_SYNDICATE = PREFIX_SYNDICATE,
-	FACTION_NGR = PREFIX_NGR,
 	FACTION_CYBERSUN = PREFIX_CYBERSUN,
+	FACTION_NGR = PREFIX_NGR,
+	FACTION_ROSEUS = PREFIX_ROSEUS,
 	FACTION_SUNS = PREFIX_SUNS,
 	FACTION_SOLGOV = PREFIX_SOLGOV,
 	FACTION_SRM = PREFIX_SRM,
