@@ -3,6 +3,7 @@
 	name = "\improper Sinta'Unathi"
 	id = SPECIES_UNATHI
 	default_color = "00FF00"
+	species_age_max = 175
 	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,SCLERA,EMOTE_OVERLAY,MUTCOLORS_SECONDARY)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	mutant_bodyparts = list("tail_lizard", "face_markings", "frills", "horns", "spines", "body_markings", "legs")
@@ -22,7 +23,6 @@
 	exotic_bloodtype = "L"
 	disliked_food = GRAIN | CLOTH | GROSS
 	liked_food = GORE | MEAT
-	inert_mutation = FIREBREATH
 	deathsound = 'sound/voice/lizard/deathsound.ogg'
 	wings_icons = list("Dragon")
 	species_language_holder = /datum/language_holder/lizard

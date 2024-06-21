@@ -36,6 +36,13 @@
 	cost = 1250
 	contains = list(/obj/item/gun/ballistic/revolver)
 
+/datum/supply_pack/gun/derringer
+	name = ".38 Derringer Crate"
+	desc = "A cheap, concealable pistol manufactured by the reputable Hunter's Pride. At least it's better than a disposable pistol. Chambered in .38 rounds."
+	cost = 350
+	contains = list(/obj/item/gun/ballistic/derringer)
+	crate_name = "derringer crate"
+
 /datum/supply_pack/gun/commanders
 	name = "Commander Pistol Crate"
 	desc = "Contains a modified Candor 'Commander' pistol, produced by Nanotrasen and chambered in 9mm."
@@ -46,8 +53,7 @@
 	name = "Stechkin Pistol Crate"
 	desc = "Contains a concealable stechkin pistol, produced by Scarborough Arms and chambered in 10mm."
 	cost = 1000
-	contains = list(/obj/item/gun/ballistic/automatic/pistol,
-					/obj/item/gun/ballistic/automatic/pistol)
+	contains = list(/obj/item/gun/ballistic/automatic/pistol)
 
 /datum/supply_pack/gun/candors
 	name = "Candor Pistol Crate"
@@ -147,17 +153,17 @@
 
 /datum/supply_pack/gun/hellfire_shotgun
 	name = "Hellfire Shotgun Crate"
-	desc = "For when you need to deal with 7 hooligans. Contains a pump shotgun, with a 8-round capacity."
+	desc = "For when you need to deal with 8 hooligans. Contains a pump shotgun, with a 8-round capacity."
 	cost = 2000
 	contains = list(/obj/item/gun/ballistic/shotgun/hellfire)
-	crate_name = "shotguns crate"
+	crate_name = "shotgun crate"
 
 /datum/supply_pack/gun/brimstone_shotgun
 	name = "Brimstone Shotgun Crate"
 	desc = "For when you need to deal with 5 hooligans, and QUICKLY. Contains a slamfire shotgun, with a 5-round capacity. Warranty voided if sawed off."
 	cost = 2000
 	contains = list(/obj/item/gun/ballistic/shotgun/brimstone)
-	crate_name = "shotguns crate"
+	crate_name = "shotgun crate"
 
 /*
 		Rifles
@@ -165,14 +171,14 @@
 
 /datum/supply_pack/gun/winchester
 	name = "Flaming Arrow Lever Action Rifle Crate"
-	desc = "Contains a antiquated lever action rifle intended for hunting wildlife. Chambered in .38 rounds."
+	desc = "Contains an antiquated lever action rifle intended for hunting wildlife. Chambered in .38 rounds."
 	cost = 750
 	contains = list(/obj/item/gun/ballistic/shotgun/flamingarrow)
 	crate_name = "rifle crate"
 
 /datum/supply_pack/gun/illestren
 	name = "Illestren Rifle Crate"
-	desc = "Contains a expertly made bolt action rifle intended for hunting wildlife. Chambered in 8x50mmR rounds."
+	desc = "Contains an expertly made bolt action rifle intended for hunting wildlife. Chambered in 8x50mmR rounds."
 	cost = 1250
 	contains = list(/obj/item/gun/ballistic/rifle/illestren)
 	crate_name = "rifle crate"
