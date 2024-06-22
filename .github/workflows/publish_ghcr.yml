@@ -13,7 +13,19 @@ jobs:
     if: ${{ !contains(github.event.head_commit.message, '[ci skip]') }}
     name: "Publish to GitHub Container Registry"
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+      id-token: write
+
     steps:
+    - name: Enable Docker Cache
+      uses: ScribeMD/docker-cache@0.5.0
+      with:
+        key: docker-${{ runner.os }}-${{ hashFiles('dependencies.sh') }}
+
     - name: Checkout Project
       uses: actions/checkout@v3
 
@@ -48,3 +60,5 @@ jobs:
         tags: ${{ steps.docker_meta.outputs.tags }}
         labels: ${{ steps.docker_meta.outputs.labels }}
         push: ${{ github.event_name != 'pull_request' }}
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
