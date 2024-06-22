@@ -31,6 +31,10 @@
 	display_name = "leather duster"
 	path = /obj/item/clothing/suit/jacket/leather/duster
 
+/datum/gear/suit/jacket/leather/duster/syndicate
+	display_name = "syndicate duster"
+	path = /obj/item/clothing/suit/jacket/leather/duster/syndicate
+
 /datum/gear/suit/jacket/military
 	display_name = "military jacket"
 	path = /obj/item/clothing/suit/jacket/miljacket
