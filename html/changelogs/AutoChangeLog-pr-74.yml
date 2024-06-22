@@ -1,0 +1,4 @@
+author: lectronyx
+changes:
+  - {rscdel: Removed SUNS poster from Twinkleshine}
+delete-after: true
