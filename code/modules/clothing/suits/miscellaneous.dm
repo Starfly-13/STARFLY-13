@@ -431,6 +431,12 @@
 	icon_state = "duster_command"
 	item_state = "duster_command"
 
+/obj/item/clothing/suit/jacket/leather/duster/syndicate
+	name = "syndicate duster"
+	desc = "A long, supple leather coat in the old Syndicate colors. Ideal for protecting its wearer from rain, sun, dust, and being mistaken for someone who's not a terrorist."
+	icon_state = "duster_syndicate"
+	item_state = "duster_syndicate"
+
 /obj/item/clothing/suit/jacket/puffer
 	name = "puffer jacket"
 	desc = "A thick jacket with a rubbery, water-resistant shell."
