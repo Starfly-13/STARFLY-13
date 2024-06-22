@@ -481,7 +481,13 @@
 	desc = "A classic stetson hat, made from real imitation leather! Wearing it gives you a strong urge to yeehaw."
 	icon_state = "cowboy"
 
+
 	dog_fashion = /datum/dog_fashion/head/cowboy
+
+/obj/item/clothing/head/outlaw
+	name = "outlaw hat"
+	desc = "A classic stetson hat, made from real imitation leather! Wearing it gives you a strong urge to rob a train."
+	icon_state = "outlaw"
 
 /obj/item/clothing/head/franks_hat
 	name = "Frank's hat"

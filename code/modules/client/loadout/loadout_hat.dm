@@ -104,6 +104,10 @@
 	display_name = "cowboy hat"
 	path = /obj/item/clothing/head/cowboy
 
+/datum/gear/hat/outlaw
+	display_name = "outlaw hat"
+	path = /obj/item/clothing/head/outlaw
+
 /datum/gear/hat/catears
 	display_name = "cat ears"
 	path = /obj/item/clothing/head/kitty
