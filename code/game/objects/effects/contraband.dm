@@ -239,7 +239,6 @@
 	random_basetype = /obj/structure/sign/poster/contraband
 	random_type = POSTER_ADD_FROM_LIST // what this does is add the SUNS poster, which would usually only be in the solgov poster pool to the contraband pool.
 	random_pool = list(
-		/obj/structure/sign/poster/solgov/suns,
 		/obj/structure/sign/poster/official/ion_carbine,
 		/obj/structure/sign/poster/official/mini_energy_gun,
 		)
@@ -247,7 +246,7 @@
 
 /obj/structure/sign/poster/contraband/free_tonto
 	name = "Free Tonto"
-	desc = "You're... not exactly sure what this is. In fact, nobody knows what it is, but its one of the few pieces of non-digital media that was found intact after the Night of Fire, making it a popular aesthetic, even if nobody knows what it is."
+	desc = "A poster for the hit movie Free Tonto, released by Roseus Galactic in 2548."
 	icon_state = "poster_2012"
 
 /obj/structure/sign/poster/contraband/atmosia_independence
@@ -386,6 +385,12 @@
 	desc = "A promotional poster for some rapper. Famous for complaining about getting 'canceled' over supporting the Syndicate, but in reality she was banned from almost every internet and organization for praising the nuclear attack on Ares IV, responsible for the death of 96% of its population."
 	icon_state = "poster_dday" // human sprite by quin
 
+/obj/structure/sign/poster/contraband/roseusfilm1
+	name = "D-Day Promo"
+	desc = "A movie poster for The Last One Out, a movie about how a cruise ship captain helped evacuate a research facility being attacked by its corporate overlords after being falsely accused of trying to revolt. One of Roseus Galactic's more popular films during the ICW."
+	icon_state = "poster-roseus-thelastoneout" //edited dday promo sprite!
+
+
 /obj/structure/sign/poster/contraband/stechkin
 	name = "Stechkin Pistol"
 	desc = "A poster advertising the Scarborough Arms Stechkin conealable pistol. It has a silencer attached, showing off the stealth capablities, while also looking badass as all hell."
@@ -417,8 +422,8 @@
 	icon_state = "poster_griffin"
 
 /obj/structure/sign/poster/contraband/pgf
-	name = "PGF Marine"
-	desc = "This poster depicts a PGF marine with a E-40. \"The Pan-Gezena Federation fights for not only YOUR freedom, but the freedom of the whole galaxy!\""
+	name = "EEAF Marine"
+	desc = "This poster depicts an EEAF marine with a E-40. \"Join the Epsilon Eridani Armed Forces today, and bring freedom to the whole galaxy!\""
 	icon_state = "poster_pgf"
 
 /obj/structure/sign/poster/contraband/free_drone
@@ -478,12 +483,12 @@
 
 /obj/structure/sign/poster/contraband/space_cops
 	name = "Space Cops."
-	desc = "A poster advertising the television show that showcases all the hip and cool ways how the colonial police on Nagaski City abuse their power. Suprisingly effective in keeping the Nagaski City colonial police popular."
+	desc = "A poster advertising the television show that showcases all the hip and cool ways how the law enforcement in Konyang abuse their power. Suprisingly effective in keeping the Konyang police popular."
 	icon_state = "poster_spacecops"
 
 /obj/structure/sign/poster/contraband/steppyflag
 	name = "Steppy Flag"
-	desc = "A poster making a simple statement: \"Fuck around, Find out.\" These posters are suspiciously popular in the Northwind Shipping offices."
+	desc = "A poster making a simple statement: \"Fuck around, Find out.\" These posters are suspiciously popular in Epsilon Eridani."
 	icon_state = "poster_steppy"
 
 /obj/structure/sign/poster/contraband/syndicate
@@ -677,12 +682,12 @@
 
 /obj/structure/sign/poster/official/cohiba_robusto_ad
 	name = "Cohiba Robusto Ad"
-	desc = "Cohiba Robusto, the classy cigar straight from Centcom."
+	desc = "Cohiba Robusto, the classy cigar straight from Earth."
 	icon_state = "poster_cohiba"
 
 /obj/structure/sign/poster/official/fruit_bowl
 	name = "Fruit Bowl"
-	desc = " Simple, yet awe-inspiring."
+	desc = "Simple, yet awe-inspiring."
 	icon_state = "poster_fruitbowl"
 
 /obj/structure/sign/poster/official/pda_ad
@@ -892,7 +897,7 @@
 
 /obj/structure/sign/poster/solgov/skiing
 	name = "Lo-Fly Skiing Advert"
-	desc = "An advertisement for some low-gravity skiing resort on Ares. \"Popular with SUNS groups!\""
+	desc = "An advertisement for some low-gravity skiing resort on Ares."
 	icon_state = "poster-solgov-loskiing"
 
 /obj/structure/sign/poster/solgov/recyle
@@ -931,13 +936,9 @@
 
 /obj/structure/sign/poster/solgov/nanomichi_ad
 	name = "Nanomichi Ad"
-	desc = " A poster advertising a early post-NOF solarian computer. Severely outdated, but the advert is now a pretty nifty decoration."
+	desc = " A poster advertising an old solarian computer. Severely outdated, but the advert is now a pretty nifty decoration."
 	icon_state = "poster_nanomichi"
 
-/obj/structure/sign/poster/solgov/suns
-	name = "Student Union of Natural Sciences"
-	desc = "SUNS, best known for it's diverse variety of top students from various solarian universities, dealing with internal fighting via dueling with swords, and being sued by Nanotrasen for trademark infrigement on their old name \"NSV.\""
-	icon_state = "poster-solgov_suns"
 
 //CLIP poster pool. This is quite limited, so don't use more than 3 random ones at once. Expect to see these on CLIP ships.
 
@@ -1004,7 +1005,7 @@
 	/obj/structure/sign/poster/contraband/stechkin,
 	/obj/structure/sign/poster/contraband/c20r,
 	/obj/structure/sign/poster/contraband/syndiemoth,
-	/obj/structure/sign/poster/solgov/suns,
+	/obj/structure/sign/poster/contraband/free_tonto,
 	/obj/structure/sign/poster/contraband/bulldog,
 	/obj/structure/sign/poster/contraband/m90,
 	/obj/structure/sign/poster/contraband/cybersun,
@@ -1014,6 +1015,8 @@
 	/obj/structure/sign/poster/contraband/engis_unite,
 	/obj/structure/sign/poster/contraband/gec,
 	/obj/structure/sign/poster/contraband/d_day_promo,
+	/obj/structure/sign/poster/contraband/roseusfilm1,
+
 		)
 
 //RILENA poster pool. There are only five of these, so try not to go overboard with the random posters, okay? Expect not to see these mapped onto ships except in rolled up form, since they're supposed to be bought in the RILENA merch crate.
