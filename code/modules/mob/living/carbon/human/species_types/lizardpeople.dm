@@ -20,7 +20,6 @@
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard
 	skinned_type = /obj/item/stack/sheet/animalhide/lizard
-	exotic_bloodtype = "L"
 	disliked_food = GRAIN | CLOTH | GROSS
 	liked_food = GORE | MEAT
 	deathsound = 'sound/voice/lizard/deathsound.ogg'
@@ -28,8 +27,7 @@
 	species_language_holder = /datum/language_holder/lizard
 	digitigrade_customization = DIGITIGRADE_OPTIONAL
 	mutanteyes = /obj/item/organ/eyes/lizard
-	sclera_color = "#fffec4"
-	blush_color = COLOR_BLUSH_TEAL
+	sclera_color = "#ffffff"
 
 	species_chest = /obj/item/bodypart/chest/lizard
 	species_head = /obj/item/bodypart/head/lizard
@@ -138,7 +136,10 @@ Lizard subspecies: YEOSA'UNATHI
 	burnmod = 1.1
 	siemens_coeff = 1.25
 	oxymod = 0.2
+	exotic_bloodtype = "L"
+	blush_color = COLOR_BLUSH_TEAL
 	grad_color="#fffec4"
+	sclera_color="#fffec4"
 
 	// Yeosa are more cold-blooded than Sinta, and thus should be less cozy in bad temps.
 	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 15 // This puts lizards 10 above lavaland max heat for ash lizards.
