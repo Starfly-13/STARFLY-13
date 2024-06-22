@@ -1,4 +1,4 @@
-name: Build Linux
+name: QA
 on:
   push:
     branches:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Install BYOND
         run: tools/starfly/ci/install_byond_linux.sh
