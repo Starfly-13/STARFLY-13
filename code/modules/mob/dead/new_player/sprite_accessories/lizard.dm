@@ -82,7 +82,7 @@
 /datum/sprite_accessory/face_markings
 	icon = 'icons/mob/species/lizard/markings.dmi'
 	body_zone = BODY_ZONE_HEAD
-	color_src = MUTCOLORS_SECONDARY
+	color_src = MUTCOLORS_FACIAL
 	synthetic_icon_state = "none"
 
 /datum/sprite_accessory/face_markings/none
