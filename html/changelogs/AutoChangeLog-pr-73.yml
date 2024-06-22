@@ -1,0 +1,14 @@
+author: lectronyx
+changes:
+  - {rscadd: 'Striped scarves in the following themes: Syndicate (Red-black), Bee,
+      Wario (Gaudy), Atmos, Inteq, Brown, Chocomint, Zebra, Candy Cane, Wintermint,
+      Festive (Red-green), Nanotrasen (Blue-white), Blue-Green, Electric Blue, Red-Blue,
+      Dark (Purple-Black), Mystic (Purple-Pink), Bubblegum, Ripple (Orange-Green),
+      and Spooky (Orange-Black)'}
+  - {rscadd: 'New Roseus Galactic-themed posters! Free Tonto has been turned into
+      a Roseus movie, while the SUNS poster has been entirely replaced with something
+      new.'}
+  - {rscadd: 'Syndicate Duster jacket, which is dark red with black lapels. Perfect
+      for looking like a cowboy, but evil. Available in the loadout!'}
+  - {rscadd: 'Outlaw Hat, which is just a black cowboy hat. Available via loadout!'}
+delete-after: true
