@@ -8924,9 +8924,6 @@
 /obj/effect/turf_decal/industrial/warning{
 	dir = 6
 	},
-/obj/structure/sign/poster/solgov/suns{
-	pixel_x = 32
-	},
 /obj/structure/crate_shelf,
 /turf/open/floor/pod/dark,
 /area/ship/cargo)
