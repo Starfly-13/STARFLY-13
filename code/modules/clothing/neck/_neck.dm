@@ -545,3 +545,4 @@
 	name = "spooky striped scarf"
 	icon_state = "spookystripedscarf"
 	custom_price = 10
+
