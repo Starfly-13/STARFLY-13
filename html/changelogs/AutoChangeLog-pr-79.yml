@@ -1,0 +1,7 @@
+author: lectronyx
+changes:
+  - {rscadd: Added syndicate_duster item icon}
+  - {rscdel: much of the FILE_DIR}
+  - {bugfix: corrected icon names for scarves}
+  - {server: should compile faster}
+delete-after: true
