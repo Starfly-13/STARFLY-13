@@ -496,7 +496,7 @@
 
 /obj/item/clothing/neck/festivescarf
 	name = "festive striped scarf"
-	icon_state = "festivescarf"
+	icon_state = "festivestripedscarf"
 	custom_price = 10
 
 /obj/item/clothing/neck/ntscarf
@@ -517,7 +517,7 @@
 
 /obj/item/clothing/neck/redbluestripedscarf
 	name = "red-blue striped scarf"
-	icon_state = "magnetscarf"
+	icon_state = "magnetstripedscarf"
 	custom_price = 10
 
 /obj/item/clothing/neck/darkstripedscarf
@@ -537,7 +537,7 @@
 
 /obj/item/clothing/neck/lisalisastripedscarf
 	name = "ripple striped scarf"
-	icon_state = "lisalisastripedscarf"
+	icon_state = "lisalisascarf"
 	desc = "A striped scarf inspired by an ancient martial artist, said to have slain vampires with a thread of her scarf."
 	custom_price = 10
 
@@ -545,3 +545,4 @@
 	name = "spooky striped scarf"
 	icon_state = "spookystripedscarf"
 	custom_price = 10
+
