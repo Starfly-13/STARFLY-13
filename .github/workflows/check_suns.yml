@@ -21,7 +21,7 @@ jobs:
 
       - name: Check /obj/structure/sign/poster/solgov/suns
         run: |
-          output=$(grep -i -r "/obj/structure/sign/poster/solgov/suns" . --exclude=".github/workflows/check_suns.yml")
+          output=$(grep -i -r "/obj/structure/sign/poster/solgov/suns" . --exclude="check_suns.yml")
           if [ -n "$output" ]; then
               echo "Error: Found occurrences of '/obj/structure/sign/poster/solgov/suns'"
               echo ""
