@@ -3355,7 +3355,7 @@
 	pixel_x = 1;
 	pixel_y = -6
 	},
-/obj/item/clothing/suit/space/hardsuit/solgov/suns{
+/obj/structure/sign/poster/contraband/free_tonto{
 	pixel_x = -5
 	},
 /obj/item/clothing/mask/breath/suns{
