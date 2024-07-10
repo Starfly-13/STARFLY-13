@@ -24,6 +24,9 @@ jobs:
           output=$(fgrep -i -r "/obj/structure/sign/poster/solgov/suns" .)
           if [ -n "$output" ]; then
               echo "Error: Found occurrences of '/obj/structure/sign/poster/solgov/suns'"
+              echo ""
+              echo "$output"
+              echo ""
               echo "Replace with one of:"
               echo "    /obj/structure/sign/poster/contraband/free_tonto"
               echo "    /obj/structure/sign/poster/contraband/roseusfilm1"
