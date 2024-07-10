@@ -21,11 +21,11 @@ jobs:
 
       - name: Check /obj/structure/sign/poster/solgov/suns
         run: |
-          output=$(grep -i -r "/obj/structure/sign/poster/solgov/suns" . --exclude="check_suns.yml")
-          if [ -n "$output" ]; then
+          count=$(grep -i -r "/obj/structure/sign/poster/solgov/suns" . --exclude="check_suns.yml" | wc -l)
+          if [ "$count" -gt 0 ]; then
               echo "Error: Found occurrences of '/obj/structure/sign/poster/solgov/suns'"
               echo ""
-              echo "$output"
+              grep -i -r "/obj/structure/sign/poster/solgov/suns" . --exclude="check_suns.yml"
               echo ""
               echo "Replace with one of:"
               echo "    /obj/structure/sign/poster/contraband/free_tonto"
