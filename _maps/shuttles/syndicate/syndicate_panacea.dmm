@@ -5240,7 +5240,7 @@
 /area/ship/engineering)
 "EO" = (
 /obj/machinery/computer/crew,
-/obj/structure/sign/poster/solgov/suns{
+/obj/structure/sign/poster/contraband/roseusfilm1{
 	pixel_y = 32
 	},
 /turf/open/floor/suns/hatch{
