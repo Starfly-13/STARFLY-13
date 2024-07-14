@@ -1,0 +1,31 @@
+name: QA
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  run_dreamchecker:
+    name: Dreamchecker
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Project
+        uses: actions/checkout@v4
+
+      - name: Restore Dreamchecker Cache
+        id: cache-dreamchecker
+        uses: actions/cache@v3
+        with:
+          path: ~/dreamchecker
+          key: ${{ runner.os }}-dreamchecker-cache-${{ hashFiles('dependencies.sh') }}
+
+      - name: Build Dreamchecker
+        if: steps.cache-dreamchecker.outputs.cache-hit != 'true'
+        run: bash tools/ci/build_spaceman_dmm.sh dreamchecker
+
+      - name: Run Dreamchecker
+        run: |
+          ~/dreamchecker
