@@ -59,15 +59,25 @@ jobs:
 
       - name: Run Linters
         run: |
+          echo "tools/bootstrap/python -m tools.maplint.source --github"
           tools/bootstrap/python -m tools.maplint.source --github
+          echo "tools/build/build --ci lint tgui-test"
           tools/build/build --ci lint tgui-test
+          echo "bash tools/ci/check_filedirs.sh shiptest.dme"
           bash tools/ci/check_filedirs.sh shiptest.dme
+          echo "bash tools/ci/check_changelogs.sh"
           bash tools/ci/check_changelogs.sh
+          echo "bash tools/ci/check_misc.sh"
           bash tools/ci/check_misc.sh
+          echo "bash tools/ci/check_grep.sh"
           bash tools/ci/check_grep.sh
+          echo "tools/bootstrap/python -m dmi.test"
           tools/bootstrap/python -m dmi.test
+          echo "tools/bootstrap/python -m mapmerge2.dmm_test"
           tools/bootstrap/python -m mapmerge2.dmm_test
+          echo "~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1"
           ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
+          echo "Done!"
 
       - name: Annotate Lints
         uses: yogstation13/DreamAnnotate@v2
