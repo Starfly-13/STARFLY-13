@@ -436,7 +436,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<br>"
 
 			// Everyone except Unathi gets mutant colors now.
-			if(!UNATHI_COLORS in pref_species.species_traits)
+			if(!(UNATHI_COLORS in pref_species.species_traits))
 				dat += "<h3>Mutant Colors</h3>"
 
 				dat += "<span style='border: 1px solid #161616; background-color: #[features["mcolor"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color;task=input'>Change</a><BR>"
