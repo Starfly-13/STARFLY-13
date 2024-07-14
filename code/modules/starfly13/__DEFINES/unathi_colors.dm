@@ -30,30 +30,30 @@
 // these are the names of the unathi color features
 
 /// feature name for unathi primary body color
-#define FEATURE_UNATHI_COLOR_BODY1			"unathi_color_body1"
+#define FEATURE_UNATHI_COLOR_BODY1 "unathi_color_body1"
 /// feature name for unathi secondary body color (unused)
-#define FEATURE_UNATHI_COLOR_BODY2			"unathi_color_body2"
+#define FEATURE_UNATHI_COLOR_BODY2 "unathi_color_body2"
 /// feature name for unathi primary body marking color
-#define FEATURE_UNATHI_COLOR_BODY_MARKING1	"unathi_color_body_marking1"
+#define FEATURE_UNATHI_COLOR_BODY_MARKING1 "unathi_color_body_marking1"
 /// feature name for unathi secondary body marking color (unused)
-#define FEATURE_UNATHI_COLOR_BODY_MARKING2	"unathi_color_body_marking2"
+#define FEATURE_UNATHI_COLOR_BODY_MARKING2 "unathi_color_body_marking2"
 /// feature name for unathi primary face marking color
-#define FEATURE_UNATHI_COLOR_FACE_MARKING1	"unathi_color_face_marking1"
+#define FEATURE_UNATHI_COLOR_FACE_MARKING1 "unathi_color_face_marking1"
 /// feature name for unathi secondary face marking color (unused)
-#define FEATURE_UNATHI_COLOR_FACE_MARKING2	"unathi_color_face_marking2"
+#define FEATURE_UNATHI_COLOR_FACE_MARKING2 "unathi_color_face_marking2"
 /// feature name for unathi primary frill color
-#define FEATURE_UNATHI_COLOR_FRILL1			"unathi_color_frill1"
+#define FEATURE_UNATHI_COLOR_FRILL1 "unathi_color_frill1"
 /// feature name for unathi secondary frill color
-#define FEATURE_UNATHI_COLOR_FRILL2			"unathi_color_frill2"
+#define FEATURE_UNATHI_COLOR_FRILL2 "unathi_color_frill2"
 /// feature name for unathi primary horn color
-#define FEATURE_UNATHI_COLOR_HORN1			"unathi_color_horn1"
+#define FEATURE_UNATHI_COLOR_HORN1 "unathi_color_horn1"
 /// feature name for unathi secondary horn color (unused)
-#define FEATURE_UNATHI_COLOR_HORN2			"unathi_color_horn2"
+#define FEATURE_UNATHI_COLOR_HORN2 "unathi_color_horn2"
 /// feature name for unathi primary spine color
-#define FEATURE_UNATHI_COLOR_SPINE1			"unathi_color_spine1"
+#define FEATURE_UNATHI_COLOR_SPINE1 "unathi_color_spine1"
 /// feature name for unathi secondary spine color (unused)
-#define FEATURE_UNATHI_COLOR_SPINE2			"unathi_color_spine2"
+#define FEATURE_UNATHI_COLOR_SPINE2 "unathi_color_spine2"
 /// feature name for unathi primary tail color
-#define FEATURE_UNATHI_COLOR_TAIL1			"unathi_color_tail1"
+#define FEATURE_UNATHI_COLOR_TAIL1 "unathi_color_tail1"
 /// feature name for unathi secondary tail color
-#define FEATURE_UNATHI_COLOR_TAIL2			"unathi_color_tail2"
+#define FEATURE_UNATHI_COLOR_TAIL2 "unathi_color_tail2"
