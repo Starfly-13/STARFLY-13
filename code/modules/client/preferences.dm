@@ -123,7 +123,21 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							"elzu_horns" = "None",
 							"elzu_tail" = "None",
 							"flavor_text" = "",
-							"body_size" = "Normal"
+							"body_size" = "Normal",
+							FEATURE_UNATHI_COLOR_BODY1 = "FFF",
+							FEATURE_UNATHI_COLOR_BODY2 = "FFF",
+							FEATURE_UNATHI_COLOR_BODY_MARKING1 = "FFF",
+							FEATURE_UNATHI_COLOR_BODY_MARKING2 = "FFF",
+							FEATURE_UNATHI_COLOR_FACE_MARKING1 = "FFF",
+							FEATURE_UNATHI_COLOR_FACE_MARKING2 = "FFF",
+							FEATURE_UNATHI_COLOR_FRILL1 = "FFF",
+							FEATURE_UNATHI_COLOR_FRILL2 = "FFF",
+							FEATURE_UNATHI_COLOR_HORN1 = "FFF",
+							FEATURE_UNATHI_COLOR_HORN2 = "FFF",
+							FEATURE_UNATHI_COLOR_SPINE1 = "FFF",
+							FEATURE_UNATHI_COLOR_SPINE2 = "FFF",
+							FEATURE_UNATHI_COLOR_TAIL1 = "FFF",
+							FEATURE_UNATHI_COLOR_TAIL2 = "FFF",
 						)
 	var/list/randomise = list(
 							RANDOM_UNDERWEAR = TRUE,
@@ -421,11 +435,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_SKIN_TONE]'>[(randomise[RANDOM_SKIN_TONE]) ? "Lock" : "Unlock"]</A>"
 				dat += "<br>"
 
-			// Everyone gets mutant colors now.
-			dat += "<h3>Mutant Colors</h3>"
+			// Everyone except Unathi gets mutant colors now.
+			if(!UNATHI_COLORS in pref_species.species_traits)
+				dat += "<h3>Mutant Colors</h3>"
 
-			dat += "<span style='border: 1px solid #161616; background-color: #[features["mcolor"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color;task=input'>Change</a><BR>"
-			dat += "<span style='border: 1px solid #161616; background-color: #[features["mcolor2"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color_2;task=input'>Change</a><BR>"
+				dat += "<span style='border: 1px solid #161616; background-color: #[features["mcolor"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color;task=input'>Change</a><BR>"
+				dat += "<span style='border: 1px solid #161616; background-color: #[features["mcolor2"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=mutant_color_2;task=input'>Change</a><BR>"
 
 			if(istype(pref_species, /datum/species/elzuose)) //not the best thing to do tbf but I dont know whats better.
 
@@ -433,6 +448,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 
 				dat += "<span style='border: 1px solid #161616; background-color: #[features["ethcolor"]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=color_ethereal;task=input'>Change</a><BR>"
 
+			if(UNATHI_COLORS in pref_species.species_traits)
+				dat += "<h3>Body Color</h3>"
+				dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_BODY1]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_BODY1];task=input'>Change</a><BR>"
+				// the secondary body color is not used for now, but maybe some day...
+				// dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_BODY2]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_BODY2];task=input'>Change</a><BR>"
 
 			if((EYECOLOR in pref_species.species_traits) && !(NOEYESPRITES in pref_species.species_traits))
 
@@ -485,6 +505,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Tail</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=tail_lizard;task=input'>[features["tail_lizard"]]</a><BR>"
+				if(UNATHI_COLORS in pref_species.species_traits)
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_TAIL1]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_TAIL1];task=input'>Change</a><BR>"
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_TAIL2]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_TAIL2];task=input'>Change</a><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -498,6 +521,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Face Marking</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=face_markings;task=input'>[features["face_markings"]]</a><BR>"
+				if(UNATHI_COLORS in pref_species.species_traits)
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_FACE_MARKING1]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_FACE_MARKING1];task=input'>Change</a><BR>"
+					// dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_FACE_MARKING2]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_FACE_MARKING2];task=input'>Change</a><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -511,8 +537,12 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Horns</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=horns;task=input'>[features["horns"]]</a><BR>"
-				dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
-				dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_HAIR_COLOR]'>[(randomise[RANDOM_HAIR_COLOR]) ? "Lock" : "Unlock"]</A><BR>"
+				if(UNATHI_COLORS in pref_species.species_traits)
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_HORN1]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_HORN1];task=input'>Change</a><BR>"
+					// dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_HORN2]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_HORN2];task=input'>Change</a><BR>"
+				else
+					dat += "<span style='border:1px solid #161616; background-color: #[hair_color];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=hair;task=input'>Change</a><BR>"
+					dat += "<a href='?_src_=prefs;preference=toggle_random;random_type=[RANDOM_HAIR_COLOR]'>[(randomise[RANDOM_HAIR_COLOR]) ? "Lock" : "Unlock"]</A><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -526,6 +556,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Frills</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=frills;task=input'>[features["frills"]]</a><BR>"
+				if(UNATHI_COLORS in pref_species.species_traits)
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_FRILL1]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_FRILL1];task=input'>Change</a><BR>"
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_FRILL2]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_FRILL2];task=input'>Change</a><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -539,6 +572,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Spines</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=spines;task=input'>[features["spines"]]</a><BR>"
+				if(UNATHI_COLORS in pref_species.species_traits)
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_SPINE1]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_SPINE1];task=input'>Change</a><BR>"
+					// dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_SPINE2]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_SPINE2];task=input'>Change</a><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -552,6 +588,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 				dat += "<h3>Body Markings</h3>"
 
 				dat += "<a href='?_src_=prefs;preference=body_markings;task=input'>[features["body_markings"]]</a><BR>"
+				if(UNATHI_COLORS in pref_species.species_traits)
+					dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_BODY_MARKING1]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_BODY_MARKING1];task=input'>Change</a><BR>"
+					// dat += "<span style='border: 1px solid #161616; background-color: #[features[FEATURE_UNATHI_COLOR_BODY_MARKING2]];'>&nbsp;&nbsp;&nbsp;</span> <a href='?_src_=prefs;preference=[FEATURE_UNATHI_COLOR_BODY_MARKING2];task=input'>Change</a><BR>"
 
 				mutant_category++
 				if(mutant_category >= MAX_MUTANT_ROWS)
@@ -1864,6 +1903,47 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						else
 							to_chat(user, "<span class='danger'>Invalid color. Your color is not bright enough.</span>")
 
+				if(FEATURE_UNATHI_COLOR_BODY1)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_BODY1, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_BODY2)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_BODY2, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_BODY_MARKING1)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_BODY_MARKING1, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_BODY_MARKING2)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_BODY_MARKING2, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_FACE_MARKING1)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_FACE_MARKING1, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_FACE_MARKING2)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_FACE_MARKING2, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_FRILL1)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_FRILL1, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_FRILL2)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_FRILL2, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_HORN1)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_HORN1, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_HORN2)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_HORN2, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_SPINE1)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_SPINE1, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_SPINE2)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_SPINE2, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_TAIL1)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_TAIL1, pref_species.default_color)
+
+				if(FEATURE_UNATHI_COLOR_TAIL2)
+					choose_unathi_color(user, features, FEATURE_UNATHI_COLOR_TAIL2, pref_species.default_color)
 
 				if("tail_lizard")
 					var/new_tail

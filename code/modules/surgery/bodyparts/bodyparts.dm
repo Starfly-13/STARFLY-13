@@ -617,6 +617,11 @@
 		if(overlay_icon_state)
 			species_secondary_color = H.dna.features["mcolor2"]
 
+		// unathi use special colors
+		if(UNATHI_COLORS in S.species_traits)
+			species_color = H.dna.features[FEATURE_UNATHI_COLOR_BODY1]
+			species_secondary_color = H.dna.features[FEATURE_UNATHI_COLOR_BODY2]
+
 		UnregisterSignal(owner, COMSIG_MOVABLE_MOVED)
 		if(NO_BONES in S.species_traits)
 			bone_status = BONE_FLAG_NO_BONES

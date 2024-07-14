@@ -1024,6 +1024,25 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							accessory_overlay.color = "#[H.eye_color]"
 				else
 					accessory_overlay.color = forced_colour
+
+			// unathi use special colors
+			if(UNATHI_COLORS in species_traits)
+				switch(bodypart)
+					if("body_markings")
+						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_BODY_MARKING1]]"
+					if("face_markings")
+						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_FACE_MARKING1]]"
+					if("frills")
+						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_FRILL1]]"
+					if("horns")
+						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_HORN1]]"
+					if("spines" || "waggingspines")
+						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_SPINE1]]"
+					if("tail" || "waggingtail")
+						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_TAIL1]]"
+					else
+						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_BODY1]]"
+
 			standing += accessory_overlay
 
 			if(S.secondary_color)
@@ -1036,6 +1055,25 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 				if(S.center)
 					secondary_color_overlay = center_image(secondary_color_overlay, S.dimension_x, S.dimension_y)
 				secondary_color_overlay.color = "#[H.dna.features["mcolor2"]]"
+
+				// unathi use special colors
+				if(UNATHI_COLORS in species_traits)
+					switch(bodypart)
+						if("body_markings")
+							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_BODY_MARKING2]]"
+						if("face_markings")
+							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_FACE_MARKING2]]"
+						if("frills")
+							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_FRILL2]]"
+						if("horns")
+							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_HORN2]]"
+						if("spines" || "waggingspines")
+							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_SPINE2]]"
+						if("tail" || "waggingtail")
+							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_TAIL2]]"
+						else
+							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_BODY2]]"
+
 				standing += secondary_color_overlay
 
 		H.overlays_standing[layer] = standing.Copy()
