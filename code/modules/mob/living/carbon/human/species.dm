@@ -1036,9 +1036,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_FRILL1]]"
 					if("horns")
 						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_HORN1]]"
-					if("spines" || "waggingspines")
+					if("spines", "waggingspines")
 						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_SPINE1]]"
-					if("tail" || "waggingtail")
+					if("tail", "waggingtail")
 						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_TAIL1]]"
 					else
 						accessory_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_BODY1]]"
@@ -1067,9 +1067,9 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_FRILL2]]"
 						if("horns")
 							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_HORN2]]"
-						if("spines" || "waggingspines")
+						if("spines", "waggingspines")
 							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_SPINE2]]"
-						if("tail" || "waggingtail")
+						if("tail", "waggingtail")
 							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_TAIL2]]"
 						else
 							secondary_color_overlay.color = "#[H.dna.features[FEATURE_UNATHI_COLOR_BODY2]]"

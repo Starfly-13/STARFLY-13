@@ -15,7 +15,7 @@
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 //---------------------------------------------------------------------------
 
-/proc/choose_unathi_color(mob/user, list/features, var/unathi_color, var/default_color)
+/proc/choose_unathi_color(mob/user, list/features, unathi_color, default_color)
 	// create an associative list to map color define to body part description
 	var/list/bodypart_list = list(
 		FEATURE_UNATHI_COLOR_BODY1 = "body",
