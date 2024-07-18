@@ -1,0 +1,7 @@
+author: lectronyx
+changes:
+  - {rscadd: Additional color slot for mutant colors that affects facial markings}
+  - {rscdel: Sinta'Unathi from Yeosa'Unathi understood languages}
+  - {rscdel: Yeosa'Unathi from Sinta'Unathi understood languages}
+  - {balance: "Tone down Yeosa'Unathi cold weakness, enhance their oxyloss resistance"}
+delete-after: true
