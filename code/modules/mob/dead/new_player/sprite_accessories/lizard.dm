@@ -4,7 +4,7 @@
 
 /datum/sprite_accessory/body_markings
 	icon = 'icons/mob/species/lizard/markings.dmi'
-	color_src = MUTCOLORS_SECONDARY
+	color_src = UNATHI_COLORS
 	body_zone = BODY_ZONE_CHEST
 	synthetic_icon_state = "none"
 
@@ -82,7 +82,7 @@
 /datum/sprite_accessory/face_markings
 	icon = 'icons/mob/species/lizard/markings.dmi'
 	body_zone = BODY_ZONE_HEAD
-	color_src = MUTCOLORS_SECONDARY
+	color_src = UNATHI_COLORS
 	synthetic_icon_state = "none"
 
 /datum/sprite_accessory/face_markings/none
@@ -113,9 +113,8 @@
 
 /datum/sprite_accessory/horns
 	icon = 'icons/mob/species/lizard/horns.dmi'
-	color_src = HAIR
+	color_src = UNATHI_COLORS
 	body_zone = BODY_ZONE_HEAD
-	synthetic_color_src = MUTCOLORS_SECONDARY
 
 /datum/sprite_accessory/horns/none
 	name = "None"

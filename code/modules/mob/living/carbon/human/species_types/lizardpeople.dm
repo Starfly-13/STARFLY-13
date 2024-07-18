@@ -4,7 +4,7 @@
 	id = SPECIES_UNATHI
 	default_color = "00FF00"
 	species_age_max = 175
-	species_traits = list(MUTCOLORS,EYECOLOR,LIPS,SCLERA,EMOTE_OVERLAY,MUTCOLORS_SECONDARY)
+	species_traits = list(EYECOLOR,LIPS,SCLERA,EMOTE_OVERLAY,UNATHI_COLORS)
 	inherent_biotypes = MOB_ORGANIC|MOB_HUMANOID|MOB_REPTILE
 	mutant_bodyparts = list("tail_lizard", "face_markings", "frills", "horns", "spines", "body_markings", "legs")
 	mutanttongue = /obj/item/organ/tongue/lizard
@@ -20,7 +20,6 @@
 	miss_sound = 'sound/weapons/slashmiss.ogg'
 	meat = /obj/item/reagent_containers/food/snacks/meat/slab/human/mutant/lizard
 	skinned_type = /obj/item/stack/sheet/animalhide/lizard
-	exotic_bloodtype = "L"
 	disliked_food = GRAIN | CLOTH | GROSS
 	liked_food = GORE | MEAT
 	deathsound = 'sound/voice/lizard/deathsound.ogg'
@@ -28,8 +27,7 @@
 	species_language_holder = /datum/language_holder/lizard
 	digitigrade_customization = DIGITIGRADE_OPTIONAL
 	mutanteyes = /obj/item/organ/eyes/lizard
-	sclera_color = "#fffec4"
-	blush_color = COLOR_BLUSH_TEAL
+	sclera_color = "#ffffff"
 
 	species_chest = /obj/item/bodypart/chest/lizard
 	species_head = /obj/item/bodypart/head/lizard
@@ -48,7 +46,7 @@
 	robotic_eyes = /obj/item/organ/eyes/robotic/lizard
 
 	// Lizards are coldblooded and can stand a greater temperature range than humans
-	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 20 // This puts lizards 10 above lavaland max heat for ash lizards.
+	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 20
 	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 10
 	loreblurb = "The Sinta'Unathi are a cold-blooded reptilian species originating from the harsh mainland of the planet Moghes, in the Uuoea-Esa system. A warrior culture with emphasis on honor, family, and loyalty to one's clan, the divided Sinta'Unathi find themselves as powerful a force as any other species despite their less than hospitable homeworld."
 
@@ -133,16 +131,19 @@ Lizard subspecies: YEOSA'UNATHI
 	examine_limb_id = SPECIES_UNATHI
 	inherent_traits = list(TRAIT_ALCOHOL_TOLERANCE)
 	species_language_holder = /datum/language_holder/yeosa
-	coldmod = 2
+	coldmod = 1.75
 	heatmod = 0.7
-	burnmod = 1.25
+	burnmod = 1.1
 	siemens_coeff = 1.25
-	oxymod = 0.75
+	oxymod = 0.2
+	exotic_bloodtype = "L"
+	blush_color = COLOR_BLUSH_TEAL
 	grad_color="#fffec4"
+	sclera_color="#fffec4"
 
 	// Yeosa are more cold-blooded than Sinta, and thus should be less cozy in bad temps.
-	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 10 // This puts lizards 10 above lavaland max heat for ash lizards.
-	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 5
+	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 15
+	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 7
 	loreblurb = "The Yeosa'Unathi are a cold-blooded reptilian species originating from the depths of the ocean on the planet Moghes, in the Uuoea-Esa system. Most Yeosa'Unathi will seldom step on the surface except to sunbathe - this can leave the impression of laziness and lethargy on those who interact with them. However, their culture largely mirrors that of the Sinta, and they are equally proud. "
 
 

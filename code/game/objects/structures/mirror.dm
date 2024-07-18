@@ -194,6 +194,17 @@
 						else
 							to_chat(H, "<span class='notice'>Invalid color. Your secondary color is not bright enough.</span>")
 
+			if(UNATHI_COLORS in H.dna.species.species_traits)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_BODY1, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_BODY_MARKING1, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_FACE_MARKING1, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_FRILL1, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_FRILL2, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_HORN1, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_SPINE1, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_TAIL1, H.dna.species.default_color)
+				choose_unathi_color(H, H.dna.features, FEATURE_UNATHI_COLOR_TAIL2, H.dna.species.default_color)
+
 			H.update_body()
 			H.update_hair()
 			H.update_body_parts(TRUE)

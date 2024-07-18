@@ -128,6 +128,20 @@
 		"vox_head_quills" = pick(GLOB.vox_head_quills_list),
 		"vox_neck_quills" = pick(GLOB.vox_neck_quills_list),
 		"wings" = "None",
+		FEATURE_UNATHI_COLOR_BODY1 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_BODY2 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_BODY_MARKING1 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_BODY_MARKING2 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_FACE_MARKING1 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_FACE_MARKING2 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_FRILL1 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_FRILL2 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_HORN1 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_HORN2 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_SPINE1 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_SPINE2 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_TAIL1 = random_unathi_color(),
+		FEATURE_UNATHI_COLOR_TAIL2 = random_unathi_color(),
 	)
 
 /proc/random_hairstyle(gender)

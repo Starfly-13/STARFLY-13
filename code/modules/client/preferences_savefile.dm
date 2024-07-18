@@ -445,6 +445,21 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["feature_elzu_horns"], features["elzu_horns"])
 	READ_FILE(S["feature_tail_elzu"], features["tail_elzu"])
 
+	READ_FILE(S[FEATURE_UNATHI_COLOR_BODY1],         features[FEATURE_UNATHI_COLOR_BODY1])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_BODY2],         features[FEATURE_UNATHI_COLOR_BODY2])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_BODY_MARKING1], features[FEATURE_UNATHI_COLOR_BODY_MARKING1])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_BODY_MARKING2], features[FEATURE_UNATHI_COLOR_BODY_MARKING2])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_FACE_MARKING1], features[FEATURE_UNATHI_COLOR_FACE_MARKING1])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_FACE_MARKING2], features[FEATURE_UNATHI_COLOR_FACE_MARKING2])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_FRILL1],        features[FEATURE_UNATHI_COLOR_FRILL1])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_FRILL2],        features[FEATURE_UNATHI_COLOR_FRILL2])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_HORN1],         features[FEATURE_UNATHI_COLOR_HORN1])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_HORN2],         features[FEATURE_UNATHI_COLOR_HORN2])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_SPINE1],        features[FEATURE_UNATHI_COLOR_SPINE1])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_SPINE2],        features[FEATURE_UNATHI_COLOR_SPINE2])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_TAIL1],         features[FEATURE_UNATHI_COLOR_TAIL1])
+	READ_FILE(S[FEATURE_UNATHI_COLOR_TAIL2],         features[FEATURE_UNATHI_COLOR_TAIL2])
+
 	READ_FILE(S["equipped_gear"], equipped_gear)
 	if(config) //This should *probably* always be there, but just in case.
 		if(length(equipped_gear) > CONFIG_GET(number/max_loadout_items))
@@ -558,6 +573,21 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	features["tail_elzu"]				= sanitize_inlist(features["tail_elzu"], GLOB.tails_list_elzu)
 	features["flavor_text"]				= sanitize_text(features["flavor_text"], initial(features["flavor_text"]))
 
+	features[FEATURE_UNATHI_COLOR_BODY1]         = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_BODY1])
+	features[FEATURE_UNATHI_COLOR_BODY2]         = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_BODY2])
+	features[FEATURE_UNATHI_COLOR_BODY_MARKING1] = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_BODY_MARKING1])
+	features[FEATURE_UNATHI_COLOR_BODY_MARKING2] = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_BODY_MARKING2])
+	features[FEATURE_UNATHI_COLOR_FACE_MARKING1] = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_FACE_MARKING1])
+	features[FEATURE_UNATHI_COLOR_FACE_MARKING2] = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_FACE_MARKING2])
+	features[FEATURE_UNATHI_COLOR_FRILL1]        = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_FRILL1])
+	features[FEATURE_UNATHI_COLOR_FRILL2]        = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_FRILL2])
+	features[FEATURE_UNATHI_COLOR_HORN1]         = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_HORN1])
+	features[FEATURE_UNATHI_COLOR_HORN2]         = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_HORN1])
+	features[FEATURE_UNATHI_COLOR_SPINE1]        = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_SPINE1])
+	features[FEATURE_UNATHI_COLOR_SPINE2]        = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_SPINE2])
+	features[FEATURE_UNATHI_COLOR_TAIL1]         = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_TAIL1])
+	features[FEATURE_UNATHI_COLOR_TAIL2]         = sanitize_hexcolor(features[FEATURE_UNATHI_COLOR_TAIL2])
+
 	all_quirks = SANITIZE_LIST(all_quirks)
 
 //Make sure all quirks are compatible
@@ -638,6 +668,21 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["feature_elzu_horns"]			, features["elzu_horns"])
 	WRITE_FILE(S["feature_tail_elzu"]			, features["tail_elzu"])
 	WRITE_FILE(S["fbp"]							, fbp)
+
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_BODY1],         features[FEATURE_UNATHI_COLOR_BODY1])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_BODY2],         features[FEATURE_UNATHI_COLOR_BODY2])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_BODY_MARKING1], features[FEATURE_UNATHI_COLOR_BODY_MARKING1])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_BODY_MARKING2], features[FEATURE_UNATHI_COLOR_BODY_MARKING2])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_FACE_MARKING1], features[FEATURE_UNATHI_COLOR_FACE_MARKING1])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_FACE_MARKING2], features[FEATURE_UNATHI_COLOR_FACE_MARKING2])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_FRILL1],        features[FEATURE_UNATHI_COLOR_FRILL1])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_FRILL2],        features[FEATURE_UNATHI_COLOR_FRILL2])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_HORN1],         features[FEATURE_UNATHI_COLOR_HORN1])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_HORN2],         features[FEATURE_UNATHI_COLOR_HORN2])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_SPINE1],        features[FEATURE_UNATHI_COLOR_SPINE1])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_SPINE2],        features[FEATURE_UNATHI_COLOR_SPINE2])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_TAIL1],         features[FEATURE_UNATHI_COLOR_TAIL1])
+	WRITE_FILE(S[FEATURE_UNATHI_COLOR_TAIL2],         features[FEATURE_UNATHI_COLOR_TAIL2])
 
 	//Flavor text
 	WRITE_FILE(S["feature_flavor_text"]			, features["flavor_text"])
