@@ -28,6 +28,10 @@ def get_includes(file_path):
     return paths
 
 def compare_paths(path1, path2):
+    # compare only with lowercase, because Windows is case-insensitive in paths
+    path1 = path1.lower()
+    path2 = path2.lower()
+
     # if the two paths are identical
     if path1 == path2:
         # they are identical; no sort preference
@@ -59,6 +63,18 @@ def compare_paths(path1, path2):
         if ('.' not in part1) and ('.' in part2):
             # path2 comes before path1
             return 1
+
+        # okay, if they're both files, .dmf files come last
+
+        # if path1 is a .dmf file, and path2 is not a .dmf file
+        if ('.dmf' in part1) and ('.dmf' not in part2):
+            # path1 comes after path2
+            return 1
+
+        # if path1 is a not .dmf file, and path2 is a .dmf file
+        if ('.dmf' not in part1) and ('.dmf' in part2):
+            # path1 comes before path2
+            return -1
 
         # they are both files, or they are both folders, so we can compare on name
         # remember, they can't be identical, or they would have been skipped
