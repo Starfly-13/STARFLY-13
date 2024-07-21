@@ -1,0 +1,31 @@
+name: QA
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+  merge_group:
+    branches:
+      - master
+
+jobs:
+  check_dme_order:
+    if: ${{ !contains(github.event.head_commit.message, '[ci skip]') }}
+    name: "#include Path Ordering"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: pip install --upgrade pip
+
+      - name: 'Run .dme #include ordering check'
+        run: python3 tools/starfly/python/check_dme_order.py shiptest.dme
