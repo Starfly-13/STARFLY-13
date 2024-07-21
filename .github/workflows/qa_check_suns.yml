@@ -21,7 +21,7 @@ jobs:
 
       - name: Check /obj/structure/sign/poster/solgov/suns
         run: |
-          count=$(grep -i -r "/obj/structure/sign/poster/solgov/suns" . --exclude="check_suns.yml" | wc -l)
+          count=$(grep -i -r "/obj/structure/sign/poster/solgov/suns" . --exclude="qa_check_suns.yml" | wc -l)
           if [ "$count" -gt 0 ]; then
               echo "Error: Found occurrences of '/obj/structure/sign/poster/solgov/suns'"
               echo ""

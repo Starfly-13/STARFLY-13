@@ -38,7 +38,7 @@ def compare_paths(path1, path2):
     path2_parts = path2.split('\\')
 
     # for each path part
-    for i in range(0, min(len(path1_parts), len(path2_parts))+1):
+    for i in range(0, min(len(path1_parts), len(path2_parts))):
         # get the parts we're interested in comparing
         part1 = path1_parts[i]
         part2 = path2_parts[i]
