@@ -138,6 +138,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 							FEATURE_UNATHI_COLOR_SPINE2 = "FFF",
 							FEATURE_UNATHI_COLOR_TAIL1 = "FFF",
 							FEATURE_UNATHI_COLOR_TAIL2 = "FFF",
+							FEATURE_PROSTHETIC_COLOR = "FFF",
 						)
 	var/list/randomise = list(
 							RANDOM_UNDERWEAR = TRUE,
