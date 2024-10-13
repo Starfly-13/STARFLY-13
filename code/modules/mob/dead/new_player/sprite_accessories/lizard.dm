@@ -105,9 +105,9 @@
 	name = "Dome"
 	icon_state = "dome"
 
-/datum/sprite_accessory/face_markings/bowl
-	name = "Bowl"
-	icon_state = "bowl"
+/datum/sprite_accessory/face_markings/cap
+	name = "Cap"
+	icon_state = "cap"
 
 /datum/sprite_accessory/face_markings/nose
 	name = "Nose"
