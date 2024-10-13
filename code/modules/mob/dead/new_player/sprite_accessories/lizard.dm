@@ -101,6 +101,10 @@
 	name = "Alligator Skink"
 	icon_state = "eye"
 
+/datum/sprite_accessory/face_markings/mask
+	name = "Mask"
+	icon_state = "mask"
+
 /datum/sprite_accessory/face_markings/dome
 	name = "Dome"
 	icon_state = "dome"
