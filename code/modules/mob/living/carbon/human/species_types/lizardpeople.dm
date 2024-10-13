@@ -96,13 +96,13 @@
 /datum/species/lizard/random_name(firstname,lastname)
 
 
-	var/personalname = lizard_name(firstname)
-	var/clanname = lizard_name(lastname)
-/*	if(lastname)
+	var/randname = lizard_name(firstname)
+	var/randname2 = lizard_name(lasttname)
+	if(lastname)
 		randname += " [lastname]"
 
 	return randname
-*/
+
 /*
 Lizard subspecies: ASHWALKERS
 */

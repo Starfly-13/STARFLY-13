@@ -1,6 +1,4 @@
 /proc/lizard_name()
-	firstname= lizard_name(firstname)
-	lastname= lizard_name(lastname)
 	. = ""
 	var/static/list/syllables = list("za","az","ze","ez","zi","iz","zo","oz","zu","uz","zs","sz","ha","ah","he","eh","hi","ih",
 	"ho","oh","hu","uh","hs","sh","la","al","le","el","li","il","lo","ol","lu","ul","ls","sl","ka","ak","ke","ek",
