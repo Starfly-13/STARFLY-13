@@ -1,8 +1,24 @@
+/proc/lizard_name()
+	firstname= lizard_name(firstname)
+	lastname= lizard_name(lastname)
+	. = ""
+	var/static/list/syllables = list("za","az","ze","ez","zi","iz","zo","oz","zu","uz","zs","sz","ha","ah","he","eh","hi","ih",
+	"ho","oh","hu","uh","hs","sh","la","al","le","el","li","il","lo","ol","lu","ul","ls","sl","ka","ak","ke","ek",
+	"ki","ik","ko","ok","ku","uk","ks","sk","sa","as","se","es","si","is","so","os","su","us","ra","ar",
+	"re","er","ri","ir","ro","or","ru","ur","rs","sr","a","a","e","e","i","i","o","o","u","u")
+	for(var/x = rand(1,2) to 0 step -1)
+		. += pick(syllables)
+	. = capitalize(.)
+
+/* Commenting out old namegen stuff. This will make room for the new Sinta and Yeosa namegens.
+
 /proc/lizard_name(gender)
 	if(gender == MALE)
 		return "[pick(GLOB.lizard_names_male)]-[pick(GLOB.lizard_names_male)]"
 	else
 		return "[pick(GLOB.lizard_names_female)]-[pick(GLOB.lizard_names_female)]"
+
+*/
 
 /proc/plasmaman_name()
 	return "[pick(GLOB.plasmaman_names)] \Roman[rand(1,99)]"

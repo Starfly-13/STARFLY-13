@@ -93,17 +93,16 @@
 /datum/species/lizard/natural_bodytemperature_stabilization(datum/gas_mixture/environment, mob/living/carbon/human/H)
 	return
 
-/datum/species/lizard/random_name(gender,unique,lastname)
-	if(unique)
-		return random_unique_lizard_name(gender)
+/datum/species/lizard/random_name(firstname,lastname)
 
-	var/randname = lizard_name(gender)
 
-	if(lastname)
+	var/personalname = lizard_name(firstname)
+	var/clanname = lizard_name(lastname)
+/*	if(lastname)
 		randname += " [lastname]"
 
 	return randname
-
+*/
 /*
 Lizard subspecies: ASHWALKERS
 */
@@ -145,6 +144,19 @@ Lizard subspecies: YEOSA'UNATHI
 	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 15
 	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 7
 	loreblurb = "The Yeosa'Unathi are a cold-blooded reptilian species originating from the depths of the ocean on the planet Moghes, in the Uuoea-Esa system. Most Yeosa'Unathi will seldom step on the surface except to sunbathe - this can leave the impression of laziness and lethargy on those who interact with them. However, their culture largely mirrors that of the Sinta, and they are equally proud. "
+
+	//Yeosa Random Name Gen
+/*	/datum/species/lizard/random_name(gender,unique,lastname)
+	if(unique)
+		return random_unique_lizard_name(gender)
+
+	var/randname = lizard_name(gender)
+
+	if(lastname)
+		randname += " [lastname]"
+
+	return randname
+*/
 
 
 //WS Edit Start - Kobold
