@@ -99,6 +99,24 @@
 /obj/item/gun/ballistic/shotgun/brimstone/no_mag
 	spawnwithmagazine = FALSE
 
+// LK-SS SHOTGUN //
+
+/obj/item/gun/ballistic/shotgun/brimstone
+	name = "LK-SS Shotgun"
+	desc = "A strange bolt-action rifle built with cheap materials and a 5-round capacity. Nobody knows where, exactly, these came from, having mysteriously appeared among pirate crews near the end of the ICW. Chambered in 12g."
+	fire_sound = 'sound/weapons/gun/shotgun/brimstone.ogg'
+	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
+	lefthand_file = 'icons/obj/guns/manufacturer/pirate/lefthand.dmi'
+	righthand_file = 'icons/obj/guns/manufacturer/pirate/righthand.dmi'
+	mob_overlay_icon = 'icons/obj/guns/manufacturer/pirate/onmob.dmi'
+	recoil = 2 //It's like a brimstone... but it's made out of scrap! The recoil's reduced by that handle, but you also cannot saw it off because it'll fly apart on fire if you do.
+	recoil_unwielded = 8 //Wristfucker.
+	icon_state = "scrapshotgun"
+	item_state = "scrapshotgun"
+	slot_flags = null
+	manufacturer = MANUFACTURER_LAKVAR
+	can_be_sawn_off  = FALSE
+
 // HELLFIRE SHOTGUN //
 
 /obj/item/gun/ballistic/shotgun/hellfire
