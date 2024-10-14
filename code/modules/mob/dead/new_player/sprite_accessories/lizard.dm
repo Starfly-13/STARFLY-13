@@ -53,6 +53,15 @@
 	name = "Smooth (One color)"
 	icon_state = "smooth2"
 
+/datum/sprite_accessory/tails/lizard/spikes
+	name = "Black Spikes"
+	icon_state = "spikes"
+	secondary_color = FALSE
+
+/datum/sprite_accessory/tails_animated/lizard/spikes
+	name = "Black Spikes"
+	icon_state = "spikes"
+
 /datum/sprite_accessory/tails/lizard/prosthetic
 	name = "Prosthetic"
 	icon_state = "synth"
@@ -68,6 +77,16 @@
 /datum/sprite_accessory/tails_animated/lizard/large
 	name = "Large"
 	icon_state = "large"
+
+/datum/sprite_accessory/tails/lizard/large_onecolor
+	name = "Large (One color)"
+	icon_state = "large"
+	secondary_color = FALSE
+
+/datum/sprite_accessory/tails_animated/lizard/large_onecolor
+	name = "Large (One color)"
+	icon_state = "large"
+	secondary_color = FALSE
 
 /datum/sprite_accessory/tails/lizard/small
 	name = "Small"
@@ -198,6 +217,10 @@
 /datum/sprite_accessory/frills/frillhawk
 	name = "Frillhawk"
 	icon_state = "frillhawk"
+
+/datum/sprite_accessory/frills/spikes
+	name = "Spikes"
+	icon_state = "spikes"
 
 /datum/sprite_accessory/frills/neck
 	name = "Neck"
