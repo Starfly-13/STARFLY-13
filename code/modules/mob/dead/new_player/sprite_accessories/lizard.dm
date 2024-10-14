@@ -218,8 +218,8 @@
 	name = "Frillhawk"
 	icon_state = "frillhawk"
 
-/datum/sprite_accessory/frills/spikes
-	name = "Spikes"
+/datum/sprite_accessory/frills/quills
+	name = "Quills"
 	icon_state = "spikes"
 
 /datum/sprite_accessory/frills/neck
