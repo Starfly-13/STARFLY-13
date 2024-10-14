@@ -1,0 +1,10 @@
+author: lectronyx
+changes:
+  - {rscadd: Cap face marking.}
+  - {rscadd: Mask face marking.}
+  - {rscadd: Quills frills}
+  - {rscadd: Large (One color) tail}
+  - {rscadd: Black Spikes tail}
+  - {rscadd: Backup of old Shiptest tails for the sake of restoring more customization
+      options in the future.}
+delete-after: true
