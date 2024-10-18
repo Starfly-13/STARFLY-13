@@ -28,6 +28,7 @@
 		"Blue" = "walkietalkieblue",
 		"Green" = "walkietalkiegreen",
 		"Gold" = "walkietalkiegold",
+		"Orange" = "walkietalkieorange",
 		"Beige" = "walkietalkiebeige",
 		"Brown" = "walkietalkiebrown",
 		)
