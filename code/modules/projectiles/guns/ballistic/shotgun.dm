@@ -101,7 +101,7 @@
 
 // LK-SS SHOTGUN //
 
-/obj/item/gun/ballistic/shotgun/brimstone
+/obj/item/gun/ballistic/shotgun/scrap
 	name = "LK-SS Shotgun"
 	desc = "A strange bolt-action rifle built with cheap materials and a 5-round capacity. Nobody knows where, exactly, these came from, having mysteriously appeared among pirate crews near the end of the ICW. Chambered in 12g."
 	fire_sound = 'sound/weapons/gun/shotgun/brimstone.ogg'
