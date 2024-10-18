@@ -58,9 +58,9 @@
 		if(12)
 			monthname = "December"
 		if(13)
-			return "Year Day, [year] FSC"
+			return "Year Day, [year] CE"
 
-	return "[monthname] [day_of_month], [year] FSC"
+	return "[monthname] [day_of_month], [year] CE"
 
 //returns timestamp in a sql and a not-quite-compliant ISO 8601 friendly format
 /proc/SQLtime(timevar)
