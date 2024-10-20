@@ -1,0 +1,17 @@
+author: lectronyx
+changes:
+  - {rscadd: LV-built shotgun}
+  - {rscadd: 'Recolor option for shortwave radios, including 11 new colors and a new
+      default - 12 colors total!'}
+  - {bugfix: Changed the Komodo prefix to SSV to better suit its faction}
+  - {bugfix: 'For the first time in recorded history, thanks to advances in door technology,
+      you can now have a wallet and be able to open doors!'}
+  - {bugfix: The actress on the poster for The Last One Out is no longer being mistaken
+      for the controversial artist D-Day.}
+  - {soundadd: 'added sounds for snap, snap2, snap3, clap1, and nose boops'}
+  - {imageadd: '11 sprites added for shortwave radio recolors, 1 new sprite added
+      for old radio recolor (beige)'}
+  - {imageadd: New DMIs for pirate weapons (LV manufacturer)}
+  - {server: 'The scrap shotgun is temporarily adminspawn-only, but will be featured
+      in ruins and future ships.'}
+delete-after: true
