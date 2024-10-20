@@ -386,7 +386,7 @@
 	icon_state = "poster_dday" // human sprite by quin
 
 /obj/structure/sign/poster/contraband/roseusfilm1
-	name = "D-Day Promo"
+	name = "The Last One Out"
 	desc = "A movie poster for The Last One Out, a movie about how a cruise ship captain helped evacuate a research facility being attacked by its corporate overlords after being falsely accused of trying to revolt. One of Roseus Galactic's more popular films during the ICW."
 	icon_state = "poster-roseus-thelastoneout" //edited dday promo sprite!
 

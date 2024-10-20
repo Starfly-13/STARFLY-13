@@ -117,10 +117,11 @@
 	if (gen_ship_access(ship))
 		return TRUE
 
-	if(istype(item, /obj/item/card/id))
-		var/obj/item/card/id/id = item.GetID()
-		if (id.has_ship_access(ship))
-			return TRUE
+	if(!item)
+		return FALSE
+	var/obj/item/card/id/id = item?.GetID()
+	if (id?.has_ship_access(ship))
+		return TRUE
 
 	return FALSE
 

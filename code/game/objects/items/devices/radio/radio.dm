@@ -18,7 +18,20 @@
 	w_class = WEIGHT_CLASS_SMALL
 	custom_materials = list(/datum/material/iron=75, /datum/material/glass=25)
 	obj_flags = USES_TGUI
-
+	unique_reskin = list(
+		"Classic" = "walkietalkie",
+		"Red" = "walkietalkiered",
+		"Pink" = "walkietalkiepink",
+		"Lavender" = "walkietalkielavender",
+		"Violet" = "walkietalkieviolet",
+		"Navy" = "walkietalkienavy",
+		"Blue" = "walkietalkieblue",
+		"Green" = "walkietalkiegreen",
+		"Gold" = "walkietalkiegold",
+		"Orange" = "walkietalkieorange",
+		"Beige" = "walkietalkiebeige",
+		"Brown" = "walkietalkiebrown",
+		)
 	var/on = TRUE
 	var/frequency = FREQ_COMMON
 	var/canhear_range = 3  // The range around the radio in which mobs can hear what it receives.
@@ -96,7 +109,7 @@
 	. = ..()
 	AddComponent(/datum/component/empprotection, EMP_PROTECT_WIRES)
 
-/obj/item/radio/AltClick(mob/user)
+/obj/item/radio/CtrlClick(mob/user)
 	if(headset)
 		. = ..()
 	else if(user.canUseTopic(src, !issilicon(user), TRUE, FALSE))
