@@ -872,6 +872,11 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
 	semi_auto = TRUE
 
+/* commenting this out because I have no idea how to fix this, but... I also really don't want to completely throw it out.
+Someone smarter than me can come in and make this gun as cool as it's meant to be. I originally wanted it to have 2 shotgun shells and 1 rifle round.
+Instead, I'm just going to give it a 3 round capacity and see what I can do about making it rifle-compatible as well...
+
+
 /obj/item/gun/ballistic/shotgun/doublebarrel/tp83/Initialize()
 	. = ..()
 	if (!alternate_magazine)
@@ -890,3 +895,5 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 		to_chat(user, "<span class='notice'>You switch to the rifle barrel.</span>")
 	else
 		to_chat(user, "<span class='notice'>You switch to the shotgun barrels.</span>")
+*/
+

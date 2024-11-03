@@ -29,7 +29,8 @@
 
 /obj/item/ammo_box/magazine/internal/shot/tp83
 	name = "Hephaestus TP83 shotgun Barrels"
-	max_ammo = 2
+	caliber = "12ga"//, "5.56x45mm" SO DOING THIS IN 2 CALIBERS DID *NOT* WORK. FUCK, I HATE MY LIFE
+	max_ammo = 3
 	instant_load = TRUE
 
 /obj/item/ammo_box/magazine/internal/shot/dual/lethal
