@@ -863,20 +863,21 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 
 	base_icon_state = "cosmo"
 	icon_state = "cosmo"
-	item_state = "gun"
+	item_state = "shotgun"
+	unique_reskin = null
 
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube
-	w_class = WEIGHT_CLASS_HUGE
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/tp83
+	w_class = WEIGHT_CLASS_NORMAL
 	var/toggled = FALSE
 	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
 	semi_auto = TRUE
 
-	/obj/item/gun/ballistic/shotgun/automatic/dual_tube/Initialize()
+/obj/item/gun/ballistic/shotgun/doublebarrel/tp83/Initialize()
 	. = ..()
 	if (!alternate_magazine)
 		alternate_magazine = new mag_type(src)
 
-/obj/item/gun/ballistic/shotgun/doublebarrel/tp83/attack_self(mob/living/user)
+/obj/item/gun/ballistic/shotgun/automatic/dual_tube/attack_self(mob/living/user)
 		toggle_tube(user)
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/tp83/proc/toggle_tube(mob/living/user)
