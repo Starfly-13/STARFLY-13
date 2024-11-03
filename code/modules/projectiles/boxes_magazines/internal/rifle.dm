@@ -32,3 +32,10 @@
 	caliber = ".308"
 	max_ammo = 10
 	instant_load = TRUE
+
+/obj/item/ammo_box/magazine/internal/tp83
+	name = "Hephaestus TP83 Rifle Barrel"
+	ammo_type = /obj/item/ammo_casing/a556_39
+	caliber = "5.56x45mm"
+	max_ammo = 1
+	instant_load = TRUE

@@ -192,10 +192,7 @@
 //Dual Feed Shotgun
 
 /obj/item/gun/ballistic/shotgun/automatic/dual_tube
-	name = "cycler shotgun"
-	desc = "An advanced shotgun with two separate magazine tubes, allowing you to quickly toggle between ammo types."
 
-	icon = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/onmob.dmi'
@@ -854,3 +851,41 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	spread = 6
 	recoil = 2
 	recoil_unwielded = 4
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/tp83
+	name = "Hephaestus TP83 Survivalist Shotgun"
+	desc = "A break-action shotgun featuring two shotgun barrels and one 5.56x45mm rifle barrel. On the bottom of the weapon is a slot that may be used to utilize a specially designed machete as a stock, making it effectively a survival kit in weapon form as long as you refrain from touching the sharp side."
+
+	icon = 'icons/obj/guns/manufacturer/frontier_import/48x32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	mob_overlay_icon = null
+
+	base_icon_state = "cosmo"
+	icon_state = "cosmo"
+	item_state = "gun"
+
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/tube
+	w_class = WEIGHT_CLASS_HUGE
+	var/toggled = FALSE
+	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
+	semi_auto = TRUE
+
+	/obj/item/gun/ballistic/shotgun/automatic/dual_tube/Initialize()
+	. = ..()
+	if (!alternate_magazine)
+		alternate_magazine = new mag_type(src)
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/tp83/attack_self(mob/living/user)
+		toggle_tube(user)
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/tp83/proc/toggle_tube(mob/living/user)
+	var/current_mag = magazine
+	var/alt_mag = alternate_magazine
+	magazine = alt_mag
+	alternate_magazine = current_mag
+	toggled = !toggled
+	if(toggled)
+		to_chat(user, "<span class='notice'>You switch to the rifle barrel.</span>")
+	else
+		to_chat(user, "<span class='notice'>You switch to the shotgun barrels.</span>")
