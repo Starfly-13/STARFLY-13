@@ -450,6 +450,24 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	item_state = "dshotgun_sawn"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual/lethal
 
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn/scrap
+	name = "Butcher Shotgun"
+	desc = "A brutal shotgun favored by pirates. That hatchet is not just for show!"
+	icon = 'icons/obj/guns/manufacturer/clip_lanchester/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
+	lefthand_file = 'icons/obj/guns/manufacturer/pirate/lefthand.dmi'
+	righthand_file = 'icons/obj/guns/manufacturer/pirate/righthand.dmi'
+	mob_overlay_icon = 'icons/obj/guns/manufacturer/pirate/onmob.dmi'
+	recoil = 1 // Surprisingly stable!
+	recoil_unwielded = 8 //oof owwie ouch my wrists
+	icon_state = "dshotgun"
+	item_state = "dshotgun"
+	slot_flags = null
+	manufacturer = MANUFACTURER_LAKVAR
+	attack_verb = list("hacked", "chopped", "smashed", "torn", "ripped", "diced", "cut")
+	sharpness = IS_SHARP_ACCURATE
+
+
 /obj/item/gun/ballistic/shotgun/doublebarrel/roumain
 	name = "HP antique double-barreled shotgun"
 	desc = "A special-edition shotgun hand-made by Hunter's Pride with a high-quality walnut stock inlaid with brass scrollwork. Shotguns like this are very rare outside of the Saint-Roumain Militia's ranks. Otherwise functionally identical to a common double-barreled shotgun. Chambered in 12g."
