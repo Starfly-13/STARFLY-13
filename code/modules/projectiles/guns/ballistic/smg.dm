@@ -446,7 +446,7 @@ EMPTY_GUN_HELPER(automatic/smg/cm5)
 	show_magazine_on_sprite = TRUE
 	manufacturer = MANUFACTURER_NANOTRASEN_OLD
 
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq/scrap
+/* /obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq/scrap
 	name = "\improper ALK SMG"
 	desc = "Despite the fact this weapon looks like it's falling apart, this scrappy looking SMG is surprisingly durable."
 	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
@@ -468,4 +468,22 @@ EMPTY_GUN_HELPER(automatic/smg/cm5)
 	wield_delay = 0.5 SECONDS
 
 	folded_slowdown = 0.15
-	folded_wield_delay = 0.2 SECONDS
+	folded_wield_delay = 0.2 SECONDS */
+
+/obj/item/gun/ballistic/automatic/smg/c20r/scrap
+	name = "\improper ALK SMG"
+	desc = "Despite the fact this weapon looks like it's falling apart, this scrappy looking SMG is surprisingly durable."
+	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
+	lefthand_file = 'icons/obj/guns/manufacturer/pirate/lefthand.dmi'
+	righthand_file = 'icons/obj/guns/manufacturer/pirate/righthand.dmi'
+	icon_state = "sten"
+	item_state = "sten"
+	mag_type = /obj/item/ammo_box/magazine/smgm9mm
+	show_magazine_on_sprite = TRUE
+	manufacturer = MANUFACTURER_LAKVAR
+
+	spread = 9
+	recoil_unwielded = 5
+
+	recoil = 1
+	recoil_unwielded = 5
