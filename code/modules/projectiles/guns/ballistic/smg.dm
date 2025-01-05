@@ -47,7 +47,7 @@
 /obj/item/gun/ballistic/automatic/smg/c20r
 	name = "\improper C-20r SMG"
 	desc = "A bullpup .45 SMG designated 'C-20r.' Its buttstamp reads 'Scarborough Arms - Per falcis, per pravitas.'"
-	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/scarborough/48x32-old.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/scarborough/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/scarborough/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
@@ -73,6 +73,7 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 /obj/item/gun/ballistic/automatic/smg/c20r/cobra
 	name = "\improper Cobra 20"
 	desc = "An older model of SMG manufactured by Scarborough Arms, a predecessor to the military C-20 series. Chambered in .45. "
+	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
 	// can_bayonet = FALSE
 	icon_state = "cobra20"
 	item_state = "cobra20"
@@ -129,7 +130,7 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 /obj/item/gun/ballistic/automatic/smg/m90
 	name = "\improper M-90gl Carbine"
 	desc = "A three-round burst 5.56 toploading carbine, designated 'M-90gl'. Has an attached underbarrel grenade launcher which can be toggled on and off."
-	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/scarborough/48x32-old.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/scarborough/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/scarborough/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
