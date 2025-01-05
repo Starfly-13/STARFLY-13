@@ -285,7 +285,7 @@
 	name = ".45 Cobra Ammo Crate"
 	desc = "Contains a .45 magazine for the Cobra-20, containing 24 rounds."
 	cost = 750
-	contains = list(/obj/item/ammo_box/magazine/smgm45)
+	contains = list(/obj/item/ammo_box/magazine/m45_cobra)
 
 /*
 		Rifle ammo

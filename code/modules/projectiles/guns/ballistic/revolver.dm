@@ -477,7 +477,7 @@
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	obj_flags = UNIQUE_RENAME
 	semi_auto = TRUE //double action
 	safety_wording = "safety"
@@ -545,10 +545,10 @@ EMPTY_GUN_HELPER(revolver/detective)
 	return TRUE
 
 /obj/item/gun/ballistic/revolver/detective/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/revolver/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 EMPTY_GUN_HELPER(revolver)
 EMPTY_GUN_HELPER(revolver/viper)
@@ -588,14 +588,14 @@ EMPTY_GUN_HELPER(revolver/viper)
 	spread_unwielded = 15
 	recoil = 0
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44/montagne
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44/montagne
 
 /obj/item/gun/ballistic/revolver/montagne/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/ammo_hud/revolver)
 
 /obj/item/gun/ballistic/revolver/montagne/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/revolver/ashhand
 	name = "HP Ashhand"
@@ -606,7 +606,7 @@ EMPTY_GUN_HELPER(revolver/viper)
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 
 	icon_state = "ashhand"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	fire_sound = 'sound/weapons/gun/revolver/shot_hunting.ogg'
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 	gate_loaded = TRUE
@@ -631,7 +631,7 @@ EMPTY_GUN_HELPER(revolver/viper)
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/pepperbox
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/pepperbox
 	spread = 20
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 	spread_unwielded = 50
@@ -641,7 +641,7 @@ EMPTY_GUN_HELPER(revolver/viper)
 	safety_wording = "safety"
 
 /obj/item/gun/ballistic/revolver/firebrand/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/revolver/shadow
 	name = "\improper Shadow 45"
@@ -654,7 +654,7 @@ EMPTY_GUN_HELPER(revolver/viper)
 	icon_state = "shadow"
 	item_state = "hp_generic"
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
 	manufacturer = MANUFACTURER_HEPHAESTUS
 	obj_flags = UNIQUE_RENAME
 	gate_loaded = TRUE
@@ -676,4 +676,4 @@ EMPTY_GUN_HELPER(revolver/viper)
 	AddComponent(/datum/component/ammo_hud/revolver)
 
 /obj/item/gun/ballistic/revolver/shadow/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE

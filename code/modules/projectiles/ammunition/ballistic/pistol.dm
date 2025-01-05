@@ -25,6 +25,12 @@
 	projectile_type = /obj/projectile/bullet/c10mm/hp
 	bullet_skin = "hollow"
 
+/obj/item/ammo_casing/c10mm/inc
+	name = "10mm incendiary bullet casing"
+	desc = "A 10mm incendiary bullet casing."
+	bullet_skin = "incen"
+	projectile_type = /obj/projectile/bullet/incendiary/c10mm
+
 /obj/item/ammo_casing/c10mm/rubber
 	name = "10mm rubber bullet casing"
 	desc = "A 10mm rubber bullet casing."
@@ -58,6 +64,12 @@
 	desc = "A 9mm hollow point bullet casing."
 	bullet_skin = "hollow"
 	projectile_type = /obj/projectile/bullet/c9mm/hp
+
+/obj/item/ammo_casing/c9mm/inc
+	name = "9mm incendiary bullet casing"
+	desc = "A 9mm incendiary bullet casing."
+	bullet_skin = "incen"
+	projectile_type = /obj/projectile/bullet/incendiary/c9mm
 
 /obj/item/ammo_casing/c9mm/rubber
 	name = "9mm rubber bullet casing"

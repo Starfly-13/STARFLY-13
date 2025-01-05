@@ -54,11 +54,11 @@
 	icon_state = "c20r"
 	item_state = "c20r"
 
-	mag_type = /obj/item/ammo_box/magazine/smgm45
-	can_bayonet = TRUE
-	can_suppress = FALSE
-	knife_x_offset = 26
-	knife_y_offset = 12
+	// mag_type = /obj/item/ammo_box/magazine/m45_cobra
+	// can_bayonet = TRUE
+	// can_suppress = FALSE
+	// knife_x_offset = 26
+	// knife_y_offset = 12
 	show_magazine_on_sprite = TRUE
 	show_magazine_on_sprite_ammo = TRUE
 	empty_indicator = TRUE
@@ -73,12 +73,12 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 /obj/item/gun/ballistic/automatic/smg/c20r/cobra
 	name = "\improper Cobra 20"
 	desc = "An older model of SMG manufactured by Scarborough Arms, a predecessor to the military C-20 series. Chambered in .45. "
-	can_bayonet = FALSE
+	// can_bayonet = FALSE
 	icon_state = "cobra20"
 	item_state = "cobra20"
 
 /obj/item/gun/ballistic/automatic/smg/c20r/cobra/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/smg/c20r/suns
 	desc = "A bullpup .45 SMG designated 'C-20r.' Its buttstamp reads 'Scarborough Arms - Per falcis, per pravitas.' Before being painted, this one was used as a film prop!"
@@ -136,8 +136,8 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	icon_state = "m90"
 	item_state = "m90"
 
-	mag_type = /obj/item/ammo_box/magazine/m556
-	can_suppress = FALSE
+	// mag_type = /obj/item/ammo_box/magazine/m556
+	// can_suppress = FALSE
 	gun_firenames = list(FIREMODE_SEMIAUTO = "single", FIREMODE_BURST = "burst fire", FIREMODE_FULLAUTO = "full auto", FIREMODE_OTHER = "underbarrel grenade launcher")
 	gun_firemodes = list(FIREMODE_SEMIAUTO, FIREMODE_BURST, FIREMODE_OTHER)
 	default_firemode = FIREMODE_SEMIAUTO
@@ -219,8 +219,8 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 
 	icon_state = "firestorm"
 	item_state = "firestorm"
-	mag_type = /obj/item/ammo_box/magazine/c45_firestorm_mag
-	can_suppress = FALSE
+	// mag_type = /obj/item/ammo_box/magazine/c45_firestorm_mag
+	// can_suppress = FALSE
 	unique_mag_sprites_for_variants = TRUE
 	burst_size = 1
 	actions_types = list()
@@ -232,7 +232,7 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	wield_slowdown = 0.4
 
 /obj/item/gun/ballistic/automatic/smg/firestorm/pan //spawns with pan magazine, can take sticks instead of just drums, not sure where this would be used, maybe erts?
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/smg/firestorm/pan/Initialize()
 	. = ..()
@@ -250,7 +250,7 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	icon_state = "cm5"
 	item_state = "cm5"
 
-	mag_type = /obj/item/ammo_box/magazine/smgm9mm
+	// mag_type = /obj/item/ammo_box/magazine/smgm9mm
 	weapon_weight = WEAPON_LIGHT
 	fire_sound = 'sound/weapons/gun/smg/smg_heavy.ogg'
 	manufacturer = MANUFACTURER_MINUTEMAN

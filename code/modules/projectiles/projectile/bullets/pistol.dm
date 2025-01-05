@@ -59,6 +59,12 @@
 	armour_penetration = -50
 	speed_mod = BULLET_SPEED_HP_MOD
 
+/obj/projectile/bullet/incendiary/c9mm
+	name = "9mm incendiary bullet"
+	damage = 10
+	armour_penetration = -20
+	fire_stacks = 2
+
 /obj/projectile/bullet/c9mm/rubber
 	name = "9mm rubber bullet"
 	damage = 5
@@ -90,6 +96,12 @@
 	damage = 40
 	armour_penetration = -50
 	speed_mod = BULLET_SPEED_HP_MOD
+
+/obj/projectile/bullet/incendiary/c10mm
+	name = "10mm incendiary bullet"
+	damage = 15
+	armour_penetration = -20
+	fire_stacks = 2
 
 /obj/projectile/bullet/c10mm/rubber
 	name = "10mm rubber bullet"

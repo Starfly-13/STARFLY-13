@@ -30,7 +30,7 @@
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
 
 	w_class = WEIGHT_CLASS_SMALL
-	mag_type = /obj/item/ammo_box/magazine/m10mm
+	// mag_type = /obj/item/ammo_box/magazine/m10mm
 	fire_sound = 'sound/weapons/gun/pistol/shot.ogg'
 	dry_fire_sound = 'sound/weapons/gun/pistol/dry_fire.ogg'
 	suppressed_sound = 'sound/weapons/gun/pistol/shot_suppressed.ogg'
@@ -52,6 +52,8 @@
 
 EMPTY_GUN_HELPER(automatic/pistol/syndicate)
 
+NO_MAG_GUN_HELPER(automatic/pistol/syndicate)
+
 /obj/item/gun/ballistic/automatic/pistol/suns
 	desc = "A small, easily concealable 10mm handgun that bears Scarborough Arms stamps. It is painted in the colors of Roseus Galactic."
 	icon_state = "pistol_suns"
@@ -70,8 +72,8 @@ EMPTY_GUN_HELPER(automatic/pistol/syndicate)
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 
-	mag_type = /obj/item/ammo_box/magazine/m45
-	can_suppress = FALSE
+	// mag_type = /obj/item/ammo_box/magazine/m45
+	// can_suppress = FALSE
 	fire_sound = 'sound/weapons/gun/pistol/candor.ogg'
 	rack_sound = 'sound/weapons/gun/pistol/candor_cocked.ogg'
 	lock_back_sound = 'sound/weapons/gun/pistol/slide_lock.ogg'
@@ -296,4 +298,6 @@ EMPTY_GUN_HELPER(automatic/pistol/candor/factory)
 		/obj/item/ammo_box/magazine/internal/derr357,
 	)
 
-EMPTY_GUN_HELPER(ballistic/derringer)
+EMPTY_GUN_HELPER(derringer)
+
+NO_MAG_GUN_HELPER(derringer)

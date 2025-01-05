@@ -45,6 +45,11 @@
 	damage = 25
 	speed_mod = BULLET_SPEED_HP_MOD
 
+/obj/projectile/bullet/incendiary/c46x30mm
+	name = "4.6x30mm incendiary bullet"
+	damage = 10
+	fire_stacks = 1
+
 /obj/projectile/bullet/c46x30mm/rubber
 	name = "4.6x30mm bullet"
 	damage = 4

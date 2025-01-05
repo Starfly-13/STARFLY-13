@@ -50,6 +50,8 @@
 	///Maximum stack size of ammunition
 	var/stack_size = 15
 
+	var/bullet_per_box
+
 /obj/item/ammo_casing/attackby(obj/item/attacking_item, mob/user, params)
 	if(istype(attacking_item, /obj/item/pen))
 		if(!user.is_literate())

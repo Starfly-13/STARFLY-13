@@ -41,6 +41,15 @@
 	desc = "A 8x58mm caseless tracker round."
 	projectile_type = /obj/projectile/bullet/a858/trac
 
+// 5.56x39mm (M-90gl Carbine & P-16)
+
+/obj/item/ammo_casing/a556_39
+	name = "5.56x39mm bullet casing"
+	desc = "A 5.56x39mm bullet casing."
+	icon_state = "rifle-brass"
+	caliber = "5.56x45mm"
+	projectile_type = /obj/projectile/bullet/a556_45
+	bullet_per_box = 80
 
 // 5.56x42mm CLIP (CM82, Hydra variants)
 

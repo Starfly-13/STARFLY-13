@@ -78,7 +78,7 @@
 	gun_firemodes = list(FIREMODE_FULLAUTO)
 	default_firemode = FIREMODE_FULLAUTO
 
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
+	// mag_type = /obj/item/ammo_box/magazine/internal/shot/lethal
 	manufacturer = MANUFACTURER_HEPHAESTUS
 	fire_delay = 0.05 SECONDS //slamfire
 	rack_delay = 0.2 SECONDS
@@ -102,7 +102,7 @@
 		mob_overlay_state = item_state
 
 /obj/item/gun/ballistic/shotgun/brimstone/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 // LK-SS SHOTGUN //
 
@@ -134,7 +134,7 @@
 	icon_state = "hellfire"
 	item_state = "hellfire"
 
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
+	// mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
 	sawn_desc = "Come with me if you want to live."
 	can_be_sawn_off  = TRUE
 	rack_sound = 'sound/weapons/gun/shotgun/rack_alt.ogg'
@@ -159,7 +159,8 @@
 		mob_overlay_state = item_state
 
 /obj/item/gun/ballistic/shotgun/hellfire/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
+
 // Automatic Shotguns//
 /obj/item/gun/ballistic/shotgun/automatic
 	spread = 4
@@ -253,7 +254,7 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	righthand_file = 'icons/obj/guns/manufacturer/clip_lanchester/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/clip_lanchester/onmob.dmi'
 
-	mag_type = /obj/item/ammo_box/magazine/cm15_mag
+	// mag_type = /obj/item/ammo_box/magazine/cm15_mag
 	icon_state = "cm15"
 	item_state = "cm15"
 	empty_alarm = FALSE
@@ -290,7 +291,7 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	force = 10
 	flags_1 = CONDUCT_1
 	slot_flags = ITEM_SLOT_BACK
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/dual
+	// mag_type = /obj/item/ammo_box/magazine/internal/shot/dual
 
 	obj_flags = UNIQUE_RENAME
 	unique_reskin = list("Default" = "dshotgun",
@@ -427,7 +428,7 @@ NO_MAG_GUN_HELPER(shotgun/automatic/bulldog/inteq)
 	name = "compact compact combat shotgun"
 	desc = "A compact version of the compact version of the semi automatic combat shotgun. For when you want a gun the same size as your brain."
 	icon_state = "cshotguncc"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact/compact
+	// mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact/compact
 	w_class = WEIGHT_CLASS_SMALL
 	sawn_desc = "You know, this isn't funny anymore."
 	can_be_sawn_off  = TRUE
@@ -450,7 +451,7 @@ NO_MAG_GUN_HELPER(shotgun/automatic/bulldog/inteq)
 	name = "compact compact compact combat shotgun"
 	desc = "A compact version of the compact version of the compact version of the semi automatic combat shotgun. <i>It's a miracle it works...</i>"
 	icon_state = "cshotgunccc"
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact/compact/compact
+	// mag_type = /obj/item/ammo_box/magazine/internal/shot/com/compact/compact/compact
 	w_class = WEIGHT_CLASS_TINY
 	sawn_desc = "<i>Sigh.</i> This is a trigger attached to a cartridge."
 	can_be_sawn_off  = TRUE

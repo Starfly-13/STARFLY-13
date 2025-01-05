@@ -1,3 +1,13 @@
+/obj/item/ammo_box/magazine/m556
+	name = "toploader magazine (5.56x45mm)"
+	desc = "An advanced, 30-round toploading magazine for the M-90gl Carbine. These rounds do moderate damage with good armor penetration."
+	icon_state = "5.56m-1"
+	base_icon_state = "5.56m"
+	ammo_type = /obj/item/ammo_casing/a556_39
+	caliber = "5.56x45mm"
+	max_ammo = 30
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
+
 /obj/item/ammo_box/magazine/rifle47x33mm
 	name = "\improper Solarian LMG magazine (4.73x33mm caseless)"
 	desc = "A large, 50-round magazine for the Solar machine gun. These rounds do moderate damage with good armor penetration."
@@ -52,6 +62,28 @@
 	icon_state = "skm_drum-1"
 	max_ammo = 75
 	w_class = WEIGHT_CLASS_NORMAL
+
+/obj/item/ammo_box/magazine/ebr
+	name = "battle rifle magazine (.308)"
+	desc = "A small, 10-round steel magazine for the M514 EBR. These rounds do good damage with significant armor penetration."
+	icon_state = "ebr_mag"
+	ammo_type = /obj/item/ammo_casing/a308
+	caliber = ".308"
+	max_ammo = 10
+
+/obj/item/ammo_box/magazine/ebr/update_icon_state()
+	. = ..()
+	icon_state = "ebr_mag-[!!ammo_count()]"
+
+/obj/item/ammo_box/magazine/gal
+	name = "\improper GAL Magazine (.308)"
+	desc = "A standard 10-round magazine for GAL platform DMRs. These rounds do good damage with significant armor penetration."
+	icon_state = "gal_mag-1"
+	base_icon_state = "gal_mag"
+	ammo_type = /obj/item/ammo_casing/a308
+	caliber = ".308"
+	max_ammo = 10
+	multiple_sprites = AMMO_BOX_FULL_EMPTY
 
 /obj/item/ammo_box/magazine/f4_308
 	name = "\improper F4 Magazine (.308)"

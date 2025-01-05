@@ -87,21 +87,21 @@
 	eject_empty_sound = 'sound/weapons/gun/rifle/vickland_unload.ogg'
 
 	internal_magazine = FALSE
-	mag_type = /obj/item/ammo_box/magazine/illestren_a850r
+	// mag_type = /obj/item/ammo_box/magazine/illestren_a850r
 	empty_autoeject = TRUE
 	eject_sound_vary = FALSE
 	can_be_sawn_off = TRUE
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 
 /obj/item/gun/ballistic/rifle/illestren/empty //i had to name it empty instead of no_mag because else it wouldnt work with guncases. sorry!
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/rifle/illestren/sawoff(mob/user)
 	. = ..()
 	if(.)
 		spread = 24
 		spread_unwielded = 30
-		can_bayonet = FALSE
+		// can_bayonet = FALSE
 		item_state = "illestren_sawn"
 		mob_overlay_state = item_state
 		weapon_weight = WEAPON_MEDIUM //you can fire it onehanded, makes it worse than worse than useless onehanded, but you can
@@ -135,7 +135,7 @@
 /obj/item/gun/ballistic/rifle/solgov
 	name = "SSG-669C"
 	desc = "A bolt-action sniper rifle used by Solarian troops. Beloved for its rotary design and accuracy. Chambered in 8x58mm Caseless."
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/solgov
+	// mag_type = /obj/item/ammo_box/magazine/internal/boltaction/solgov
 	icon_state = "ssg669c"
 	item_state = "ssg669c"
 	icon = 'icons/obj/guns/manufacturer/solararmories/48x32.dmi'
@@ -168,7 +168,7 @@
 	icon_state = "scout"
 	item_state = "scout"
 
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/smile
+	// mag_type = /obj/item/ammo_box/magazine/internal/boltaction/smile
 	fire_sound = 'sound/weapons/gun/rifle/scout.ogg'
 
 	rack_sound = 'sound/weapons/gun/rifle/scout_bolt_out.ogg'
@@ -183,7 +183,7 @@
 	manufacturer = MANUFACTURER_HEPHAESTUS
 
 /obj/item/gun/ballistic/rifle/scout/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/rifle/polymer
 	name = "LK-MR Marksman Rifle"

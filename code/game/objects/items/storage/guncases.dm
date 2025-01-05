@@ -64,6 +64,12 @@
 /obj/item/storage/guncase/inherit
 	grab_loc = TRUE
 
+/obj/item/storage/guncase/p16
+/obj/item/storage/guncase/p16/PopulateContents()
+	new /obj/item/gun/ballistic/automatic/assault/p16/no_mag(src)
+	new /obj/item/ammo_box/magazine/p16/empty(src)
+	new /obj/item/ammo_box/magazine/p16/empty(src)
+
 /obj/item/storage/guncase/pistol
 	name = "pistol case"
 	desc = "A large box designed for holding pistols and magazines safely."
