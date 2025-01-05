@@ -1,4 +1,3 @@
-#define LEGIONVIRUS_TYPE /datum/disease/transformation/legionvirus
 #define BULLET_SHELL_DAMAGE 1
 
 //A beast that fire freezing blasts.
@@ -33,7 +32,6 @@
 	attack_sound = 'sound/weapons/bladeslice.ogg'
 	aggro_vision_range = 9
 	turns_per_move = 5
-	gold_core_spawnable = HOSTILE_SPAWN
 	loot = list(/obj/item/stack/ore/diamond{layer = ABOVE_MOB_LAYER},
 				/obj/item/stack/ore/diamond{layer = ABOVE_MOB_LAYER})
 	var/lava_drinker = TRUE
@@ -46,10 +44,10 @@
 	damage_type = BURN
 	nodamage = TRUE
 	flag = "energy"
-	temperature = -50 // Cools you down! per hit!
+	temperature = -5 // Cools you down! per hit!
 
 /obj/projectile/temp/basilisk/super
-	temperature = -100
+	temperature = -20
 	damage = 5
 	nodamage = FALSE
 
@@ -204,7 +202,6 @@
 	projectiletype = /obj/projectile/temp/basilisk/heated
 
 #undef BULLET_SHELL_DAMAGE
-#undef LEGIONVIRUS_TYPE
 
 //Watcher
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher
@@ -231,7 +228,6 @@
 	robust_searching = 1
 	attack_same = TRUE		// So we'll fight basilisks
 	//mob_trophy = /obj/item/mob_trophy/watcher_wing
-	gold_core_spawnable = NO_SPAWN
 	loot = list()
 	butcher_results = list(/obj/item/stack/ore/diamond = 2, /obj/item/stack/sheet/sinew = 2, /obj/item/stack/sheet/bone = 1)
 	lava_drinker = FALSE
@@ -340,8 +336,8 @@
 		if(istype(L))
 			L.apply_status_effect(/datum/status_effect/freon/watcher)
 
-/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/tendril
-	fromtendril = TRUE
+/mob/living/simple_animal/hostile/asteroid/basilisk/watcher/nest
+	from_nest = TRUE
 
 /mob/living/simple_animal/hostile/asteroid/basilisk/watcher/forgotten
 	name = "forgotten watcher"

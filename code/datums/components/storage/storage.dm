@@ -18,6 +18,7 @@
 	var/list/cant_hold								//if this is set, items, and their children, won't fit
 	var/list/exception_hold           //if set, these items will be the exception to the max size of object that can fit.
 	var/list/can_hold_trait							/// If set can only contain stuff with this single trait present.
+	var/list/can_hold_max_of_items 			// if set, storage can only hold up to the set amount of said item.
 
 	var/can_hold_description
 
@@ -424,7 +425,7 @@
 /datum/component/storage/proc/dump_content_at(atom/dest_object, mob/M)
 	var/atom/A = parent
 	var/atom/dump_destination = dest_object.get_dumping_location()
-	if(A.Adjacent(M) && dump_destination && M.Adjacent(dump_destination))
+	if(M.CanReach(A) && dump_destination && M.CanReach(dump_destination))
 		if(locked)
 			to_chat(M, "<span class='warning'>[parent] seems to be [locked_flavor]!</span>")
 			return FALSE
@@ -432,6 +433,12 @@
 			playsound(A, "rustle", 50, TRUE, -5)
 			return TRUE
 	return FALSE
+
+/datum/component/storage/proc/get_dumping_location(atom/dest_object)
+	var/datum/component/storage/storage = dest_object.GetComponent(/datum/component/storage)
+	if(storage)
+		return storage.real_location()
+	return dest_object.get_dumping_location()
 
 //This proc is called when you want to place an item into the storage item.
 /datum/component/storage/proc/attackby(datum/source, obj/item/I, mob/M, params)
@@ -560,6 +567,16 @@
 			if(!stop_messages)
 				to_chat(M, "<span class='warning'>[host] cannot hold [I]!</span>")
 			return FALSE
+	if(length(can_hold_max_of_items))
+		if(is_type_in_typecache(I,can_hold_max_of_items))
+			var/amount = 0
+			for(var/_item in contents())
+				if(is_type_in_typecache(_item,can_hold_max_of_items))
+					amount++
+			if(amount >= can_hold_max_of_items[I.type])
+				if(!stop_messages)
+					to_chat(M, "<span class='warning'>[host] cannot hold another [I]!</span>")
+					return FALSE
 	if(is_type_in_typecache(I, cant_hold) || HAS_TRAIT(I, TRAIT_NO_STORAGE_INSERT) || (can_hold_trait && !HAS_TRAIT(I, can_hold_trait))) //Items which this container can't hold.
 		if(!stop_messages)
 			to_chat(M, "<span class='warning'>[host] cannot hold [I]!</span>")

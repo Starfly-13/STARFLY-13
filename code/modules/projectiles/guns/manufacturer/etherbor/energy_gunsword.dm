@@ -14,9 +14,13 @@
 	fire_delay = 0.16 SECONDS
 
 	wield_delay = 0.7 SECONDS
-	wield_slowdown = 0.35
+	wield_slowdown = LASER_RIFLE_SLOWDOWN
 
-	cell_type = /obj/item/stock_parts/cell/gun/kalix
+	default_ammo_type = /obj/item/stock_parts/cell/gun/kalix
+	allowed_ammo_types = list(
+		/obj/item/stock_parts/cell/gun/kalix,
+		/obj/item/stock_parts/cell/gun/pgf,
+	)
 	ammo_type = list(/obj/item/ammo_casing/energy/kalix, /obj/item/ammo_casing/energy/disabler/hitscan)
 
 	load_sound = 'sound/weapons/gun/gauss/pistol_reload.ogg'
@@ -43,17 +47,23 @@
 	armour_penetration = -10
 
 /obj/item/gun/energy/kalix/empty_cell
-	dead_cell = TRUE
+	spawn_no_ammo = TRUE
 
 /obj/item/gun/energy/kalix/pgf
 	name = "Etherbor BG-16"
 	desc = "An advanced variant of the BG-12, the BG-16 is the military-grade beam gun designed and manufactured by Etherbor Industries as the standard-issue close-range weapon of the Epsilon Eridani Defense Force."
 	icon_state = "pgfgun"
 	item_state = "pgfgun"
-	w_class = WEIGHT_CLASS_NORMAL
 
-	cell_type = /obj/item/stock_parts/cell/gun/pgf
-	ammo_type = list(/obj/item/ammo_casing/energy/pgf , /obj/item/ammo_casing/energy/disabler/hitscan)
+	gun_firemodes = list(FIREMODE_SEMIAUTO, FIREMODE_FULLAUTO)
+	default_firemode = FIREMODE_SEMIAUTO
+
+	default_ammo_type = /obj/item/stock_parts/cell/gun/pgf
+	allowed_ammo_types = list(
+		/obj/item/stock_parts/cell/gun/pgf,
+		/obj/item/stock_parts/cell/gun/kalix,
+	)
+	ammo_type = list(/obj/item/ammo_casing/energy/kalix/pgf , /obj/item/ammo_casing/energy/disabler/hitscan)
 
 /obj/projectile/beam/hitscan/kalix/pgf
 	name = "concentrated energy"
@@ -64,9 +74,10 @@
 	muzzle_flash_color_override = LIGHT_COLOR_ELECTRIC_GREEN
 	impact_light_color_override = LIGHT_COLOR_ELECTRIC_GREEN
 
-/obj/item/ammo_casing/energy/pgf
+/obj/item/ammo_casing/energy/kalix/pgf
 	projectile_type = /obj/projectile/beam/hitscan/kalix/pgf
 	fire_sound = 'sound/weapons/gun/energy/kalixsmg.ogg'
+	e_cost = 666 //30 shots per cell
 	delay = 1
 
 /obj/item/gun/energy/kalix/pistol //blue
@@ -78,12 +89,16 @@
 	modifystate = FALSE
 
 	wield_delay = 0.2 SECONDS
-	wield_slowdown = 0.15
+	wield_slowdown = LASER_PISTOL_SLOWDOWN
 
 	spread = 2
 	spread_unwielded = 5
 
-	cell_type = /obj/item/stock_parts/cell/gun/kalix
+	default_ammo_type = /obj/item/stock_parts/cell/gun/kalix
+	allowed_ammo_types = list(
+		/obj/item/stock_parts/cell/gun/kalix,
+		/obj/item/stock_parts/cell/gun/pgf,
+	)
 	ammo_type = list(/obj/item/ammo_casing/energy/kalix/pistol)
 
 
@@ -95,14 +110,13 @@
 	delay = 0
 
 /obj/item/gun/energy/kalix/pistol/empty_cell
-	dead_cell = TRUE
+	spawn_no_ammo = TRUE
 
 /obj/item/gun/energy/kalix/pgf/heavy
 	name = "Etherbor HBG-7"
 	desc = "The HBG-7 is the standard-issue rifle weapon of the Epsilon Eridani Defense Force. If the stopping power and fire rate isn't enough, it comes with a DMR mode that has greater armor piercing for dealing with armored targets."
 	icon_state = "pgfheavy"
 	item_state = "pgfheavy"
-	w_class = WEIGHT_CLASS_BULKY
 	slot_flags = ITEM_SLOT_BACK
 
 	modifystate = FALSE
@@ -113,7 +127,7 @@
 	fire_delay = 0.2 SECONDS
 
 	wield_delay = 0.7 SECONDS
-	wield_slowdown = 0.6
+	wield_slowdown = HEAVY_LASER_RIFLE_SLOWDOWN
 
 	spread = 0
 	spread_unwielded = 20
@@ -166,5 +180,5 @@
 	spread = -5
 	spread_unwielded = 40
 
-	wield_slowdown = 1
+	wield_slowdown = LASER_SNIPER_SLOWDOWN
 	wield_delay = 1.3 SECONDS

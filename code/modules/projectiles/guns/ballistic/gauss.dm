@@ -8,10 +8,12 @@
 	icon_state = "gauss"
 	item_state = "arg"
 	slot_flags = 0
-	mag_type = /obj/item/ammo_box/magazine/gauss
+	default_ammo_type = /obj/item/ammo_box/magazine/gauss
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/gauss,
+	)
 	fire_sound = 'sound/weapons/gun/gauss/magrifle.ogg'
 	load_sound = 'sound/weapons/gun/gauss/rifle_reload.ogg'
-	can_suppress = FALSE
 	burst_size = 1
 	fire_delay = 0.3 SECONDS
 	spread = 0
@@ -27,7 +29,7 @@
 	spread_unwielded = 25
 	recoil = 0
 	recoil_unwielded = 4
-	wield_slowdown = 0.75
+	wield_slowdown = HEAVY_RIFLE_SLOWDOWN
 	wield_delay = 1 SECONDS
 	fire_select_icon_state_prefix = "pellet_"
 

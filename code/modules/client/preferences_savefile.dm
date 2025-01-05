@@ -208,21 +208,25 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["pda_color"], pda_color)
 	READ_FILE(S["whois_visible"], whois_visible)
 
-	// Custom hotkeys
-	READ_FILE(S["key_bindings"], key_bindings)
-	check_keybindings()
-
 	READ_FILE(S["show_credits"], show_credits)
 
 	//favorite outfits
 	READ_FILE(S["favorite_outfits"], favorite_outfits)
-
 	var/list/parsed_favs = list()
 	for(var/typetext in favorite_outfits)
 		var/datum/outfit/path = text2path(typetext)
 		if(ispath(path)) //whatever typepath fails this check probably doesn't exist anymore
 			parsed_favs += path
 	favorite_outfits = uniqueList(parsed_favs)
+
+	// OOC commendations
+	READ_FILE(S["hearted_until"], hearted_until)
+	if(hearted_until > world.realtime)
+		hearted = TRUE
+
+	// Custom hotkeys
+	READ_FILE(S["key_bindings"], key_bindings)
+	check_keybindings()
 
 	//try to fix any outdated data if necessary
 	if(needs_update >= 0)
@@ -352,6 +356,7 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	WRITE_FILE(S["key_bindings"], key_bindings)
 	WRITE_FILE(S["favorite_outfits"], favorite_outfits)
 	WRITE_FILE(S["whois_visible"], whois_visible)
+	WRITE_FILE(S["hearted_until"], (hearted_until > world.realtime ? hearted_until : null))
 	return TRUE
 
 /datum/preferences/proc/load_character(slot)
@@ -463,9 +468,15 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	READ_FILE(S["equipped_gear"], equipped_gear)
 	if(config) //This should *probably* always be there, but just in case.
 		if(length(equipped_gear) > CONFIG_GET(number/max_loadout_items))
-			to_chat(parent, "<span class='userdanger'>Loadout maximum items exceeded in loaded slot, Your loadout has been cleared! You had [length(equipped_gear)]/[CONFIG_GET(number/max_loadout_items)] equipped items!</span>")
+			to_chat(parent, span_userdanger("Loadout maximum items exceeded in loaded slot, Your loadout has been cleared! You had [length(equipped_gear)]/[CONFIG_GET(number/max_loadout_items)] equipped items!"))
 			equipped_gear = list()
-			WRITE_FILE(S["equipped_gear"]				, equipped_gear)
+			WRITE_FILE(S["equipped_gear"], equipped_gear)
+
+	for(var/gear in equipped_gear)
+		if(!(gear in GLOB.gear_datums))
+			to_chat(parent, span_warning("Removing nonvalid loadout item [gear] from loadout"))
+			equipped_gear -= gear //be GONE
+			WRITE_FILE(S["equipped_gear"], equipped_gear)
 
 	READ_FILE(S["feature_human_tail"], features["tail_human"])
 	READ_FILE(S["feature_human_ears"], features["ears"])

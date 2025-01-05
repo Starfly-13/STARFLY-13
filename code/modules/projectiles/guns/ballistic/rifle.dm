@@ -5,10 +5,12 @@
 	mob_overlay_icon = 'icons/mob/clothing/back.dmi'
 	icon_state = "hunting"
 	item_state = "hunting"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/boltaction
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/internal/boltaction,
+	)
 	bolt_wording = "bolt"
 	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
 	slot_flags = ITEM_SLOT_BACK
 	bolt_type = BOLT_TYPE_STANDARD
 	semi_auto = FALSE
@@ -29,7 +31,7 @@
 	spread_unwielded = 48
 	recoil = -3
 	recoil_unwielded = 4
-	wield_slowdown = 1
+	wield_slowdown = RIFLE_SLOWDOWN
 	wield_delay = 1.2 SECONDS
 
 /obj/item/gun/ballistic/rifle/update_overlays()
@@ -51,7 +53,7 @@
 
 /obj/item/gun/ballistic/rifle/eject_magazine(mob/user, display_message = TRUE, obj/item/ammo_box/magazine/tac_load = null)
 	if (!bolt_locked && empty_autoeject)
-		to_chat(user, "<span class='notice'>The bolt is closed!</span>")
+		to_chat(user, span_notice("The bolt is closed!"))
 		return
 	return ..()
 
@@ -62,7 +64,7 @@
 
 /obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	if (!bolt_locked)
-		to_chat(user, "<span class='notice'>The bolt is closed!</span>")
+		to_chat(user, span_notice("The bolt is closed!"))
 		return
 	return ..()
 
@@ -189,8 +191,11 @@
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "crackhead_rifle"
 	item_state = "crackhead_rifle"
-	weapon_weight = WEAPON_MEDIUM
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/polymer
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/boltaction/polymer
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/internal/boltaction/polymer,
+	)
 	can_be_sawn_off = FALSE
 	manufacturer = MANUFACTURER_LAKVAR
