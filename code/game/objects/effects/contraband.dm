@@ -392,8 +392,8 @@
 
 
 /obj/structure/sign/poster/contraband/stechkin
-	name = "Stechkin Pistol"
-	desc = "A poster advertising the Scarborough Arms Stechkin conealable pistol. It has a silencer attached, showing off the stealth capablities, while also looking badass as all hell."
+	name = "Ringneck Pistol"
+	desc = "A poster advertising the Scarborough Arms Ringneck conealable pistol. It has a silencer attached, showing off the stealth capablities, while also looking badass as all hell."
 	icon_state = "poster_stechkin"
 
 /obj/structure/sign/poster/contraband/energy_swords
@@ -524,7 +524,7 @@
 /obj/structure/sign/poster/contraband/m90
 	name = "M90 SMG"
 	desc = "A poster advertising the Scarborough M90. Burst action with a grenade launcher, for some reason."
-	icon_state = "poster-bulldog"
+	icon_state = "poster-m90"
 
 /obj/structure/sign/poster/contraband/inteq_nt
 	name = "Inteq Recruitment"
@@ -880,10 +880,10 @@
 	desc = "Terra, or Earth as it's called by inhabitants, the third planet in the Sol system. Home to the only life as humans knew it, until contact with the outside universe. This poster in particular is trying to attract tourists to Terra, listing attractions like the Grand Orrery and Neue Waldstätte."
 	icon_state = "poster-solgov-terra"
 
-/obj/structure/sign/poster/solgov/ares
-	name = "Ares"
-	desc = "Ares, fourth planet in the Sol system. While evidence suggests that Aphrodite and Ares may have once had life, Terra was the only one that kept it. This poster in particular is trying to attract tourists to Ares, listing attractions like skiing resorts and ancient robot exhibits."
-	icon_state = "poster-solgov-ares"
+/obj/structure/sign/poster/solgov/mars
+	name = "Mars"
+	desc = "Mars, fourth planet in the Sol system. While evidence suggests that Venus and Mars may have once had life, Terra was the only one that kept it. This poster in particular is trying to attract tourists to Mars, listing attractions like skiing resorts and ancient robot exhibits."
+	icon_state = "poster-solgov-mars"
 
 /obj/structure/sign/poster/solgov/luna
 	name = "Luna"

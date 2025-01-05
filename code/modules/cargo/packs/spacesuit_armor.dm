@@ -16,7 +16,7 @@
 
 /datum/supply_pack/spacesuit_armor/pilot_spacesuit
 	name = "Pilot Space Suit Crate"
-	desc = "One pilot space suit, for improved mobility in mechs."
+	desc = "One pilot space suit, for improved mobility in exosuits."
 	cost = 750
 	contains = list(/obj/item/clothing/suit/space/pilot,
 					/obj/item/clothing/head/helmet/space/pilot/random)
@@ -24,7 +24,7 @@
 
 /datum/supply_pack/spacesuit_armor/mining_hardsuits_indie
 	name = "Mining Hardsuit Crate"
-	desc = "One independent branded mining hardsuit for when explorer suits just dont cut it."
+	desc = "One independent-manufactured mining hardsuit, for when explorer suits just dont cut it."
 	cost = 1500
 	contains = list(/obj/item/clothing/suit/space/hardsuit/mining/independent)
 	crate_name = "mining hardsuit crate"
@@ -37,6 +37,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/medical)
 	crate_name = "medical hardsuit crate"
 	crate_type = /obj/structure/closet/crate/medical
+	faction = /datum/faction/nt
 
 /datum/supply_pack/spacesuit_armor/mining_hardsuit_heavy
 	name = "Heavy Mining Hardsuit Crate"
@@ -46,6 +47,7 @@
 					/obj/item/clothing/shoes/bhop)
 	crate_name = "heavy mining hardsuit crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
+	faction = /datum/faction/nt
 
 /datum/supply_pack/spacesuit_armor/sec_hardsuit_bundle
 	name = "Security Hardsuit Crate"
@@ -54,6 +56,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/security/independent)
 	crate_name = "security hardsuit crate"
 	crate_type = /obj/structure/closet/crate/secure/gear
+	faction = /datum/faction/nt
 
 /datum/supply_pack/spacesuit_armor/sci_hardsuit
 	name = "Science Hardsuit Crate"
@@ -62,6 +65,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/rd)
 	crate_name = "science hardsuit crate"
 	crate_type = /obj/structure/closet/crate/secure/science
+	faction = /datum/faction/nt
 
 /datum/supply_pack/spacesuit_armor/engi_spacesuit_bundle
 	name = "Engineering Space Suit Crate"
@@ -79,16 +83,7 @@
 	contains = list(/obj/item/clothing/suit/space/hardsuit/engine/atmos)
 	crate_name = "atmospherics hardsuit crate"
 	crate_type = /obj/structure/closet/crate/secure/engineering
-
-/datum/supply_pack/spacesuit_armor/swat
-	name = "SWAT Crate"
-	desc = "Contains one fullbody set of tough, fireproof, pressurized suit designed in a joint effort by IS-ERI and Nanotrasen. The set contains a suit, helmet, and combat belt."
-	cost = 3500
-	contains = list(/obj/item/clothing/head/helmet/swat/nanotrasen,
-					/obj/item/clothing/suit/space/swat,
-					/obj/item/storage/belt/military/assault)
-	crate_name = "swat crate"
-	crate_type = /obj/structure/closet/crate/secure/gear
+	faction = /datum/faction/nt
 
 /*
 		Non-spaceworthy (armor)
@@ -117,7 +112,8 @@
 	desc = "Contains one full set of bulletproof armor, guaranteed to reduce a bullet's stopping power by half but with limited protection against melee weaponry."
 	cost = 1750
 	contains = list(/obj/item/clothing/suit/armor/vest/bulletproof,
-					/obj/item/clothing/head/helmet/bulletproof)
+					/obj/item/clothing/head/helmet/bulletproof,
+					/obj/item/clothing/glasses/sunglasses/ballistic)
 	crate_name = "bulletproof armor crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma
 
@@ -127,4 +123,22 @@
 	cost = 1500
 	contains = list(/obj/item/clothing/suit/armor/laserproof)
 	crate_name = "reflector vest crate"
+	crate_type = /obj/structure/closet/crate/secure/plasma
+
+/datum/supply_pack/spacesuit_armor/marine_armor
+	name = "Tactical Armor Crate"
+	desc = "One set of well-rounded tactical armor. While it does not protect the limbs, the vest is fairly durable. The set includes a helmet and vest."
+	cost = 1500
+	contains = list(/obj/item/clothing/suit/armor/vest/marine,
+					/obj/item/clothing/head/helmet/bulletproof/x11)
+	crate_name = "armor crate"
+	crate_type = /obj/structure/closet/crate/secure/plasma
+
+/datum/supply_pack/spacesuit_armor/medium_marine_armor
+	name = "Medium Tactical Armor Crate"
+	desc = "One set of well-rounded medium tactical body armor. Plates are attached to the vest and cover the limbs. The set includes a helmet and chestpiece."
+	cost = 3000
+	contains = list(/obj/item/clothing/suit/armor/vest/marine/medium,
+					/obj/item/clothing/head/helmet/bulletproof/x11)
+	crate_name = "armor crate"
 	crate_type = /obj/structure/closet/crate/secure/plasma

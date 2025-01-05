@@ -1,11 +1,13 @@
 /obj/item/gun/ballistic/automatic/smg
+	show_magazine_on_sprite = TRUE
+
 	burst_size = 2
 	actions_types = list()
 	fire_delay = 0.13 SECONDS
 
 	spread = 6
 	spread_unwielded = 10
-	wield_slowdown = 0.35
+	wield_slowdown = SMG_SLOWDOWN
 	recoil_unwielded = 4
 	w_class = WEIGHT_CLASS_BULKY
 
@@ -18,6 +20,9 @@
 	load_empty_sound = 'sound/weapons/gun/smg/smg_reload.ogg'
 	eject_sound = 'sound/weapons/gun/smg/smg_unload.ogg'
 	eject_empty_sound = 'sound/weapons/gun/smg/smg_unload.ogg'
+
+	gunslinger_recoil_bonus = 2
+	gunslinger_spread_bonus = 16
 
 /obj/item/gun/ballistic/automatic/smg/calculate_recoil(mob/user, recoil_bonus = 0)
 	var/gunslinger_bonus = 2
@@ -42,18 +47,18 @@
 /obj/item/gun/ballistic/automatic/smg/c20r
 	name = "\improper C-20r SMG"
 	desc = "A bullpup .45 SMG designated 'C-20r.' Its buttstamp reads 'Scarborough Arms - Per falcis, per pravitas.'"
-	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/scarborough/48x32-old.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/scarborough/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/scarborough/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
 	icon_state = "c20r"
 	item_state = "c20r"
 
-	mag_type = /obj/item/ammo_box/magazine/smgm45
-	can_bayonet = TRUE
-	can_suppress = FALSE
-	knife_x_offset = 26
-	knife_y_offset = 12
+	// mag_type = /obj/item/ammo_box/magazine/m45_cobra
+	// can_bayonet = TRUE
+	// can_suppress = FALSE
+	// knife_x_offset = 26
+	// knife_y_offset = 12
 	show_magazine_on_sprite = TRUE
 	show_magazine_on_sprite_ammo = TRUE
 	empty_indicator = TRUE
@@ -68,12 +73,13 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 /obj/item/gun/ballistic/automatic/smg/c20r/cobra
 	name = "\improper Cobra 20"
 	desc = "An older model of SMG manufactured by Scarborough Arms, a predecessor to the military C-20 series. Chambered in .45. "
-	can_bayonet = FALSE
+	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
+	// can_bayonet = FALSE
 	icon_state = "cobra20"
 	item_state = "cobra20"
 
 /obj/item/gun/ballistic/automatic/smg/c20r/cobra/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/smg/c20r/suns
 	desc = "A bullpup .45 SMG designated 'C-20r.' Its buttstamp reads 'Scarborough Arms - Per falcis, per pravitas.' Before being painted, this one was used as a film prop!"
@@ -89,12 +95,11 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/onmob.dmi'
 	icon_state = "wt550"
 	item_state = "arg"
-	mag_type = /obj/item/ammo_box/magazine/wt550m9
-	can_suppress = FALSE
+	default_ammo_type = /obj/item/ammo_box/magazine/wt550m9
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/wt550m9,
+	)
 	actions_types = list()
-	can_bayonet = TRUE
-	knife_x_offset = 25
-	knife_y_offset = 12
 	show_magazine_on_sprite = TRUE
 	show_magazine_on_sprite_ammo = TRUE
 	empty_indicator = TRUE
@@ -102,35 +107,7 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	fire_sound = 'sound/weapons/gun/smg/smg_heavy.ogg'
 
 /obj/item/gun/ballistic/automatic/smg/wt550/no_mag
-	spawnwithmagazine = FALSE
-
-/obj/item/gun/ballistic/automatic/smg/mini_uzi
-	name = "\improper Type U3 Uzi"
-	desc = "A lightweight submachine gun, for when you really want someone dead. Uses 9mm rounds."
-
-	icon = 'icons/obj/guns/manufacturer/frontier_import/48x32.dmi'
-	lefthand_file = 'icons/obj/guns/manufacturer/frontier_import/lefthand.dmi'
-	righthand_file = 'icons/obj/guns/manufacturer/frontier_import/righthand.dmi'
-	mob_overlay_icon = 'icons/obj/guns/manufacturer/frontier_import/onmob.dmi'
-	icon_state = "uzi"
-
-	mag_type = /obj/item/ammo_box/magazine/uzim9mm
-	bolt_type = BOLT_TYPE_OPEN
-	show_magazine_on_sprite = TRUE
-
-	fire_sound = 'sound/weapons/gun/smg/uzi.ogg'
-	rack_sound = 'sound/weapons/gun/smg/uzi_cocked.ogg'
-
-	load_sound = 'sound/weapons/gun/smg/uzi_reload.ogg'
-	load_empty_sound = 'sound/weapons/gun/smg/uzi_reload.ogg'
-	eject_sound = 'sound/weapons/gun/smg/uzi_unload.ogg'
-	eject_empty_sound = 'sound/weapons/gun/smg/uzi_unload.ogg'
-
-	spread = 4
-	spread_unwielded = 8
-	wield_slowdown = 0.25
-	wield_delay = 0.2 SECONDS
-	fire_delay = 0.1 SECONDS
+	default_ammo_type = FALSE
 
 /obj/item/gun/ballistic/automatic/smg/vector
 	name = "\improper Vector carbine"
@@ -141,7 +118,10 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/onmob.dmi'
 	icon_state = "vector"
 	item_state = "vector"
-	mag_type = /obj/item/ammo_box/magazine/smgm9mm //you guys remember when the autorifle was chambered in 9mm
+	default_ammo_type = /obj/item/ammo_box/magazine/smgm9mm
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/smgm9mm,
+	) //you guys remember when the autorifle was chambered in 9mm
 	bolt_type = BOLT_TYPE_LOCKING
 	show_magazine_on_sprite = TRUE
 	weapon_weight = WEAPON_LIGHT
@@ -150,15 +130,15 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 /obj/item/gun/ballistic/automatic/smg/m90
 	name = "\improper M-90gl Carbine"
 	desc = "A three-round burst 5.56 toploading carbine, designated 'M-90gl'. Has an attached underbarrel grenade launcher which can be toggled on and off."
-	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/scarborough/48x32-old.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/scarborough/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/scarborough/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
 	icon_state = "m90"
 	item_state = "m90"
 
-	mag_type = /obj/item/ammo_box/magazine/m556
-	can_suppress = FALSE
+	// mag_type = /obj/item/ammo_box/magazine/m556
+	// can_suppress = FALSE
 	gun_firenames = list(FIREMODE_SEMIAUTO = "single", FIREMODE_BURST = "burst fire", FIREMODE_FULLAUTO = "full auto", FIREMODE_OTHER = "underbarrel grenade launcher")
 	gun_firemodes = list(FIREMODE_SEMIAUTO, FIREMODE_BURST, FIREMODE_OTHER)
 	default_firemode = FIREMODE_SEMIAUTO
@@ -240,8 +220,8 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 
 	icon_state = "firestorm"
 	item_state = "firestorm"
-	mag_type = /obj/item/ammo_box/magazine/c45_firestorm_mag
-	can_suppress = FALSE
+	// mag_type = /obj/item/ammo_box/magazine/c45_firestorm_mag
+	// can_suppress = FALSE
 	unique_mag_sprites_for_variants = TRUE
 	burst_size = 1
 	actions_types = list()
@@ -253,7 +233,7 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	wield_slowdown = 0.4
 
 /obj/item/gun/ballistic/automatic/smg/firestorm/pan //spawns with pan magazine, can take sticks instead of just drums, not sure where this would be used, maybe erts?
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/automatic/smg/firestorm/pan/Initialize()
 	. = ..()
@@ -271,7 +251,7 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	icon_state = "cm5"
 	item_state = "cm5"
 
-	mag_type = /obj/item/ammo_box/magazine/smgm9mm
+	// mag_type = /obj/item/ammo_box/magazine/smgm9mm
 	weapon_weight = WEAPON_LIGHT
 	fire_sound = 'sound/weapons/gun/smg/smg_heavy.ogg'
 	manufacturer = MANUFACTURER_MINUTEMAN
@@ -313,10 +293,11 @@ EMPTY_GUN_HELPER(automatic/smg/cm5)
 	eject_empty_sound = 'sound/weapons/gun/rifle/skm_unload.ogg'
 
 	weapon_weight = WEAPON_MEDIUM
-	w_class = WEIGHT_CLASS_BULKY
-	mag_type = /obj/item/ammo_box/magazine/skm_545_39
-
-	actions_types = list(/datum/action/item_action/fold_stock) //once again, ideally an attatchment in the future
+	w_class = WEIGHT_CLASS_NORMAL
+	default_ammo_type = /obj/item/ammo_box/magazine/skm_46_30
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/skm_46_30,
+	)
 
 	recoil = 2
 	recoil_unwielded = 6
@@ -325,78 +306,37 @@ EMPTY_GUN_HELPER(automatic/smg/cm5)
 	spread_unwielded = 14
 
 	wield_delay = 0.6 SECONDS
-	wield_slowdown = 0.35
+	wield_slowdown = SMG_SLOWDOWN
 
-	///is the bipod deployed?
-	var/stock_folded = FALSE
+	valid_attachments = list(
+		/obj/item/attachment/silencer,
+		/obj/item/attachment/laser_sight,
+		/obj/item/attachment/rail_light,
+		/obj/item/attachment/bayonet,
+		/obj/item/attachment/foldable_stock
+	)
 
-	///we add these two values to recoi/spread when we have the bipod deployed
-	var/stock_recoil_bonus = -2
-	var/stock_spread_bonus = -5
+	slot_available = list(
+		ATTACHMENT_SLOT_MUZZLE = 1,
+		ATTACHMENT_SLOT_RAIL = 1,
+		ATTACHMENT_SLOT_STOCK = 1
+	)
+	slot_offsets = list(
+		ATTACHMENT_SLOT_MUZZLE = list(
+			"x" = 26,
+			"y" = 20,
+		),
+		ATTACHMENT_SLOT_RAIL = list(
+			"x" = 19,
+			"y" = 18,
+		),
+		ATTACHMENT_SLOT_STOCK = list(
+			"x" = 11,
+			"y" = 20,
+		)
+	)
 
-	var/folded_slowdown = 0.6
-	var/folded_wield_delay = 0.6 SECONDS
-
-	var/unfolded_slowdown = 0.35
-	var/unfolded_wield_delay = 0.2 SECONDS
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/ComponentInitialize()
-	. = ..()
-	AddElement(/datum/element/update_icon_updates_onmob)
-
-/datum/action/item_action/fold_stock
-	name = "Fold/Unfold stock"
-	desc = "Fold or unfold the stock for easier storage."
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/ui_action_click(mob/user, action)
-	if(!istype(action, /datum/action/item_action/fold_stock))
-		return ..()
-	fold(user)
-
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/proc/fold(mob/user)
-	if(stock_folded)
-		to_chat(user, "<span class='notice'>You unfold the stock on the [src].</span>")
-		w_class = WEIGHT_CLASS_BULKY
-		wield_delay = folded_wield_delay
-		wield_slowdown = folded_slowdown
-	else
-		to_chat(user, "<span class='notice'>You fold the stock on the [src].</span>")
-		w_class = WEIGHT_CLASS_NORMAL
-		wield_delay = unfolded_wield_delay
-		wield_slowdown = unfolded_slowdown
-
-	if(wielded)
-		user.add_or_update_variable_movespeed_modifier(/datum/movespeed_modifier/gun, multiplicative_slowdown = wield_slowdown)
-
-	stock_folded = !stock_folded
-	playsound(src, 'sound/weapons/empty.ogg', 100, 1)
-	update_appearance()
-
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/calculate_recoil(mob/user, recoil_bonus = 0)
-	var/total_recoil = recoil_bonus
-	if(!stock_folded)
-		total_recoil += stock_recoil_bonus
-
-	return ..(user, total_recoil)
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/calculate_spread(mob/user, bonus_spread)
-	var/total_spread = bonus_spread
-
-	if(!stock_folded)
-		total_spread += stock_spread_bonus
-
-	return ..(user, total_spread)
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/update_icon_state()
-	. = ..()
-	item_state = "[initial(item_state)][stock_folded ? "_nostock" : ""]"
-	mob_overlay_state = "[initial(item_state)][stock_folded ? "_nostock" : ""]"
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/update_overlays()
-	. = ..()
-	. += "[base_icon_state || initial(icon_state)][stock_folded ? "_nostock" : "_stock"]"
+	default_attachments = list(/obj/item/attachment/foldable_stock)
 
 /obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq
 	name = "\improper SKM-44v Mongrel"
@@ -408,7 +348,10 @@ EMPTY_GUN_HELPER(automatic/smg/cm5)
 	icon_state = "skm_inteqsmg"
 	item_state = "skm_inteqsmg"
 
-	mag_type = /obj/item/ammo_box/magazine/smgm10mm
+	default_ammo_type = /obj/item/ammo_box/magazine/smgm10mm
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/smgm10mm,
+	)
 	manufacturer = MANUFACTURER_INTEQ
 
 	fire_sound = 'sound/weapons/gun/smg/vector_fire.ogg'
@@ -419,30 +362,57 @@ EMPTY_GUN_HELPER(automatic/smg/cm5)
 	eject_empty_sound = 'sound/weapons/gun/smg/smg_unload.ogg'
 
 	spread = 7
-	recoil_unwielded = 10
+	spread_unwielded = 10
 
 	recoil = 0
 	recoil_unwielded = 4
 
-	stock_spread_bonus = -4
-	stock_recoil_bonus = -1
-
 	wield_delay = 0.4 SECONDS
 
-	folded_slowdown = 0.15
-	folded_wield_delay = 0.2 SECONDS
+	valid_attachments = list(
+		/obj/item/attachment/silencer,
+		/obj/item/attachment/laser_sight,
+		/obj/item/attachment/rail_light,
+		/obj/item/attachment/bayonet,
+		/obj/item/attachment/foldable_stock/inteq
+	)
+	default_attachments = list(/obj/item/attachment/foldable_stock/inteq)
 
-	unfolded_slowdown = 0.35
-	unfolded_wield_delay = 0.4 SECONDS
-
-/obj/item/gun/ballistic/automatic/smg/skm_carbine/inteq/proto
+/obj/item/gun/ballistic/automatic/smg/skm_carbine/saber
 	name = "\improper Nanotrasen Saber SMG"
 	desc = "A prototype full-auto 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors and a folding stock."
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "saber"
 	item_state = "gun"
-	mag_type = /obj/item/ammo_box/magazine/smgm9mm
+
+	default_ammo_type = /obj/item/ammo_box/magazine/smgm9mm
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/smgm9mm,
+	)
+
+	fire_sound = 'sound/weapons/gun/smg/vector_fire.ogg'
+
+	load_sound = 'sound/weapons/gun/smg/smg_reload.ogg'
+	load_empty_sound = 'sound/weapons/gun/smg/smg_reload.ogg'
+	eject_sound = 'sound/weapons/gun/smg/smg_unload.ogg'
+	eject_empty_sound = 'sound/weapons/gun/smg/smg_unload.ogg'
+
+	spread = 7
+	spread_unwielded = 10
+
+	recoil = 0
+	recoil_unwielded = 4
+
+	wield_delay = 0.4 SECONDS
+
+	valid_attachments = list(
+		/obj/item/attachment/silencer,
+		/obj/item/attachment/laser_sight,
+		/obj/item/attachment/rail_light,
+		/obj/item/attachment/bayonet,
+		/obj/item/attachment/foldable_stock
+	)
+	default_attachments = list(/obj/item/attachment/foldable_stock)
 	bolt_type = BOLT_TYPE_LOCKING
 	show_magazine_on_sprite = TRUE
 	manufacturer = MANUFACTURER_NANOTRASEN_OLD
-

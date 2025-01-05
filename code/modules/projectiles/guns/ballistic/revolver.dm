@@ -10,7 +10,10 @@
 	name = "i demand"
 	desc = "You feel as if you should make a 'adminhelp' if you see one of these, along with a 'github' report. You don't really understand what this means though."
 	icon_state = "revolver"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/cylinder
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/internal/cylinder,
+	)
 	fire_sound = 'sound/weapons/gun/revolver/shot.ogg'
 	rack_sound = 'sound/weapons/gun/revolver/revolver_prime.ogg'
 	load_sound = 'sound/weapons/gun/revolver/load_bullet.ogg'
@@ -25,6 +28,9 @@
 	var/spin_delay = 10
 	var/recent_spin = 0
 	manufacturer = MANUFACTURER_SCARBOROUGH
+
+	valid_attachments = list()
+	slot_available = list()
 	fire_delay = 0.4 SECONDS
 	spread_unwielded = 15
 	recoil = 0.5
@@ -33,12 +39,15 @@
 	bolt_wording = "hammer"
 	dry_fire_sound = 'sound/weapons/gun/general/bolt_drop.ogg'
 	dry_fire_text = "snap"
-	wield_slowdown = 0.3
+	wield_slowdown = REVOLVER_SLOWDOWN
 
 	gun_firemodes = list(FIREMODE_SEMIAUTO)
 	default_firemode = FIREMODE_SEMIAUTO
 
 	safety_wording = "hammer"
+
+	gunslinger_recoil_bonus = -1
+	gunslinger_spread_bonus = -8
 
 	var/gate_loaded = FALSE //for stupid wild west shit
 	var/gate_offset = 5 //for wild west shit 2: instead of ejecting the chambered round, eject the next round if 1
@@ -418,7 +427,7 @@
 	fire_delay = src::fire_delay
 	if(fan)
 		rack()
-		to_chat(user, "<span class='notice'>You fan the [bolt_wording] of \the [src]!</span>")
+		to_chat(user, span_notice("You fan the [bolt_wording] of \the [src]!"))
 		balloon_alert_to_viewers("fans revolver!")
 		fire_delay = 0 SECONDS
 
@@ -435,25 +444,6 @@
 			toggle_safety(silent = TRUE, rack_gun = FALSE)
 		return
 	to_chat(user, "<span class='danger'>The hammer is up on [src]! Pull it down to fire!</span>")
-
-/obj/item/gun/ballistic/revolver/calculate_recoil(mob/user, recoil_bonus = 0)
-	var/gunslinger_bonus = -1
-	var/total_recoil = recoil_bonus
-
-	if(HAS_TRAIT(user, TRAIT_GUNSLINGER)) //gunslinger bonus
-		total_recoil += gunslinger_bonus
-		total_recoil = clamp(total_recoil,0,INFINITY)
-
-	return ..(user, total_recoil)
-
-/obj/item/gun/ballistic/revolver/calculate_spread(mob/user, bonus_spread)
-	var/gunslinger_bonus = -8
-	var/total_spread = bonus_spread
-
-	if(HAS_TRAIT(user, TRAIT_GUNSLINGER)) //gunslinger bonus
-		total_spread += gunslinger_bonus
-
-	return ..(user, total_spread)
 
 /obj/item/gun/ballistic/revolver/pickup(mob/user)
 	. = ..()
@@ -472,7 +462,7 @@
 	name = "\improper syndicate revolver"
 	desc = "A weighty revolver with a Scarborough Arms logo engraved on the barrel. Uses .357 ammo." //usually used by syndicates
 	icon_state = "revolver"
-	icon = 'icons/obj/guns/manufacturer/scarborough/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/scarborough/48x32-old.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/scarborough/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/scarborough/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
@@ -487,7 +477,7 @@
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	obj_flags = UNIQUE_RENAME
 	semi_auto = TRUE //double action
 	safety_wording = "safety"
@@ -555,10 +545,13 @@ EMPTY_GUN_HELPER(revolver/detective)
 	return TRUE
 
 /obj/item/gun/ballistic/revolver/detective/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/revolver/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
+
+EMPTY_GUN_HELPER(revolver)
+EMPTY_GUN_HELPER(revolver/viper)
 
 /obj/item/gun/ballistic/revolver/mateba
 	name = "\improper Unica 6 auto-revolver"
@@ -595,14 +588,14 @@ EMPTY_GUN_HELPER(revolver/detective)
 	spread_unwielded = 15
 	recoil = 0
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44/montagne
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44/montagne
 
 /obj/item/gun/ballistic/revolver/montagne/ComponentInitialize()
 	. = ..()
 	AddComponent(/datum/component/ammo_hud/revolver)
 
 /obj/item/gun/ballistic/revolver/montagne/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/revolver/ashhand
 	name = "HP Ashhand"
@@ -613,7 +606,7 @@ EMPTY_GUN_HELPER(revolver/detective)
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 
 	icon_state = "ashhand"
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	fire_sound = 'sound/weapons/gun/revolver/shot_hunting.ogg'
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 	gate_loaded = TRUE
@@ -638,7 +631,7 @@ EMPTY_GUN_HELPER(revolver/detective)
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/hunterspride/onmob.dmi'
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/pepperbox
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/pepperbox
 	spread = 20
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 	spread_unwielded = 50
@@ -648,7 +641,7 @@ EMPTY_GUN_HELPER(revolver/detective)
 	safety_wording = "safety"
 
 /obj/item/gun/ballistic/revolver/firebrand/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/revolver/shadow
 	name = "\improper Shadow 45"
@@ -661,7 +654,7 @@ EMPTY_GUN_HELPER(revolver/detective)
 	icon_state = "shadow"
 	item_state = "hp_generic"
 
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
+	// mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
 	manufacturer = MANUFACTURER_HEPHAESTUS
 	obj_flags = UNIQUE_RENAME
 	gate_loaded = TRUE
@@ -683,4 +676,4 @@ EMPTY_GUN_HELPER(revolver/detective)
 	AddComponent(/datum/component/ammo_hud/revolver)
 
 /obj/item/gun/ballistic/revolver/shadow/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE

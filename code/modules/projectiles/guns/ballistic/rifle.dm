@@ -5,10 +5,12 @@
 	mob_overlay_icon = 'icons/mob/clothing/back.dmi'
 	icon_state = "hunting"
 	item_state = "hunting"
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/boltaction
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/internal/boltaction,
+	)
 	bolt_wording = "bolt"
 	w_class = WEIGHT_CLASS_BULKY
-	weapon_weight = WEAPON_HEAVY
 	slot_flags = ITEM_SLOT_BACK
 	bolt_type = BOLT_TYPE_STANDARD
 	semi_auto = FALSE
@@ -29,7 +31,7 @@
 	spread_unwielded = 48
 	recoil = -3
 	recoil_unwielded = 4
-	wield_slowdown = 1
+	wield_slowdown = RIFLE_SLOWDOWN
 	wield_delay = 1.2 SECONDS
 
 /obj/item/gun/ballistic/rifle/update_overlays()
@@ -51,7 +53,7 @@
 
 /obj/item/gun/ballistic/rifle/eject_magazine(mob/user, display_message = TRUE, obj/item/ammo_box/magazine/tac_load = null)
 	if (!bolt_locked && empty_autoeject)
-		to_chat(user, "<span class='notice'>The bolt is closed!</span>")
+		to_chat(user, span_notice("The bolt is closed!"))
 		return
 	return ..()
 
@@ -62,7 +64,7 @@
 
 /obj/item/gun/ballistic/rifle/attackby(obj/item/A, mob/user, params)
 	if (!bolt_locked)
-		to_chat(user, "<span class='notice'>The bolt is closed!</span>")
+		to_chat(user, span_notice("The bolt is closed!"))
 		return
 	return ..()
 
@@ -85,21 +87,21 @@
 	eject_empty_sound = 'sound/weapons/gun/rifle/vickland_unload.ogg'
 
 	internal_magazine = FALSE
-	mag_type = /obj/item/ammo_box/magazine/illestren_a850r
+	// mag_type = /obj/item/ammo_box/magazine/illestren_a850r
 	empty_autoeject = TRUE
 	eject_sound_vary = FALSE
 	can_be_sawn_off = TRUE
 	manufacturer = MANUFACTURER_HUNTERSPRIDE
 
 /obj/item/gun/ballistic/rifle/illestren/empty //i had to name it empty instead of no_mag because else it wouldnt work with guncases. sorry!
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
-/obj/item/gun/ballistic/rifle/illestren/sawoff(mob/user)
+/obj/item/gun/ballistic/rifle/illestren/sawoff(forced = FALSE)
 	. = ..()
 	if(.)
 		spread = 24
 		spread_unwielded = 30
-		can_bayonet = FALSE
+		// can_bayonet = FALSE
 		item_state = "illestren_sawn"
 		mob_overlay_state = item_state
 		weapon_weight = WEAPON_MEDIUM //you can fire it onehanded, makes it worse than worse than useless onehanded, but you can
@@ -115,7 +117,7 @@
 	icon_state = "illestren_factory"
 	item_state = "illestren_factory"
 
-/obj/item/gun/ballistic/rifle/illestren/sawoff(mob/user)
+/obj/item/gun/ballistic/rifle/illestren/factory/sawoff(forced = FALSE)
 	. = ..()
 	if(.)
 		item_state = "illestren_factory_sawn"
@@ -133,7 +135,7 @@
 /obj/item/gun/ballistic/rifle/solgov
 	name = "SSG-669C"
 	desc = "A bolt-action sniper rifle used by Solarian troops. Beloved for its rotary design and accuracy. Chambered in 8x58mm Caseless."
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/solgov
+	// mag_type = /obj/item/ammo_box/magazine/internal/boltaction/solgov
 	icon_state = "ssg669c"
 	item_state = "ssg669c"
 	icon = 'icons/obj/guns/manufacturer/solararmories/48x32.dmi'
@@ -166,7 +168,7 @@
 	icon_state = "scout"
 	item_state = "scout"
 
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/smile
+	// mag_type = /obj/item/ammo_box/magazine/internal/boltaction/smile
 	fire_sound = 'sound/weapons/gun/rifle/scout.ogg'
 
 	rack_sound = 'sound/weapons/gun/rifle/scout_bolt_out.ogg'
@@ -181,7 +183,7 @@
 	manufacturer = MANUFACTURER_HEPHAESTUS
 
 /obj/item/gun/ballistic/rifle/scout/no_mag
-	spawnwithmagazine = FALSE
+	// spawnwithmagazine = FALSE
 
 /obj/item/gun/ballistic/rifle/polymer
 	name = "LK-MR Marksman Rifle"
@@ -189,8 +191,11 @@
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "crackhead_rifle"
 	item_state = "crackhead_rifle"
-	weapon_weight = WEAPON_MEDIUM
-	w_class = WEIGHT_CLASS_NORMAL
-	mag_type = /obj/item/ammo_box/magazine/internal/boltaction/polymer
+	weapon_weight = WEAPON_HEAVY
+	w_class = WEIGHT_CLASS_BULKY
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/boltaction/polymer
+	allowed_ammo_types = list(
+		/obj/item/ammo_box/magazine/internal/boltaction/polymer,
+	)
 	can_be_sawn_off = FALSE
 	manufacturer = MANUFACTURER_LAKVAR

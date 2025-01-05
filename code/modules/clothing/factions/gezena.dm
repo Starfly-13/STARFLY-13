@@ -36,10 +36,12 @@
 	item_state = "bluecloth"
 	blood_overlay_type = "coat"
 	togglename = "zipper"
-	body_parts_covered = CHEST
+	body_parts_covered = CHEST|GROIN|ARMS
+	cold_protection = CHEST|GROIN|ARMS
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 	pocket_storage_component_path = /datum/component/storage/concrete/pockets/exo
 	supports_variations = DIGITIGRADE_VARIATION_NO_NEW_ICON
-	armor = list("melee" = 20, "bullet" = 20, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 0)
 
 //Armored suit
 
@@ -100,6 +102,10 @@
 	w_class = WEIGHT_CLASS_NORMAL
 	supports_variations = DIGITIGRADE_VARIATION
 
+/obj/item/clothing/suit/space/gezena/Initialize()
+	. = ..()
+	allowed = GLOB.security_hardsuit_allowed
+
 /obj/item/clothing/head/helmet/space/gezena
 	name = "\improper Eridanite model E-3 helmet"
 	desc = "A celebration of the diversity in Epsilon Eridani, the E-3 spacesuit helmet features rubberized grommets fitting for any length of horn, and an internal monitor for life support."
@@ -130,6 +136,9 @@
 	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Navy colors. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back."
 	icon_state = "navalflap"
 	item_state = "bluecloth"
+	cold_protection = HEAD
+	min_cold_protection_temperature = FIRE_SUIT_MIN_TEMP_PROTECT
+	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 50, "acid" = 50)
 
 /obj/item/clothing/head/gezena/marine
 	name = "\improper EAFMC Cap"
@@ -140,6 +149,12 @@
 /obj/item/clothing/head/gezena/marine/flap
 	name = "\improper EAFMC flap cap"
 	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Marine Corps colors. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back."
+	icon_state = "marineflap"
+	item_state = "marinecloth"
+
+/obj/item/clothing/head/gezena/flap/marine
+	name = "\improper PGFMC Betzu-il cap"
+	desc = "The standard cap of the PGF military, in Marine Corps colors. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects."
 	icon_state = "marineflap"
 	item_state = "marinecloth"
 
@@ -155,6 +170,12 @@
 	icon_state = "squadflap"
 	item_state = "marinecloth"
 
+/obj/item/clothing/head/gezena/flap/marine/lead
+	name = "\improper PGFMC Commander's' Betzu-il cap"
+	desc = "The standard cap of the PGF military, in Marine Corps colors. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects. The silver markings denote it as a commander's cap."
+	icon_state = "squadflap"
+	item_state = "marinecloth"
+
 /obj/item/clothing/head/gezena/medic
 	name = "\improper EAF medic cap"
 	desc = "The standard cap of the Epsilon Eridani Armed Forces. The coloring indicates the wearer as a medical officer."
@@ -164,6 +185,12 @@
 /obj/item/clothing/head/gezena/medic/flap
 	name = "\improper EAF medic flap cap"
 	desc = "The standard cap of the Epsilon Eridani Armed Forces. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back."
+	icon_state = "medicflap"
+	item_state = "whitecloth"
+
+/obj/item/clothing/head/gezena/flap/medic
+	name = "\improper PGF medic Betzu-il cap"
+	desc = "The standard cap of the PGF military. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects. The coloring indicates the wearer as a medical officer."
 	icon_state = "medicflap"
 	item_state = "whitecloth"
 
@@ -212,7 +239,6 @@
 	name = "\improper PGFN Captain's Gripper Gloves"
 	desc = "As the name suggests, the gloves employed by the Epsilon Eridani Armed Forces are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Bears the silver standard of an Eridanite captain."
 	icon_state = "captaingloves"
-	siemens_coefficient = 0
 
 //Boots
 
@@ -220,7 +246,7 @@
 	name = "\improper Eridanite steel-toed boots"
 	desc = "These boots have steel protection around the toes. Standard issue to all members of all branches of the Epsilon Eridani Armed Forces."
 	icon = 'icons/obj/clothing/faction/gezena/feet.dmi'
-	//mob_overlay_icon = 'icons/mob/clothing/faction/gezena/feet.dmi' todo: find out why digi breaks here
+	mob_overlay_icon = 'icons/mob/clothing/faction/gezena/feet.dmi'
 	icon_state = "pgfboots"
 	item_state = "jackboots"
 
@@ -237,6 +263,20 @@
 	item_state = "bluecloth"
 	unique_reskin = null
 
+/obj/item/storage/belt/military/gezena/bg16/PopulateContents()
+	. = ..()
+	for(var/i in 1 to 4)
+		new /obj/item/stock_parts/cell/gun/pgf(src)
+	new /obj/item/screwdriver(src)
+
+/obj/item/storage/belt/military/gezena/engineer/PopulateContents()
+	. = ..()
+	for(var/i in 1 to 2)
+		new /obj/item/stock_parts/cell/gun/pgf(src)
+	new /obj/item/screwdriver(src)
+	new /obj/item/grenade/c4
+	new /obj/item/grenade/c4
+
 /obj/item/storage/belt/medical/gezena
 	name = "\improper EAF Medical gear harness"
 	desc = "A lightweight harness covered in pouches, supplied to the ground troops of the EAF. This variant is designed for carrying medical supplies."
@@ -246,6 +286,17 @@
 	righthand_file = 'icons/mob/inhands/faction/gezena/gezena_righthand.dmi'
 	icon_state = "medpouches"
 	item_state = "whitecloth"
+
+/obj/item/storage/belt/medical/gezena/paramedic/PopulateContents()
+	new /obj/item/reagent_containers/medigel/styptic(src)
+	new /obj/item/reagent_containers/medigel/styptic(src)
+	new /obj/item/reagent_containers/medigel/silver_sulf(src)
+	new /obj/item/reagent_containers/medigel/silver_sulf(src)
+	new /obj/item/reagent_containers/medigel/synthflesh(src)
+	new /obj/item/stack/medical/gauze/twelve(src)
+	new /obj/item/stack/medical/splint(src)
+	. = ..()
+
 
 //Cloaks
 
