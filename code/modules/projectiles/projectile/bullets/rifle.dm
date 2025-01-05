@@ -4,7 +4,7 @@
 	name = "5.56x45mm bullet"
 	damage = 25
 	armour_penetration = 20
-	
+
 // 5.56x42mm CLIP (CM82, Hydra variants)
 
 /obj/projectile/bullet/a556_42

@@ -299,5 +299,3 @@ EMPTY_GUN_HELPER(automatic/pistol/candor/factory)
 	)
 
 EMPTY_GUN_HELPER(derringer)
-
-NO_MAG_GUN_HELPER(derringer)

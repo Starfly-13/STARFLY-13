@@ -20,7 +20,7 @@
 	bullet_skin = "incen"
 	projectile_type = /obj/projectile/bullet/incendiary/c46x30mm
 	bullet_per_box = 50
-	
+
 // 5.7x39mm (Asp and Sidewinder)
 
 /obj/item/ammo_casing/c57x39mm

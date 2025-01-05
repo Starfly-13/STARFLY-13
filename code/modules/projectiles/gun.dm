@@ -1135,7 +1135,7 @@ GLOBAL_LIST_INIT(gun_saw_types, typecacheof(list(
 
 	if(do_after(user, 30, target = src))
 		user.visible_message(span_notice("[user] shortens \the [src]!"), span_notice("You shorten \the [src]."))
-		sawoff(user, saw)
+		sawoff(forced = FALSE)
 
 ///Used on init or try_sawoff
 /obj/item/gun/proc/sawoff(forced = FALSE)

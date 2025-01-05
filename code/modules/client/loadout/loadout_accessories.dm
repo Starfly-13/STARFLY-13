@@ -259,7 +259,7 @@
 	display_name = "face with tears of joy mask"
 	path = /obj/item/clothing/mask/joy
 	slot = ITEM_SLOT_MASK
-	
+
 /datum/gear/accessory/pocketprotector
 	display_name = "pocket protector"
 	path = /obj/item/clothing/accessory/pocketprotector

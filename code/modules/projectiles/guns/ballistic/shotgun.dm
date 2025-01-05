@@ -87,7 +87,7 @@
 	can_be_sawn_off  = TRUE
 
 
-/obj/item/gun/ballistic/shotgun/brimstone/sawoff(mob/user)
+/obj/item/gun/ballistic/shotgun/brimstone/sawoff(forced = FALSE)
 	. = ..()
 	if(.)
 		weapon_weight = WEAPON_MEDIUM
@@ -141,7 +141,7 @@
 	fire_delay = 0.1 SECONDS
 	manufacturer = MANUFACTURER_HEPHAESTUS
 
-/obj/item/gun/ballistic/shotgun/hellfire/sawoff(mob/user)
+/obj/item/gun/ballistic/shotgun/hellfire/sawoff(forced = FALSE)
 	. = ..()
 	if(.)
 		var/obj/item/ammo_box/magazine/internal/tube = magazine

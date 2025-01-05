@@ -133,7 +133,7 @@
 
 /obj/item/storage/pistolcase/derringer
 /obj/item/storage/pistolcase/derringer/PopulateContents()
-	new /obj/item/gun/ballistic/derringer/no_mag(src)
+	new /obj/item/gun/ballistic/derringer/empty(src)
 
 /obj/item/storage/pistolcase/a357
 /obj/item/storage/pistolcase/a357/PopulateContents()
