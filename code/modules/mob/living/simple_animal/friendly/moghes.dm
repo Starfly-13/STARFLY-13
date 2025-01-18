@@ -23,12 +23,35 @@ mob/living/simple_animal/threshbeast
 	base_pixel_x = -15
 	maxHealth = 100
 	health = 100
-	tame_chance = 5
-	bonus_tame_chance = 10
+	tame_chance = 15
+	bonus_tame_chance = 30
 	speed = 3
 	harm_intent_damage = 0
 	melee_damage_lower = 12
 	melee_damage_upper = 20
+
+mob/living/simple_animal/threshbeast/attackby(obj/item/O, mob/user, params)
+	if(istype(O, /obj/item/saddle) && !saddled)
+		if(tame && do_after(user, 55, target=src))
+			user.visible_message("<span class='notice'>You manage to put [O] on [src], you can now ride [p_them()].</span>")
+			qdel(O)
+			saddled = TRUE
+			can_buckle = TRUE
+			buckle_lying = FALSE
+			add_overlay("threshbeast_saddled")
+			var/datum/component/riding/D = LoadComponent(/datum/component/riding)
+			D.set_riding_offsets(RIDING_OFFSET_ALL, list(TEXT_NORTH = list(0, 8), TEXT_SOUTH = list(0, 8), TEXT_EAST = list(-2, 8), TEXT_WEST = list(2, 8)))
+			D.set_vehicle_dir_layer(SOUTH, ABOVE_MOB_LAYER)
+			D.set_vehicle_dir_layer(NORTH, OBJ_LAYER)
+			D.set_vehicle_dir_layer(EAST, OBJ_LAYER)
+			D.set_vehicle_dir_layer(WEST, OBJ_LAYER)
+			D.drive_verb = "ride"
+		else
+			user.visible_message("<span class='warning'>[src] is rocking around! You can't put the saddle on!</span>")
+		return
+	..()
+
+
 
 mob/living/simple_animal/threshbeast/brown
 	icon_state = "threshbeastbrown"
