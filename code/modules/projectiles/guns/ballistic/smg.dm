@@ -78,7 +78,8 @@ EMPTY_GUN_HELPER(automatic/smg/c20r)
 	righthand_file = 'icons/obj/guns/manufacturer/pirate/righthand.dmi'
 	icon_state = "sten"
 	item_state = "sten"
-	//mag_type = /obj/item/ammo_box/magazine/smgm9mm
+	default_ammo_type = /obj/item/ammo_box/magazine/smgm9mm
+	allowed_ammo_types = /obj/item/ammo_box/magazine/smgm9mm
 	show_magazine_on_sprite = TRUE
 	manufacturer = MANUFACTURER_LAKVAR
 

@@ -12,6 +12,11 @@ mob/living/simple_animal/threshbeast
 	response_disarm_simple = "pushes"
 	response_harm_continuous = "strikes"
 	response_harm_simple = "strikes"
+	speak_chance = 1
+	turns_per_move = 5
+	speak_emote = list("chuffs", "hisses", "bellows")
+	emote_hear = list("chuffs", "hisses", "bellows")
+	emote_see = list("shakes its head", "thumps its tail")
 	mob_biotypes = MOB_ORGANIC|MOB_BEAST|MOB_REPTILE
 	move_resist = MOVE_FORCE_VERY_STRONG
 	food_type = list(/obj/item/reagent_containers/food/snacks/grown/ash_flora/cactus_fruit, /obj/item/reagent_containers/food/snacks/grown/ash_flora/fern, /obj/item/reagent_containers/food/snacks/grown/grass, /obj/item/reagent_containers/food/snacks/grown/grass/fairy, /obj/item/reagent_containers/food/snacks/grown/grass/carpet)		// Herbivore
@@ -24,3 +29,19 @@ mob/living/simple_animal/threshbeast
 	harm_intent_damage = 0
 	melee_damage_lower = 12
 	melee_damage_upper = 20
+
+mob/living/simple_animal/threshbeast/brown
+	icon_state = "threshbeastbrown"
+	icon_living = "threshbeastbrown"
+	icon_dead = "threshbeastbrown_dead"
+
+mob/living/simple_animal/threshbeast/grey
+	icon_state = "threshbeastgrey"
+	icon_living = "threshbeastgrey"
+	icon_dead = "threshbeastgrey_dead"
+
+mob/living/simple_animal/threshbeast/red
+	icon_state = "threshbeastred"
+	icon_living = "threshbeastred"
+	icon_dead = "threshbeastred_dead"
+

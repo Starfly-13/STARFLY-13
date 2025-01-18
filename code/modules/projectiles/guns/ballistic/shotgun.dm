@@ -119,8 +119,9 @@
 	icon_state = "cosmo"
 	item_state = "shotgun"
 	unique_reskin = null
-
-	mag_type = /obj/item/ammo_box/magazine/internal/shot/tp83
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/tp83
+	allowed_ammo_types = /obj/item/ammo_box/magazine/internal/shot/tp83
+	//mag_type = /obj/item/ammo_box/magazine/internal/shot/tp83
 	w_class = WEIGHT_CLASS_NORMAL
 	var/toggled = FALSE
 	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
@@ -178,7 +179,8 @@
 	icon_state = "hellfire"
 	item_state = "hellfire"
 
-	// mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/riot
+	allowed_ammo_types = /obj/item/ammo_box/magazine/internal/shot/riot
 	sawn_desc = "Come with me if you want to live."
 	can_be_sawn_off  = TRUE
 	rack_sound = 'sound/weapons/gun/shotgun/rack_alt.ogg'
