@@ -397,7 +397,7 @@
 	head = /obj/item/clothing/head/soft/black
 	shoes = /obj/item/clothing/shoes/combat
 	l_pocket = /obj/item/melee/knife/survival
-	gloves = /obj/item/clothing/gloves/color/red/insulated
+	gloves = /obj/item/clothing/gloves/combat
 
 	implants = list(/obj/item/implant/radio)
 

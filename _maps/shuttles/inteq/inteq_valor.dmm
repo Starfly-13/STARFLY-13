@@ -568,11 +568,11 @@
 	},
 /obj/effect/turf_decal/borderfloorwhite,
 /obj/machinery/button/door{
-	dir = 1;
 	id = "valor_surgery";
 	name = "Privacy Shutters";
-	pixel_x = 8;
-	pixel_y = 8
+	pixel_y = 8;
+	dir = 1;
+	pixel_x = 8
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
@@ -672,10 +672,10 @@
 /area/ship/hallway/port)
 "fO" = (
 /obj/structure/closet/secure_closet{
-	icon_door = "prisoner";
 	icon_state = "prisoner";
 	name = "shuttle pilot locker";
-	req_access = list(3)
+	req_access = list(3);
+	icon_door = "prisoner"
 	},
 /obj/item/clothing/head/beret/sec/inteq,
 /obj/item/clothing/head/soft/inteq,
@@ -2093,7 +2093,6 @@
 	},
 /obj/effect/turf_decal/corner_techfloor_gray/full,
 /obj/machinery/cell_charger,
-/obj/item/clothing/gloves/color/yellow,
 /turf/open/floor/plating,
 /area/ship/maintenance/port)
 "sc" = (
@@ -4267,11 +4266,11 @@
 /obj/machinery/airalarm/directional/east,
 /obj/effect/turf_decal/borderfloorwhite,
 /obj/machinery/button/door{
-	dir = 1;
 	id = "valor_surgery";
 	name = "Privacy Shutters";
-	pixel_x = -7;
-	pixel_y = -23
+	pixel_y = -23;
+	dir = 1;
+	pixel_x = -7
 	},
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
@@ -4807,8 +4806,8 @@
 /obj/structure/table/glass,
 /obj/machinery/computer/med_data/laptop{
 	dir = 8;
-	pixel_x = 3;
-	pixel_y = 7
+	pixel_y = 7;
+	pixel_x = 3
 	},
 /turf/open/floor/plasteel/tech,
 /area/ship/medical)
@@ -5448,8 +5447,8 @@
 	},
 /obj/structure/table,
 /obj/item/storage/toolbox/emergency/shuttle{
-	pixel_x = -1;
-	pixel_y = 9
+	pixel_y = 9;
+	pixel_x = -1
 	},
 /obj/item/gps{
 	pixel_x = 6;

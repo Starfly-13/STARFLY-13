@@ -147,10 +147,10 @@
 
 /obj/item/clothing/gloves/explorer/old
 	name = "prototype exploration gauntlets"
-	desc = "Thick-fingered gloves with a heavy layer of armor plating, meant to stop all but the most brutal of stovetop-touching accidents in the field."
+	desc = "Thick-fingered gloves with a heavy layer of armor plating, meant to stop all but the most brutal of stovetop-touching accidents in the field. This premium pre-run prototype comes with an added layer of electrical insulation."
 	icon_state = "explorerold"
 	armor = list("melee" = 25, "bullet" = 10, "laser" = 15, "energy" = 15, "bomb" = 65, "bio" = 100, "rad" = 75, "fire" = 75, "acid" = 75)
-	siemens_coefficient = 0.5
+	siemens_coefficient = 0
 	permeability_coefficient = 0.05
 
 /obj/item/clothing/suit/hooded/survivor

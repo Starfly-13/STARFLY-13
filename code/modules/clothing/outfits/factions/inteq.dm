@@ -92,7 +92,7 @@
 	mask = /obj/item/clothing/mask/balaclava/inteq
 	dcoat = /obj/item/clothing/suit/hooded/wintercoat/security/inteq
 	shoes = /obj/item/clothing/shoes/combat
-	gloves = /obj/item/clothing/gloves/color/yellow
+	gloves = /obj/item/clothing/gloves/combat
 	belt = /obj/item/storage/belt/utility/full
 
 	id = /obj/item/card/id/silver

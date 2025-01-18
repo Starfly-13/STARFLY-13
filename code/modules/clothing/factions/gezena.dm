@@ -239,6 +239,7 @@
 	name = "\improper PGFN Captain's Gripper Gloves"
 	desc = "As the name suggests, the gloves employed by the Epsilon Eridani Armed Forces are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Bears the silver standard of an Eridanite captain."
 	icon_state = "captaingloves"
+	siemens_coefficient = 0
 
 //Boots
 
