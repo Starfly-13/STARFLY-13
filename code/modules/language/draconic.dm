@@ -1,5 +1,5 @@
 /datum/language/draconic
-	name = "Sinta'Unathi"
+	name = "Sinta'Azaziba"
 	desc = "The most prevalent language to come out of Moghes, composed of sibilant hisses and rattles."
 	speech_verb = "hisses"
 	ask_verb = "hisses"
@@ -21,7 +21,7 @@
 	default_priority = 90
 
 /datum/language/yeosa
-	name = "Yeosa'Unathi"
+	name = "Yeosa'Azibala"
 	desc = "A moghesan language consisting of spoken words and gestures, used by those who live near the shore. The rarity of this language outside of its native region and its prominence within only cause further obscurity of Yeosa culture."
 	speech_verb = "hisses"
 	ask_verb = "rattles"

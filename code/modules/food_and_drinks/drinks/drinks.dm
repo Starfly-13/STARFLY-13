@@ -665,7 +665,7 @@
 
 /obj/item/reagent_containers/food/drinks/soda_cans/orange_soda
 	name = "Sol Sparkler: Orange Remembrance"
-	desc = "A line of flavored seltzer water from the Solarian Confederation. Its infamy stems from being flavored sparingly enough to warrant it being referred to as being vague memories of the fruit in question."
+	desc = "A line of flavored seltzer water from the Solar Federation. Its infamy stems from being flavored sparingly enough to warrant it being referred to as being vague memories of the fruit in question."
 	icon_state = "orange_soda"
 	list_reagents = list(/datum/reagent/consumable/orangejuice = 5, /datum/reagent/consumable/sodawater = 25)
 	foodtype = FRUIT
@@ -706,8 +706,8 @@
 	foodtype = SUGAR | JUNKFOOD
 
 /obj/item/reagent_containers/food/drinks/soda_cans/tadrixx
-	name = "Tadrixx"
-	desc = "A Kalixcian drink made from a plant that tastes similar to sassafrass, which is used in root beer. A stumpy drake holding a mug of it is on the front."
+	name = "Srassa"
+	desc = "A Moghesan drink made from a plant that tastes similar to sassafrass, which is used in root beer. A stumpy drake holding a mug of it is on the front."
 	icon_state = "tadrixx"
 	list_reagents = list(/datum/reagent/consumable/tadrixx = 30)
 	foodtype = SUGAR | JUNKFOOD
@@ -748,13 +748,13 @@
 
 /obj/item/reagent_containers/food/drinks/soda_cans/molten
 	name = "Molten Bubbles"
-	desc = "A spicy soft drink made from a coca-like plant from Kalixcis. Popularly served both cold -and- hot, depending on the weather."
+	desc = "A spicy soft drink made from a coca-like plant from Moghes. Popularly served both cold -and- hot, depending on the weather."
 	icon_state = "molten"
 	list_reagents = list(/datum/reagent/consumable/molten = 50)
 
 /obj/item/reagent_containers/food/drinks/soda_cans/plasma
 	name = "Plasma Fizz"
-	desc = "A spinoff of the popular Molten Bubbles drink from Kalixcis, made to emulate the flavor of spiced grape instead. It's... not exactly convincing or a very good mix."
+	desc = "A spinoff of the popular Molten Bubbles drink from Moghes, made to emulate the flavor of spiced grape instead. It's... not exactly convincing or a very good mix."
 	icon_state = "plasma"
 	list_reagents = list(/datum/reagent/consumable/molten/plasma_fizz = 50)
 
@@ -791,6 +791,6 @@
 	return ..()
 
 /obj/item/reagent_containers/food/drinks/ration/pan_genezan_vodka
-	name = "Pan-Genezan vodka"
+	name = "Vodka"
 	desc = "Vodka made from the finest potatoes."
 	list_reagents = list(/datum/reagent/consumable/ethanol/vodka = 15)
