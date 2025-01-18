@@ -210,8 +210,9 @@
 	possible_colors = list("orange" = LIGHT_COLOR_ORANGE)
 
 /obj/item/melee/energy/sword/hegemony
+	name = "Moghesan energy sword"
 	icon_state = "moghessword"
-	desc = "A peculiar blade produced on Moghes. It pulses with a strange heat."
+	desc = "A peculiar blade produced on Moghes, popular in both the Hegemony and desert due to its ease of repair and effectiveness as a weapon. Its handle is wrapped with threshbeast hide."
 
 /obj/item/melee/energy/sword/saber/attackby(obj/item/W, mob/living/user, params)
 	if(W.tool_behaviour == TOOL_MULTITOOL)
