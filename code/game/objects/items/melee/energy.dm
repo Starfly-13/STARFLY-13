@@ -121,7 +121,7 @@
 
 /obj/item/melee/energy/sword
 	name = "energy sword"
-	desc = "For when a katana isn't enough. While Nanotrasen and the Syndicate both produce the so-called e-swords, they are visually and functionaly identical."
+	desc = "While Nanotrasen and Cybersun both produce the so-called e-swords, they are visually and functionaly identical."
 	icon_state = "sword"
 	base_icon_state = "sword"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
@@ -204,14 +204,15 @@
 	possible_colors = list("purple" = LIGHT_COLOR_LAVENDER)
 
 /obj/item/melee/energy/sword/saber/yellow
-	possible_colors = list("yellow" = COLOR_YELLOW)
+	possible_colors = list("yellow" = LIGHT_COLOR_YELLOW)
 
 /obj/item/melee/energy/sword/saber/orange
-	possible_colors = list("orange" = COLOR_ORANGE)
+	possible_colors = list("orange" = LIGHT_COLOR_ORANGE)
 
 /obj/item/melee/energy/sword/saber/hegemony
+	icon_state = "hegemonysword"
 	desc = "A peculiar blade produced on Moghes. It pulses with a strange heat."
-	sword_color = "swordhegemony"
+	possible_colors = list("hegemony" = LIGHT_COLOR_ORANGE)
 
 /obj/item/melee/energy/sword/saber/attackby(obj/item/W, mob/living/user, params)
 	if(W.tool_behaviour == TOOL_MULTITOOL)
@@ -230,10 +231,10 @@
 
 
 /obj/item/melee/energy/sword/saber/pirate
-	name = "energy cutlass"
-	desc = "Arrrr matey."
-	icon_state = "cutlass"
-	base_icon_state = "cutlass"
+	name = "energy saber"
+	desc = "An old ArkNet-brand energy sword, modeled after the popular Cybersun release. While less expensive, their cutting power isn't quite as strong."
+	icon_state = "sword"
+	base_icon_state = "sword"
 	lefthand_file = 'icons/mob/inhands/weapons/swords_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/swords_righthand.dmi'
 
