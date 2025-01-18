@@ -29,6 +29,7 @@ mob/living/simple_animal/threshbeast
 	harm_intent_damage = 0
 	melee_damage_lower = 12
 	melee_damage_upper = 20
+	var/saddled = FALSE
 
 mob/living/simple_animal/threshbeast/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/saddle) && !saddled)
