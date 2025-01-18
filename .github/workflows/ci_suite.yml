@@ -118,6 +118,7 @@ jobs:
 
       - name: Run OpenDream Linter
         run: |
+          sudo apt-get update && sudo apt-get install -y dotnet-sdk-9.0
           ./DMCompiler_linux-x64/DMCompiler shiptest.dme --suppress-unimplemented --define=CIBUILDING | bash tools/ci/annotate_od.sh
 
   compile_all_maps:
