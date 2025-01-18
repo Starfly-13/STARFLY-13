@@ -209,7 +209,7 @@
 /obj/item/melee/energy/sword/saber/orange
 	possible_colors = list("orange" = LIGHT_COLOR_ORANGE)
 
-/obj/item/melee/energy/sword/saber/hegemony
+/obj/item/melee/energy/sword/hegemony
 	icon_state = "hegemonysword"
 	desc = "A peculiar blade produced on Moghes. It pulses with a strange heat."
 	possible_colors = list("hegemony" = LIGHT_COLOR_ORANGE)
@@ -252,6 +252,9 @@
 
 /obj/item/melee/energy/sword/saber/pirate/yellow
 	possible_colors = list("yellow" = COLOR_YELLOW)
+
+/obj/item/melee/energy/sword/saber/pirate/orange
+	possible_colors = list("orange" = COLOR_ORANGE)
 
 /obj/item/melee/energy/blade
 	name = "energy blade"
