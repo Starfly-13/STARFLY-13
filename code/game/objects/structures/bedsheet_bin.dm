@@ -229,18 +229,18 @@ LINEN BINS
 	dream_messages = list("authority", "an ending")
 
 /obj/item/bedsheet/solgov
-	name = "\improper SolGov bedsheet"
-	desc = "It has the emblem of the Solar Confederation emblazoned upon it!"
+	name = "\improper SolFed bedsheet"
+	desc = "It has the emblem of the Solar Federation emblazoned upon it!"
 	icon_state = "sheetsolgov"
 	item_state = "sheetsolgov"
 	dream_messages = list("bureaucracy", "laws", "papers", "writing")
 
 /obj/item/bedsheet/suns
-	name = "\improper SUNS bedsheet"
-	desc = "A gold and purple bedsheet with the SUNS icon on it."
+	name = "\improper Roseus bedsheet"
+	desc = "A gold and purple bedsheet with the Roseus Galactic emblem on it."
 	icon_state = "sheetsuns"
 	item_state = "sheetsuns"
-	dream_messages = list("learning", "science", "geology", "studying a day before an exam")
+	dream_messages = list("stardom", "luxury", "cinema", "totally not propaganda")
 
 /obj/item/bedsheet/ian
 	icon_state = "sheetian"
@@ -357,18 +357,18 @@ LINEN BINS
 	desc = "It appears to have a beaker emblem, and is made out of fire-resistant material, although it probably won't protect you in the event of fires you're familiar with every day."
 
 /obj/item/bedsheet/double/solgov
-	name = "double SolGov bedsheet"
+	name = "double SolFed bedsheet"
 	icon_state = "double_sheetsolgov"
 	item_state = "double_sheetsolgov"
 	dream_messages = list("bureaucracy", "laws", "papers", "writing")
-	desc = "It has the emblem of the Solar Confederation emblazoned upon it!"
+	desc = "It has the emblem of the Solar Federation emblazoned upon it!"
 
 /obj/item/bedsheet/double/suns
-	name = "double SUNS bedsheet"
-	desc = "A large gold and purple bedsheet with the SUNS icon on it."
+	name = "double Roseus bedsheet"
+	desc = "A large gold and purple bedsheet with the Roseus Galactic logo on it."
 	icon_state = "double_sheetsuns"
 	item_state = "double_sheetsuns"
-	dream_messages = list("learning", "science", "geology", "studying a day before an exam")
+	dream_messages = list("movies", "fame", "stardom", "the next blockbuster hit")
 
 /obj/item/bedsheet/random/Initialize()
 	..()

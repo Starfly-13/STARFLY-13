@@ -263,8 +263,8 @@
 	list_reagents = list(/datum/reagent/consumable/tea = 30)
 
 /obj/item/reagent_containers/food/drinks/mug/coco
-	name = "Solar's Best Hot Cocoa"
-	desc = "A cup of hot water mixed with chocolate and malted milk powder. A classic hot drink from the Solarian Confederation."
+	name = "Sol's Best Hot Cocoa"
+	desc = "A cup of hot water mixed with chocolate and malted milk powder. A classic hot drink from the Solari Federation."
 	list_reagents = list(/datum/reagent/consumable/hot_coco = 15, /datum/reagent/consumable/sugar = 5)
 	foodtype = SUGAR
 	resistance_flags = FREEZE_PROOF

@@ -871,13 +871,13 @@
 	random_type = POSTER_SUBTYPES
 
 /obj/structure/sign/poster/solgov/solgov_logo
-	name = "Solgov"
-	desc = "The seal of The Most Serene Solar and Intersolar Confederation, or more boringly known as SolGov. \"The State is a sapling: Waters of change may drown it, and rays of fear may wither it, but well-tended it will one day bear fruit.\""
+	name = "SolFed"
+	desc = "The seal of The Solar Federation. \"The Solar Federation: Bringing Civilization to the Stars!.\""
 	icon_state = "poster-solgov"
 
 /obj/structure/sign/poster/solgov/terra
 	name = "Terra"
-	desc = "Terra, or Earth as it's called by inhabitants, the third planet in the Sol system. Home to the only life as humans knew it, until contact with the outside universe. This poster in particular is trying to attract tourists to Terra, listing attractions like the Grand Orrery and Neue Waldstätte."
+	desc = "Terra, or Earth as it's called by inhabitants, the third planet in the Sol system. Home to the only life as humans knew it, until contact with the outside universe. This poster in particular is trying to attract tourists to Terra, listing attractions like the Grand Canyon and Great Wall of China."
 	icon_state = "poster-solgov-terra"
 
 /obj/structure/sign/poster/solgov/mars
@@ -916,7 +916,7 @@
 	icon_state = "poster-solgov-paperwork"
 
 /obj/structure/sign/poster/solgov/sonnensoldner
-	name = "The Sonnensöldners"
+	name = "The Solarian Guard"
 	desc = "The symbol of the many Solar Companies."
 	icon_state = "poster-solgov-sonnensoldner"
 
@@ -931,7 +931,7 @@
 
 /obj/structure/sign/poster/solgov/solgov_enlist //much better.
 	name = "Enlist"
-	desc = "Enlist to be a part of the SolGov Exploration Forces!"
+	desc = "Enlist to be a part of the SolFed Exploration Forces!"
 	icon_state = "poster_solgov_enlist_legit"
 
 /obj/structure/sign/poster/solgov/nanomichi_ad
@@ -956,7 +956,7 @@
 
 /obj/structure/sign/poster/clip/enlist
 	name = "Enlist"
-	desc = "\"Do your part for not just CLIP, but Luna Town, Lanchester City, Serene, Star City, Ryunosuke, Lanshuka, Radinska, New Kalixcis, and all of your families! Plus, finance your future; It's a win/win to enlist in the CMM!\""
+	desc = "\"Do your part for not just CLIP, but Lanchester City, Serene, Star City, Ryunosuke, Lanshuka, Radinska, and all of your families! Plus, finance your future; It's a win/win to enlist in the CMM!\""
 	icon_state = "poster-clip_enlist"
 
 /obj/structure/sign/poster/clip/bard

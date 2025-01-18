@@ -235,8 +235,8 @@
 // SolGov
 
 /obj/item/clothing/suit/hooded/wintercoat/solgov
-	name = "solgov winter coat"
-	desc = "An environment-resistant wintercoat in the colors of the Solarian Confederation."
+	name = "solfed winter coat"
+	desc = "An environment-resistant wintercoat in the colors of the Solar Federation."
 	icon_state = "coatsolgov"
 	item_state = "coatsolgov"
 	hoodtype = /obj/item/clothing/head/hooded/winterhood/solgov
