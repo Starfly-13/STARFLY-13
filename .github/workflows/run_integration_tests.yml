@@ -64,34 +64,11 @@ jobs:
         if: steps.cache-deps.outputs.cache-hit != 'true'
         run: bash tools/ci/build_auxmos.sh
 
-      #   - name: Build rust-g
-      #     if: steps.cache-deps.outputs.cache-hit != 'true'
-      #     run: bash tools/ci/build_rust_g.sh
-
-      # Build the Docker image
-      - name: Build Docker Image
-        run: docker build -t rust_g_image -f Dockerfile-rust_g .
-
-      # Create a container from the built image
-      - name: Create Docker Container
-        run: docker create --name rust_g_container rust_g_image
-
-      # Copy the file from the container to the runner
-      - name: Copy File from Container
-        run: docker cp rust_g_container:/librust_g.so ~/BYOND/byond/bin/librust_g.so
-
-      # Clean up Docker container and image
-      - name: Clean Up
+      - name: Copy rust-g (if needed)
         run: |
-          docker rm rust_g_container
-          docker rmi rust_g_image
-
-      #   - name: Copy rust_g library to BYOND
-      #     run: |
-      #       if [ ! -f ~/BYOND/byond/bin/librust_g.so ]; then
-      #         # bash tools/ci/build_rust_g.sh
-      #         cp -v ~/.byond/bin/librust_g.so ~/BYOND/byond/bin/librust_g.so
-      #       fi
+          if [ ! -f ~/BYOND/byond/bin/librust_g.so ]; then
+            cp -v ~/tools/starfly/rust_g/librust_g.so ~/BYOND/byond/bin/librust_g.so
+          fi
 
       - name: Setup database
         run: |

@@ -6,9 +6,9 @@ source dependencies.sh
 echo "Building rust_g v${RUST_G_VERSION}..."
 
 # build rust_g, and tag it as rust_g:$RUST_G_VERSION
-    # --no-cache \
 docker buildx build \
     --file Dockerfile-rust_g \
+    --no-cache \
     --tag rust_g:${RUST_G_VERSION} \
     .
 
