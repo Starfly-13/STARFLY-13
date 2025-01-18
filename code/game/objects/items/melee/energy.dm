@@ -207,11 +207,11 @@
 	possible_colors = list("yellow" = COLOR_YELLOW)
 
 /obj/item/melee/energy/sword/saber/orange
-	possible_colors = list("yellow" = COLOR_ORANGE)
+	possible_colors = list("orange" = COLOR_ORANGE)
 
 /obj/item/melee/energy/sword/saber/hegemony
 	desc = "A peculiar blade produced on Moghes. It pulses with a strange heat."
-	icon_state = "swordhegemony"
+	sword_color = "swordhegemony"
 
 /obj/item/melee/energy/sword/saber/attackby(obj/item/W, mob/living/user, params)
 	if(W.tool_behaviour == TOOL_MULTITOOL)
