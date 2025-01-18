@@ -68,7 +68,9 @@ jobs:
         run: |
           if [ ! -f $HOME/BYOND/byond/bin/librust_g.so ]; then
             unxz tools/starfly/rust_g/librust_g.so.xz
-            mv -v tools/starfly/rust_g/librust_g.so $HOME/BYOND/byond/bin/librust_g.so
+            mv -v tools/starfly/rust_g/librust_g.so ~/.byond/bin/librust_g.so
+            chmod +x ~/.byond/bin/librust_g.so
+            ldd ~/.byond/bin/librust_g.so
           fi
 
       - name: Setup database
