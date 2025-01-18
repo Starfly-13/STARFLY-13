@@ -460,6 +460,8 @@ EMPTY_GUN_HELPER(shotgun/bulldog/inteq)
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/pirate/onmob.dmi'
 	recoil = 1 // Surprisingly stable!
 	recoil_unwielded = 8 //oof owwie ouch my wrists
+	force = 15
+	throwforce = 20
 	icon_state = "dshotgun"
 	item_state = "dshotgun"
 	slot_flags = null
