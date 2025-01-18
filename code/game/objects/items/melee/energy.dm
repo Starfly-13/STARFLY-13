@@ -175,7 +175,7 @@
 	return FALSE
 
 /obj/item/melee/energy/sword/saber
-	var/list/possible_colors = list("red" = COLOR_SOFT_RED, "blue" = LIGHT_COLOR_LIGHT_CYAN, "green" = LIGHT_COLOR_GREEN, "purple" = LIGHT_COLOR_LAVENDER, "yellow" = COLOR_YELLOW)
+	var/list/possible_colors = list("red" = COLOR_SOFT_RED, "blue" = LIGHT_COLOR_LIGHT_CYAN, "green" = LIGHT_COLOR_GREEN, "purple" = LIGHT_COLOR_LAVENDER, "yellow" = COLOR_YELLOW, "orange" = COLOR_ORANGE)
 	var/hacked = FALSE
 
 /obj/item/melee/energy/sword/saber/Initialize(mapload)
@@ -205,6 +205,13 @@
 
 /obj/item/melee/energy/sword/saber/yellow
 	possible_colors = list("yellow" = COLOR_YELLOW)
+
+/obj/item/melee/energy/sword/saber/orange
+	possible_colors = list("yellow" = COLOR_ORANGE)
+
+/obj/item/melee/energy/sword/saber/hegemony
+	desc = "A peculiar blade produced on Moghes. It pulses with a strange heat."
+	icon_state = "swordhegemony"
 
 /obj/item/melee/energy/sword/saber/attackby(obj/item/W, mob/living/user, params)
 	if(W.tool_behaviour == TOOL_MULTITOOL)
