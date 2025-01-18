@@ -65,8 +65,13 @@ jobs:
         run: bash tools/ci/build_auxmos.sh
 
       - name: Build rust-g
-        if: steps.cache-deps.outputs.cache-hit != 'true'
-        run: bash tools/ci/build_rust_g.sh
+        # if: steps.cache-deps.outputs.cache-hit != 'true'
+        # run: bash tools/ci/build_rust_g.sh
+        run: |
+          if [ ! -f ~/BYOND/byond/bin/librust_g.so ]; then
+            tools/ci/build_rust_g.sh
+            cp -v ~/.byond/bin/librust_g.so ~/BYOND/byond/bin/librust_g.so
+          fi
 
       - name: Setup database
         run: |
