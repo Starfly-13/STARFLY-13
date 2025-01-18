@@ -104,6 +104,50 @@
 /obj/item/gun/ballistic/shotgun/brimstone/no_mag
 	// spawnwithmagazine = FALSE
 
+// TP-85 Shotgun
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/tp83
+	name = "Hephaestus TP83 Survivalist Shotgun"
+	desc = "A break-action shotgun featuring two shotgun barrels and one 5.56x45mm rifle barrel. On the bottom of the weapon is a slot that may be used to utilize a specially designed machete as a stock, making it effectively a survival kit in weapon form as long as you refrain from touching the sharp side."
+
+	icon = 'icons/obj/guns/manufacturer/frontier_import/48x32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	mob_overlay_icon = null
+
+	base_icon_state = "cosmo"
+	icon_state = "cosmo"
+	item_state = "shotgun"
+	unique_reskin = null
+
+	mag_type = /obj/item/ammo_box/magazine/internal/shot/tp83
+	w_class = WEIGHT_CLASS_NORMAL
+	var/toggled = FALSE
+	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
+	semi_auto = TRUE
+
+// Butcher Shotgun
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn/scrap
+	name = "Butcher Shotgun"
+	desc = "A brutal shotgun favored by pirates. That hatchet is not just for show!"
+	icon = 'icons/obj/guns/manufacturer/clip_lanchester/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
+	lefthand_file = 'icons/obj/guns/manufacturer/pirate/lefthand.dmi'
+	righthand_file = 'icons/obj/guns/manufacturer/pirate/righthand.dmi'
+	mob_overlay_icon = 'icons/obj/guns/manufacturer/pirate/onmob.dmi'
+	recoil = 1 // Surprisingly stable!
+	recoil_unwielded = 8 //oof owwie ouch my wrists
+	force = 15
+	throwforce = 20
+	icon_state = "dshotgun"
+	item_state = "dshotgun"
+	slot_flags = null
+	manufacturer = MANUFACTURER_LAKVAR
+	attack_verb = list("hacked", "chopped", "smashed", "torn", "ripped", "diced", "cut")
+	sharpness = IS_SHARP_ACCURATE
+
+
 // LK-SS SHOTGUN //
 
 /obj/item/gun/ballistic/shotgun/scrap
