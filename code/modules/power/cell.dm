@@ -448,7 +448,7 @@
 	update_appearance()
 
 /obj/item/stock_parts/cell/gun/solgov
-	name = "SolGov power cell"
+	name = "SolFed power cell"
 	icon_state = "g-sg-cell"
 
 /obj/item/stock_parts/cell/gun/large
@@ -466,14 +466,14 @@
 
 /obj/item/stock_parts/cell/gun/kalix
 	name = "Etherbor EWC-5"
-	desc = "Brought to you by Etherbor Industries, proudly based within the PGF, is the EWC-5, an energy cell compatible with any Etherbor Industries energy weapons."
+	desc = "Brought to you by Etherbor Industries, proudly partnered with Epsilon Eridani, is the EWC-5, an energy cell compatible with any Etherbor Industries energy weapons."
 	icon_state = "kalix-cell"
 	maxcharge = 12750 // 15 shots at 850 energy per
 	chargerate = 1750
 
 /obj/item/stock_parts/cell/gun/pgf
 	name = "Etherbor EWC-6m"
-	desc = "Exclusive only to the PGF military, the EWC-6m is an Etherbor energy weapon cell designed for military-grade use, including expanded capacity and output."
+	desc = "Exclusive only to Epsilon Eridani security forces, the EWC-6m is an Etherbor energy weapon cell designed for military-grade use, including expanded capacity and output."
 	icon_state = "pgf-cell"
 	maxcharge = 20000 // 20 shots at 1000 energy per
 	chargerate = 2000
