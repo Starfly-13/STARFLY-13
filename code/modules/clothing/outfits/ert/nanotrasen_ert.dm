@@ -5,8 +5,62 @@
 
 	wallet = null
 
-	ears = /obj/item/radio/headset/headset_sec/alt
-	uniform = /obj/item/clothing/under/nanotrasen/security
+	box = /obj/item/storage/box/survival/security
+	l_pocket = /obj/item/restraints/handcuffs
+	r_pocket = /obj/item/kitchen/knife/combat
+
+	backpack_contents = list(/obj/item/radio=1, /obj/item/stock_parts/cell/gun/upgraded=2, /obj/item/screwdriver=1)
+
+
+/datum/outfit/job/nanotrasen/security/ert/lp/medic
+	name = "ERT - Loss Prevention Medical Specialist"
+	jobtype = /datum/job/doctor
+	job_icon = "medicalresponseofficer"
+
+	head = null
+	uniform = /obj/item/clothing/under/rank/medical/paramedic/lp
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/lp/med
+	id = /obj/item/card/id/lpmed
+	gloves = /obj/item/clothing/gloves/color/latex/nitrile
+	back = /obj/item/storage/backpack/ert/medical
+	belt = /obj/item/storage/belt/medical/surgery
+
+	box = /obj/item/storage/box/survival/medical
+	l_pocket = /obj/item/healthanalyzer
+	r_pocket = /obj/item/reagent_containers/hypospray/medipen/atropine
+
+	backpack_contents = list(/obj/item/storage/firstaid/medical=1, /obj/item/radio=1)
+
+
+/datum/outfit/job/nanotrasen/security/ert/lp/engineer
+	name = "ERT - Loss Prevention Engineering Specialist"
+	jobtype = /datum/job/engineer
+	job_icon = "engineeringresponseofficer"
+
+	head = null
+	uniform = /obj/item/clothing/under/rank/engineering/engineer/nt/lp
+	suit = /obj/item/clothing/suit/space/hardsuit/ert/lp/engi
+	id = /obj/item/card/id/lpengie
+	belt = /obj/item/storage/belt/utility/full
+	gloves = /obj/item/clothing/gloves/combat
+	glasses = /obj/item/clothing/glasses/welding
+	back = /obj/item/storage/backpack/ert/engineer
+
+	box = /obj/item/storage/box/survival/engineer
+	l_pocket = /obj/item/extinguisher/mini
+	r_pocket = /obj/item/wrench/combat
+
+	backpack_contents = list(/obj/item/stack/sheet/metal/fifty=1, /obj/item/stack/sheet/glass/fifty=1, /obj/item/radio=1)
+
+/datum/outfit/job/nanotrasen/security/ert/lp/lieutenant
+	name = "ERT - Loss Prevention Lieutenant"
+	jobtype = /datum/job/captain
+	job_icon = "emergencyresponseteamcommander"
+
+	head = null
+	ears = /obj/item/radio/headset/nanotrasen/alt/captain
+	id = /obj/item/card/id/lplieu
+	belt = /obj/item/storage/belt/military/army
 	gloves = /obj/item/clothing/gloves/color/black
 	head = /obj/item/clothing/head/nanotrasen/cap/security
 	suit = /obj/item/clothing/suit/armor/nanotrasen
