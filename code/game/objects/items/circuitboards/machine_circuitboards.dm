@@ -570,6 +570,7 @@
 	var/static/list/fridges_name_paths = list(/obj/machinery/smartfridge = "plant produce",
 		/obj/machinery/smartfridge/food = "food",
 		/obj/machinery/smartfridge/drinks = "drinks",
+		/obj/machinery/smartfridge/extract = "slimes",
 		/obj/machinery/smartfridge/bloodbank = "blood",
 		/obj/machinery/smartfridge/organ = "organs",
 		/obj/machinery/smartfridge/chemistry = "chems",
@@ -982,6 +983,15 @@
 		/obj/item/airlock_painter = 1,
 		/obj/item/stack/sheet/glass = 1)
 
+/obj/item/circuitboard/machine/monkey_recycler
+	name = "Monkey Recycler (Machine Board)"
+	icon_state = "science"
+	build_path = /obj/machinery/monkey_recycler
+	req_components = list(
+		/obj/item/stock_parts/matter_bin = 1,
+		/obj/item/stock_parts/manipulator = 1)
+	needs_anchored = FALSE
+
 /obj/item/circuitboard/machine/nanite_chamber
 	name = "Nanite Chamber (Machine Board)"
 	icon_state = "science"
@@ -1007,6 +1017,11 @@
 		/obj/item/stock_parts/manipulator = 2,
 		/obj/item/stock_parts/micro_laser = 2,
 		/obj/item/stock_parts/scanning_module = 1)
+
+/obj/item/circuitboard/machine/processor/slime
+	name = "Slime Processor (Machine Board)"
+	icon_state = "science"
+	build_path = /obj/machinery/processor/slime
 
 /obj/item/circuitboard/machine/protolathe/department/science
 	name = "Protolathe (Machine Board) - Science"
@@ -1262,6 +1277,19 @@
 		/obj/item/stock_parts/matter_bin = 1,
 		/obj/item/stock_parts/manipulator = 1)
 	needs_anchored = FALSE
+
+/obj/item/circuitboard/machine/processor/attackby(obj/item/I, mob/user, params)
+	if(I.tool_behaviour == TOOL_SCREWDRIVER)
+		if(build_path == /obj/machinery/processor)
+			name = "Slime Processor (Machine Board)"
+			build_path = /obj/machinery/processor/slime
+			to_chat(user, "<span class='notice'>Name protocols successfully updated.</span>")
+		else
+			name = "Food Processor (Machine Board)"
+			build_path = /obj/machinery/processor
+			to_chat(user, "<span class='notice'>Defaulting name protocols.</span>")
+	else
+		return ..()
 
 /obj/item/circuitboard/machine/protolathe/department/service
 	name = "Protolathe - Service (Machine Board)"

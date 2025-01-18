@@ -616,7 +616,7 @@
 	belt = /obj/item/storage/belt/military/clip/gunner
 	suit_store = /obj/item/gun/ballistic/automatic/hmg/cm40
 
-	backpack_contents = list(/obj/item/clothing/mask/gas/clip=1, /obj/item/storage/ration/shredded_beef=1)
+	backpack_contents = list(/obj/item/clothing/mask/gas/clip=1, /obj/item/reagent_containers/food/snacks/rationpack=1)
 
 ///lead, i guess you could reuse this for "Brig Officer"
 
@@ -644,8 +644,7 @@
 
 	suit_store = /obj/item/gun/ballistic/automatic/assault/cm82
 	belt = /obj/item/storage/belt/military/clip/cm82
-	//replace commander with the cm23 when its impemented, see the cm-f4 above
-	backpack_contents = list(/obj/item/clothing/mask/gas/clip=1, /obj/item/storage/ration/shredded_beef=1, /obj/item/gun/ballistic/automatic/pistol/commander=1)
+	backpack_contents = list(/obj/item/clothing/mask/gas/clip=1, /obj/item/reagent_containers/food/snacks/rationpack=1, /obj/item/gun/ballistic/automatic/pistol/cm23=1)
 
 /datum/outfit/job/clip/minutemen/grunt/commander
 	name = "CLIP Minutemen - Field Commander"

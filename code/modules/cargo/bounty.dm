@@ -75,7 +75,7 @@ GLOBAL_LIST_EMPTY(bounties_list)
 
 // Returns a new bounty of random type, but does not add it to GLOB.bounties_list.
 /proc/random_bounty()
-	switch(rand(1, 12))
+	switch(rand(1, 13))
 		if(1)
 			var/subtype = pick(subtypesof(/datum/bounty/item/assistant))
 			return new subtype
@@ -103,15 +103,18 @@ GLOBAL_LIST_EMPTY(bounties_list)
 			var/subtype = pick(subtypesof(/datum/bounty/item/science))
 			return new subtype
 		if(9)
-			var/subtype = pick(subtypesof(/datum/bounty/item/engineering))
+			var/subtype = pick(subtypesof(/datum/bounty/item/slime))
 			return new subtype
 		if(10)
-			var/subtype = pick(subtypesof(/datum/bounty/item/mining))
+			var/subtype = pick(subtypesof(/datum/bounty/item/engineering))
 			return new subtype
 		if(11)
-			var/subtype = pick(subtypesof(/datum/bounty/item/medical))
+			var/subtype = pick(subtypesof(/datum/bounty/item/mining))
 			return new subtype
 		if(12)
+			var/subtype = pick(subtypesof(/datum/bounty/item/medical))
+			return new subtype
+		if(13)
 			var/subtype = pick(subtypesof(/datum/bounty/item/botany))
 			return new subtype
 
@@ -150,7 +153,10 @@ GLOBAL_LIST_EMPTY(bounties_list)
 	/********************************Dynamic Gens********************************/
 
 	for(var/i in 0 to 1)
-		pick = pick(subtypesof(/datum/bounty/item/science))
+		if(prob(50))
+			pick = pick(subtypesof(/datum/bounty/item/slime))
+		else
+			pick = pick(subtypesof(/datum/bounty/item/science))
 		try_add_bounty(new pick)
 
 	/********************************Cutoff for Non-Low Priority Bounties********************************/

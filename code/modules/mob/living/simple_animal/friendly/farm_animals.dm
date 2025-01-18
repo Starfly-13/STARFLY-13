@@ -122,6 +122,7 @@
 	attack_sound = 'sound/weapons/punch1.ogg'
 	health = 50
 	maxHealth = 50
+	gold_core_spawnable = FRIENDLY_SPAWN
 	blood_volume = BLOOD_VOLUME_NORMAL
 	food_type = list(/obj/item/reagent_containers/food/snacks/grown/wheat)
 	tame_chance = 25
@@ -177,6 +178,7 @@
 /mob/living/simple_animal/cow/wisdom
 	name = "wisdom cow"
 	desc = "Known for its wisdom, shares it with all"
+	gold_core_spawnable = FALSE
 	tame_chance = 0
 	bonus_tame_chance = 0
 	speak_chance = 15
@@ -227,6 +229,8 @@
 	var/amount_grown = 0
 	pass_flags = PASSTABLE | PASSGRILLE | PASSMOB
 	mob_size = MOB_SIZE_TINY
+	gold_core_spawnable = FRIENDLY_SPAWN
+
 	footstep_type = FOOTSTEP_MOB_CLAW
 
 /mob/living/simple_animal/chick/Initialize()
@@ -286,6 +290,7 @@
 	var/list/feedMessages = list("It clucks happily.","It clucks happily.")
 	var/list/layMessage = EGG_LAYING_MESSAGES
 	var/list/validColors = list("brown","black","white")
+	gold_core_spawnable = FRIENDLY_SPAWN
 	var/static/chicken_count = 0
 
 	footstep_type = FOOTSTEP_MOB_CLAW
@@ -381,6 +386,7 @@
 	var/list/feedMessages = list("It clucks happily.","It clucks happily.")
 	var/list/layMessage = EGG_LAYING_MESSAGES
 	var/list/validColors = list("brown","black","white")
+	gold_core_spawnable = FRIENDLY_SPAWN
 	var/static/chicken_count = 0
 	environment_smash = ENVIRONMENT_SMASH_NONE
 	melee_damage_lower = 3

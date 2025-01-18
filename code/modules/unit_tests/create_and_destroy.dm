@@ -13,6 +13,8 @@
 		/turf/template_noop,
 		//Never meant to be created, errors out the ass for mobcode reasons
 		/mob/living/carbon,
+		//And another
+		/obj/item/slimecross/recurring,
 		//This should be obvious
 		/obj/machinery/doomsday_device,
 		//Template type

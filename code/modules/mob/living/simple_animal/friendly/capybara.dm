@@ -43,6 +43,7 @@
 	real_name = "Caspar"
 	desc = "It's Caspar, the Capybara Captain, the Capy Cappy."
 	gender = MALE
+	gold_core_spawnable = NO_SPAWN
 	unique_pet = TRUE
 
 	var/wear_hat = /obj/item/clothing/head/caphat

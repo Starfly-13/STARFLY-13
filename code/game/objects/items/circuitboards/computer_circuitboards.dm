@@ -315,6 +315,11 @@
 	icon_state = "science"
 	build_path = /obj/machinery/computer/teleporter
 
+/obj/item/circuitboard/computer/xenobiology
+	name = "circuit board (Xenobiology Console)"
+	icon_state = "science"
+	build_path = /obj/machinery/computer/camera_advanced/xenobio
+
 //Security
 
 /obj/item/circuitboard/computer/gulag_teleporter_console

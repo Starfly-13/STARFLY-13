@@ -28,6 +28,7 @@
 	friendly_verb_simple = "pinch"
 	a_intent = INTENT_HELP
 	ventcrawler = VENTCRAWLER_ALWAYS
+	gold_core_spawnable = FRIENDLY_SPAWN
 	stat_attack = HARD_CRIT
 	gender = NEUTER
 	stop_automated_movement = FALSE
@@ -101,6 +102,7 @@
 /mob/living/simple_animal/hostile/asteroid/gutlunch/grublunch
 	name = "grublunch"
 	wanted_objects = list() //They don't eat.
+	gold_core_spawnable = NO_SPAWN
 	var/growth = 0
 
 //Baby gutlunch
