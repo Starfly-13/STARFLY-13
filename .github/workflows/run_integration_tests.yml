@@ -69,7 +69,7 @@ jobs:
         # run: bash tools/ci/build_rust_g.sh
         run: |
           if [ ! -f ~/BYOND/byond/bin/librust_g.so ]; then
-            tools/ci/build_rust_g.sh
+            bash tools/ci/build_rust_g.sh
             cp -v ~/.byond/bin/librust_g.so ~/BYOND/byond/bin/librust_g.so
           fi
 
