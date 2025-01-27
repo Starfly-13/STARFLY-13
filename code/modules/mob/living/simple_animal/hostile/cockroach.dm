@@ -23,6 +23,7 @@
 	melee_damage_upper = 0
 	obj_damage = 0
 	ventcrawler = VENTCRAWLER_ALWAYS
+	gold_core_spawnable = FRIENDLY_SPAWN
 	verb_say = "chitters"
 	verb_ask = "chitters inquisitively"
 	verb_exclaim = "chitters loudly"
@@ -48,6 +49,7 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 5
 	obj_damage = 20
+	gold_core_spawnable = HOSTILE_SPAWN
 	projectilesound = 'sound/weapons/gun/pistol/shot.ogg'
 	projectiletype = /obj/projectile/glockroachbullet
 	casingtype = /obj/item/ammo_casing/glockroach

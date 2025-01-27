@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# build-rust-g
+
+# determine the version of rust_g
+source dependencies.sh
+echo "Building rust_g v${RUST_G_VERSION}..."
+
+# build rust_g, and tag it as rust_g:$RUST_G_VERSION
+docker buildx build \
+    --file Dockerfile-rust_g \
+    --no-cache \
+    --tag rust_g:${RUST_G_VERSION} \
+    .
+
+# since we just built rust_g, tag it again as rust_g:latest
+docker image tag rust_g:${RUST_G_VERSION} rust_g:latest
