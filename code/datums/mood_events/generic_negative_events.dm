@@ -15,7 +15,7 @@
 	mood_change = -12
 
 /datum/mood_event/burnt_thumb
-	description = span_warning("I shouldn't play with lighters...")
+	description = span_warning("I should be more careful with lighters...")
 	mood_change = -1
 	timeout = 2 MINUTES
 
@@ -38,7 +38,7 @@
 	timeout = 3 MINUTES
 
 /datum/mood_event/eye_stab
-	description = span_boldwarning("I used to be an adventurer like you, until I took a screwdriver to the eye.")
+	description = span_boldwarning("My eye! What kind of maniac goes for the eyes?")
 	mood_change = -4
 	timeout = 3 MINUTES
 
@@ -53,7 +53,7 @@
 	timeout = 2 MINUTES
 
 /datum/mood_event/depression_mild
-	description = span_warning("I feel sad for no particular reason.")
+	description = span_warning("I feel down for no particular reason.")
 	mood_change = -12
 	timeout = 2 MINUTES
 
@@ -68,7 +68,7 @@
 	timeout = 2 MINUTES
 
 /datum/mood_event/dismembered
-	description = span_boldwarning("AHH! I WAS USING THAT LIMB!")
+	description = span_boldwarning("AGGHHH!!! I'M MISSING A LIMB!!!")
 	mood_change = -10
 	timeout = 8 MINUTES
 
@@ -135,7 +135,7 @@
 	timeout = 3 MINUTES
 
 /datum/mood_event/painful_medicine
-	description = span_warning("Medicine may be good for me but right now it stings like hell.")
+	description = span_warning("Medicine may be good for me, but right now it stings like hell.")
 	mood_change = -5
 	timeout = 60 SECONDS
 
@@ -250,7 +250,7 @@
 
 //These are unused so far but I want to remember them to use them later
 /datum/mood_event/surgery
-	description = span_boldwarning("HE'S CUTTING ME OPEN!!")
+	description = span_boldwarning("AGH! I'm being cut open!")
 	mood_change = -8
 
 /datum/mood_event/nanite_sadness
@@ -314,6 +314,6 @@
 	timeout = 30 SECONDS
 
 /datum/mood_event/bad_boop
-	description = span_warning("Someone booped my nose... ACK!")
+	description = span_warning("ACK! Keep your hands off my nose!")
 	mood_change = -3
 	timeout = 4 MINUTES
