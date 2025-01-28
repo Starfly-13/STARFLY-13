@@ -51,6 +51,11 @@
 	prefixes = PREFIX_HARDLINERS
 	color = "#B22C20"
 
+/datum/faction/syndicate/roseus
+	name = FACTION_ROSEUS
+	prefixes = PREFIX_ROSEUS
+	color = "#9D20B2"
+
 /datum/faction/syndicate/suns
 	name = FACTION_SUNS
 	short_name = "SUNS"
