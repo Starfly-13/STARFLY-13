@@ -56,15 +56,15 @@ GLOBAL_LIST_INIT(rpg_scrawlings, list(
 	"A Kepori inset in a stylized crimson heart",
 	"\"Eat lead psychohazard!\"",
 	"\"Portable Demotion\"",
-	"A drawing of the Rilena character 'T4L1' smoking a boof",
+	"\"This machine kills Izweski\"",
 	"\"Eat it corpo!\"",
-	"A Sarathi woman in a suggestive pose",
-	"A masculine Sarathi shouldering a launcher",
-	"A Vox woman with a sledgehammer over their shoulder",
+	"A Yeosa woman in a suggestive pose",
+	"A masculine Sinta shouldering a launcher",
+	"A Sinta woman with a sledgehammer over their shoulder",
 	"A man in a floral patterned shirt and nothing else, drawn leaning against the rocket's tube",
 	"A crudely-drawn picture of a Gorlex Marauder exploding",
 	"A scratched-out link to some kind of website",
-	".:|:;",
+	"\"Coastal Pride World Wide\"",
 	"\"SPEAR TO THE SHOAL, FOR A FREE FRONTIER!\"",
 	"\"Arm this!\"",
 ))
@@ -132,7 +132,7 @@ GLOBAL_LIST_INIT(rpg_scrawlings, list(
 
 /obj/item/gun/ballistic/rocketlauncher/solgov
 	name = "Panzerfaust XII"
-	desc = "The standard recoiless rifle of the Solarian Confederation. Barely varies from previous models."
+	desc = "The standard recoiless rifle of the Solar Federation. Barely varies from previous models."
 
 	icon = 'icons/obj/guns/manufacturer/solararmories/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/solararmories/lefthand.dmi'

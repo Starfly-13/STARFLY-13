@@ -22,6 +22,7 @@
 	unique_reskin = list(
 		"Classic" = "walkietalkie",
 		"Red" = "walkietalkiered",
+		"Compact Red" = "walkietalkieoldred",
 		"Pink" = "walkietalkiepink",
 		"Lavender" = "walkietalkielavender",
 		"Violet" = "walkietalkieviolet",
@@ -29,6 +30,7 @@
 		"Blue" = "walkietalkieblue",
 		"Green" = "walkietalkiegreen",
 		"Gold" = "walkietalkiegold",
+		"Gold and Black" = "walkietalkieparadise",
 		"Orange" = "walkietalkieorange",
 		"Beige" = "walkietalkiebeige",
 		"Brown" = "walkietalkiebrown",

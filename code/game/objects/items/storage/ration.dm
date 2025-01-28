@@ -204,7 +204,7 @@
 		/obj/item/reagent_containers/food/snacks/ration/entree/sausage_peppers_onions = 1,
 		/obj/item/reagent_containers/food/snacks/ration/side/white_sandwich_bread = 1,
 		/obj/item/reagent_containers/food/snacks/ration/side/baked_cheddarcheese_chips = 1,
-		/obj/item/reagent_containers/food/snacks/ration/snack/channeler_meat_candy = 1,
+		/obj/item/reagent_containers/food/snacks/ration/snack/kazasan_meat_candy = 1,
 		/obj/item/reagent_containers/food/snacks/ration/snack/chocolate_orange_snack_cake = 1,
 		/obj/item/reagent_containers/food/drinks/ration/pan_genezan_vodka = 1,
 		/obj/item/ration_heater = 1

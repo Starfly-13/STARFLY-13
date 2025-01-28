@@ -35,7 +35,7 @@
 
 /obj/item/gun/ballistic/automatic/powered/gauss/modelh
 	name = "Model H"
-	desc = "A standard-issue pistol exported from the Solarian Confederation. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor."
+	desc = "A standard-issue pistol exported from the Solar Federation. It fires slow flesh-rending ferromagnetic slugs at a high energy cost, however they are ineffective on any armor."
 	// mag_type = /obj/item/ammo_box/magazine/modelh
 	icon = 'icons/obj/guns/manufacturer/solararmories/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/solararmories/lefthand.dmi'

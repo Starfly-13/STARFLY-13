@@ -2,7 +2,7 @@ SUBSYSTEM_DEF(overmap)
 	name = "Overmap"
 	wait = 10
 	init_order = INIT_ORDER_OVERMAP
-	flags = SS_KEEP_TIMING
+	flags = SS_KEEP_TIMING|SS_NO_TICK_CHECK
 	runlevels = RUNLEVEL_SETUP | RUNLEVEL_GAME
 
 	///Defines which generator to use for the overmap
@@ -447,6 +447,25 @@ SUBSYSTEM_DEF(overmap)
 		if(!Ship.source_template || Ship.source_template.category != "subshuttles")
 			ship_count++
 	return ship_count
+
+/datum/controller/subsystem/overmap/proc/get_fancy_manifest()
+	var/list/manifest_out = list()
+	for(var/datum/overmap/ship/controlled/ship as anything in controlled_ships)
+		if(!length(ship.manifest))
+			continue
+		var/list/data = list()
+		data["color"] = ship.source_template.faction.color
+		data["mode"] = ship.join_mode
+		for(var/crewmember in ship.manifest)
+			var/datum/job/crewmember_job = ship.manifest[crewmember]
+			data["crew"] += list(list(
+				"name" = crewmember,
+				"rank" = crewmember_job.name,
+				"officer" = crewmember_job.officer
+			))
+		manifest_out["[ship.name] ([ship.source_template.short_name])"] = data
+
+	return manifest_out
 
 /datum/controller/subsystem/overmap/proc/get_manifest()
 	var/list/manifest_out = list()

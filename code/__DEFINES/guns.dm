@@ -70,7 +70,7 @@
 #define MANUFACTURER_PGF "the Etherbor Industries emblem"
 #define MANUFACTURER_ROSEUS "the Roseus Galactic logo"
 #define MANUFACTURER_ADHOMAI "a Tajaran emblem"
-#define MANUFACTURER_LAKVAR "the letters LKV"
+#define MANUFACTURER_LAKVAR "an unrecognizable, heavily faded symbol"
 #define MANUFACTURER_HEPHAESTUS "the Hephaestus Industries logo"
 #define MANUFACTURER_IMPORT "Lanchester Import Co."
 #define MANUFACTURER_SERENE "the Serene Outdoors logo"

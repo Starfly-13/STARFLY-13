@@ -621,11 +621,11 @@
 	tastes = list("peanut" = 1, "cranberry" = 1)
 	foodtype = FRUIT
 
-/obj/item/reagent_containers/food/snacks/ration/snack/channeler_meat_candy
-	name = "channeler meat candy"
-	desc = "A traditional meat-candy from the Antechannel League on Kalixcis, offering an unusual and captivating flavor experience."
+/obj/item/reagent_containers/food/snacks/ration/snack/kazasan_meat_candy
+	name = "Kazasan meat candy"
+	desc = "A traditional meat-candy from the Northern Republic on Moghes, offering an unusual and captivating flavor experience."
 	filling_color = "#9933ff"
-	tastes = list("channeler meat" = 1, "candy" = 1)
+	tastes = list("jerked meat" = 1, "caramel- and honey-like sweetness" = 1)
 	foodtype = MEAT | SUGAR
 
 /obj/item/reagent_containers/food/snacks/ration/snack/chocolate_orange_snack_cake

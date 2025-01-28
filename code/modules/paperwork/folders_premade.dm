@@ -15,7 +15,7 @@
 	icon_state = "folder_white"
 
 /obj/item/folder/solgov
-	desc = "A blue folder with a SolGov seal."
+	desc = "A blue folder with a SolFed seal."
 	icon_state = "folder_solgov"
 
 /obj/item/folder/terragov
@@ -85,11 +85,13 @@
 //pgf folders
 
 /obj/item/folder/pgf
-	desc = "A green folder with Pan Gezenan Federation iconography."
+	desc = "A green folder with Epsilon Eridani iconography."
 	icon_state = "folder_pgf"
 
 /obj/item/folder/pgf/red
+	desc = "A red folder with Epsilon Eridani iconography."
 	icon_state = "folder_pgfred"
 
 /obj/item/folder/pgf/blue
+	desc = "A blue folder with Epsilon Eridani iconography."
 	icon_state = "folder_pgfblue"
