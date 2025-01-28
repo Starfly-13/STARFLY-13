@@ -213,7 +213,7 @@
 	scan_range = 12
 	shot_delay = 20
 
-/* Solcon Turrets */
+/* SolFed Turrets */
 
 /obj/machinery/porta_turret/ship/solgov
 	faction = list(FACTION_PLAYER_SOLCON, "turret")
@@ -223,7 +223,7 @@
 
 /obj/machinery/porta_turret/ship/pgf
 	name = "Etherbor Defensive Mount"
-	desc = "A less portable Etherbor offering, the EDM is a self-directed linkage of energy weapons, designed to keep intruders away from Gezenan vessels."
+	desc = "A less portable Etherbor offering, the EDM is a self-directed linkage of energy weapons, designed to keep intruders away from Eridanian vessels."
 	faction = list(FACTION_PLAYER_GEZENA, "Turret")
 	stun_projectile = /obj/projectile/beam/hitscan/disabler
 	stun_projectile_sound = 'sound/weapons/gun/energy/kalixpistol.ogg'
@@ -303,7 +303,7 @@
 /obj/machinery/porta_turret/ship/frontiersmen
 	name = "Spitter Turret"
 	desc = "A juryrigged mishmash of a 9mm SMG and targetting system. Stand clear!"
-	faction = list(FACTION_FRONTIER, "Turret")
+	faction = list(FACTION_FRONTIERSMEN, "Turret")
 	subsystem_type = /datum/controller/subsystem/processing/fastprocess
 	integrity_failure = 0.6
 	max_integrity = 180

@@ -64,7 +64,7 @@ GLOBAL_LIST_INIT(rpg_scrawlings, list(
 	"A man in a floral patterned shirt and nothing else, drawn leaning against the rocket's tube",
 	"A crudely-drawn picture of a Gorlex Marauder exploding",
 	"A scratched-out link to some kind of website",
-	"\"Coastal Pride World Wide"",
+	"\"Coastal Pride World Wide\"",
 	"\"SPEAR TO THE SHOAL, FOR A FREE FRONTIER!\"",
 	"\"Arm this!\"",
 ))
