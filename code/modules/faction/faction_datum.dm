@@ -63,7 +63,6 @@
 
 /datum/faction/syndicate/scarborough
 	name = "Scarborough Arms"
-	parent_faction = /datum/faction/syndicate
 	prefixes = PREFIX_NONE
 
 /datum/faction/solgov
