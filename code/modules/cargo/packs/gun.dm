@@ -17,10 +17,9 @@
 /datum/supply_pack/gun/derringer
 	name = ".38 Derringer Crate"
 	desc = "A cheap, concealable pistol manufactured by the reputable Hunter's Pride. At least it's better than a disposable pistol. Chambered in .38 rounds."
-	cost = 350
+	cost = 500
 	contains = list(/obj/item/storage/guncase/pistol/derringer)
 	crate_name = "derringer crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/m17
 	name = "M17 pistol Crate"
@@ -98,23 +97,20 @@
 /datum/supply_pack/gun/pepperbox
 	name = "HP Firebrand Pepperbox Revolver Crate"
 	desc = "Contains a concealable pepperbox revolver manufactured by the Saint Roumain Militia, chambered in .357."
-	cost = 1250
+	cost = 15000
 	contains = list(/obj/item/storage/guncase/pistol/firebrand)
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/detrevolver
 	name = "Hunter's Pride Detective Revolver Crate"
 	desc = "Contains a concealable revolver favored by police departments around the sector, chambered in .38."
-	cost = 600
+	cost = 800
 	contains = list(/obj/item/storage/guncase/pistol/detective)
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/shadowrevolver
 	name = "Shadow Revolver Crate"
 	desc = "Contains a concealable Shadow revolver, chambered in .44 Roumain."
-	cost = 1000
+	cost = 1400
 	contains = list(/obj/item/storage/guncase/pistol/shadow)
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/viperrevolver
 	name = "Viper-23 Revolver Crate"
@@ -136,9 +132,8 @@
 /datum/supply_pack/gun/ashhand
 	name = "Ashhand Hunting Revolver Crate"
 	desc = "Contains a single-action .45-70 hunting revolver manufactured by Hunter's Pride for use against the biggest game."
-	cost = 3500
+	cost = 3750
 	contains = list(/obj/item/storage/guncase/pistol/ashhand)
-	faction = /datum/faction/srm
 	faction_discount = 0
 	faction_locked = TRUE
 
@@ -241,34 +236,30 @@
 /datum/supply_pack/gun/doublebarrel_shotgun
 	name = "Double Barrel Shotgun Crate"
 	desc = "For when you need to deal with 2 drunkards the old-fashioned way. Contains a double-barreled shotgun, favored by Bartenders. Warranty voided if sawed off."
-	cost = 1000
+	cost = 1300
 	contains = list(/obj/item/storage/guncase/doublebarrel)
 	crate_name = "shotgun crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/conflagration
 	name = "Conflagration Lever Action Shotgun Crate"
 	desc = "For when you need to deal with 6 hooligans and look good doing it. Contains one lever-action shotgun, with a 6 round capacity."
-	cost = 1500
+	cost = 1750
 	contains = list(/obj/item/storage/guncase/conflagration)
 	crate_name = "shotgun crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/hellfire_shotgun
 	name = "Hellfire Shotgun Crate"
 	desc = "For when you need to deal with 8 hooligans. Contains a pump shotgun, with a 8-round capacity."
-	cost = 2000
+	cost = 2250
 	contains = list(/obj/item/storage/guncase/hellfire)
 	crate_name = "shotgun crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/brimstone_shotgun
 	name = "Brimstone Shotgun Crate"
 	desc = "For when you need to deal with 5 hooligans, and QUICKLY. Contains a slamfire shotgun, with a 5-round capacity. Warranty voided if sawed off."
-	cost = 2000
+	cost = 22500
 	contains = list(/obj/item/storage/guncase/brimstone)
 	crate_name = "shotgun crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/buckmaster
 	name = "Buckmaster Shotgun Crate"
@@ -453,7 +444,6 @@
 	cost = 750
 	contains = list(/obj/item/storage/guncase/winchester)
 	crate_name = "rifle crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/absolution
 	name = "Absolution Lever Action Rifle Crate"
@@ -461,7 +451,6 @@
 	cost = 2000
 	contains = list(/obj/item/storage/guncase/absolution)
 	crate_name = "shotguns crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/illestren
 	name = "Illestren Rifle Crate"
@@ -469,7 +458,6 @@
 	cost = 1250
 	contains = list(/obj/item/storage/guncase/illestren)
 	crate_name = "rifle crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/beacon
 	name = "Beacon Break Action Rifle Crate"
@@ -477,7 +465,6 @@
 	cost = 1000
 	contains = list(/obj/item/storage/guncase/beacon)
 	crate_name = "rifle crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/skm
 	name = "SKM-24 Rifle Crate"
@@ -575,7 +562,6 @@
 	cost = 3500
 	contains = list(/obj/item/storage/guncase/vickland)
 	crate_name = "dmr crate"
-	faction = /datum/faction/srm
 	faction_discount = 0
 	faction_locked = TRUE
 

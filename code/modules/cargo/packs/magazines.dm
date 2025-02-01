@@ -30,40 +30,34 @@
 	desc = "Contains a .38 speedloader for revolvers, containing six rounds."
 	contains = list(/obj/item/ammo_box/c38)
 	cost = 250
-	faction_discount = 20
-	faction = /datum/faction/srm
 
 /datum/supply_pack/magazine/c38match
 	name = ".38 Match Grade Speedloader"
 	desc = "Contains one speedloader of match grade .38 ammunition, perfect for showing off trickshots."
-	cost = 200
+	cost = 250
 	small_item = TRUE
 	contains = list(/obj/item/ammo_box/c38/match)
 	crate_name = ".38 match crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/magazine/c38dumdum
 	name = ".38 DumDum Speedloader"
 	desc = "Contains one speedloader of .38 DumDum ammunition, good for embedding in soft targets."
-	cost = 200
+	cost = 250
 	small_item = TRUE
 	contains = list(/obj/item/ammo_box/c38/dumdum)
 	crate_name = ".38 match crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/magazine/m45_mag
 	name = ".45 ACP Candor Magazine Crate"
 	desc = "Contains a .45 ACP magazine for the Candor pistol, containing eight rounds."
 	contains = list(/obj/item/ammo_box/magazine/m45)
-	cost = 500
-	faction = /datum/faction/srm
+	cost = 525
 
 /datum/supply_pack/magazine/a44roum_speedloader
 	name = ".44 Roumain Speedloader Crate"
 	desc = "Contains a .44 Roumain speedloader for the HP Montagne, containing six rounds."
 	contains = list(/obj/item/ammo_box/a44roum_speedloader)
-	cost = 400
-	faction = /datum/faction/srm
+	cost = 450
 
 /* Serene Sporting */
 
