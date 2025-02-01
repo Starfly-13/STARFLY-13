@@ -167,6 +167,20 @@
 	manufacturer = MANUFACTURER_LAKVAR
 	can_be_sawn_off  = FALSE
 
+// SHOTGUN PISTOL //
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn/pistol
+	name = "Condor"
+	desc = "Resembles a classic semi-automatic handgun, widely popular throughout the Frontier. Something is off about this one...."
+	fire_sound = 'sound/weapons/gun/shotgun/brimstone.ogg'
+	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
+	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
+	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
+	icon_state = "pocketshotgun"
+	item_state = "hp_generic"
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/improvised
+	allowed_ammo_types = /obj/item/ammo_box/magazine/internal/shot/improvised
+
 // HELLFIRE SHOTGUN //
 
 /obj/item/gun/ballistic/shotgun/hellfire
