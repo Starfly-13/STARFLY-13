@@ -81,27 +81,12 @@
 //Soft caps
 
 /datum/gear/hat/softcap
-	subtype_path = /datum/gear/hat/softcap
+	display_name = "cap, recolorable"
+	path = /obj/item/clothing/head/soft
 
-/datum/gear/hat/softcap/red
-	display_name = "cap, red"
-	path = /obj/item/clothing/head/soft/red
-
-/datum/gear/hat/softcap/blue
-	display_name = "cap, blue"
-	path = /obj/item/clothing/head/soft/blue
-
-/datum/gear/hat/softcap/grey
-	display_name = "cap, grey"
-	path = /obj/item/clothing/head/soft/grey
-
-/datum/gear/hat/softcap/white
-	display_name = "cap, white"
-	path = /obj/item/clothing/head/soft/mime
-
-/datum/gear/hat/softcap/black
-	display_name = "cap, black"
-	path = /obj/item/clothing/head/soft/black
+/datum/gear/hat/flapcap
+	display_name = "flapcap, recolorable"
+	path = /obj/item/clothing/head/flap
 
 /datum/gear/hat/utility_black
 	display_name = "utility cover, black"
