@@ -15,6 +15,10 @@
 /datum/gear/suit/jacket
 	subtype_path = /datum/gear/suit/jacket
 
+/datum/gear/suit/jacket/windbreaker
+	display_name = "windbreaker, recolorable"
+	path = /obj/item/clothing/suit/toggle/windbreaker
+
 /datum/gear/suit/jacket/bomber
 	display_name = "bomber jacket"
 	path = /obj/item/clothing/suit/jacket
