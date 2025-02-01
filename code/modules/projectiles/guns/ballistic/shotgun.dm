@@ -104,12 +104,11 @@
 /obj/item/gun/ballistic/shotgun/brimstone/no_mag
 	// spawnwithmagazine = FALSE
 
-// TP-85 Shotgun
+// TP-83 Shotgun
 
 /obj/item/gun/ballistic/shotgun/doublebarrel/tp83
-	name = "Hephaestus TP83 Survivalist Shotgun"
-	desc = "A break-action shotgun featuring two shotgun barrels and one 5.56x45mm rifle barrel. On the bottom of the weapon is a slot that may be used to utilize a specially designed machete as a stock, making it effectively a survival kit in weapon form as long as you refrain from touching the sharp side."
-
+	name = "Hephaestus TP-83 Survivalist Shotgun"
+	desc = "A break-action shotgun featuring three barrels. On the bottom of the weapon is a slot that may be used to utilize a specially designed machete as a stock, making it effectively a survival kit in weapon form as long as you refrain from touching the sharp side."
 	icon = 'icons/obj/guns/manufacturer/frontier_import/48x32.dmi'
 	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
@@ -126,6 +125,7 @@
 	var/toggled = FALSE
 	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
 	semi_auto = TRUE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 
 // Butcher Shotgun
 

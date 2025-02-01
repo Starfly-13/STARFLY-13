@@ -240,6 +240,13 @@
 	contains = list(/obj/item/storage/guncase/doublebarrel)
 	crate_name = "shotgun crate"
 
+/datum/supply_pack/gun/tp83
+	name = "TP-83 Shotgun Crate"
+	desc = "A break-action triple-barrel shotgun manufactured by Hephaestus Industries, the TP-83 was originally designed to aid in surviving the wilderness on alien worlds that supported life."
+	cost = 1750
+	contains = list(/obj/item/storage/guncase/tp83)
+	crate_name = "shotgun crate"
+
 /datum/supply_pack/gun/conflagration
 	name = "Conflagration Lever Action Shotgun Crate"
 	desc = "For when you need to deal with 6 hooligans and look good doing it. Contains one lever-action shotgun, with a 6 round capacity."
