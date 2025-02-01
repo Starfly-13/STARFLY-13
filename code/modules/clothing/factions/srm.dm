@@ -3,8 +3,8 @@
 /////////////
 
 /obj/item/clothing/under/suit/roumain
-	name = "saint-roumain's worksuit"
-	desc = "A simple, hard-wearing suit designed for the hardworking hunters of the Saint-Roumain Militia."
+	name = "survivalist's worksuit"
+	desc = "A simple, hard-wearing suit designed for exploring the wilderness."
 	icon_state = "rouma_work"
 	item_state = "rouma_work"
 	can_adjust = FALSE
@@ -17,7 +17,7 @@
 /////////////////
 
 /obj/item/clothing/suit/armor/roumain
-	name = "saint-roumain duster"
+	name = "tough duster"
 	desc = "A coat made from hard leather. Meant to withstand long hunts in harsh wilderness."
 	icon_state = "armor_rouma"
 	item_state = "rouma_coat"
@@ -29,45 +29,45 @@
 	supports_variations = KEPORI_VARIATION
 
 /obj/item/clothing/suit/armor/roumain/shadow
-	name = "saint-roumain shadow duster"
-	desc = "A coat made from hard leather. Its rough, barely-treated finish is typical of one of the Saint-Roumain Militia's trainees."
+	name = "beige hardleather duster"
+	desc = "A coat made from hard leather. The leather is treated to be a lighter color."
 	icon_state = "armor_rouma_shadow"
 	item_state = "rouma_shadow_coat"
 	supports_variations = KEPORI_VARIATION
 
 /obj/item/clothing/suit/toggle/labcoat/roumain_med
-	name = "saint-roumain medical duster"
-	desc = "A coat made from hard leather and further treated with exotic sterilizing oils and wax. The treatment and its more closed design offers much better protection against biological hazards."
+	name = "grey hardleather duster"
+	desc = "A coat made from hard leather and dyed grey."
 	icon = 'icons/obj/clothing/faction/srm/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/srm/suits.dmi'
 	icon_state = "rouma_med_coat"
-	armor = list("melee" = 35, "bullet" = 35, "laser" = 35, "energy" = 40, "bomb" = 25, "bio" = 50, "rad" = 0, "fire" = 50, "acid" = 50)
 	supports_variations = KEPORI_VARIATION
 
 /obj/item/clothing/suit/hazardvest/roumain
-	name = "saint-roumain machinist leather vest"
-	desc = "A modified Roumain leather duster with its large flaps and sleeves cut off to provide extra mobility when maintaining weapons and vessels belonging to the Church of Saint Roumain. Its specialty treatment grants it better protection against acid and fire."
+	name = "hard leather vest"
+	desc = "A vest made of hard leather. It's pretty sturdy, and could be used as basic armor."
 	icon = 'icons/obj/clothing/faction/srm/suits.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/srm/suits.dmi'
 	icon_state = "armor_rouma_machinist"
 	item_state = "rouma_coat"
-	armor = list("melee" = 35, "bullet" = 20, "laser" = 20, "energy" = 40, "bomb" = 35, "bio" = 0, "rad" = 0, "fire" = 60, "acid" = 60)
+	armor = list("melee" = 15, "bullet" = 0, "laser" = 5, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/suit/armor/roumain/flamebearer
-	name = "saint-roumain flamebearer robes"
-	desc = "A set of ashy-grey robes made from hard leather, adorned with gold trims. Its rough finish after a near-char and application of aromatics is heavily favored for the ecclesiastical sect of the Church of Saint Roumain, a living reminder of the Ashen Huntsman himself."
+	name = "fancy hardleather coat"
+	desc = "An elegant, trimmed coat in a style popular among missionaries on the frontier. Often found with a holy book in one of its pockets."
 	icon_state = "armor_rouma_flamebearer"
 	supports_variations = KEPORI_VARIATION
 
 /obj/item/clothing/suit/armor/roumain/colligne
-	name = "saint-roumain colligne coat"
-	desc = "A well-maintained hard leather coat typically worn to denote the rank of Colligne, a trainee Hunter Montagne. It is treated with bullet-resistant materials, and lined with the dark fur of Illestrian dire wolves."
+	name = "armored hardleather duster."
+	desc = "A hard leather coat treated with bullet-resistant materials, and lined with the dark fur of Adhoman wolves."
 	icon_state = "armor_rouma_colligne"
 	item_state = "rouma_coat"
 	body_parts_covered = CHEST|GROIN
 	cold_protection = CHEST|GROIN|LEGS|ARMS
 	heat_protection = CHEST|GROIN|LEGS|ARMS
 	supports_variations = KEPORI_VARIATION
+	armor = list("melee" = 15, "bullet" = 5, "laser" = 5, "energy" = 5, "bomb" = 0, "bio" = 0, "rad" = 0, "fire" = 0, "acid" = 0)
 
 /obj/item/clothing/suit/armor/roumain/montagne
 	name = "saint-roumain montagne coat"
@@ -111,16 +111,16 @@
 ////////
 
 /obj/item/clothing/head/cowboy/sec/roumain
-	name = "hunter's hat"
-	desc = "A fancy hat with a nice feather. The way it covers your eyes makes you feel like a badass."
+	name = "red-banded cowboy hat"
+	desc = "A fancy hat with a red band and a nice feather. The way it covers your eyes makes you feel like a badass."
 	icon_state = "rouma_hat"
 	icon = 'icons/obj/clothing/faction/srm/head.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/faction/srm/head.dmi'
 	supports_variations = KEPORI_VARIATION
 
 /obj/item/clothing/head/cowboy/sec/roumain/shadow
-	name = "shadow's hat"
-	desc = "A rough, simple hat. The way it covers your eyes makes you feel badass, but you just look like a wannabe hunter."
+	name = "beige cowboy hat"
+	desc = "A beige cowboy hat. The way it covers your eyes makes you feel badass, but this color totally shows dirt."
 	icon_state = "rouma_shadow_hat"
 	supports_variations = KEPORI_VARIATION
 
@@ -130,7 +130,7 @@
 	icon_state = "rouma_machinist_hat"
 
 /obj/item/clothing/head/cowboy/sec/roumain/med
-	name = "medical hunter's hat"
+	name = "red-banded hat"
 	desc = "A very wide-brimmed, round hat treated with oil and wax. Somehow manages to look stylish and creepy at the same time."
 	icon_state = "rouma_med_hat"
 	supports_variations = KEPORI_VARIATION
