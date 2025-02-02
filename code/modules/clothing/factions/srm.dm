@@ -161,8 +161,8 @@
 //Please transfer them over to a factional file if accessory code is ever fixed
 
 /obj/item/clothing/accessory/waistcoat/roumain
-	name = "roumain waistcoat"
-	desc = "A warm, red wool waistcoat, worn by any member of the Church of Saint Roumain, though heavily favored by Machinists for the added warmth given to their rather breezy outfit."
+	name = "red waistcoat"
+	desc = "A warm, red wool waistcoat that is occasionally seen on the frontier. Popular with those working in colder environments."
 	icon_state = "rouma_waistcoat"
 	icon = 'icons/obj/clothing/accessories.dmi'
 	mob_overlay_icon = 'icons/mob/clothing/accessories.dmi'

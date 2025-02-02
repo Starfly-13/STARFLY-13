@@ -65,7 +65,7 @@
 		list(fax_name = "Outpost Authority", fax_id = "outpost", color = "orange", emag_needed = FALSE),
 		list(fax_name = "IRMG Mothership", fax_id = "inteq", color = "yellow", emag_needed = FALSE),
 		list(fax_name = "Solar Federation Frontier Affairs", fax_id = "solgov", color = "teal", emag_needed = FALSE),
-		list(fax_name = "Roumain Council of Huntsmen", fax_id = "roumain", color = "brown", emag_needed = FALSE),
+		list(fax_name = "Hunter's Pride Customer Service", fax_id = "roumain", color = "brown", emag_needed = FALSE),
 		list(fax_name = "Confederated League Leadership", fax_id = "minutemen", color = "blue", emag_needed = FALSE),
 		list(fax_name = "Epsilon Eridani Capitol", fax_id = "gezena", color = "olive", emag_needed = FALSE),
 		list(fax_name = "Syndicate Coalition Coordination Center", fax_id = "syndicate", color = "red", emag_needed = FALSE),
@@ -547,6 +547,20 @@
 		list(fax_name = "Frontiersmen Communications Quartermaster", fax_id = "frontiersmen", color = "black", emag_needed = TRUE)
 	)
 
+/obj/machinery/fax/arknet
+	special_networks = list(
+		list(fax_name = "Outpost Authority", fax_id = "outpost", color = "orange", emag_needed = FALSE),
+		list(fax_name = "ArkNet Inc. HQ", fax_id = "arknet", color = "red", emag_needed = FALSE),
+		list(fax_name = "Frontiersmen Communications Quartermaster", fax_id = "frontiersmen", color = "black", emag_needed = TRUE)
+	)
+
+/obj/machinery/fax/hephaestus
+	special_networks = list(
+		list(fax_name = "Outpost Authority", fax_id = "outpost", color = "orange", emag_needed = FALSE),
+		list(fax_name = "Hephaestus Industries Corporate Center", fax_id = "hephaestus", color = "orange", emag_needed = FALSE),
+		list(fax_name = "Frontiersmen Communications Quartermaster", fax_id = "frontiersmen", color = "black", emag_needed = TRUE)
+	)
+
 /obj/machinery/fax/solgov
 	special_networks = list(
 		list(fax_name = "Outpost Authority", fax_id = "outpost", color = "orange", emag_needed = FALSE),
@@ -580,6 +594,16 @@
 	fax_name = "Outpost Authority"
 	admin_fax_id = "outpost"
 
+/obj/machinery/fax/admin/arknet
+	name = "ArkNet HQ Fax Machine"
+	fax_name = "ArkNet Inc. HQ"
+	admin_fax_id = "arknet"
+
+/obj/machinery/fax/admin/hephaestus
+	name = "Hephaestus Industries Fax Machine"
+	fax_name = "Hephaestus Industries Corporate Center"
+	admin_fax_id = "syndicate"
+
 /obj/machinery/fax/admin/solgov
 	name = "SolGov Frontier Affairs Fax Machine"
 	fax_name = "Solarian Confederation Frontier Affairs"
@@ -601,8 +625,8 @@
 	admin_fax_id = "minutemen"
 
 /obj/machinery/fax/admin/roumain
-	name = "Huntsman Council Fax Machine"
-	fax_name = "Saint-Roumain Council of Huntsmen"
+	name = "HP Customer Service Fax Machine"
+	fax_name = "Hunter's Pride Customer Service"
 	admin_fax_id = "roumain"
 
 /obj/machinery/fax/admin/pgf

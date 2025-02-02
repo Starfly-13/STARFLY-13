@@ -97,7 +97,7 @@
 /datum/supply_pack/gun/pepperbox
 	name = "HP Firebrand Pepperbox Revolver Crate"
 	desc = "Contains a concealable pepperbox revolver manufactured by the Saint Roumain Militia, chambered in .357."
-	cost = 15000
+	cost = 1250
 	contains = list(/obj/item/storage/guncase/pistol/firebrand)
 
 /datum/supply_pack/gun/detrevolver
@@ -115,7 +115,7 @@
 /datum/supply_pack/gun/viperrevolver
 	name = "Viper-23 Revolver Crate"
 	desc = "Contains a civilian variant of the Viper revolver, chambered in .357 magnum."
-	cost = 2500
+	cost = 1500
 	contains = list(/obj/item/storage/guncase/pistol/viper)
 	faction = /datum/faction/syndicate/scarborough
 	faction_discount = 5
@@ -123,7 +123,7 @@
 /datum/supply_pack/gun/a357
 	name = "R-23 'Viper' Revolver Crate"
 	desc = "Contains a double-action military variant of the Viper revolver, chambered in .357 magnum."
-	cost = 3000
+	cost = 1700
 	contains = list(/obj/item/storage/guncase/pistol/a357)
 	faction = /datum/faction/syndicate/scarborough
 	faction_discount = 0
@@ -132,7 +132,7 @@
 /datum/supply_pack/gun/ashhand
 	name = "Ashhand Hunting Revolver Crate"
 	desc = "Contains a single-action .45-70 hunting revolver manufactured by Hunter's Pride for use against the biggest game."
-	cost = 3750
+	cost = 3250
 	contains = list(/obj/item/storage/guncase/pistol/ashhand)
 	faction_discount = 0
 	faction_locked = TRUE
@@ -243,28 +243,28 @@
 /datum/supply_pack/gun/tp83
 	name = "TP-83 Shotgun Crate"
 	desc = "A break-action triple-barrel shotgun manufactured by Hephaestus Industries, the TP-83 was originally designed to aid in surviving the wilderness on alien worlds that supported life."
-	cost = 1750
+	cost = 1500
 	contains = list(/obj/item/storage/guncase/tp83)
 	crate_name = "shotgun crate"
 
 /datum/supply_pack/gun/conflagration
 	name = "Conflagration Lever Action Shotgun Crate"
 	desc = "For when you need to deal with 6 hooligans and look good doing it. Contains one lever-action shotgun, with a 6 round capacity."
-	cost = 1750
+	cost = 1500
 	contains = list(/obj/item/storage/guncase/conflagration)
 	crate_name = "shotgun crate"
 
 /datum/supply_pack/gun/hellfire_shotgun
 	name = "Hellfire Shotgun Crate"
 	desc = "For when you need to deal with 8 hooligans. Contains a pump shotgun, with a 8-round capacity."
-	cost = 2250
+	cost = 2000
 	contains = list(/obj/item/storage/guncase/hellfire)
 	crate_name = "shotgun crate"
 
 /datum/supply_pack/gun/brimstone_shotgun
 	name = "Brimstone Shotgun Crate"
 	desc = "For when you need to deal with 5 hooligans, and QUICKLY. Contains a slamfire shotgun, with a 5-round capacity. Warranty voided if sawed off."
-	cost = 22500
+	cost = 2000
 	contains = list(/obj/item/storage/guncase/brimstone)
 	crate_name = "shotgun crate"
 
@@ -383,9 +383,6 @@
 	cost = 3000
 	contains = list(/obj/item/storage/guncase/firestorm)
 	crate_name = "SMG crate"
-	faction = /datum/faction/srm
-	faction_discount = 0
-	faction_locked = TRUE
 
 /datum/supply_pack/gun/rattlesnake
 	name = "Rattlesnake Machinepistol Crate"
@@ -626,7 +623,6 @@
 	cost = 4000
 	contains = list(/obj/item/storage/guncase/scout)
 	crate_name = "sniper rifle crate"
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/ssg669
 	name = "SSG-669C Sniper Rifle Crate"
