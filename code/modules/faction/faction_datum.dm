@@ -115,12 +115,12 @@
 	prefixes = PREFIX_HEPHAESTUS
 	color = "#ABCF19"
 
-/datum/faction/frontiersmen
-	name = FACTION_FRONTIERSMEN
-	prefixes = PREFIX_FRONTIERSMEN
+/datum/faction/frontier
+	name = FACTION_FRONTIER
+	prefixes = PREFIX_FRONTIER
 	color = "#80735D"
 	check_prefix = FALSE
-	parent_faction = /datum/faction/frontiersmen
+	parent_faction = /datum/faction/frontier
 
 /datum/faction/pgf
 	name = FACTION_PGF

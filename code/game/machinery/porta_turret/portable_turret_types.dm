@@ -303,7 +303,7 @@
 /obj/machinery/porta_turret/ship/frontiersmen
 	name = "Spitter Turret"
 	desc = "A juryrigged mishmash of a 9mm SMG and targetting system. Stand clear!"
-	faction = list(FACTION_FRONTIERSMEN, "Turret")
+	faction = list(FACTION_FRONTIER, "Turret")
 	subsystem_type = /datum/controller/subsystem/processing/fastprocess
 	integrity_failure = 0.6
 	max_integrity = 180

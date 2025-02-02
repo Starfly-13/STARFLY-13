@@ -30,7 +30,6 @@
 #define FACTION_HEPHAESTUS "ArkNet"
 #define FACTION_ARKNET "ArkNet"
 #define FACTION_FRONTIER "Frontiersmen Fleet"
-#define FACTION_FRONTIERSMEN "Frontiersmen Fleet"
 #define FACTION_PGF "Epsilon Eridani"
 #define FACTION_INDEPENDENT "Independent"
 
@@ -38,7 +37,7 @@
 	#define PREFIX_NGR list("NGRV")
 	#define PREFIX_CYBERSUN list("CSSV")
 	#define PREFIX_ROSEUS list("RGSV")
-	#define PREFIX_HARDLINERS list("SSV")
+	#define PREFIX_HARDLINERS list("ISV")
 	#define PREFIX_SUNS list("SUNS")
 #define PREFIX_SOLGOV list("SCSV")
 #define PREFIX_SRM list("SRSV")
@@ -50,6 +49,5 @@
 #define PREFIX_ARKNET list("ANSV")
 #define PREFIX_HEPHAESTUS list("HINV")
 #define PREFIX_FRONTIER list("FFV")
-#define PREFIX_FRONTIERSMEN list("FFV")
 #define PREFIX_PGF list("PGF", "PGFMC", "PGFN")
 #define PREFIX_INDEPENDENT list("SV", "IMV", "ISV")
