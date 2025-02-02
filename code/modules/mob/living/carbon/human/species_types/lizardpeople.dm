@@ -46,7 +46,7 @@
 	robotic_eyes = /obj/item/organ/eyes/robotic/lizard
 
 	// Lizards are coldblooded and can stand a greater temperature range than humans
-	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 20
+	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 30
 	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 10
 	max_temp_comfortable = HUMAN_BODYTEMP_NORMAL + 20
 	min_temp_comfortable = HUMAN_BODYTEMP_NORMAL
@@ -143,9 +143,9 @@ Lizard subspecies: YEOSA'UNATHI
 	grad_color="#fffec4"
 	sclera_color="#fffec4"
 
-	// Yeosa are more cold-blooded than Sinta, and thus should be less cozy in bad temps.
-	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 15
-	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 7
+
+	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 30
+	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 10
 	loreblurb = "The Yeosa'Unathi are a cold-blooded reptilian species originating from the depths of the ocean on the planet Moghes, in the Uuoea-Esa system. Most Yeosa'Unathi will seldom step on the surface except to sunbathe - this can leave the impression of laziness and lethargy on those who interact with them. However, their culture largely mirrors that of the Sinta, and they are equally proud. "
 
 

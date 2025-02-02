@@ -137,6 +137,7 @@
 	lefthand_file = 'icons/obj/guns/manufacturer/pirate/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/pirate/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/pirate/onmob.dmi'
+	unique_reskin = null
 	recoil = 1 // Surprisingly stable!
 	recoil_unwielded = 8 //oof owwie ouch my wrists
 	force = 15
@@ -176,6 +177,7 @@
 	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
+	unique_reskin = null
 	icon_state = "pocketshotgun"
 	item_state = "hp_generic"
 	recoil = 2 //OUCH.
