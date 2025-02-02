@@ -54,8 +54,8 @@
 	cost = 525
 
 /datum/supply_pack/magazine/a44roum_speedloader
-	name = ".44 Roumain Speedloader Crate"
-	desc = "Contains a .44 Roumain speedloader for the HP Montagne, containing six rounds."
+	name = ".44 Special Speedloader Crate"
+	desc = "Contains a .44 Special speedloader for the HP Montagne, containing six rounds."
 	contains = list(/obj/item/ammo_box/a44roum_speedloader)
 	cost = 450
 

@@ -36,7 +36,7 @@
 /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	name = "cattleman revolver cylinder"
 	ammo_type = /obj/item/ammo_casing/a44roum
-	caliber = ".44 Roumain"
+	caliber = ".44 special"
 	max_ammo = 6
 	instant_load = FALSE
 
