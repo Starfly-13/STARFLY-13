@@ -215,7 +215,7 @@ SUBSYSTEM_DEF(mapping)
 
 		if(istext(data["prefix"]))
 			S.prefix = data["prefix"]
-		if(S.faction.check_prefix && !(S.prefix in S.faction.prefixes))
+			if(S.faction.check_prefix && !(S.prefix in S.faction.prefixes))
 				stack_trace("Faction prefix mismatch for [S.faction.name]: [data["prefix"]] on [S.name]'s config!")
 
 		if(!S.prefix)
