@@ -857,7 +857,7 @@
 	desc = "A decommisioned poster that uses Safety Pill(TM?) to promote less-than-legal chemicals. This is one of the reasons Nanotrasen stopped outsourcing their posters. It's partially signed by 'AspEv'."
 	icon_state = "poster_moth_pill"
 
-//Solgov poster pool. expect a focus on solarian based products and places. Expect these on solgov ships
+//SolGov poster pool. expect a focus on solarian based products and places. Expect these on SolGov ships
 /obj/structure/sign/poster/solgov
 	poster_item_name = "solarian poster"
 	poster_item_desc = "A solarian based poster, made with natural paper! It comes with adhesive backing, for easy pinning to any vertical surface."
