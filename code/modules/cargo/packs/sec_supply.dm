@@ -116,7 +116,7 @@
 	name = "Energy Sword Crate"
 	desc = "Contains one Moghesan-built energy sword."
 	cost = 2500
-	contains = /obj/item/melee/energy/sword/hegemony)
+	contains = list(/obj/item/melee/energy/sword/hegemony)
 	crate_name = "Energy sword crate"
 	crate_type = /obj/structure/closet/crate/secure/weapon
 	faction = /datum/faction/hephaestus
