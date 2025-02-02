@@ -1,4 +1,4 @@
-mob/living/simple_animal/threshbeast
+/mob/living/simple_animal/threshbeast
 	name = "threshbeast"
 	desc = "Large herbivorous reptiles native to Moghes, the azkrazal or 'threshbeast' is commonly used as a mount, beast of burden, or convenient food source by Unathi. They are highly valued for their speed and strength, capable of running at 30-42 miles per hour at top speed. Their favorite foods are grasses and cactus fruits"
 	icon = 'icons/mob/moghes/threshbeast.dmi'
@@ -31,7 +31,7 @@ mob/living/simple_animal/threshbeast
 	melee_damage_upper = 20
 	var/saddled = FALSE
 
-mob/living/simple_animal/threshbeast/attackby(obj/item/O, mob/user, params)
+/mob/living/simple_animal/threshbeast/attackby(obj/item/O, mob/user, params)
 	if(istype(O, /obj/item/saddle) && !saddled)
 		if(tame && do_after(user, 55, target=src))
 			user.visible_message("<span class='notice'>You manage to put [O] on [src], you can now ride [p_them()].</span>")
@@ -52,20 +52,17 @@ mob/living/simple_animal/threshbeast/attackby(obj/item/O, mob/user, params)
 		return
 	..()
 
-
-
-mob/living/simple_animal/threshbeast/brown
+/mob/living/simple_animal/threshbeast/brown
 	icon_state = "threshbeastbrown"
 	icon_living = "threshbeastbrown"
 	icon_dead = "threshbeastbrown_dead"
 
-mob/living/simple_animal/threshbeast/grey
+/mob/living/simple_animal/threshbeast/grey
 	icon_state = "threshbeastgrey"
 	icon_living = "threshbeastgrey"
 	icon_dead = "threshbeastgrey_dead"
 
-mob/living/simple_animal/threshbeast/red
+/mob/living/simple_animal/threshbeast/red
 	icon_state = "threshbeastred"
 	icon_living = "threshbeastred"
 	icon_dead = "threshbeastred_dead"
-
