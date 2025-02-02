@@ -219,7 +219,8 @@ SUBSYSTEM_DEF(mapping)
 			stack_trace("Unable to default to Independent -- UT OH -- [data["faction"]] on [S.name]'s config")
 
 		if(!S.faction.name)
-			stack_trace("Nameless Faction: [[S.faction]]")
+		json
+			stack_trace("Nameless Faction: [json_encode(S.faction)]")
 
 		S.category = S.faction.name
 
