@@ -201,15 +201,25 @@ SUBSYSTEM_DEF(mapping)
 		else
 			S.short_name = copytext(S.name, 1, 20)
 
+		// if(istext(data["faction"]))
+		// 	var/type = text2path(data["faction"])
+		// 	if(!(type in SSfactions.factions))
+		// 		stack_trace("Invalid faction path: [data["faction"]] on [S.name]'s config! Defaulting to Independent.")
+		// 	else
+		// 		S.faction = SSfactions.factions[type]
+
 		if(istext(data["faction"]))
 			var/type = text2path(data["faction"])
-			if(!(type in SSfactions.factions))
-				stack_trace("Invalid faction path: [data["faction"]] on [S.name]'s config! Defaulting to Independent.")
-			else
+			if(type in SSfactions.factions)
 				S.faction = SSfactions.factions[type]
 
 		if(!S.faction)
 			S.faction = SSfactions.factions[/datum/faction/independent]
+		if(!S.faction)
+			stack_trace("Unable to default to Independent -- UT OH -- [data["faction"]] on [S.name]'s config")
+
+		if(!S.faction.name)
+			stack_trace("Nameless Faction: [[S.faction]]")
 
 		S.category = S.faction.name
 
