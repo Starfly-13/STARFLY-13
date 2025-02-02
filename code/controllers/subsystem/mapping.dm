@@ -215,6 +215,11 @@ SUBSYSTEM_DEF(mapping)
 
 		if(!S.faction)
 			S.faction = SSfactions.factions[/datum/faction/independent]
+		if(!S.faction)
+			stack_trace("Unable to default to Independent -- UT OH -- [data["faction"]] on [S.name]'s config")
+
+		if(!S.faction.name)
+			stack_trace("Nameless Faction: [[S.faction]]")
 
 		S.category = S.faction.name
 
