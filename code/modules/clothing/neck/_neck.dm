@@ -491,7 +491,7 @@
 	custom_price = 10
 
 /obj/item/clothing/neck/brownstripedscarf
-	name = "brown striped scarf scarf"
+	name = "brown striped scarf"
 	icon_state = "brownstripedscarf"
 	custom_price = 10
 
