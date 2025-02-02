@@ -65,7 +65,6 @@
 	desc = "Contains a Candor pistol, the trusty sidearm of any spacer, produced by Hunter's Pride and chambered in .45 ACP."
 	cost = 1000
 	contains = list(/obj/item/storage/guncase/pistol/candor)
-	faction = /datum/faction/srm
 
 /datum/supply_pack/gun/asp
 	name = "BC-81 'Asp' Crate"
@@ -96,7 +95,7 @@
 
 /datum/supply_pack/gun/pepperbox
 	name = "HP Firebrand Pepperbox Revolver Crate"
-	desc = "Contains a concealable pepperbox revolver manufactured by the Saint Roumain Militia, chambered in .357."
+	desc = "Contains a concealable pepperbox revolver manufactured by Hunter's Pride, chambered in .357."
 	cost = 1250
 	contains = list(/obj/item/storage/guncase/pistol/firebrand)
 
@@ -108,7 +107,7 @@
 
 /datum/supply_pack/gun/shadowrevolver
 	name = "Shadow Revolver Crate"
-	desc = "Contains a concealable Shadow revolver, chambered in .44 Roumain."
+	desc = "Contains a concealable Shadow revolver, chambered in .44 Special."
 	cost = 1400
 	contains = list(/obj/item/storage/guncase/pistol/shadow)
 

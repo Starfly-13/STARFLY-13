@@ -4,13 +4,13 @@
 
 /datum/reagent/consumable/ethanol/trickwine/ash_wine
 	name = "Wine Of Ash"
-	description = "A traditional sacrament for members of the Saint-Roumain Militia. Believed to grant visions, seeing use both in ritual and entertainment within the Militia."
+	description = "A traditional sacrament for the natives of Indecipheres. Believed to grant visions, seeing use both in ritual and entertainment."
 	color = "#6CC66C"
 	boozepwr = 80
 	quality = DRINK_VERYGOOD
 	taste_description = "a rustic fruit, with hints of sweet yet tangy ash."
 	glass_name = "Wine Of Ash"
-	glass_desc = "A traditional sacrament for members of the Saint-Roumain Militia. Believed to grant visions, seeing use both in ritual and entertainment within the Militia."
+	glass_desc = "A traditional sacrament for the natives of Indecipheres. Believed to grant visions, seeing use both in ritual and entertainment."
 	breakaway_flask_icon_state = "baflaskashwine"
 
 /datum/reagent/consumable/ethanol/trickwine/ash_wine/on_mob_life(mob/living/M)
@@ -35,12 +35,12 @@
 
 /datum/reagent/consumable/ethanol/trickwine/ice_wine
 	name = "Wine Of Ice"
-	description = "A specialized brew utilized by members of the Saint-Roumain Militia, designed to assist in temperature regulation while working in hot environments. Known to give one the cold shoulder when thrown."
+	description = "A specialized brew utilized by warm blooded travellers on hot planets, designed to assist in temperature regulation while working in hot environments. Known to give one the cold shoulder when thrown."
 	color = "#C0F1EE"
 	boozepwr = 70
 	taste_description = "a weighty meat, undercut by a mild pepper."
 	glass_name = "Wine Of Ice"
-	glass_desc = "A specialized brew utilized by members of the Saint-Roumain Militia, designed to assist in temperature regulation while working in hot environments. Known to give one the cold shoulder when thrown."
+	glass_desc = "A specialized brew utilized by warm blooded travellers on hot planets, designed to assist in temperature regulation while working in hot environments. Known to give one the cold shoulder when thrown."
 	breakaway_flask_icon_state = "baflaskicewine"
 
 /datum/reagent/consumable/ethanol/trickwine/ice_wine/on_mob_life(mob/living/M)
@@ -70,12 +70,12 @@
 
 /datum/reagent/consumable/ethanol/trickwine/shock_wine
 	name = "Lightning's Blessing"
-	description = "A stimulating brew utilized by members of the Saint-Roumain Militia, created to allow trackers to keep up with highly mobile prey. Known to have a shocking effect when thrown"
+	description = "A stimulating brew originally created on Sol in 2282 to celebrate four hundred years of consumer electricity. Known to have a shocking effect when thrown"
 	color = "#FEFEB8"
 	boozepwr = 50
 	taste_description = "a sharp and unrelenting citrus"
 	glass_name = "Lightning's Blessing"
-	glass_desc = "A stimulating brew utilized by members of the Saint-Roumain Militia, created to allow trackers to keep up with highly mobile prey. Known to have a shocking effect when thrown"
+	glass_desc = "A stimulating brew originally created on Sol in 2282 to celebrate four hundred years of consumer electricity. Known to have a shocking effect when thrown"
 	breakaway_flask_icon_state = "baflaskshockwine"
 
 /datum/reagent/consumable/ethanol/trickwine/shock_wine/on_mob_metabolize(mob/living/M)
@@ -100,12 +100,12 @@
 
 /datum/reagent/consumable/ethanol/trickwine/hearth_wine
 	name = "Hearthflame"
-	description = "A fiery brew utilized by members of the Saint-Roumain Militia, engineered to heat the body and cauterize wounds. Goes out in a blaze of glory when thrown."
+	description = "Hearthflame was a limited-run liquor from the 2100s notorious for its burning sensation. Useful for heating the body and cauterize wounds. Goes out in a blaze of glory when thrown."
 	color = "#FEE185"
 	boozepwr = 70
 	taste_description = "apple cut apart by tangy pricks"
 	glass_name = "Hearthflame"
-	glass_desc = "Fiery brew utilized by members of the Saint-Roumain Militia, engineered to heat the body and cauterize wounds. Goes out in a blaze of glory when thrown."
+	glass_desc = "Hearthflame was a limited-run liquor from the 2100s notorious for its burning sensation. Useful for heating the body and cauterize wounds. Goes out in a blaze of glory when thrown."
 	breakaway_flask_icon_state = "baflaskhearthwine"
 
 /datum/reagent/consumable/ethanol/trickwine/hearth_wine/on_mob_life(mob/living/M)

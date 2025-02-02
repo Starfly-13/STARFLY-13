@@ -447,8 +447,8 @@
 	ammo_type = /obj/item/ammo_casing/a44roum
 
 /obj/item/storage/box/ammo/a44roum
-	name = "box of .44 roumain ammo"
-	desc = "A box of standard .44 roumain ammo."
+	name = "box of .44 special ammo"
+	desc = "A box of standard .44 special ammo."
 	icon_state = "a44roum"
 
 /obj/item/storage/box/ammo/a44roum/PopulateContents()
@@ -460,8 +460,8 @@
 	ammo_type = /obj/item/ammo_casing/a44roum/rubber
 
 /obj/item/storage/box/ammo/a44roum_rubber
-	name = "box of rubber .44 roumain ammo"
-	desc = "A box of .44 roumain rubbershot ammo, designed to disable targets without causing serious damage."
+	name = "box of rubber .44 special ammo"
+	desc = "A box of .44 special rubbershot ammo, designed to disable targets without causing serious damage."
 	icon_state = "a44roum-rubber"
 
 /obj/item/storage/box/ammo/a44roum_rubber/PopulateContents()
@@ -473,8 +473,8 @@
 	ammo_type = /obj/item/ammo_casing/a44roum/hp
 
 /obj/item/storage/box/ammo/a44roum_hp
-	name = "box of HP .44 roumain ammo"
-	desc = "A box of .44 roumain hollowpoint ammo, designed to disable targets without causing serious damage."
+	name = "box of HP .44 special ammo"
+	desc = "A box of .44 special hollowpoint ammo, designed to disable targets without causing serious damage."
 	icon_state = "a44roum-hp"
 
 /obj/item/storage/box/ammo/a44roum_hp/PopulateContents()
