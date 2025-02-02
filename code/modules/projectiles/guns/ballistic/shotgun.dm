@@ -178,6 +178,8 @@
 	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
 	icon_state = "pocketshotgun"
 	item_state = "hp_generic"
+	recoil = 2 //OUCH.
+	recoil_unwielded = 12 //WRISTFUCKER PLUS ULTRA
 	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/improvised
 	allowed_ammo_types = /obj/item/ammo_box/magazine/internal/shot/improvised
 

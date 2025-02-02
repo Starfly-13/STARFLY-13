@@ -112,9 +112,19 @@
 	faction = /datum/faction/syndicate/ngr
 	faction_discount = 20
 
+/datum/supply_pack/sec_supply/hegemonysword
+	name = "Energy Sword Crate"
+	desc = "Contains one Moghesan-built energy sword."
+	cost = 2500
+	contains = /obj/item/melee/energy/sword/hegemony)
+	crate_name = "Energy sword crate"
+	crate_type = /obj/structure/closet/crate/secure/weapon
+	faction = /datum/faction/hephaestus
+	faction_discount = 1000
+
 /datum/supply_pack/sec_supply/halberd
 	name = "Energy Halberd Crate"
-	desc = "Contains one Solarian Energy Halberd, for issue to your local Sonnensoldner battalion."
+	desc = "Contains one Solarian Energy Halberd, for issue to your local Special Forces battalion."
 	cost = 1500
 	contains = list(/obj/item/energyhalberd)
 	crate_name = "energy halberd crate"
@@ -178,3 +188,4 @@
 	-When pressure releases, reach below device and lift via underside in one clean motion. Mounting legs will automatically retract. <br><br> \
 	-The device is now safe to handle. <br><br> \
 	-Safely stow device in secure, moisture-free location, away from fire and blunt force. "
+
