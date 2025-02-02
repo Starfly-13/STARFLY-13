@@ -11,7 +11,6 @@
 #define FACTION_PLAYER_SOLCON "playerSolcon"
 #define FACTION_PLAYER_INTEQ "playerInteq"
 #define FACTION_PLAYER_ROUMAIN "playerRoumain"
-#define FACTION_PLAYER_HEPHAESTUS "playerHephaestus"
 #define FACTION_PLAYER_HEPHAESTUS "playerArknet"
 #define FACTION_PLAYER_GEZENA "playerGezena"
 
@@ -28,9 +27,10 @@
 #define FACTION_NT "Nanotrasen"
 	#define FACTION_NS_LOGI "N+S Logistics"
 	#define FACTION_VIGILITAS "Vigilitas Interstellar"
-#define PREFIX_HEPHAESTUS list("HINV")
+#define FACTION_HEPHAESTUS "ArkNet"
 #define FACTION_ARKNET "ArkNet"
 #define FACTION_FRONTIER "Frontiersmen Fleet"
+#define FACTION_FRONTIERSMEN "Frontiersmen Fleet"
 #define FACTION_PGF "Epsilon Eridani"
 #define FACTION_INDEPENDENT "Independent"
 
@@ -50,5 +50,6 @@
 #define PREFIX_ARKNET list("ANSV")
 #define PREFIX_HEPHAESTUS list("HINV")
 #define PREFIX_FRONTIER list("FFV")
+#define PREFIX_FRONTIERSMEN list("FFV")
 #define PREFIX_PGF list("PGF", "PGFMC", "PGFN")
 #define PREFIX_INDEPENDENT list("SV", "IMV", "ISV")

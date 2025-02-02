@@ -5,14 +5,12 @@
 	var/parent_faction
 	/// List of prefixes that ships of this faction uses
 	var/list/prefixes
-	/// List/Typecache of factions that this faction is allowed to interact with. Non-recursive.
+	/// list of factions that are "allowed" with this faction, used for factional cargo
 	var/list/allowed_factions = list()
 	/// Theme color for this faction, currently only used for the wiki
 	var/color = "#ffffff"
 	/// Whether or not this faction should be able to use prefixes that aren't their own (see: Frontiersmen using Indie prefixes)
 	var/check_prefix = TRUE
-	/// Sorting order for factions
-	var/order = FACTION_SORT_DEFAULT
 
 /datum/faction/New()
 	if(!short_name)
@@ -63,12 +61,12 @@
 
 /datum/faction/syndicate/scarborough
 	name = "Scarborough Arms"
-	prefixes = PREFIX_NONE
+	prefixes = PREFIX_INDEPENDENT
 
 /datum/faction/solgov
-	name = FACTION_SOLCON
+	name = FACTION_SOLGOV
 	parent_faction = /datum/faction/solgov
-	prefixes = PREFIX_SOLCON
+	prefixes = PREFIX_SOLGOV
 	color = "#444e5f"
 
 /datum/faction/srm
@@ -137,4 +135,3 @@
 	parent_faction =  /datum/faction/independent
 	prefixes = PREFIX_INDEPENDENT
 	color = "#A0A0A0"
-	order = FACTION_SORT_INDEPENDENT
