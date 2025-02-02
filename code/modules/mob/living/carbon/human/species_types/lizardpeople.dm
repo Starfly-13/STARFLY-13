@@ -55,16 +55,68 @@
 	ass_image = 'icons/ass/asslizard.png'
 	var/datum/action/innate/liz_lighter/internal_lighter
 
-/datum/species/lizard/on_species_loss(mob/living/carbon/C)
+/* datum/species/lizard/on_species_loss(mob/living/carbon/C)
 	if(internal_lighter)
 		internal_lighter.Remove(C)
-	..()
+	..() */
+
+	var/datum/action/innate/liztackle/liztackle
+	/// # Inherit tackling variables #
+	/// See: [/datum/component/tackler/var/stamina_cost]
+	var/tackle_stam_cost = 15
+	/// See: [/datum/component/tackler/var/base_knockdown]
+	var/base_knockdown = 0.3 SECONDS
+	/// See: [/datum/component/tackler/var/range]
+	var/tackle_range = 5
+	/// See: [/datum/component/tackler/var/min_distance]
+	var/min_distance = 1
+	/// See: [/datum/component/tackler/var/speed]
+	var/tackle_speed = 1
+	/// See: [/datum/component/tackler/var/skill_mod]
+	var/skill_mod = 3
 
 /datum/species/lizard/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	if(ishuman(C))
-		internal_lighter = new
+		liztackle = new
+		liztackle.Grant(C)
+
+
+/datum/species/lizard/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
+	. = ..()
+
+	C.base_pixel_x += 8
+	C.pixel_x = C.base_pixel_x
+	C.stop_updating_hands()
+
+	if(liztackle)
+		liztackle.Remove(C)
+
+	qdel(C.GetComponent(/datum/component/tackler))
+
+/datum/action/innate/liztackle
+	name = "Pounce"
+	desc = "Ready yourself to pounce."
+	check_flags = AB_CHECK_CONSCIOUS
+	button_icon_state = "tackle"
+	icon_icon = 'icons/obj/clothing/gloves.dmi'
+	background_icon_state = "bg_alien"
+
+/datum/action/innate/liztackle/Activate()
+	var/mob/living/carbon/human/H = owner
+	var/datum/species/lizard/liz = H.dna.species
+	if(H.GetComponent(/datum/component/tackler))
+		qdel(H.GetComponent(/datum/component/tackler))
+		to_chat(H, "<span class='notice'>You relax, no longer ready to pounce.</span>")
+		return
+	H.AddComponent(/datum/component/tackler, stamina_cost= liz.tackle_stam_cost, base_knockdown= liz.base_knockdown, range= liz.tackle_range, speed= liz.tackle_speed, skill_mod= liz.skill_mod, min_distance= liz.min_distance)
+	H.visible_message("<span class='notice'>[H] gets ready to pounce!</span>", \
+		"<span class='notice'>You ready yourself to pounce!</span>", null, COMBAT_MESSAGE_RANGE)
+
+
+	/*	internal_lighter = new
 		internal_lighter.Grant(C)
+
 
 /datum/action/innate/liz_lighter
 	name = "Ignite"
@@ -90,6 +142,8 @@
 		if(H.reagents && H.reagents.has_reagent(/datum/reagent/fuel,4))
 			return TRUE
 		return FALSE
+
+*/
 
 /// Lizards are cold blooded and do not stabilize body temperature naturally
 /datum/species/lizard/natural_bodytemperature_stabilization(datum/gas_mixture/environment, mob/living/carbon/human/H)
