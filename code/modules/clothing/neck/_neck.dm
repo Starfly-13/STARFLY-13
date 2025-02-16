@@ -593,7 +593,7 @@
 						"Zebra Striped Scarf" = "zebrastripedscarf",
 						"Candycane Striped Scarf" = "candycanescarf",
 						"Wintermint Striped Scarf" = "wintermintscarf",
-						"Blue and White Striped Scarf" = "ntstripedscarf",
+						"Blue and White Striped Scarf" = "ntscarf",
 						"Syndicate Striped Scarf" = "stripedsyndiscarf",
 						"SolGov Striped Scarf" = "stripedsolgovscarf",
 						"Inteq Striped Scarf" = "stripedinteqscarf",
