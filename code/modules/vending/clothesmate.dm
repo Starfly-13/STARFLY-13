@@ -4,7 +4,7 @@
 	desc = "A vending machine for clothing."
 	icon_state = "clothes"
 	icon_deny = "clothes-deny"
-	product_slogans = "Dress for success!;Prepare to look swagalicious!;Look at all this swag!;Why leave style up to fate? Use the ClothesMate!"
+	product_slogans = "Dress for success!;Prepare to look swagalicious!;Look at all this swag!;Loaded with the hottest new fashions!;Dress to impress!;Why leave style up to fate? Use the ClothesMate!"
 	vend_reply = "Thank you for using the ClothesMate!"
 	products = list(
 		/obj/item/clothing/head/beanie = 3,
@@ -20,6 +20,8 @@
 		/obj/item/clothing/head/beanie/stripedred = 3,
 		/obj/item/clothing/head/beanie/stripedblue = 3,
 		/obj/item/clothing/head/beanie/stripedgreen = 3,
+		/obj/item/clothing/head/outlaw = 3,
+		/obj/item/clothing/head/cowboy = 3,
 		/obj/item/clothing/gloves/fingerless = 2,
 		/obj/item/clothing/neck/scarf/pink = 3,
 		/obj/item/clothing/neck/scarf/red = 3,
@@ -33,9 +35,7 @@
 		/obj/item/clothing/neck/scarf/black = 3,
 		/obj/item/clothing/neck/scarf/zebra = 3,
 		/obj/item/clothing/neck/scarf/christmas = 3,
-		/obj/item/clothing/neck/stripedredscarf = 3,
-		/obj/item/clothing/neck/stripedbluescarf = 3,
-		/obj/item/clothing/neck/stripedgreenscarf = 3,
+		/obj/item/clothing/neck/stripedscarfrecolor = 12,
 		/obj/item/clothing/neck/tie = 9,
 		/obj/item/storage/belt/fannypack = 3,
 		/obj/item/storage/belt/fannypack/blue = 3,
@@ -70,6 +70,7 @@
 		/obj/item/clothing/suit/jacket/puffer = 2,
 		/obj/item/clothing/suit/jacket/letterman = 2,
 		/obj/item/clothing/suit/jacket/letterman_red = 2,
+		/obj/item/clothing/suit/jacket/leather/duster = 2,
 		/obj/item/clothing/glasses/regular = 2,
 		/obj/item/clothing/glasses/cheapsuns = 2, //WS Edit - Cheap sunglasses
 		/obj/item/clothing/glasses/regular/jamjar = 1,
@@ -95,7 +96,7 @@
 		/obj/item/clothing/suit/ianshirt = 1,
 		/obj/item/clothing/shoes/laceup = 2,
 		/obj/item/clothing/shoes/sandal = 2,
-		/obj/item/clothing/shoes/cowboy = 2,
+		/obj/item/clothing/shoes/cowboy = 4,
 		/obj/item/clothing/shoes/cowboy/white = 2,
 		/obj/item/clothing/shoes/cowboy/black = 2,
 		/obj/item/clothing/suit/jacket/miljacket = 1,
