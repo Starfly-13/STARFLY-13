@@ -2,12 +2,12 @@
 
 /datum/reagent/consumable/ethanol/beer/green
 	name = "Green Beer"
-	description = "An alcoholic beverage, brewed originally to keep a safe source of drinking water. This variety is dyed green, but you're not sure why."
+	description = "An alcoholic beverage, brewed originally to keep a safe source of drinking water. On Sol, it is a tradition to dye beer green to celebrate Irish heritage, especially among people who aren't Irish."
 	color = "#A8E61D"
 	taste_description = "green bad water"
 	glass_icon_state = "greenbeerglass"
 	glass_name = "glass of green beer"
-	glass_desc = "A pint of green beer. You get the feeling this had some sort of meaning, once."
+	glass_desc = "A pint of green beer. You are no more or less Irish after drinking this than you were before."
 
 /datum/reagent/consumable/ethanol/beer/green/on_mob_life(mob/living/carbon/M)
 	if(M.color != color)
@@ -128,7 +128,7 @@
 
 /datum/reagent/consumable/ethanol/goldschlager
 	name = "Goldschlager"
-	description = "100 proof cinnamon schnapps, made for the Student Unions' unbearable tastes."
+	description = "100 proof cinnamon schnapps, popular among college students."
 	color = "#FFFF91" // rgb: 255, 255, 145
 	boozepwr = 25
 	quality = DRINK_VERYGOOD
@@ -217,15 +217,15 @@
 	glass_desc ="Rumored to be a favorite amongst the Verwaltungskompanien, to their entertainment."
 
 /datum/reagent/consumable/ethanol/white_russian
-	name = "White Gezenan"
+	name = "White Russian"
 	description = "Cream and vodka."
 	color = "#A68340" // rgb: 166, 131, 64
 	boozepwr = 50
 	quality = DRINK_GOOD
 	taste_description = "bitter cream"
 	glass_icon_state = "whiterussianglass"
-	glass_name = "White Gezenan"
-	glass_desc = "A mix of traditionally PGF-sourced vodka and cream derived from nut milk. You can still drink this if you're not from Gezena, though."
+	glass_name = "White Russian"
+	glass_desc = "A mix of traditionally Russian vodka and cream derived from nut milk."
 
 /datum/reagent/consumable/ethanol/screwdrivercocktail
 	name = "Screwdriver"
@@ -458,14 +458,14 @@
 	playsound(M, 'sound/effects/explosion_distant.ogg', 100, FALSE)
 
 /datum/reagent/consumable/ethanol/irishcoffee
-	name = "Gezenan Coffee"
+	name = "Irish Coffee"
 	description = "Coffee, and alcohol. Traditionally enjoyed in the morning on lazy days."
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 35
 	quality = DRINK_NICE
 	taste_description = "giving up on the day"
 	glass_icon_state = "irishcoffeeglass"
-	glass_name = "Gezenan Coffee"
+	glass_name = "Irish Coffee"
 	glass_desc = "Coffee and alcohol. Traditionally enjoyed in the morning on lazy days."
 
 /datum/reagent/consumable/ethanol/margarita
@@ -480,26 +480,26 @@
 	glass_desc = "On the rocks with salt on the rim. Apparently the name meant something in a language long lost on Earth."
 
 /datum/reagent/consumable/ethanol/black_russian
-	name = "Black Rachnid"
-	description = "An alternative take to the White Gezenan. Doubles as an option for those who can't handle lactose."
+	name = "Black Russian"
+	description = "An alternative take to the White Russian. Doubles as an option for those who can't handle lactose."
 	color = "#360000" // rgb: 54, 0, 0
 	boozepwr = 70
 	quality = DRINK_NICE
 	taste_description = "bitterness"
 	glass_icon_state = "blackrussianglass"
-	glass_name = "Black Rachnid"
-	glass_desc = "An alternative take to the White Gezenan. Doubles as an option for those who can't handle lactose."
+	glass_name = "Black Russian"
+	glass_desc = "An alternative take to the White Russian. Doubles as an option for those who can't handle lactose."
 
 
 /datum/reagent/consumable/ethanol/manhattan
-	name = "Twelve Crossings"
+	name = "Manhattan"
 	description = "A mixed drink popularized by a murder mystery book series from Teceti."
 	color = "#664300" // rgb: 102, 67, 0
 	boozepwr = 30
 	quality = DRINK_NICE
 	taste_description = "mild dryness"
 	glass_icon_state = "manhattanglass"
-	glass_name = "Twelve Crossings"
+	glass_name = "Manhattan"
 	glass_desc = "A mixed drink popularized by a murder mystery book series from Teceti. The Detective's undercover drink of choice. He never could stomach gin..."
 
 /datum/reagent/consumable/ethanol/whiskeysoda
@@ -761,15 +761,15 @@
 	return ..()
 
 /datum/reagent/consumable/ethanol/irishcarbomb
-	name = "Lightspeed"
-	description = "A shot of Zohil cream in a pinch of ale, meant to be downed in one chug - hits you as fast as the name."
+	name = "Irish Slammer"
+	description = "A shot of Irish cream in a pinch of ale, meant to be downed in one chug."
 	color = "#2E6671" // rgb: 46, 102, 113
 	boozepwr = 25
 	quality = DRINK_GOOD
-	taste_description = "the rush of hyperspace"
+	taste_description = "rather malty and creamy"
 	glass_icon_state = "irishcarbomb"
-	glass_name = "Lightspeed"
-	glass_desc = "A shot of Zohil cream in a pinch of ale, meant to be downed in one chug - hits you as fast as the name."
+	glass_name = "Irish Slammer"
+	glass_desc = "A shot of Irish cream in a pinch of ale, meant to be downed in one chug."
 
 /datum/reagent/consumable/ethanol/syndicatebomb
 	name = "Gorlex Surprise"
@@ -1264,15 +1264,15 @@
 	..()
 
 /datum/reagent/consumable/ethanol/amaretto_alexander
-	name = "Happy Huntsman"
-	description = "A cousin of the Ash-Shield, what it lacks in strength (and mysterious power), it makes up for in flavor."
+	name = "Amaretto Alexander"
+	description = "A rich and creamy cocktail that goes well with dessert."
 	color = "#DBD5AE"
 	boozepwr = 35
 	quality = DRINK_VERYGOOD
 	taste_description = "sweet, creamy cacao"
 	glass_icon_state = "alexanderam"
-	glass_name = "Happy Huntsman"
-	glass_desc = "A gentle, creamy drink, enjoyed on rare occasions by the Saint Roumain's followers."
+	glass_name = "Amaretto Alexander"
+	glass_desc = "A rich and creamy cocktail that goes well with dessert."
 
 /datum/reagent/consumable/ethanol/sidecar
 	name = "Bridge Bunny"
@@ -1318,7 +1318,7 @@
 	taste_description = "fluttery sour-sweetness"
 	glass_icon_state = "kamikaze"
 	glass_name = "Mothball"
-	glass_desc = "Made in an attempt to commemorate the supposed original place mothpeople were created in, though it was since disproven. While moth dust <i>could</i> be used as a garnish, don't go asking for it unless you are one."
+	glass_desc = "Supposedly popular among the Mothic Fleet. While moth dust <i>could</i> be used as a garnish, don't go asking for it unless you are one."
 
 /datum/reagent/consumable/ethanol/mojito
 	name = "Mojito"
@@ -1340,7 +1340,7 @@
 	taste_description = "refreshing spiciness"
 	glass_icon_state = "moscow_mule"
 	glass_name = "Gorlex Gator"
-	glass_desc = "A chilly drink made in remembrance of Gorlex IV. It's not a wise idea to go ordering this when the PGF are in town, though."
+	glass_desc = "A chilly drink made in remembrance of Gorlex IV. Ordering this is a good way to start a fight in NT-owned territory."
 
 
 /datum/reagent/consumable/ethanol/fernet/on_mob_life(mob/living/carbon/M)
@@ -1525,14 +1525,14 @@
 
 /datum/reagent/consumable/ethanol/trappist
 	name = "Trapper's Beer"
-	description = "A strong dark ale brewed by the Saint Roumain Militia."
+	description = "A strong dark ale typically brewed locally, due to difficulty in preservation."
 	color = "#390c00"
 	boozepwr = 40
 	quality = DRINK_VERYGOOD
 	taste_description = "dried plums, ash, and malt"
 	glass_icon_state = "trappistglass"
 	glass_name = "Trapper's Beer"
-	glass_desc = "The Ashen Huntsman's blessings, in a glass. Despite proclaiming an ascetic lifestyle, it's okay to have a little fun once in a while."
+	glass_desc = "A strong dark ale that's seldom shipped long-distance due to difficulties in preservation."
 
 /datum/reagent/consumable/ethanol/blazaam
 	name = "Hyperspace Highball"
@@ -1565,7 +1565,7 @@
 	taste_description = "fiery, with an aftertaste of burnt flesh"
 	glass_icon_state = "mauna_loa"
 	glass_name = "Inner Fire"
-	glass_desc = "Not at all made by the Saint Roumain, this drink still bases itself as a test of will used by the hunters to test their endurance to intense heat... and alcohol."
+	glass_desc = "This drink bases itself as a test of will used by the brave to test their endurance to intense heat... and alcohol."
 
 /datum/reagent/consumable/ethanol/mauna_loa/on_mob_life(mob/living/carbon/M)
 	// Heats the user up while the reagent is in the body. Occasionally makes you burst into flames.
@@ -1670,7 +1670,7 @@
 
 /datum/reagent/consumable/ethanol/spriters_bane
 	name = "Spriter's Bane"
-	description = "A drink to fill your very SOUL."
+	description = "Tastes better than it looks."
 	color = "#800080"
 	boozepwr = 30
 	quality = DRINK_GOOD
@@ -1792,7 +1792,7 @@
 	taste_description = "an incoming bullet"
 	glass_icon_state = "shotinthedark"
 	glass_name = "Shot in the Dark"
-	glass_desc = "A specially made drink from the popular webseries RILENA: LMR. Contains traces of gold from the real bullet inside... which wouldn't make sense outside of the series it comes from."
+	glass_desc = "A popular drink among the Gorlex Marauders, originally served at a bar in the Syndicate HQ. Contains traces of gold from the real bullet inside..."
 
 /datum/reagent/consumable/ethanol/bullethell
 	name = "Bullet Hell"
@@ -1803,7 +1803,7 @@
 	taste_description = "being shot in the head several times and then set on fire"
 	glass_icon_state = "bullethell"
 	glass_name = "Bullet Hell"
-	glass_desc = "A specially made drink from the popular webseries RILENA: LMR. Served in an oversized brass shell casing, since glass would probably melt from how intense it is."
+	glass_desc = "A specially made drink originally served at the Syndicate HQ. Served in an oversized brass shell casing, since glass would probably melt from how intense it is."
 	accelerant_quality = 20
 
 /datum/reagent/consumable/ethanol/bullethell/on_mob_life(mob/living/carbon/M) //rarely sets you on fire
@@ -1821,7 +1821,7 @@
 	taste_description = "home, in a way that hurts"
 	glass_icon_state = "homesick"
 	glass_name = "Homesick"
-	glass_desc = "A specially made drink from the popular webseries RILENA: LMR. Ri's mother's favorite drink."
+	glass_desc = "A specially made drink from Epsilon Eridani, invented by a bartender who'd died in one of their first revolts."
 
 /datum/reagent/consumable/ethanol/homesick/on_mob_metabolize(mob/living/M)
 	var/drink_message = pick("You think of what you've left behind...", "You think of the people who miss you...", "You think of where you're from...")

@@ -99,20 +99,29 @@
 //44 Roumain (Montagne & Shadow)
 
 /obj/item/ammo_casing/a44roum
-	name = ".44 roumain bullet casing"
-	desc = "A .44 roumain bullet casing."
-	caliber = ".44 Roumain"
+	name = ".44 special bullet casing"
+	desc = "A .44 special bullet casing."
+	caliber = ".44 special"
 	icon_state = "pistol-steel"
 	projectile_type = /obj/projectile/bullet/a44roum
 
 /obj/item/ammo_casing/a44roum/rubber
-	name = ".44 roumain rubber bullet casing"
-	desc = "A .44 roumain rubber bullet casing."
+	name = ".44 special rubber bullet casing"
+	desc = "A .44 special rubber bullet casing."
 	bullet_skin = "rubber"
 	projectile_type = /obj/projectile/bullet/a44roum/rubber
 
 /obj/item/ammo_casing/a44roum/hp
-	name = ".44 roumain hollow point bullet casing"
-	desc = "A .44 roumain holow point bullet casing."
+	name = ".44 special hollow point bullet casing"
+	desc = "A .44 special holow point bullet casing."
 	bullet_skin = "hollow"
 	projectile_type = /obj/projectile/bullet/a44roum/hp
+
+// 7.62x38mmR (Nagant Revolver)
+
+/obj/item/ammo_casing/n762_38
+	name = "7.62x38mmR bullet casing"
+	desc = "A 7.62x38mmR bullet casing."
+	caliber = "7.62x38mmR"
+	projectile_type = /obj/projectile/bullet/n762
+

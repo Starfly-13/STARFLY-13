@@ -240,9 +240,9 @@
 			</html>"}
 
 /obj/item/book/manual/trickwines_4_brewers
-	name = "Ashen Brewing"
+	name = "Trickwines 4 Brewers"
 	icon_state = "book2"
-	author = "Amarasatsu ke Qazawat"
+	author = "Arnold H. Grimhand"
 	title = "Ashen Brewing"
 	dat = {"<html>
 			<head>
@@ -256,50 +256,7 @@
 			</style>
 			</head>
 			<body>
-			<h1>On the Topic of Trickwines</h1>
-			The alchemists of Roumain have long held that with sufficient preparation can many a potion be made. Many a daring hunter has returned to their domicile at the aid of an Alchemist. For those who travel, the 'Trickwine' is oft chosen, and so the learners of Roumain pass the secrets on to others. <br>
-			A 'trickwine' is a potent brew, made by taking the powers that rest in the world around us and fermenting them in the blessings of Illestren. When imbibed by a Hunter, strength and power flow through their body, yet when shattered upon the beasts of the World, Illestrens' curses are unleashed upon it.<br>
-			To freely create a trickwine is the mark of a rising alchemist, and to deliver it in the heat of a brawl is the mark of a true Hunter.<br>
-			May this document guide you to both those marks. <br>
-
-			<h2>Brewing Vessels.</h2>
-			While many vessels permeate the minds of alchemists, the Breakaway Flask is the instrument of choice for the rising talent. By taking the essence of plasma and infusing it within the body of glass - a most durable vessel is produced for the Trickwine. The glass remains firm lest it impacts upon a foe.<br>
-			Any who tinker will find the infusion of essence is done most easily with a flame. Something that burns with a flame most potent. Away from the furnaces of Illestren, the burn of a welder suffices to create the vessel.<br>
-
-			<h2> The Bacteria Of Illestren </h2>
-			The world of Illestren gave birth to a bacterium that has formed the backbone of alchemical experimentation for countless years. It has given birth to countless fermentation methods, including the cycle of brewing a Trickwine.<br>
-			By use of a specialized distillery, the Illestren Bacteria can be maintained in amounts ideal to the fermentation of reagents from Trickwines to Beers. A talented brewer can create their own heritage by blending activating bacterium and reagent into a new concotion. <br>
-			Not all vessels of the Militia bear a distillery, but plants transplanted from Illestren carry the bacterium within the flesh of their fruit. Careful nurture of a fruit-bearing plant will allow it to spread the blessings of Illestren. Treat the plant as you would treat any other ally. Allot it drinks. Trim its branches. Protect it from those who seek to harm it.<br>
-			Once the fruit has ripened and dropped from the host, an alchemist can take it, fermenting the ripe flesh into a potent mixture of ciders and bacterias entangled together.<br>
-			Just as we give to the tree, it shall give to us. It pays a talent to remember this.<br>
-
-			<h2> Common Mixtures </h2>
-			Those that find easy success within the alchemical arts have written that to make a Trickwine, one must maintain a careful mixture.<br>
-			Three wholes of an ethanol base, with the flavor varied for impact. Entangled with a whole strand of beast, and the blessings of plant. Once cut with the potent catalyst that is the Bacterium, the fermentation is rapid, and a Trickwine is born from the mixture. <br>
-
-			<h2> Wine Of Ash </h2>
-			The Wine Of Ash is the most endearing brew to have come from the Distilleries of the Militia. It carries a variety of uses, from the Ceremonies of Roumain, to the warm afterparty of a successful hunt. The flavor is said to be somewhat rustic, with hints of fruit and a sweet yet ashy tang. <br>
-			Brewing the Wine Of Ash is a simple task, that even Shadows are expected to do at times. By fermenting a flower of the moon into a potent absinthe, a strong base is formed. Seeping a hallucinogenic mushroom within the absinthe, and then introducing an ash into the mixture of drink and plant creates the Wine Of Ash. One must be patient when brewing, as the brew will be strong, but further fermentation will allow it to blossom into a true vintage.<br>
-			Take care whilst brewing to maintain a proper ratio of ingredients. The Wine shall become off-balance if more than one whole of mushroom and one whole of ash is introduced to three wholes of absinthe. One must also take care to protect their eyes, as the Vapors of Ash are a potent irritant.<br>
-			The Wine itself is held to be hallucinogenic, although debate rages within the halls of Roumain on the nature of such. A talented brewer can offset such trivialities by cutting the Wine with water, or introducing another substance once it has been fermented. Many a Hunter holds the drink to purify the soul, and strengthen the mind for days ahead.<br>
-
-			<h2> Wine Of Ice </h2>
-			The Wine Of Ice is a strong brew formented by the Talent Keo Lanai. Talent Lanai had long found solace from the heat in his visions of the 'Godsforsaken Precipice' that the Ashen Huntsman was said to wander, and sought to share this solace with other Hunters. The flavor is said to be somewhat meaty, with a pleasing current of pepper.
-			Brewing of the Wine Of Ice requires a unique assortment of reagents. By fermenting the fur of a bear within traditionally brewed rice sake, Keo Lanai found a solid base for the introduction of Frozen Pepper Essence. It is said that the original brew produced a cold so potent that frost formed on Lanai's brow.<br>
-			Hunters favor the Wine Of Ice for blessed relief from heat imbibing it provide. Alchemists have theorized that the brew stimulates the production of sweat in the body, allowing the body to cool itself more rapidly. Other Hunters swear by relief seeping into their burns as the brew finds its way into their system. Others find usage in the potent frost that it leaves upon impact, using it to freeze everything from foe to food.<br>
-
-			<h2> Lightning's Blessing </h2>
-			Lightning's Blessing is said to be a potent stimulant, brewed by Hunter Trackers to allow them to track mobile prey through unknown environments. The flavor is said to be sharp and unrelenting, much like the Hunters who indulge in it.<br>
-			Lightning's Blessing is brewed with a base of Vodka. By taking vodka and fermenting ground down bones within it, a strong alchemical blend is created. This blend is then inoculated with juiced lemon whilst within a distillery. The resulting blend is an environment ripe for a particular strain of Bacterium to multiply in. This strain of the Bacterium is said to be what gives the flavor to the brew, and its digestion produces a high in most sapients.<br>
-			Hunters are said to use Lightning's Blessing as a weapon, where the bacterium, upon being introduced to open air quickly produces an electrical field, shocking whatever the mixture lands upon.
-
-			<h2> Hearthflame </h2>
-			Hearthflame is Talent Lanai's other great creation. While travelling through the cold of many a fringe world, Lanai sought the warmth of his home, and took the creation of another mixture as a challenge. By taking the hearty fermented blend of an Illestren Apple, The petals of a Fireblossom, and a hint of phosphorous, Lanai produced a potent heating drink.<br>
-			Hearthflame is said to have a bold flavor profile, not unlike an apple shredded apart by tangy pricks. The bacterium is said to stimulate the body and cause it to start heating herself, or in cases of localized exposure, causes rapid, cauterizing heating.<br>
-			When this particular blend is exposed to the air, it rapidly heats up. Hunters have advised Shadows be careful if issued it, and most Alchemists refuse to make it unless it is required for the hunt at hand.<br>
-			<br>Transcribed by Amarasatsu ke Qazawat<br>
-
-			<font face="Segoe Script">Amarasatsu ke Qazawat</font><br>
+			<h1>This book should not be obtainable! Please inform a coder how you found it.</h1>
 
 			</body>
 			</html>"}
@@ -346,7 +303,7 @@
 /obj/item/book/manual/wiki/chemistry
 	name = "Chemistry Textbook"
 	icon_state = "chemistrybook"
-	author = "GREMLIN"
+	author = "George Marlin"
 	title = "Chemistry Textbook"
 	page_link = "Guide_to_Chemistry"
 
@@ -367,7 +324,7 @@
 /obj/item/book/manual/wiki/ghetto_chemistry
 	name = "Ghetto Chemistry Textbook"
 	icon_state = "chemistrybook"
-	author = "GREMLIN"
+	author = "Gregory Myren"
 	title = "Less Legal Chemistry Textbook"
 	page_link = "Guide_to_Ghetto_Chemistry"
 

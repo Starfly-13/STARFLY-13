@@ -29,6 +29,12 @@
 /datum/gear/accessory/scarf/striped
 	subtype_path = /datum/gear/accessory/scarf/striped
 
+/datum/gear/accessory/scarf/striped/recolorable
+	display_name = "striped scarf, recolorable"
+	path = /obj/item/clothing/neck/stripedscarfrecolor
+
+/* Commented out the other striped scarf colors.
+
 /datum/gear/accessory/scarf/striped/red
 	display_name = "striped scarf, red"
 	path = /obj/item/clothing/neck/stripedredscarf
@@ -120,6 +126,8 @@
 /datum/gear/accessory/scarf/striped/spooky
 	display_name = "striped scarf, spooky (orange-black)"
 	path = /obj/item/clothing/neck/spookystripedscarf
+
+*/
 
 
 //Ties

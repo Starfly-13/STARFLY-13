@@ -579,6 +579,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		"plain",
 		"dame",
 		"thirteen",
+		"engraved",
 		"snake"
 		)
 
@@ -689,6 +690,15 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 /obj/item/lighter/get_temperature()
 	return lit * heat
 
+/obj/item/lighter/priest
+	name = "\improper Faithful Zippo lighter"
+	desc = "A zippo with religious imagery on it."
+	overlay_state = "priest"
+
+/obj/item/lighter/fancy
+	name = "\improper Fancy Zippo lighter"
+	desc = "A zippo with a luxurious black-and-gold finish."
+	overlay_state = "fancy"
 
 /obj/item/lighter/greyscale
 	name = "cheap lighter"

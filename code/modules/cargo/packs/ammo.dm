@@ -143,20 +143,20 @@
 /* .44 */
 
 /datum/supply_pack/ammo/a44roum
-	name = ".44 Roumain Ammo Box Crate"
-	desc = "Contains a 48-round box of .44 roumain ammo for revolvers such as the Shadow and Montagne."
+	name = ".44 Special Ammo Box Crate"
+	desc = "Contains a 48-round box of .44 special ammo for revolvers such as the Shadow and Montagne."
 	contains = list(/obj/item/storage/box/ammo/a44roum)
 	cost = 250
 
 /datum/supply_pack/ammo/a44roum_rubber
-	name = ".44 Roumain Rubber Ammo Box Crate"
-	desc = "Contains a 48-round box of .44 roumain ammo loaded with less-than-lethal rubber rounds."
+	name = ".44 Special Rubber Ammo Box Crate"
+	desc = "Contains a 48-round box of .44 special ammo loaded with less-than-lethal rubber rounds."
 	contains = list(/obj/item/storage/box/ammo/a44roum_rubber)
 	cost = 250
 
 /datum/supply_pack/ammo/a44roum_hp
-	name = ".44 Roumain Hollow Point Ammo Box Crate"
-	desc = "Contains a 48-round box of .44 roumain hollow point ammo, great against unarmored targets."
+	name = ".44 Special Hollow Point Ammo Box Crate"
+	desc = "Contains a 48-round box of .44 special hollow point ammo, great against unarmored targets."
 	contains = list(/obj/item/storage/box/ammo/a44roum_hp)
 	cost = 500
 

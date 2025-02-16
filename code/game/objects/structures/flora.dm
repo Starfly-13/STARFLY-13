@@ -986,7 +986,7 @@
 	name = "Montagne's Oak"
 	icon = 'icons/obj/flora/chapeltree.dmi'
 	icon_state = "churchtree"
-	desc = "A sturdy oak tree imported directly from Illestren the homeworld of the Saint-Roumain Militia. It contains a bacteria native to the planet. The soil was carfuly transfered from the same place it was planted. A apple tree branch has been grafted onto it. You could try watering it"
+	desc = "A sturdy oak tree imported directly from Sol. It contains a bacteria frequently used in vintage brews. The soil was carfuly transfered from the same place it was planted. A apple tree branch has been grafted onto it. You could try watering it"
 	pixel_x = -16
 	max_integrity = 200
 	bound_height = 64

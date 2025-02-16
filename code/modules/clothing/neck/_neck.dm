@@ -273,6 +273,7 @@
 //The three following scarves don't have the scarf subtype
 //This is because Ian can equip anything from that subtype
 //However, these 4 don't have corgi versions of their sprites
+
 /obj/item/clothing/neck/stripedredscarf
 	name = "striped red scarf"
 	icon_state = "stripedredscarf"
@@ -471,6 +472,10 @@
 	desc = "A striped scarf using particularly expensive gold and magenta threads."
 	custom_price = 10
 
+/obj/item/clothing/neck/greystripedscarf
+	name = "grey striped scarf"
+	icon_state = "stonestripedscarf"
+	custom_price = 10
 
 /obj/item/clothing/neck/beescarf
 	name = "bee-striped scarf"
@@ -491,7 +496,7 @@
 	custom_price = 10
 
 /obj/item/clothing/neck/brownstripedscarf
-	name = "brown striped scarf scarf"
+	name = "brown striped scarf"
 	icon_state = "brownstripedscarf"
 	custom_price = 10
 
@@ -573,3 +578,40 @@
 	desc = "A necklace made out of a wolf's fang and some sinew. According to a common Frontier superstition, it brings good luck to its wearer."
 	icon_state = "fang_necklace"
 	cuttable = FALSE
+
+// The Scarf To End All (Striped) Scarves
+
+/obj/item/clothing/neck/stripedscarfrecolor
+	name = "Striped Scarf"
+	desc = "A cozy striped scarf. Special material allows it to be reskinned by Alt-clicking it, but only once."
+	unique_reskin = list("Red" = "stripedredscarf",
+						"Green" = "stripedgreenscarf",
+						"Blue" = "stripedbluescarf",
+						"Brown" = "brownstripedscarf",
+						"Grey" = "stonestripedscarf",
+						"Pink" = "bubblegumstripedscarf",
+						"Zebra" = "zebrastripedscarf",
+						"Candycane" = "candycanescarf",
+						"Wintermint" = "wintermintscarf",
+						"Blue and White" = "ntscarf",
+						"Syndicate" = "stripedsyndiscarf",
+						"SolGov" = "stripedsolgovscarf",
+						"Inteq" = "stripedinteqscarf",
+						"Atmospherics" = "atmosscarf",
+						"Gaudy" = "warioscarf",
+						"Electric Blue" = "electricstripedscarf",
+						"Spooky" = "spookystripedscarf",
+						"Bee" = "beescarf",
+						"Chocolate-Mint" = "chocomintscarf",
+						"Festive" = "festivestripedscarf",
+						"Red-Blue" = "magnetstripedscarf",
+						"Green-Blue" = "bluegreenstripedscarf",
+						"Dark" = "darkstripedscarf",
+						"Mystic" = "mysticstripedscarf",
+						"Italian" = "lisalisascarf",
+						)
+	icon_state = "stonestripedscarf"
+	item_state = ""	//no inhands
+	w_class = WEIGHT_CLASS_SMALL
+	custom_price = 60
+

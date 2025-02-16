@@ -80,8 +80,6 @@ SUBSYSTEM_DEF(shuttle)
 	jump_timer = addtimer(VARSET_CALLBACK(src, jump_mode, BS_JUMP_COMPLETED), jump_completion_time, TIMER_STOPPABLE)
 	priority_announce("Jump initiated. ETA: [jump_completion_time / (1 MINUTES)] minutes.", null, null, "Priority")
 
-	INVOKE_ASYNC(SSticker, TYPE_PROC_REF(/datum/controller/subsystem/ticker,poll_hearts))
-
 /datum/controller/subsystem/shuttle/proc/request_transit_dock(obj/docking_port/mobile/M)
 	if(!istype(M))
 		CRASH("[M] is not a mobile docking port")
@@ -404,11 +402,6 @@ SUBSYSTEM_DEF(shuttle)
 	for(var/obj/docking_port/mobile/M as anything in mobile)
 		var/list/L = list()
 
-		if(M.current_ship)
-			L["type"] = "[M.current_ship.source_template ? (M.current_ship.source_template.short_name ? M.current_ship.source_template.short_name : M.current_ship.source_template.name) : "Custom"]"
-		else
-			L["type"] = "???"
-
 		L["name"] = M.name
 		L["id"] = REF(M)
 		L["timer"] = M.timer
@@ -417,11 +410,13 @@ SUBSYSTEM_DEF(shuttle)
 			L["mode"] = capitalize(M.mode)
 
 		if(M.current_ship)
+			L["type"] = M.current_ship.source_template.short_name
 			if(M.current_ship.docked_to)
 				L["position"] = "Docked at [M.current_ship.docked_to.name] ([M.current_ship.docked_to.x], [M.current_ship.docked_to.y])"
 			else
 				L["position"] = "Flying At ([M.current_ship.x], [M.current_ship.y])"
 		else
+			L["type"] = "???"
 			L["position"] = "???"
 
 		data["shuttles"] += list(L)

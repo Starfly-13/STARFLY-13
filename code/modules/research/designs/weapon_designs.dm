@@ -695,3 +695,21 @@
 	materials = list(/datum/material/iron = 15000)
 	build_path = /obj/item/storage/box/ammo/c9mm
 	category = list("Imported")
+
+/datum/design/n762
+	name = "Ammo Holder (7.62x38mmR)"
+	id = "n762"
+	build_type = AUTOLATHE
+	materials = list(/datum/material/iron = 20000)
+	build_path = /obj/item/ammo_box/n762
+	category = list("Imported")
+
+/datum/design/nagantrevolver
+	name = "Nagant Revolver"
+	desc = "An old model of revolver. Uses 7.62."
+	id = "nagantrevolver"
+	build_type = PROTOLATHE
+	materials = list(/datum/material/iron = 90000, /datum/material/glass = 1500, /datum/material/silver = 1500)
+	build_path = /obj/item/gun/ballistic/revolver/nagant
+	category = list("Weapons")
+	departmental_flags = DEPARTMENTAL_FLAG_BALLISTICS

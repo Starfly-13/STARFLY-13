@@ -1,8 +1,9 @@
 {
-	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"$schema": "https://raw.githubusercontent.com/Starfly-13/STARFLY-13/8efaba456290f1c934d3b40e78e764a27dae113f/_maps/ship_config_schema.json",
+	"faction": "/datum/faction/syndicate/roseus",
 	"prefix": "RGSV",
 	"namelists": [
-		"CYBERSUN",
+		"ROSEUS",
 		"SPACE",
 		"NATURAL_AGGRESSIVE"
 	],

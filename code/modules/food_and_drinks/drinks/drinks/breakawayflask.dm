@@ -49,26 +49,26 @@
 	. = ..()
 
 /obj/item/reagent_containers/food/drinks/breakawayflask/vintage
-	name = "Vintage Saint-Roumain Trickwine"
+	name = "Vintage Trickwine"
 	desc = "Supposedly one of the first bottles made"
 	vintage = TRUE
 
 /obj/item/reagent_containers/food/drinks/breakawayflask/vintage/ashwine
-	name = "Vintage Wine of Ash"
+	name = "Vintage Ashwine"
 	list_reagents = list(/datum/reagent/consumable/ethanol/trickwine/ash_wine = 45, /datum/reagent/consumable/ethanol/absinthe  = 5)
-	desc = "Wine of Ash was originally created using herbs native to Illestren, as a means of relaxing after a long hunt. The Saint-Roumain Militia has no prohibition on a little fun."
+	desc = "Ashwine was originally created using herbs native to Indecipheres, as a means of relaxing after a long hunt."
 
 /obj/item/reagent_containers/food/drinks/breakawayflask/vintage/icewine
-	name = "Vintage Wine Of Ice"
+	name = "Vintage Icewine"
 	list_reagents = list(/datum/reagent/consumable/ethanol/trickwine/ice_wine = 45, /datum/reagent/consumable/ethanol/sake = 5)
-	desc = "Wine Of Ice, inspired by the frigid slopes of the 'Godforsaken Precipice' that forged the group's reputation as valiant survivalists, was engineered to both soothe overheated Hunters and freeze their foes in their tracks."
+	desc = "Icewine, popular among warm-blooded travellers on lava and desert planets for regulating their body temperature."
 
 /obj/item/reagent_containers/food/drinks/breakawayflask/vintage/shockwine
 	name = "Vintage Lightnings' Blessing"
 	list_reagents = list(/datum/reagent/consumable/ethanol/trickwine/shock_wine = 45, /datum/reagent/consumable/ethanol/vodka = 5)
-	desc = "Lightnings' Blessing, made to invigorate consumers and incapacitate targets, took inspiration from an incident early in the Saint-Roumain Militia's history, when a young Shadow stopped a rampaging beast by plunging an electrical cable that had been dislodged in the fighting into its side."
+	desc = "Lightnings' Blessing was a limited-run drink created on Sol in 2282 to celebrate four hundred years of consumer electricity."
 
 /obj/item/reagent_containers/food/drinks/breakawayflask/vintage/hearthwine
 	name = "Vintage Hearthflame"
 	list_reagents = list(/datum/reagent/consumable/ethanol/trickwine/hearth_wine = 45, /datum/reagent/consumable/ethanol/hcider = 5)
-	desc = "Hearthflame is one of the most important tonics devised by the SRM – both for its potent abilities in staunching wounds or setting enemies aflame, and for its closeness to the divine fire associated with the Ashen Huntsman."
+	desc = "Hearthflame was a limited-run liquor from the 2100s notorious for its burning sensation. The strange qualities of the drink allow it to be used to help treat wounds or inflict burns on enemies."

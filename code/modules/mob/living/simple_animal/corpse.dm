@@ -304,13 +304,13 @@
 /* SRM */
 
 /obj/effect/mob_spawn/human/corpse/srm/hunter
-	name = "SRM Hunter"
+	name = "Hunter"
 	id_job = "Hunter"
 	outfit = /datum/outfit/job/roumain/security
 	id_access_list = null
 
 /obj/effect/mob_spawn/human/corpse/srm/montagne
-	name = "SRM Montagne"
+	name = "Montagne"
 	id_job = "Hunter Montagne"
 	outfit = /datum/outfit/job/roumain/captain
 	id_access_list = null

@@ -407,8 +407,8 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/blazaam = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/trappist
-	name = "Roumain Trapper's"
-	desc = "Traditionally (and heavily monitored for authenticity) made beer brewed on Illestren. Trapper's beer must be brewed by Saint Roumain Hunters or Shadows, made to fit the needs of their community first, and must never be made for profit... which makes it a common sight in the Frontier."
+	name = "Trapper's"
+	desc = "Traditionally (and heavily monitored for authenticity) made beer brewed in eastern Europe, in the Sol system. The recipe is said to be over a thousand years old, though the authenticity of such claims is debated."
 	custom_premium_price = 17
 	icon_state = "trappistbottle"
 	volume = 50

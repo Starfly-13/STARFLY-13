@@ -111,7 +111,7 @@
 
 /datum/blackmarket_item/clothing/frontiersmen_armor_fireproof
 	name = "Fireproof Armor Set"
-	desc = "Get it while it's hot! This fireproofed armor and uniform set is made with a pre-Night Of Fire miracle material that renders it almost impervious to flames. The Frontiersmen swear by the stuff. It's kept each of it's previous owners safe until they passed away from illness."
+	desc = "Get it while it's hot! This fireproofed armor and uniform set is made with a miracle material that renders it almost impervious to flames. The Frontiersmen swear by the stuff. It's kept each of it's previous owners safe until they passed away from illness."
 	item = /obj/item/storage/box
 
 	price_min = 1000
@@ -130,8 +130,8 @@
 	return B
 
 /datum/blackmarket_item/clothing/gezena_armor
-	name = "Raksha-Plating vest"
-	desc = "Genuine armor vests used by the PGF Marine Corp. If a military guy in a cape comes by, play dumb."
+	name = "Eridanite armored vest"
+	desc = "Genuine armor vests used by Epsilon Eridani security forces. Noone's sure why Etherbor is sending them such quality equipment."
 	item = /obj/item/clothing/suit/armor/gezena/marine
 	pair_item = list(/datum/blackmarket_item/clothing/gezena_helmet)
 
@@ -141,8 +141,8 @@
 	availability_prob = 20
 
 /datum/blackmarket_item/clothing/gezena_helmet
-	name = "Raksha-Helm"
-	desc = "A helmet used by the PGF Marine Corp. They won't miss it. Not like there's much to protect up there anyways."
+	name = "Eridanite armored helmet"
+	desc = "A helmet used by Epsilon Eridani security forces. They won't miss it. Not like there's much to protect up there anyways."
 	item = /obj/item/clothing/head/helmet/gezena
 
 	price_min = 500
