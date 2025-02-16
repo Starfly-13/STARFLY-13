@@ -687,6 +687,10 @@ EMPTY_GUN_HELPER(revolver/viper)
 	manufacturer = MANUFACTURER_HEPHAESTUS
 	spread_unwielded = 12
 	recoil = 0
-	slot_available = ATTACHMENT_SLOT_MUZZLE
+	slot_available = list(
+		ATTACHMENT_SLOT_MUZZLE = 1,
+	)
 	default_ammo_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
-	valid_attachments = /obj/item/attachment/silencer
+	valid_attachments = list(
+		/obj/item/attachment/silencer,
+		)
