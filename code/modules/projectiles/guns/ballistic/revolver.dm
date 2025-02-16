@@ -681,6 +681,7 @@ EMPTY_GUN_HELPER(revolver/viper)
 /obj/item/gun/ballistic/revolver/nagant
 	name = "Nagant 762 revolver"
 	desc = "A classic design revisited by Hephaestus Industries, chambered in the special 7.62x38mmR. Uniquely able to be suppressed."
+	icon = 'icons\obs\guns\projectile.dmi'
 	icon_state = "nagant"
 	//can_suppress = TRUE
 	manufacturer = MANUFACTURER_HEPHAESTUS
