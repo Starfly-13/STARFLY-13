@@ -682,7 +682,7 @@ EMPTY_GUN_HELPER(revolver/viper)
 	name = "Nagant 762 revolver"
 	desc = "A classic design revisited by Hephaestus Industries, chambered in the special 7.62x38mmR. Uniquely able to be suppressed."
 	icon_state = "nagant"
-	can_suppress = TRUE
+	//can_suppress = TRUE
 	manufacturer = MANUFACTURER_HEPHAESTUS
 	spread_unwielded = 12
 	recoil = 0
