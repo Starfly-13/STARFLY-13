@@ -148,3 +148,13 @@
 	armour_penetration = -20
 	ricochet_chance = 0
 	speed_mod = BULLET_SPEED_HP_MOD
+
+
+// 7.62x38mmR (Nagant Revolver)
+
+/obj/projectile/bullet/n762
+	name = "7.62x38mmR bullet"
+	damage = 30
+	armour_penetration = -20
+	speed = BULLET_SPEED_REVOLVER
+

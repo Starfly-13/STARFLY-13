@@ -116,3 +116,12 @@
 	desc = "A .44 special holow point bullet casing."
 	bullet_skin = "hollow"
 	projectile_type = /obj/projectile/bullet/a44roum/hp
+
+// 7.62x38mmR (Nagant Revolver)
+
+/obj/item/ammo_casing/n762_38
+	name = "7.62x38mmR bullet casing"
+	desc = "A 7.62x38mmR bullet casing."
+	caliber = "7.62x38mmR"
+	projectile_type = /obj/projectile/bullet/n762
+
