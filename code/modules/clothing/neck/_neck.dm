@@ -273,6 +273,7 @@
 //The three following scarves don't have the scarf subtype
 //This is because Ian can equip anything from that subtype
 //However, these 4 don't have corgi versions of their sprites
+
 /obj/item/clothing/neck/stripedredscarf
 	name = "striped red scarf"
 	icon_state = "stripedredscarf"
@@ -471,6 +472,10 @@
 	desc = "A striped scarf using particularly expensive gold and magenta threads."
 	custom_price = 10
 
+/obj/item/clothing/neck/greystripedscarf
+	name = "grey striped scarf"
+	icon_state = "stonestripedscarf"
+	custom_price = 10
 
 /obj/item/clothing/neck/beescarf
 	name = "bee-striped scarf"
@@ -573,3 +578,40 @@
 	desc = "A necklace made out of a wolf's fang and some sinew. According to a common Frontier superstition, it brings good luck to its wearer."
 	icon_state = "fang_necklace"
 	cuttable = FALSE
+
+// The Scarf To End All (Striped) Scarves
+
+/obj/item/clothing/neck/stripedscarfrecolor
+	name = "Recolorable Striped Scarf"
+	desc = "A cozy striped scarf. Special material allows it to be reskinned by Alt-clicking it, but only once."
+	unique_reskin = list("Striped Red Scarf" = "stripedredscarf",
+						"Striped Green Scarf" = "stripedgreenscarf",
+						"Striped Blue Scarf" = "stripedbluescarf",
+						"Brown Striped Scarf" = "brownstripedscarf",
+						"Grey Striped Scarf" = "stonestripedscarf",
+						"Pink Striped Scarf" = "bubblegumstripedscarf",
+						"Zebra Striped Scarf" = "zebrastripedscarf",
+						"Candycane Striped Scarf" = "candycanescarf",
+						"Wintermint Striped Scarf" = "wintermintscarf",
+						"Blue and White Striped Scarf" = "ntstripedscarf",
+						"Syndicate Striped Scarf" = "stripedsyndiscarf",
+						"SolGov Striped Scarf" = "stripedsolgovscarf",
+						"Inteq Striped Scarf" = "stripedinteqscarf",
+						"Atmospherics Striped Scarf" = "atmosscarf",
+						"Gaudy Striped Scarf" = "warioscarf",
+						"Electric Blue Striped Scarf" = "electricstripedscarf",
+						"Spooky Striped Scarf" = "spookystripedscarf",
+						"Bee Striped Scarf" = "beescarf",
+						"Chocolate-Mint Striped Scarf" = "chocomintscarf",
+						"Festive Striped Scarf" = "festivestripedscarf",
+						"Red-Blue Striped Scarf" = "magnetstripedscarf",
+						"Green-Blue Striped Scarf" = "bluegreenstripedscarf",
+						"Dark Striped Scarf" = "darkstripedscarf",
+						"Mystic Striped Scarf" = "mysticstripedscarf",
+						"Italian Striped Scarf" = "lisalisascarf",
+						)
+	icon_state = "stonestripedscarf"
+	item_state = ""	//no inhands
+	w_class = WEIGHT_CLASS_SMALL
+	custom_price = 60
+
