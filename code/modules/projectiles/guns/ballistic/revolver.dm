@@ -467,6 +467,7 @@
 	righthand_file = 'icons/obj/guns/manufacturer/scarborough/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
 
+
 /obj/item/gun/ballistic/revolver/detective
 	name = "\improper HP Detective Special"
 	desc = "A small law enforcement firearm. Originally commissioned by Nanotrasen for their Private Investigation division, it has become extremely popular among independent civilians and local police forces as a cheap, compact sidearm. Uses .38 Special rounds."
@@ -694,3 +695,14 @@ EMPTY_GUN_HELPER(revolver/viper)
 	valid_attachments = list(
 		/obj/item/attachment/silencer,
 		)
+
+/obj/item/gun/ballistic/revolver/unica //RETURN OF THE KING
+	name = "Hephaestus Unica-6"
+	desc = "A weighty revolver with an unconventional barrel placement, aligned with the bottom of the cylinder. Known for its complex design, double action, and low recoil. Uses .357 ammo." //rare and expensive, high-quality revolver
+	icon_state = "mateba"
+	icon = 'icons/obj/guns/manufacturer/hephaestus_industries/48x32.dmi'
+	spread_unwielded = 1
+	recoil = 0
+	semi_auto = TRUE
+	safety_wording = "safety"
+
