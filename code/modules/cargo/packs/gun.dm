@@ -116,8 +116,12 @@
 	desc = "Contains a civilian variant of the Viper revolver, chambered in .357 magnum."
 	cost = 1500
 	contains = list(/obj/item/storage/guncase/pistol/viper)
-	faction = /datum/faction/syndicate/scarborough
-	faction_discount = 5
+
+/datum/supply_pack/gun/nagantrevolver
+	name = "Nagant Revolver Crate"
+	desc = "Contains a revolver with an exotic design that allows it to be suppressed, chambered in 7.62x38mmR."
+	cost = 1750
+	contains = list(/obj/item/gun/ballistic/revolver/nagant)
 
 /datum/supply_pack/gun/a357
 	name = "R-23 'Viper' Revolver Crate"

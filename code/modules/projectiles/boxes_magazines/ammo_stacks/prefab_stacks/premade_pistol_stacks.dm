@@ -496,7 +496,7 @@
 /obj/item/ammo_box/n762
 	name = "ammo box (7.62x38mmR)"
 	icon_state = "n762box"
-	desc = "A box of unusual revolver ammunition with the bullet seated below the mouth of the cartridge."
+	desc = "A box of unusual revolver ammunition with the bullet seated below the mouth of the cartridge. Holds 28 rounds."
 	ammo_type = /obj/item/ammo_casing/n762_38
 	max_ammo = 28
 

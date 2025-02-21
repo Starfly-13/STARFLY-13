@@ -522,3 +522,11 @@
 	desc = "Contains a 48-round box for high-powered gauss guns such as the GAR assault rifle."
 	contains = list(/obj/item/storage/box/ammo/ferrolance)
 	cost = 250
+
+/* ferro pellets */
+
+/datum/supply_pack/ammo/n762
+	name = "7.62x38mmR Box Crate"
+	desc = "Contains a box of revolver ammunition with the bullet seated below the mouth of the cartridge. Holds 28 rounds."
+	contains = list(/obj/item/ammo_box/n762)
+	cost = 250
