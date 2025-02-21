@@ -119,9 +119,15 @@
 
 /datum/supply_pack/gun/nagantrevolver
 	name = "Nagant Revolver Crate"
-	desc = "Contains a revolver with an exotic design that allows it to be suppressed, chambered in 7.62x38mmR."
-	cost = 1750
+	desc = "Contains a revolver with an exotic design that allows it to be suppressed, highly popular among Hephaestus security guards. Chambered in 7.62x38mmR."
+	cost = 1600
 	contains = list(/obj/item/gun/ballistic/revolver/nagant)
+
+/datum/supply_pack/gun/unicarevolver
+	name = "Unica Revolver Crate"
+	desc = "Contains a revolver with an exotic, heavy design that significantly reduces recoil - the flagship design of Hephaestus Industries. Chambered in .357 magnum."
+	cost = 1750
+	contains = list(/obj/item/gun/ballistic/revolver/unica)
 
 /datum/supply_pack/gun/a357
 	name = "R-23 'Viper' Revolver Crate"
