@@ -555,8 +555,8 @@ EMPTY_GUN_HELPER(revolver)
 EMPTY_GUN_HELPER(revolver/viper)
 
 /obj/item/gun/ballistic/revolver/mateba
-	name = "\improper Unica 6 auto-revolver"
-	desc = "A high-powered revolver with a unique auto-reloading system. Uses .357 ammo."
+	name = "\improper Uniqa-6 Auto-Revolver"
+	desc = "A high-powered double-action revolver imitating a popular design from Hephaestus Industries. Uses .357 ammo."
 	icon = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/righthand.dmi'
@@ -704,5 +704,6 @@ EMPTY_GUN_HELPER(revolver/viper)
 	spread_unwielded = 1
 	recoil = 0
 	semi_auto = TRUE
+	manufacturer = MANUFACTURER_HEPHAESTUS
 	safety_wording = "safety"
 

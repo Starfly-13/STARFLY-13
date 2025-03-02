@@ -66,3 +66,42 @@
 	icon_state = "threshbeastred"
 	icon_living = "threshbeastred"
 	icon_dead = "threshbeastred_dead"
+
+/mob/living/simple_animal/miervesh
+	name = "Mier'vesh"
+	desc = "A small, sweet-tempered flying reptile from Moghes. Frequently samples the air with a long, thin forked tongue. They are popular animals among Ouerean Unathi as they are small and sweet tempered, making them slow to respond to danger." //'
+	icon = 'icons/mob/moghes/miervesh.dmi'
+	icon_state = "miervesh-1"
+	icon_living = "miervesh-1"
+	icon_dead = "miervesh-1-dead"
+	density = FALSE
+	health = 4
+	maxHealth = 4
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/chicken = 1)
+	melee_damage_upper = 2
+	melee_damage_lower = 0
+	speak_chance = 1
+	speak = list("Chirp!","peep!","tweet!")
+	speak_emote = list("croons","chirps","hisses")
+	emote_hear = list("croons.","chirps.","hisses.")
+	emote_see = list("pecks at the ground","flaps its wings","flicks out its tongue")
+	turns_per_move = 5
+
+	response_help_continuous = "pets"
+	response_help_simple = "pet"
+	response_disarm_continuous = "gently moves aside"
+	response_disarm_simple = "gently move aside"
+	response_harm_continuous = "swats"
+	response_harm_simple = "swat"
+	a_intent = INTENT_HARM //wild animals aren't going to be your best friend, but a player-controlled one might be tame enough.
+	attack_verb_continuous = "chomps"
+	attack_verb_simple = "chomp"
+	friendly_verb_continuous = "grooms"
+	friendly_verb_simple = "groom"
+	mob_size = MOB_SIZE_SMALL
+	movement_type = FLYING
+
+/mob/living/simple_animal/miervesh/red
+	icon_state = "miervesh-2"
+	icon_living = "miervesh-2"
+	icon_dead = "miervesh-2-dead"
