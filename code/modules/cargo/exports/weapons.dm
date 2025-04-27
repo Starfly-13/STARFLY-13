@@ -15,7 +15,6 @@
 	unit_name = "combat knife"
 	export_types = list(/obj/item/melee/knife/combat)
 
-
 /datum/export/weapon/taser
 	cost = 200
 	unit_name = "advanced taser"

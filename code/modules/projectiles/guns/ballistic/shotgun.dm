@@ -104,6 +104,52 @@
 /obj/item/gun/ballistic/shotgun/brimstone/no_mag
 	// spawnwithmagazine = FALSE
 
+// TP-83 Shotgun
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/tp83
+	name = "Hephaestus TP-83 Survivalist Shotgun"
+	desc = "A break-action shotgun featuring three barrels. On the bottom of the weapon is a slot that may be used to utilize a specially designed machete as a stock, making it effectively a survival kit in weapon form as long as you refrain from touching the sharp side."
+	icon = 'icons/obj/guns/manufacturer/frontier_import/48x32.dmi'
+	lefthand_file = 'icons/mob/inhands/weapons/guns_lefthand.dmi'
+	righthand_file = 'icons/mob/inhands/weapons/guns_righthand.dmi'
+	mob_overlay_icon = null
+
+	base_icon_state = "cosmo"
+	icon_state = "cosmo"
+	item_state = "shotgun"
+	unique_reskin = null
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/tp83
+	allowed_ammo_types = /obj/item/ammo_box/magazine/internal/shot/tp83
+	//mag_type = /obj/item/ammo_box/magazine/internal/shot/tp83
+	w_class = WEIGHT_CLASS_NORMAL
+	var/toggled = FALSE
+	var/obj/item/ammo_box/magazine/internal/shot/alternate_magazine
+	semi_auto = TRUE
+	manufacturer = MANUFACTURER_HEPHAESTUS
+
+// Butcher Shotgun
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn/scrap
+	name = "Butcher Shotgun"
+	desc = "A brutal shotgun favored by pirates. That hatchet is not just for show!"
+	icon = 'icons/obj/guns/manufacturer/clip_lanchester/48x32.dmi'
+	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
+	lefthand_file = 'icons/obj/guns/manufacturer/pirate/lefthand.dmi'
+	righthand_file = 'icons/obj/guns/manufacturer/pirate/righthand.dmi'
+	mob_overlay_icon = 'icons/obj/guns/manufacturer/pirate/onmob.dmi'
+	unique_reskin = null
+	recoil = 1 // Surprisingly stable!
+	recoil_unwielded = 8 //oof owwie ouch my wrists
+	force = 15
+	throwforce = 20
+	icon_state = "dshotgun"
+	item_state = "dshotgun"
+	slot_flags = null
+	manufacturer = MANUFACTURER_LAKVAR
+	attack_verb = list("hacked", "chopped", "smashed", "torn", "ripped", "diced", "cut")
+	sharpness = IS_SHARP_ACCURATE
+
+
 // LK-SS SHOTGUN //
 
 /obj/item/gun/ballistic/shotgun/scrap
@@ -122,6 +168,23 @@
 	manufacturer = MANUFACTURER_LAKVAR
 	can_be_sawn_off  = FALSE
 
+// SHOTGUN PISTOL //
+
+/obj/item/gun/ballistic/shotgun/doublebarrel/presawn/pistol
+	name = "Condor"
+	desc = "Resembles a classic semi-automatic handgun, widely popular throughout the Frontier. Something is off about this one...."
+	fire_sound = 'sound/weapons/gun/shotgun/brimstone.ogg'
+	icon = 'icons/obj/guns/manufacturer/pirate/48x32.dmi'
+	lefthand_file = 'icons/obj/guns/manufacturer/hunterspride/lefthand.dmi'
+	righthand_file = 'icons/obj/guns/manufacturer/hunterspride/righthand.dmi'
+	unique_reskin = null
+	icon_state = "pocketshotgun"
+	item_state = "hp_generic"
+	recoil = 2 //OUCH.
+	recoil_unwielded = 12 //WRISTFUCKER PLUS ULTRA
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/improvised
+	allowed_ammo_types = /obj/item/ammo_box/magazine/internal/shot/improvised
+
 // HELLFIRE SHOTGUN //
 
 /obj/item/gun/ballistic/shotgun/hellfire
@@ -134,7 +197,8 @@
 	icon_state = "hellfire"
 	item_state = "hellfire"
 
-	// mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/shot/riot
+	allowed_ammo_types = /obj/item/ammo_box/magazine/internal/shot/riot
 	sawn_desc = "Come with me if you want to live."
 	can_be_sawn_off  = TRUE
 	rack_sound = 'sound/weapons/gun/shotgun/rack_alt.ogg'

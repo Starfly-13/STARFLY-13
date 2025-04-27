@@ -143,20 +143,20 @@
 /* .44 */
 
 /datum/supply_pack/ammo/a44roum
-	name = ".44 Roumain Ammo Box Crate"
-	desc = "Contains a 48-round box of .44 roumain ammo for revolvers such as the Shadow and Montagne."
+	name = ".44 Special Ammo Box Crate"
+	desc = "Contains a 48-round box of .44 special ammo for revolvers such as the Shadow and Montagne."
 	contains = list(/obj/item/storage/box/ammo/a44roum)
 	cost = 250
 
 /datum/supply_pack/ammo/a44roum_rubber
-	name = ".44 Roumain Rubber Ammo Box Crate"
-	desc = "Contains a 48-round box of .44 roumain ammo loaded with less-than-lethal rubber rounds."
+	name = ".44 Special Rubber Ammo Box Crate"
+	desc = "Contains a 48-round box of .44 special ammo loaded with less-than-lethal rubber rounds."
 	contains = list(/obj/item/storage/box/ammo/a44roum_rubber)
 	cost = 250
 
 /datum/supply_pack/ammo/a44roum_hp
-	name = ".44 Roumain Hollow Point Ammo Box Crate"
-	desc = "Contains a 48-round box of .44 roumain hollow point ammo, great against unarmored targets."
+	name = ".44 Special Hollow Point Ammo Box Crate"
+	desc = "Contains a 48-round box of .44 special hollow point ammo, great against unarmored targets."
 	contains = list(/obj/item/storage/box/ammo/a44roum_hp)
 	cost = 500
 
@@ -521,4 +521,12 @@
 	name = "Ferromagnetic Lance Box Crate"
 	desc = "Contains a 48-round box for high-powered gauss guns such as the GAR assault rifle."
 	contains = list(/obj/item/storage/box/ammo/ferrolance)
+	cost = 250
+
+/* ferro pellets */
+
+/datum/supply_pack/ammo/n762
+	name = "7.62x38mmR Box Crate"
+	desc = "Contains a box of revolver ammunition with the bullet seated below the mouth of the cartridge. Holds 28 rounds."
+	contains = list(/obj/item/ammo_box/n762)
 	cost = 250

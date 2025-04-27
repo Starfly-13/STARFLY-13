@@ -447,8 +447,8 @@
 	ammo_type = /obj/item/ammo_casing/a44roum
 
 /obj/item/storage/box/ammo/a44roum
-	name = "box of .44 roumain ammo"
-	desc = "A box of standard .44 roumain ammo."
+	name = "box of .44 special ammo"
+	desc = "A box of standard .44 special ammo."
 	icon_state = "a44roum"
 
 /obj/item/storage/box/ammo/a44roum/PopulateContents()
@@ -460,8 +460,8 @@
 	ammo_type = /obj/item/ammo_casing/a44roum/rubber
 
 /obj/item/storage/box/ammo/a44roum_rubber
-	name = "box of rubber .44 roumain ammo"
-	desc = "A box of .44 roumain rubbershot ammo, designed to disable targets without causing serious damage."
+	name = "box of rubber .44 special ammo"
+	desc = "A box of .44 special rubbershot ammo, designed to disable targets without causing serious damage."
 	icon_state = "a44roum-rubber"
 
 /obj/item/storage/box/ammo/a44roum_rubber/PopulateContents()
@@ -473,11 +473,31 @@
 	ammo_type = /obj/item/ammo_casing/a44roum/hp
 
 /obj/item/storage/box/ammo/a44roum_hp
-	name = "box of HP .44 roumain ammo"
-	desc = "A box of .44 roumain hollowpoint ammo, designed to disable targets without causing serious damage."
+	name = "box of HP .44 special ammo"
+	desc = "A box of .44 special hollowpoint ammo, designed to disable targets without causing serious damage."
 	icon_state = "a44roum-hp"
 
 /obj/item/storage/box/ammo/a44roum_hp/PopulateContents()
 	var/static/items_inside = list(
 		/obj/item/ammo_box/magazine/ammo_stack/prefilled/a44roum/hp = 4)
 	generate_items_inside(items_inside,src)
+
+/obj/item/ammo_box/n762_clip
+	name = "ammo holder (7.62x38mmR)"
+	desc = "A 7-round ammo holder for the Nagant revolver. These rounds do good damage, but struggle against armor."
+	icon_state = "n762"
+	ammo_type = /obj/item/ammo_casing/n762_38
+	max_ammo = 7
+	multiple_sprites = AMMO_BOX_PER_BULLET
+	item_flags = NO_MAT_REDEMPTION
+	w_class = WEIGHT_CLASS_TINY
+	instant_load = TRUE
+
+/obj/item/ammo_box/n762
+	name = "ammo box (7.62x38mmR)"
+	icon_state = "n762box"
+	desc = "A box of unusual revolver ammunition with the bullet seated below the mouth of the cartridge. Holds 28 rounds."
+	ammo_type = /obj/item/ammo_casing/n762_38
+	max_ammo = 28
+
+

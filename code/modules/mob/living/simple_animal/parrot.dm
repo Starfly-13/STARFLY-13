@@ -39,14 +39,14 @@
 	maxHealth = 80
 	pass_flags = PASSTABLE | PASSMOB
 
-	speak = list("Hi!","Hello!","Cracker?","BAWWWWK george mellons griffing me!")
+	speak = list("Hi!","Hello!","Cracker?","Pretty bird!")
 	speak_emote = list("squawks","says","yells")
 	emote_hear = list("squawks.","bawks!")
 	emote_see = list("flutters its wings.")
 
 	speak_chance = 1 //1% (1 in 100) chance every tick; So about once per 150 seconds, assuming an average tick is 1.5s
 	turns_per_move = 5
-	butcher_results = list(/obj/item/reagent_containers/food/snacks/cracker/ = 1)
+	butcher_results = list(/obj/item/reagent_containers/food/snacks/meat/slab/chicken = 1, /obj/item/reagent_containers/food/snacks/cracker/ = 1)
 	melee_damage_upper = 10
 	melee_damage_lower = 5
 

@@ -153,14 +153,14 @@
 	item_state = "marinecloth"
 
 /obj/item/clothing/head/gezena/flap/marine
-	name = "\improper PGFMC Betzu-il cap"
-	desc = "The standard cap of the PGF military, in Marine Corps colors. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects."
+	name = "\improper EAFMC flap cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Marine Corps colors. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back."
 	icon_state = "marineflap"
 	item_state = "marinecloth"
 
 /obj/item/clothing/head/gezena/marine/lead
 	name = "\improper EAFMC Commander Cap"
-	desc = "The standard cap of the PGF military, in Marine Corps colors. The silver markings denote it as a commander's cap."
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Marine Corps colors. The silver markings denote it as a commander's cap."
 	icon_state = "squadhat"
 	item_state = "marinecloth"
 
@@ -171,8 +171,8 @@
 	item_state = "marinecloth"
 
 /obj/item/clothing/head/gezena/flap/marine/lead
-	name = "\improper PGFMC Commander's' Betzu-il cap"
-	desc = "The standard cap of the PGF military, in Marine Corps colors. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects. The silver markings denote it as a commander's cap."
+	name = "\improper EAFMC Commander's' flap cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces, in Marine Corps colors. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back. The silver markings denote it as a commander's cap."
 	icon_state = "squadflap"
 	item_state = "marinecloth"
 
@@ -189,8 +189,8 @@
 	item_state = "whitecloth"
 
 /obj/item/clothing/head/gezena/flap/medic
-	name = "\improper PGF medic Betzu-il cap"
-	desc = "The standard cap of the PGF military. “betzu-il”, translating to “sun-blocker”, refers to the flap at the back for protection against natural hazards such as sunburns, sandstorms, and biting insects. The coloring indicates the wearer as a medical officer."
+	name = "\improper EAF medic flap cap"
+	desc = "The standard cap of the Epsilon Eridani Armed Forces. Due to the hazards of sunburn and insect-spread diseases, this cap features a flap on its back. The coloring indicates the wearer as a medical officer."
 	icon_state = "medicflap"
 	item_state = "whitecloth"
 
@@ -236,7 +236,7 @@
 	siemens_coefficient = 0
 
 /obj/item/clothing/gloves/gezena/captain
-	name = "\improper PGFN Captain's Gripper Gloves"
+	name = "\improper EAFN Captain's Gripper Gloves"
 	desc = "As the name suggests, the gloves employed by the Epsilon Eridani Armed Forces are designed to ensure the highest possible grip is maintained while also providing protection from blisters in work environments. Bears the silver standard of an Eridanite captain."
 	icon_state = "captaingloves"
 	siemens_coefficient = 0

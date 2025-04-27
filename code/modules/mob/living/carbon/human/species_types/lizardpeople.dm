@@ -46,25 +46,77 @@
 	robotic_eyes = /obj/item/organ/eyes/robotic/lizard
 
 	// Lizards are coldblooded and can stand a greater temperature range than humans
-	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 20
+	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 30
 	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 10
-	max_temp_comfortable = HUMAN_BODYTEMP_NORMAL + 20
-	min_temp_comfortable = HUMAN_BODYTEMP_NORMAL
+	max_temp_comfortable = HUMAN_BODYTEMP_NORMAL + 25
+	min_temp_comfortable = HUMAN_BODYTEMP_NORMAL - 3
 	loreblurb = "The Sinta'Unathi are a cold-blooded reptilian species originating from the harsh mainland of the planet Moghes, in the Uuoea-Esa system. A warrior culture with emphasis on honor, family, and loyalty to one's clan, the divided Sinta'Unathi find themselves as powerful a force as any other species despite their less than hospitable homeworld."
 
 	ass_image = 'icons/ass/asslizard.png'
 	var/datum/action/innate/liz_lighter/internal_lighter
 
-/datum/species/lizard/on_species_loss(mob/living/carbon/C)
+/* datum/species/lizard/on_species_loss(mob/living/carbon/C)
 	if(internal_lighter)
 		internal_lighter.Remove(C)
-	..()
+	..() */
+
+	var/datum/action/innate/liztackle/liztackle
+	/// # Inherit tackling variables #
+	/// See: [/datum/component/tackler/var/stamina_cost]
+	var/tackle_stam_cost = 15
+	/// See: [/datum/component/tackler/var/base_knockdown]
+	var/base_knockdown = 0.3 SECONDS
+	/// See: [/datum/component/tackler/var/range]
+	var/tackle_range = 5
+	/// See: [/datum/component/tackler/var/min_distance]
+	var/min_distance = 1
+	/// See: [/datum/component/tackler/var/speed]
+	var/tackle_speed = 1
+	/// See: [/datum/component/tackler/var/skill_mod]
+	var/skill_mod = 3
 
 /datum/species/lizard/on_species_gain(mob/living/carbon/C, datum/species/old_species)
 	..()
 	if(ishuman(C))
-		internal_lighter = new
+		liztackle = new
+		liztackle.Grant(C)
+
+
+/datum/species/lizard/on_species_loss(mob/living/carbon/human/C, datum/species/new_species, pref_load)
+	. = ..()
+
+	C.base_pixel_x += 8
+	C.pixel_x = C.base_pixel_x
+	C.stop_updating_hands()
+
+	if(liztackle)
+		liztackle.Remove(C)
+
+	qdel(C.GetComponent(/datum/component/tackler))
+
+/datum/action/innate/liztackle
+	name = "Pounce"
+	desc = "Ready yourself to pounce."
+	check_flags = AB_CHECK_CONSCIOUS
+	button_icon_state = "tackle"
+	icon_icon = 'icons/obj/clothing/gloves.dmi'
+	background_icon_state = "bg_alien"
+
+/datum/action/innate/liztackle/Activate()
+	var/mob/living/carbon/human/H = owner
+	var/datum/species/lizard/liz = H.dna.species
+	if(H.GetComponent(/datum/component/tackler))
+		qdel(H.GetComponent(/datum/component/tackler))
+		to_chat(H, "<span class='notice'>You relax, no longer ready to pounce.</span>")
+		return
+	H.AddComponent(/datum/component/tackler, stamina_cost= liz.tackle_stam_cost, base_knockdown= liz.base_knockdown, range= liz.tackle_range, speed= liz.tackle_speed, skill_mod= liz.skill_mod, min_distance= liz.min_distance)
+	H.visible_message("<span class='notice'>[H] gets ready to pounce!</span>", \
+		"<span class='notice'>You ready yourself to pounce!</span>", null, COMBAT_MESSAGE_RANGE)
+
+
+	/*	internal_lighter = new
 		internal_lighter.Grant(C)
+
 
 /datum/action/innate/liz_lighter
 	name = "Ignite"
@@ -90,6 +142,8 @@
 		if(H.reagents && H.reagents.has_reagent(/datum/reagent/fuel,4))
 			return TRUE
 		return FALSE
+
+*/
 
 /// Lizards are cold blooded and do not stabilize body temperature naturally
 /datum/species/lizard/natural_bodytemperature_stabilization(datum/gas_mixture/environment, mob/living/carbon/human/H)
@@ -143,9 +197,11 @@ Lizard subspecies: YEOSA'UNATHI
 	grad_color="#fffec4"
 	sclera_color="#fffec4"
 
-	// Yeosa are more cold-blooded than Sinta, and thus should be less cozy in bad temps.
-	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 15
-	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 7
+
+	bodytemp_heat_damage_limit = HUMAN_BODYTEMP_HEAT_DAMAGE_LIMIT + 30
+	bodytemp_cold_damage_limit = HUMAN_BODYTEMP_COLD_DAMAGE_LIMIT - 10
+	max_temp_comfortable = HUMAN_BODYTEMP_NORMAL + 20
+	min_temp_comfortable = HUMAN_BODYTEMP_NORMAL - 1
 	loreblurb = "The Yeosa'Unathi are a cold-blooded reptilian species originating from the depths of the ocean on the planet Moghes, in the Uuoea-Esa system. Most Yeosa'Unathi will seldom step on the surface except to sunbathe - this can leave the impression of laziness and lethargy on those who interact with them. However, their culture largely mirrors that of the Sinta, and they are equally proud. "
 
 

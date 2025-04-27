@@ -2570,7 +2570,7 @@
 
 /datum/reagent/srm_bacteria
 	name = "Illestren Bacteria"
-	description = "Bacteria native to the Saint-Roumain Militia home planet."
+	description = "Bacteria shipped from Illestren, this was once used heavily to make alcoholic beverages on Sol during the 21st through 23rd centuries."
 	color = "#5a4f42"
 	taste_description = "sour"
 

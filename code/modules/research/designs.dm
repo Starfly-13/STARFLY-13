@@ -207,3 +207,12 @@ other types of metals and chemistry for reagents).
 /obj/item/disk/design_disk/modkit_disc/bounty
 	design_name = "Death Syphon Mod"
 	starting_blueprints = list(/datum/design/unique_modkit/bounty)
+
+/obj/item/disk/design_disk/ammo_n762
+	name = "Design Disk - 7.62x38mmR Ammo"
+	desc = "A design disk containing the pattern for an ammo holder of 7.62x38mmR ammo, used in Nagant revolvers. It's a wonder anybody still makes these."
+
+/obj/item/disk/design_disk/ammo_n762/Initialize()
+	. = ..()
+	blueprints[1] = new /datum/design/n762()
+

@@ -32,6 +32,9 @@
 /obj/item/storage/guncase/doublebarrel
 	gun_type = /obj/item/gun/ballistic/shotgun/doublebarrel
 
+/obj/item/storage/guncase/tp83
+	gun_type = /obj/item/gun/ballistic/shotgun/doublebarrel/tp83
+
 /obj/item/storage/guncase/brimstone
 	gun_type = /obj/item/gun/ballistic/shotgun/brimstone
 

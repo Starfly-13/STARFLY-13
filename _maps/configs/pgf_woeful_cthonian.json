@@ -1,7 +1,7 @@
 {
-	"$schema": "https://raw.githubusercontent.com/shiptest-ss13/Shiptest/master/_maps/ship_config_schema.json",
+	"$schema": "https://raw.githubusercontent.com/Starfly-13/STARFLY-13/8efaba456290f1c934d3b40e78e764a27dae113f/_maps/ship_config_schema.json",
 	"faction": "/datum/faction/pgf",
-	"prefix": "PGFN",
+	"prefix": "ESV",
 	"map_name": "Woeful Cthonian-class Patrol Cutter",
 	"namelists": [
 		"PGF"

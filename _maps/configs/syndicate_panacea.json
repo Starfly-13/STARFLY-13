@@ -1,10 +1,11 @@
 {
-	"prefix": "SUNS",
-	"map_name": "Panacea-class Infirm Vessel",
-	"map_short_name": "Panacea-class",
+	"$schema": "https://raw.githubusercontent.com/Starfly-13/STARFLY-13/8efaba456290f1c934d3b40e78e764a27dae113f/_maps/ship_config_schema.json",
+	"prefix": "CSSV",
+	"map_name": "Seiiki-class Infirm Vessel",
+	"map_short_name": "Seiiki-class",
 	"map_path": "_maps/shuttles/syndicate/syndicate_panacea.dmm",
-	"faction": "/datum/faction/syndicate/suns",
-	"description": "Shortly after Solcon breached the Oort Cloud, SUNS joined into the Syndicate Coalition. Holding close ties to both the ACLF and GEC, students jumped at the opportunity to see the rest of the galaxy. The Panacea-class was the first of its kind out of Sol, moving typically planetside inpatient care to a space vessel and jumping system to system. The Panacea class is a moderately well supplied ship, allowing for emergency pharmaceutical compounding, mental and physical therapy, and general medical work, while doubling as a student run vessel.",
+	"faction": "/datum/faction/syndicate/cybersun",
+	"description": "Approximately a third of the way through the ICW, it became apparent that the Syndicate could not muster the sheer throwaway manpower that Nanotrasen could with its swaths of mercenaries and disposable personnel. Instead, the Syndicate began to adopt a much more conservative approach to maintaining personnel, by establishing an initiative to create a host of medical vessels designed to rescue and rehabilitate the fallen. The Seiiki-class takes the formerly planetside role of inpatient care and moves it among the stars, providing a mobile means of providing physical and mental therapy alongside pharmaceuticals and general medicine. Having such elaborate, yet mobile, hospitals provided a major tactical advantage in the ICW as the Syndicate was able to better conceal and protect wounded soldiers. Nowadays, Cybersun offers these services to the general public in a move both highly profitable and beneficial to their PR.",
 	"tags": [
 		"Generalist",
 		"Medical",
@@ -14,7 +15,7 @@
 	"map_id": "syndicate_panacea",
 	"limit": 1,
 	"namelists": [
-		"SUNS",
+		"CYBERSUN",
 		"SPACE",
 		"GENERAL"
 	],

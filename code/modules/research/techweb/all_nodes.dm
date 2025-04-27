@@ -734,8 +734,8 @@
 
 /datum/techweb_node/srm_ballistics
 	id = "srm_ballistics"
-	display_name = "Saint-Roumain Ballistics"
-	description = "Ballistics normally manufactured by the Saint-Roumain Militia."
+	display_name = "Classical Ballistics"
+	description = "Ballistics that have been crafted since the 1800s."
 	prereq_ids = list("adv_ballistics")
 	design_ids = list("doublebarrel", "winchmk2")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
@@ -743,8 +743,8 @@
 
 /datum/techweb_node/srm_pistols
 	id = "srm_pistols"
-	display_name = "Saint-Roumain Pistols"
-	description = "Pistols normally manufactured by the Saint-Roumain Militia."
+	display_name = "Classic Pistols"
+	description = "Pistols using ancient technology dating back to the 19th and 20th centuries."
 	prereq_ids = list("adv_ballistics")
 	design_ids = list("pepperbox", "montagne", "derringer", "speedload357")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 5000)
@@ -752,8 +752,8 @@
 
 /datum/techweb_node/srm_special
 	id = "srm_special"
-	display_name = "Saint-Roumain Specialty Ballistics"
-	description = "Specialty ballistics normally manufactured by the Saint-Roumain Militia."
+	display_name = "Classical Specialty Ballistics"
+	description = "Specialty ballistics operable in antique weaponry."
 	prereq_ids = list("srm_ballistics", "srm_pistols")
 	design_ids = list("candor", "stripper762", "illestren")
 	research_costs = list(TECHWEB_POINT_TYPE_GENERIC = 12000)

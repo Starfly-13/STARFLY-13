@@ -8,15 +8,17 @@
 #define FACTION_PLAYER_NANOTRASEN "playerNanotrasen"
 #define FACTION_PLAYER_FRONTIERSMEN "playerFrontiersmen"
 #define FACTION_PLAYER_MINUTEMAN "playerMinuteman"
-#define FACTION_PLAYER_SOLCON "playerSolcon"
+#define FACTION_PLAYER_SOLCON "playerSolCon"
 #define FACTION_PLAYER_INTEQ "playerInteq"
 #define FACTION_PLAYER_ROUMAIN "playerRoumain"
+#define FACTION_PLAYER_HEPHAESTUS "playerArknet"
 #define FACTION_PLAYER_GEZENA "playerGezena"
 
 #define FACTION_SYNDICATE "Syndicate"
 	#define FACTION_NGR "New Gorlex Republic"
 	#define FACTION_CYBERSUN "CyberSun"
-	#define FACTION_HARDLINERS "Hardliners"
+	#define FACTION_HARDLINERS "Syndicate Hardline"
+	#define FACTION_ROSEUS "Roseus Galactic"
 	#define FACTION_SUNS "Student-Union of Naturalistic Sciences"
 #define FACTION_SOLGOV "SolGov"
 #define FACTION_SRM "Saint-Roumain Militia"
@@ -25,13 +27,16 @@
 #define FACTION_NT "Nanotrasen"
 	#define FACTION_NS_LOGI "N+S Logistics"
 	#define FACTION_VIGILITAS "Vigilitas Interstellar"
+#define FACTION_HEPHAESTUS "ArkNet"
+#define FACTION_ARKNET "ArkNet"
 #define FACTION_FRONTIER "Frontiersmen Fleet"
-#define FACTION_PGF "Pan-Gezenan Federation"
+#define FACTION_PGF "Epsilon Eridani"
 #define FACTION_INDEPENDENT "Independent"
 
 #define PREFIX_SYNDICATE list("SEV", "SSV")
 	#define PREFIX_NGR list("NGRV")
 	#define PREFIX_CYBERSUN list("CSSV")
+	#define PREFIX_ROSEUS list("RGSV")
 	#define PREFIX_HARDLINERS list("ISV")
 	#define PREFIX_SUNS list("SUNS")
 #define PREFIX_SOLGOV list("SCSV")
@@ -41,6 +46,8 @@
 #define PREFIX_NT list("NTSV")
 	#define PREFIX_NS_LOGI list("NSSV")
 	#define PREFIX_VIGILITAS list("VISV")
+#define PREFIX_ARKNET list("ANSV")
+#define PREFIX_HEPHAESTUS list("HINV")
 #define PREFIX_FRONTIER list("FFV")
 #define PREFIX_PGF list("PGF", "PGFMC", "PGFN")
 #define PREFIX_INDEPENDENT list("SV", "IMV", "ISV")

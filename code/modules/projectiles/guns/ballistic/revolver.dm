@@ -467,6 +467,7 @@
 	righthand_file = 'icons/obj/guns/manufacturer/scarborough/righthand.dmi'
 	mob_overlay_icon = 'icons/obj/guns/manufacturer/scarborough/onmob.dmi'
 
+
 /obj/item/gun/ballistic/revolver/detective
 	name = "\improper HP Detective Special"
 	desc = "A small law enforcement firearm. Originally commissioned by Nanotrasen for their Private Investigation division, it has become extremely popular among independent civilians and local police forces as a cheap, compact sidearm. Uses .38 Special rounds."
@@ -554,8 +555,8 @@ EMPTY_GUN_HELPER(revolver)
 EMPTY_GUN_HELPER(revolver/viper)
 
 /obj/item/gun/ballistic/revolver/mateba
-	name = "\improper Unica 6 auto-revolver"
-	desc = "A high-powered revolver with a unique auto-reloading system. Uses .357 ammo."
+	name = "\improper Uniqa-6 Auto-Revolver"
+	desc = "A high-powered double-action revolver imitating a popular design from Hephaestus Industries. Uses .357 ammo."
 	icon = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/48x32.dmi'
 	lefthand_file = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/lefthand.dmi'
 	righthand_file = 'icons/obj/guns/manufacturer/nanotrasen_sharplite/righthand.dmi'
@@ -677,3 +678,32 @@ EMPTY_GUN_HELPER(revolver/viper)
 
 /obj/item/gun/ballistic/revolver/shadow/no_mag
 	// spawnwithmagazine = FALSE
+
+/obj/item/gun/ballistic/revolver/nagant
+	name = "Nagant 762 revolver"
+	desc = "A classic design revisited by Hephaestus Industries, chambered in the special 7.62x38mmR. Uniquely able to be suppressed."
+	icon = 'icons/obj/guns/manufacturer/hephaestus_industries/48x32.dmi'
+	icon_state = "nagant"
+	//can_suppress = TRUE
+	manufacturer = MANUFACTURER_HEPHAESTUS
+	spread_unwielded = 12
+	recoil = 0
+	slot_available = list(
+		ATTACHMENT_SLOT_MUZZLE = 1,
+	)
+	default_ammo_type = /obj/item/ammo_box/magazine/internal/cylinder/rev762
+	valid_attachments = list(
+		/obj/item/attachment/silencer,
+		)
+
+/obj/item/gun/ballistic/revolver/unica //RETURN OF THE KING
+	name = "Hephaestus Unica-6"
+	desc = "A weighty revolver with an unconventional barrel placement, aligned with the bottom of the cylinder. Known for its complex design, double action, and low recoil. Uses .357 ammo." //rare and expensive, high-quality revolver
+	icon_state = "mateba"
+	icon = 'icons/obj/guns/manufacturer/hephaestus_industries/48x32.dmi'
+	spread_unwielded = 1
+	recoil = 0
+	semi_auto = TRUE
+	manufacturer = MANUFACTURER_HEPHAESTUS
+	safety_wording = "safety"
+

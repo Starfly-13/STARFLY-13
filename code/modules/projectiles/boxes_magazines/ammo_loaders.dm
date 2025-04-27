@@ -163,7 +163,7 @@
 	multiple_sprites = AMMO_BOX_PER_BULLET
 	w_class = WEIGHT_CLASS_NORMAL
 
-// .44 Roumain speedloader
+// .44 Special (formerly Roumain) speedloader
 
 /obj/item/ammo_box/a44roum_speedloader
 	name = "speed loader (.44)"
